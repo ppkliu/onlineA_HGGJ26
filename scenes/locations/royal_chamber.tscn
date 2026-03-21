@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://royalchamber001"]
 
 [ext_resource type="Script" path="res://scenes/locations/royal_chamber.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://art/backgrounds/window.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://art/backgrounds/princess_room_gj.png" id="2_bg"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
 [ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
 [ext_resource type="Texture2D" path="res://art/characters/maid_npc.png" id="5_maid"]
@@ -70,7 +70,7 @@ shape = SubResource("CircleShape2D_interact_detect")
 position = Vector2(1300, 700)
 
 [node name="Sprite2D" type="Sprite2D" parent="MaidNPC"]
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_maid")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC"]

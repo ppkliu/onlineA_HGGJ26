@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="768" viewBox="0 0 512 768">
-  <rect width="512" height="768" fill="#3a2878"/>
-  <rect x="10" y="10" width="492" height="748" rx="12" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8,4" opacity="0.5"/>
-  <!-- Silhouette -->
-  <ellipse cx="256" cy="280" rx="90" ry="110" fill="#2a1a5e" opacity="0.7"/>
-  <ellipse cx="256" cy="440" rx="130" ry="160" fill="#2a1a5e" opacity="0.7"/>
-  <!-- Text -->
-  <text x="256" y="640" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="bold" fill="#fff">Princess</text>
-  <text x="256" y="680" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#a0b0e0">Determined</text>
-  <text x="256" y="740" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#fff" opacity="0.6" letter-spacing="4">PLACEHOLDER</text>
+  <rect width="512" height="768" rx="16" fill="#FFD700"/>
+  <rect x="8" y="8" width="496" height="752" rx="12" fill="none" stroke="#4A3800" stroke-width="2" stroke-dasharray="8,4" opacity="0.4"/>
+  <ellipse cx="256" cy="260" rx="80" ry="100" fill="#E6C200" opacity="0.6"/>
+  <ellipse cx="256" cy="420" rx="110" ry="140" fill="#E6C200" opacity="0.6"/>
+  <text x="256" y="600" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#4A3800">艾蓮娜</text>
+  <text x="256" y="660" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#6B5500">決意</text>
+  <text x="256" y="730" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#4A3800" opacity="0.5" letter-spacing="6">PLACEHOLDER</text>
 </svg>

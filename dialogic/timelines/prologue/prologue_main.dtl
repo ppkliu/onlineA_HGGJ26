@@ -6,24 +6,24 @@
 
 [wait time="1.5"]
 
-princess (shocked): 怎、怎麼回事……外面好吵……
+princess (default): 嗯……好吵喔……是在辦什麼慶典嗎？
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/corridor_crash.ogg"]
 [signal arg="camera_shake"]
 
-princess (shocked): 來人！莉娜？有人在嗎？
+princess (shocked): 哇！好大聲！莉娜——？你在外面嗎？幫我開一下門嘛——
 
-princess: （門被從外面鎖住了。我拍打門板，沒有人回應。）
+princess: （咦，門怎麼打不開……一定是莉娜忘記了。算了，等她來就好了。）
 
 [wait time="0.8"]
 
-princess (sad): 父王一定會派人來的……魔法守護絕對不會有事的……
+princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生的……外面大概只是在演習吧？
 
 [wait time="1.0"]
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/running_screams.ogg"]
 
-princess (shocked): 是救兵嗎……？！
+princess (default): 啊！有人來了！是莉娜來接我了嗎——
 
 [wait time="1.5"]
 
