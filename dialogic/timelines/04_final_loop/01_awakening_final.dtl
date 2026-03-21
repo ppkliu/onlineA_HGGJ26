@@ -1,47 +1,45 @@
-# 最終輪迴：最後一次醒來
+# 最終輪迴：最後一次醒來 — 公主寢房（Day 1 早晨）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
-# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.3"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.5" volume="0.5"]
+
+[wait time="2.0"]
 
 join princess center
 
 princess (determined): ……
 
-[wait time="1.0"]
+[wait time="1.2"]
 
-princess: （那個聲音——「說話很輕、很慢，像在唸詩。」不是父王。是宰相。）
+princess: （那個聲音——「很輕、很慢，像在唸詩。」不是父王。是宰相。）
 
-[wait time="0.8"]
+princess: （弄瞎達爾的是他。鎖住救濟糧的是他。操弄暴民的是他。腐蝕魔法陣的也是他。）
 
-princess: （弄瞎達爾的是宰相。鎖糧倉的是他。操弄暴民的是他。破壞魔法陣的也是他。）
-
-[wait time="1.0"]
-
-princess: （父王不是冷血的實用主義者——他是被叛徒包圍、孤軍奮戰的人。）
+princess: （父王不是冷血的犧牲者。他是被叛徒包圍、孤軍奮戰到最後的人。）
 
 [wait time="1.0"]
 
-princess (determined): （父王，對不起。這次，換我來保護你了。但我不會再一個人行動——我需要對的人，在對的時間，也知道真相。）
+princess (determined): （父王，對不起。這次，換我來保護你。但我不會再一個人扛——我需要對的人，在對的時間，知道真相。）
 
 [wait time="0.8"]
 
 join maid right
 
-maid (default): 殿下～早安！宰——
+maid (default): 殿下～早安！宰相大人送來了——
 
-princess (determined): 莉娜，退回寶石。去告訴賽拉斯：我知道父王的密令，也知道他一直在做什麼。讓他天黑後到我房間來。
+princess (determined): 莉娜，把寶石退回去。然後去告訴賽拉斯：我知道父王的密令，也知道他這半年每天在做什麼。讓他今晚天黑後，到我房間來。不要讓任何人知道。
 
-maid (default): 殿下好像突然變了一個人……
+maid (shocked): 殿下……您好像突然變了一個人。
 
-princess (determined): 因為我醒了。
+princess (determined): 因為我醒了。不是從夢裡醒來，是從無知裡醒來。
 
-leave maid
+[wait time="0.6"]
 
-[wait time="0.5"]
+maid (grateful): ……遵命，殿下。
 
 [signal arg="day_counter:180"]
 
 leave princess
+leave maid
 
 jump 02_recruit_silas/

@@ -1,66 +1,54 @@
-# 第 3 輪迴：Bad End C — 棋差一步
+# 第 3 輪迴：Bad End C — 棋差一步（塔樓）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/tower_room.png" fade="0.5"]
+[background arg="res://art/backgrounds/tower_room_dark.png" fade="0.8"]
 
 join princess center
 
-princess: （塔樓。石壁冰冷，窗戶被釘死。）
+princess: （塔樓頂層。石壁滲水，窗被鐵條封死。只有風聲和遠處的火光。）
+
+[wait time="1.2"]
+
+princess (cold): （我知道的夠多。地下防線、魔法被腐蝕、糧倉被鎖……但這些在鐵門前，一文不值。）
+
+princess (cold): （一個人知道真相，是不夠的。）
 
 [wait time="1.0"]
 
-princess: （我知道的夠多了——地下防線、宰相可能有問題、父王為了大局犧牲所有人。但這些知識在石壁面前一文不值。）
+princess (shocked): （等等……達爾說的聲音。「輕、慢，像唸詩」。）
 
-[wait time="1.0"]
+princess (shocked): （宰相。莫里昂每次說話——「殿下，臣洗耳恭聽」——就是這種語調。）
 
-princess (cold): （一個人知道真相是不夠的。）
-
-[wait time="1.5"]
-
-princess: （等等。達爾說的那個聲音——「說話很輕、很慢，像在唸詩。」）
-
-[wait time="1.0"]
-
-princess: （……宰相。宰相莫里昂說話就是那種語調。他在花園裡對我說話的時候——「殿下，臣洗耳恭聽」——就是那種聲音。）
-
-[wait time="1.0"]
-
-princess (shocked): （如果弄瞎達爾的不是父王——是宰相？）
-
-[wait time="0.5"]
-
-princess (shocked): （那鎖住糧倉的也不是父王——糧倉鎖上印的是財政署的印記——財政署是宰相管的！）
+princess (shocked): （弄瞎達爾的不是父王，是宰相！鎖糧倉的財政署印記……也是宰相管的！）
 
 [wait time="0.8"]
 
-# 遠處傳來城門被撞開的聲音。塔樓在震動中搖晃
-# [PLACEHOLDER] [sound path="res://audio/sfx/gate_open_heavy.ogg"]
-
+[sound path="res://audio/sfx/gate_open_heavy.ogg"]
 [signal arg="camera_shake"]
 
-princess (shocked): 不——差一步……只差最後一步就能拼出完整的真相——
+princess (shocked): 不……只差一步……只差最後一步，就能拼出完整真相——
 
-[wait time="1.0"]
-
-leave princess
+princess (hollow): （父王不是冷血的犧牲者。他是唯一在拼命守護的人。而我……用他的方式，毀了他的一切。）
 
 [signal arg="cut_to_silence"]
 
-[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+leave --All--
 
-[wait time="3.0"]
+[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 
-「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」
+[wait time="4.0"]
 
-[wait time="2.0"]
+princess: 「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」
 
-帶著這份記憶……回到一切開始之前。
+[wait time="2.8"]
 
-[wait time="1.5"]
+princess: （下一次……我不能再一個人。我得找到那個……曾經哭著殺我的人。）
 
-[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+[wait time="1.8"]
 
-# === 獲得情報 ===
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
 [signal arg="intel:intel_chancellor_treason"]
-[signal arg="death_context:{'death_message': '你被宰相幽禁在塔樓中，眼睜睜看著城破。\n\n「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」', 'intel_reward': ['intel_chancellor_treason'], 'killer': 'chancellor'}"]
+[signal arg="intel:intel_king_defense_line"]
+[signal arg="intel:intel_dal_blinded_by_chancellor"]
+[signal arg="death_context:{'death_message': '你被宰相幽禁塔樓，眼睜睜看著王城陷落，只差一步就揭穿一切。\\n\\n「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」', 'intel_reward': ['intel_chancellor_treason', 'intel_king_defense_line', 'intel_dal_blinded_by_chancellor'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]

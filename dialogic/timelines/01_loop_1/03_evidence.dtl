@@ -1,38 +1,32 @@
-# 第 1 輪迴：宰相的「證據」— Day 2
+# 第 1 輪迴：宰相的「證據」 — 書房（Day 2）
 
-# [PLACEHOLDER] [background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
-# [PLACEHOLDER] [music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
 
 join princess left
 join chancellor right
 
 chancellor (serious): 殿下，請過目。
 
-chancellor (serious): 這是過去兩年的財政帳簿。陛下以「戰備」為名，徵收了三倍的稅金。但實際用於軍備的不到三成——其餘的去向不明。
+chancellor (serious): 這是過去兩年的財政帳簿。陛下以「戰備」為名，徵收了三倍稅金。但實際用於軍備的……確實不到三成。
 
-princess: （我翻看帳簿。數字確實對不上。）
+princess: （數字確實對不上……）
 
-chancellor (serious): 這是邊防將領的密報。陛下在一年前曾派使者挑釁敵國邊境——是他主動激化了衝突。
+chancellor (serious): 這是邊防將領的密報。陛下在一年前確實曾派使者前往敵國邊境——他主動激化了衝突，這是事實。
 
-princess: （白紙黑字，蓋著官印。）
+chancellor (sad): 臣在朝中多次苦勸，但陛下已聽不進任何人的話。他甚至開始清除反對加稅的官員……上個月，兩位忠臣以「通敵」罪名入獄。
 
-chancellor (sad): 臣在朝中多次試圖勸諫，但陛下已經不聽任何人的話了。他甚至開始清洗異見者——上個月，兩名反對加稅的官員被以「通敵」的罪名下獄。
+chancellor (determined): 殿下。如果連您都不知道真相，這個國家……真的沒救了。
 
-chancellor (sad): 殿下。臣不願在殿下心中毀掉一位父親的形象。但如果連殿下都不知道真相——
+princess (sad): 父王他……為什麼要這麼做？
 
-chancellor (determined): 這個國家，就真的沒救了。
-
-princess (shocked): 父王他……為什麼要這麼做？
-
-chancellor (sad): 權力。恐懼。和一個老去的國王無法面對自己衰弱的瘋狂。臣說不好。但結果擺在這裡。
+chancellor (sad): 權力使人瘋狂。年老的國王最怕的，就是失去一切。臣說不好。但證據，就擺在眼前。
 
 [wait time="1.0"]
 
-princess (sad): ……我需要親眼去看看。城裡的百姓……真的過得這麼慘嗎？
+princess (determined): ……我需要親眼去看。下城區的百姓……真的過得這麼苦嗎？
 
-chancellor (concerned): 殿下想去下城區？臣可以安排。但請務必低調……陛下如果知道，會很不高興的。
-
-[wait time="0.5"]
+chancellor (concerned): 殿下想去？臣可以安排。但請務必低調。若被陛下知道，他會非常……不高興。
 
 leave chancellor
 leave princess

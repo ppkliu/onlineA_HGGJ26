@@ -22,6 +22,38 @@
 "mirror": false,
 "scale": 1.0,
 "scene": ""
+},
+"forced_smile": {
+"export_overrides": {
+"image": "res://art/characters/maid_portrait.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"confused": {
+"export_overrides": {
+"image": "res://art/characters/maid_portrait.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"shocked": {
+"export_overrides": {
+"image": "res://art/characters/maid_portrait.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"grateful": {
+"export_overrides": {
+"image": "res://art/characters/maid_portrait.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
 }
 },
 &"scale": 1.0

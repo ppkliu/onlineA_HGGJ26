@@ -1,63 +1,46 @@
-# 最終輪迴：收服騎士長 — Day 1 夜晚
+# 最終輪迴：收服騎士長 — Day 1 夜晚（公主寢房）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.8"]
-# [PLACEHOLDER] [music path="res://audio/bgm/final_truth.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.9"]
+[music path="res://audio/bgm/final_truth.ogg" fade="3.0" volume="0.7"]
 
 join princess left
 join loyal_retainer right
 
-princess (determined): 接下來的話你會覺得我瘋了。但請聽完。
-
-[wait time="0.5"]
-
-princess (determined): ——父王給了你一道密令：城破就殺了我。對嗎？
-
-[wait time="1.0"]
-
-loyal_retainer (exhausted): 殿下不可能知道——
-
-princess (determined): 你每天都在祈禱不需要執行那道命令。你訓練民兵、巡視城牆——不是為了服從國王，而是為了讓那道命令永遠不需要執行。
-
-[wait time="1.0"]
-
-princess (determined): 你不敢看我的眼睛，因為你怕看得越多，到時候就越下不了手。
-
-[wait time="1.5"]
-
-princess (sad): 賽拉斯。你辛苦了。
-
-[wait time="1.0"]
-
-loyal_retainer (tearful): ……
-
-[wait time="0.5"]
-
-loyal_retainer (tearful): 臣是懸在您頭上的劍。只要那道命令存在，臣就是您最危險的人。
+princess (determined): 接下來的話你會覺得我瘋了。但請聽完，不要打斷。
 
 [wait time="0.8"]
 
-princess (determined): 不。你是這座城堡裡唯一一個會為了殺我而哭的人。
+princess (determined): 父王給了你一道密令：在城破時，絕不能讓我落入敵手。不惜一切代價——包括殺了我。對嗎？
 
-[wait time="0.5"]
+loyal_retainer (exhausted): 殿下……不可能知道這件事。
+
+princess (determined): 你每天都在祈禱不需要執行它。你偷偷訓練民兵、夜裡巡視城牆、伏擊敵探、甚至被調離王城後還留下副手繼續——全部都是為了讓那道命令永遠不會到來。
+
+[wait time="1.2"]
+
+princess (determined): 你不敢和我多說一句話，不敢讓我靠近，因為你怕看得越多，到時候劍就越重。
+
+princess (sad): 賽拉斯。你辛苦了。
+
+[wait time="1.5"]
+
+loyal_retainer (tearful): ……
+
+loyal_retainer (tearful): 臣是懸在您頭上的劍。只要那道命令還在，臣就是您最危險的人。
+
+princess (determined): 不。你是這座城堡裡唯一一個會為了殺我而哭的人。
 
 princess (determined): 這讓你成為我最信任的人。
 
 [wait time="1.0"]
 
-princess (determined): 宰相莫里昂是叛徒。他偽造帳簿、操弄暴民、破壞魔法陣、弄瞎了工匠達爾。我有證據——但我一個人做不到。
-
-[wait time="1.5"]
+princess (determined): 宰相莫里昂是叛徒。他偽造帳簿、操弄暴民、破壞魔法陣、弄瞎達爾。我有證據——但我一個人做不到。我需要你。
 
 loyal_retainer (relieved): ……
 
-[wait time="0.5"]
+loyal_retainer (relieved): 臣等這句話……等了太久。
 
-loyal_retainer (relieved): 臣……終於等到這一天了。
-
-[wait time="0.5"]
-
-loyal_retainer (relieved): 殿下有令，萬死不辭。
+loyal_retainer (tearful): 殿下有令，萬死不辭。
 
 leave princess
 leave loyal_retainer

@@ -1,70 +1,61 @@
-# 第 1 輪迴：醒來 — 公主寢房
+# 第 1 輪迴：醒來 — 公主寢房（Day 1 早晨）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
-# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.65"]
+
+[wait time="1.8"]
 
 join princess left
 
 princess (shocked): ——！
 
-[wait time="0.5"]
+[wait time="0.6"]
 
-princess: （心臟在狂跳。我還記得那把劍、賽拉斯的眼淚、胸口被貫穿的觸感。但我活著。指甲上還塗著昨天的蔻丹。）
+princess: （心臟像要炸開。我記得那把劍、賽拉斯的眼淚、胸口冰冷的觸感……可我還活著。手指上還留著昨天的玫瑰色指彩。）
 
-princess (shocked): 這……是夢嗎……？
+princess (shocked): 這……真的是夢嗎……？
 
-[wait time="1.0"]
+[wait time="1.2"]
 
 join maid right
 
-maid (default): 殿下～早安！宰相大人送來了南國的寶石呢！邊境的小毛賊陛下已經派人處理了，您完全不需要操心～
+maid (default): 殿下～早安！宰相大人昨天送來了南國最漂亮的寶石呢！邊境那些小毛賊，陛下已經派人處理了，您完全不需要操心～
 
 [wait time="1.0"]
 
 princess (shocked): ……莉娜？
 
-[wait time="0.5"]
+maid (default): 怎麼啦殿下？您臉色好差，是不是又做惡夢了？
 
-maid (default): 怎麼了殿下？您臉色好差，是不是沒睡好？
+princess (shocked): 你剛才說……南國的寶石？
+
+maid (default): 對呀！宰相大人說這顏色最襯您的膚色，還特地挑了最大顆的那一顆喔～
+
+[wait time="1.3"]
+
+princess: （……一模一樣的對話。一模一樣的笑容。如果這不是夢……那我真的回到了六個月前？）
+
+princess (shocked): 莉娜，今天是什麼日子？
+
+maid (default): 今天是星期三呀！殿下怎麼連日子都忘啦？哈哈，您一定是夢到什麼可怕的事了吧？
+
+[wait time="1.5"]
+
+princess: （星期三……跟夢裡完全一樣。莉娜的眼睛……好像有點紅腫？）
+
+princess: 莉娜……你眼睛怎麼紅紅的？
+
+maid (forced_smile): 欸？沒有啦！只是昨晚看小說看到太晚～殿下別擔心我！
+
+princess: （……她在說謊。我第一次察覺到。）
 
 [wait time="0.8"]
 
-princess (shocked): 你剛才說什麼……？南國的寶石？
+princess: 莉娜，幫我更衣。我要立刻去見宰相大人。
 
-[wait time="0.5"]
-
-maid (default): 嗯？對呀，宰相大人送來的。殿下您果然還在發呆呢～
-
-[wait time="1.2"]
-
-princess: （……這些話。我好像聽過。一模一樣，連語氣都一樣。如果這不是夢……那我回到了過去？）
-
-[wait time="1.5"]
-
-princess (shocked): 莉娜……今天是什麼日子？
-
-[wait time="0.5"]
-
-maid (default): 今天？就是普通的星期三呀。殿下怎麼連日子都忘了？您真的是做惡夢了吧。
-
-[wait time="1.5"]
-
-princess: （星期三。跟夢裡的一樣……不、一定是巧合。一定是的。）
-
-[wait time="1.0"]
-
-princess: （可是……如果不是夢呢？宰相大人一直對我很溫柔，也許他知道些什麼。）
-
-[wait time="0.5"]
+maid (default): 咦？今天突然要見宰相？好的好的！我馬上準備最漂亮的禮服！
 
 [signal arg="day_counter:180"]
-
-princess: 莉娜……幫我更衣。我想去見宰相大人。
-
-[wait time="0.5"]
-
-maid (default): 咦？殿下今天怎麼突然想見宰相大人？好的好的，我馬上準備！
 
 leave princess
 leave maid

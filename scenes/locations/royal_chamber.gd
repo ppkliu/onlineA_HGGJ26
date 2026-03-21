@@ -5,13 +5,21 @@ func _ready() -> void:
 	AudioManager.play_loop_restart()
 	FlowLogger.log_event("scene", "Royal chamber ready", {"phase": LoopManager.LoopPhase.keys()[LoopManager.current_phase], "loop": IntelSystem.current_loop})
 
+	var timeline_id := _get_awakening_timeline()
+	FlowLogger.log_event("dialogic", "Start timeline", {"timeline": timeline_id})
+	Dialogic.start(timeline_id)
+
+
+func _get_awakening_timeline() -> String:
 	match LoopManager.current_phase:
 		LoopManager.LoopPhase.EARLY:
-			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "awakening"})
-			Dialogic.start("res://dialogic/timelines/loop_1/awakening.dtl")
+			if IntelSystem.current_loop <= 1:
+				return "01_awakening"
+			else:
+				return "01_awakening_angry"
 		LoopManager.LoopPhase.MID:
-			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "awakening_with_intel"})
-			Dialogic.start("res://dialogic/timelines/loop_2/awakening_with_intel.dtl")
+			return "01_awakening_cold"
 		LoopManager.LoopPhase.FINAL:
-			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "final_confrontation"})
-			Dialogic.start("res://dialogic/timelines/final_loop/final_confrontation.dtl")
+			return "01_awakening_final"
+		_:
+			return "01_awakening"

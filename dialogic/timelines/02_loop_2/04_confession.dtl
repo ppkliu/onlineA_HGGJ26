@@ -1,50 +1,43 @@
-# 第 2 輪迴：坦白身份 — Day 30
+# 第 2 輪迴：坦白身份 — Day 30 深夜（鐵匠鋪）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/blacksmith.png" fade="0.5"]
+[background arg="res://art/backgrounds/blacksmith_night.png" fade="0.6"]
 
 join princess left
 join mob_leader right
 
-princess (determined): 布魯諾。我不是什麼家僕。我是公主艾蓮娜。
+princess (determined): 布魯諾。我不是家僕。我是艾蓮娜公主。
 
-[wait time="1.0"]
+[wait time="1.2"]
 
-mob_leader (angry): ……什麼？
+mob_leader (angry): ……妳說什麼？
 
-[wait time="0.5"]
+princess (determined): 在你動手之前，聽我說完。
 
-princess (determined): 在你打我之前——聽我說。
+princess (determined): 宰相莫里昂是叛徒。他和敵國有密約。你們的饑荒，一部分是備戰代價，但更大的部分是他暗中破壞糧道、囤積物資。
 
-princess (determined): 宰相莫里昂是叛徒，和敵國有密約。你們的饑荒和重稅，有一部分是備戰代價，但更大的部分是宰相暗中搞鬼。
+princess (determined): 我知道王家糧倉的位置和鑰匙。我可以打開它。先讓大家吃飽，再一起對付真正的敵人——不是父王，是莫里昂。
 
-princess (determined): 我可以打開王家糧倉，先讓城裡的人吃飽，然後一起對付真正的敵人。
+[wait time="1.3"]
 
-[wait time="1.0"]
+mob_leader (grieving): 妳知道我老婆怎麼死的？
 
-mob_leader (grieving): 妳知道我老婆怎麼死的嗎？
+princess: ……
 
-[wait time="0.5"]
+mob_leader (grieving): 難產。需要一種從南方進口的止血草。但所有草藥都被徵為軍需了。我跪在稅務司門口三天三夜，求他們放行一小包。
 
-mob_leader (grieving): 難產，需要一種草藥。但草藥全被徵為軍需了。我跪在官府門口求了三天。
+mob_leader (grieving): 他們說：「軍需優先。」我老婆就在我懷裡斷氣。血流了一地，連孩子都沒保住。
 
-mob_leader (grieving): 我老婆的命，值不了一包草藥。
-
-[wait time="1.5"]
+[wait time="1.8"]
 
 princess (sad): ……對不起。
 
-[wait time="0.5"]
-
-princess (sad): 沒有用，我知道。但我能做的只有——讓以後不再有人經歷同樣的事。
+princess (sad): 我知道這句話沒用。但如果我什麼都不做，以後還會有更多妻子、更多孩子死在同樣的理由下。
 
 [wait time="1.0"]
 
-mob_leader (hesitant): ……
+mob_leader (hesitant): ……給我三天。我得跟兄弟們談。
 
-[wait time="0.8"]
-
-mob_leader (hesitant): ……給我三天。我需要跟兄弟們商量。
+princess (determined): 我等你。
 
 leave princess
 leave mob_leader

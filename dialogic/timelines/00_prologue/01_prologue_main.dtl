@@ -1,41 +1,42 @@
 # 序章：亡國之夜 — 公主寢房
 
 [background arg="res://art/backgrounds/prologue_princess_room.png" fade="1.5"]
-# [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
-# [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
+# [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0" volume="0.6"]
+# [sound path="res://audio/sfx/fire_burning.ogg" loop="true" volume="0.4"]
 
-[wait time="2.0"]
+[wait time="2.5"]
 
-princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎？
+princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎？今天不是節日呀……
 
-[wait time="1.0"]
+[wait time="1.2"]
 
 [sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX"]
 [signal arg="camera_shake"]
 
-[wait time="0.3"]
+[wait time="0.4"]
 
-princess (shocked): 哇！好大聲！……莉娜——？你在外面嗎？
-
-[wait time="0.8"]
-
-princess (default): 門怎麼打不開……算了，等莉娜來就好了。
-
-[sound path="res://audio/sfx/door_knock.ogg" bus="SFX"]
+princess (shocked): 哇！什麼東西倒下來了？！……莉娜？！你在外面嗎？莉娜——！
 
 [wait time="1.0"]
 
-princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生的。外面大概只是在演習吧。
+princess (default): 奇怪……門怎麼推不開……沒關係，父王說過有魔法陣，壞人進不來的。莉娜一定很快就來了。
 
-[wait time="1.2"]
+[sound path="res://audio/sfx/door_knock_hard.ogg" bus="SFX"]
 
-[sound path="res://audio/sfx/running_screams.ogg" bus="SFX"]
+[wait time="0.8"]
 
-princess (default): 嗯？好像有很多人在跑……啊！有人來了！是莉娜來接我了嗎——
+princess (default): 嗯？敲門聲……是莉娜嗎？進來呀～
 
-[wait time="1.5"]
+[wait time="1.0"]
 
-[sound path="res://audio/sfx/armor_approach.ogg" bus="SFX"]
-[sound path="res://audio/sfx/lock_break.ogg" bus="SFX"]
+[sound path="res://audio/sfx/running_screams_distant.ogg" bus="SFX" volume="0.7"]
+
+princess (default): 外面好多人跑喔……是在玩什麼遊戲嗎？聽起來好慌張……
+
+[wait time="1.8"]
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+[sound path="res://audio/sfx/lock_break_forceful.ogg" bus="SFX"]
+[signal arg="camera_shake"]
 
 jump 02_prologue_assassination/

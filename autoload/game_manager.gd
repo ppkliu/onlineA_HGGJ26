@@ -97,10 +97,17 @@ func _handle_dialogic_signal_string(argument: String) -> void:
 				_pending_trigger_death = true
 			else:
 				_trigger_death_with_pending_context()
-		"camera_shake":
-			pass
+		"death_fade":
+			FlowLogger.log_event("game", "Death fade effect triggered")
+		"true_ending_reached":
+			FlowLogger.log_event("game", "True ending reached")
+		"show_credits":
+			FlowLogger.log_event("game", "Show credits requested")
 		_:
-			if argument.begins_with("death_context:"):
+			if argument.begins_with("intel:"):
+				var intel_id := argument.trim_prefix("intel:")
+				IntelSystem.acquire_intel(intel_id)
+			elif argument.begins_with("death_context:"):
 				var payload := argument.trim_prefix("death_context:")
 				var parsed: Variant = JSON.parse_string(payload.replace("'", '"'))
 				if parsed is Dictionary:
@@ -109,6 +116,15 @@ func _handle_dialogic_signal_string(argument: String) -> void:
 						_trigger_death_with_pending_context()
 				else:
 					push_warning("Invalid death context payload: %s" % argument)
+			elif argument.begins_with("camera_shake"):
+				pass
+			elif argument.begins_with("day_counter:"):
+				var days := argument.trim_prefix("day_counter:").to_int()
+				FlowLogger.log_event("game", "Day counter set", {"days": days})
+			elif argument.begins_with("slow_motion_effect"):
+				pass
+			else:
+				FlowLogger.log_event("dialogic", "Unhandled signal", {"argument": argument})
 
 
 func _handle_dialogic_signal_dict(argument: Dictionary) -> void:

@@ -1,30 +1,35 @@
-# 第 2 輪迴：帶著憤怒醒來
+# 第 2 輪迴：帶著憤怒醒來 — 公主寢房（Day 1 早晨）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
-# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.7"]
+
+[wait time="1.5"]
 
 join princess left
 
 princess (hollow): ……又回來了。
 
-[wait time="0.5"]
+[wait time="0.7"]
 
-princess: （宰相是叛徒——這一點我確定了。但下城區的饑荒是真的，莉娜哥哥被徵兵也是真的。我不會再相信任何貴族。只能靠那些真正受苦的人了。）
+princess: （宰相是叛徒，這我確定了。但下城區的饑荒是真的，莉娜哥哥被徵兵是真的，孩子們的水腫是真的。我不會再相信任何一個貴族。）
 
-[wait time="1.0"]
+princess: （那些真正受苦的人……也許只有他們，才不會騙我。）
+
+[wait time="1.2"]
 
 join maid right
 
-maid (default): 殿下～早安！宰相大人送來了——
+maid (default): 殿下～早安！宰相大人送來了南國的寶石呢！他說這顏色最襯您——
 
-princess (determined): 莉娜，把寶石退回去。幫我準備一套不顯眼的衣服。我要去下城區。
+princess (determined): 莉娜，把寶石退回去。幫我準備一套最不起眼的粗布衣服。我要去下城區。
 
-maid (confused): 殿下……？
+maid (confused): 殿下……？您怎麼突然——
 
-princess (determined): 不要問為什麼。快去。
+princess (determined): 不要問。快去。從現在開始，你什麼都別問我。
 
-[wait time="0.5"]
+[wait time="0.6"]
+
+maid (forced_smile): ……好的，殿下。
 
 [signal arg="day_counter:180"]
 

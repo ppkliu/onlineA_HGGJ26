@@ -2,105 +2,134 @@
 
 [background arg="res://art/backgrounds/prologue_knight_arrives.png" fade="0.8"]
 
-[wait time="1.0"]
+[wait time="1.2"]
 
 loyal_retainer (tearful): ……殿下。
 
-[wait time="0.8"]
-
-princess (default): 賽拉斯！你來啦！外面好吵喔，發生什麼事了嗎？
-
-[sound path="res://audio/sfx/door_close.ogg" bus="SFX"]
-
-[wait time="0.8"]
-
-princess (default): 你衣服上怎麼紅紅的？還臭臭的？莉娜看到會唸你的喔。
-
-[wait time="0.8"]
-
-loyal_retainer (tearful): 殿下，城破了。
-
-[wait time="1.5"]
-
-princess (shocked): 城破？那是什麼意思？城牆裂開了嗎？
-
-[wait time="0.8"]
-
-loyal_retainer (exhausted): 魔法陣三天前就失效了。有人從內部切斷了能源核心。
-
 [wait time="1.0"]
 
-princess (shocked): 可是父王說，魔法陣會一直保護我們的呀……
+princess (default): 賽拉斯！你來啦～外面好吵喔，是不是又在演習？父王說最近邊境不太平……
+
+[sound path="res://audio/sfx/door_close_slow.ogg" bus="SFX"]
+
+[wait time="0.9"]
+
+princess (default): 欸？你盔甲怎麼濕濕的？還有紅紅的東西……是顏料嗎？莉娜看到一定會說你不愛乾淨喔。
 
 [wait time="1.2"]
 
-loyal_retainer (tearful): 陛下已經……戰死在城門前了。南門、西門都被人從裡面打開了。
+loyal_retainer (exhausted): 殿下……城破了。
+
+[wait time="1.6"]
+
+princess (shocked): 城破？是城牆壞掉了嗎？那工人很快就會修好的呀？
+
+[wait time="1.0"]
+
+loyal_retainer (tearful): 三天前……魔法陣的能源核心被人從內部破壞。防護失效了。
+
+[wait time="1.3"]
+
+princess (shocked): 可是……父王明明說過，它會保護我們一輩子……
+
+[wait time="1.0"]
+
+loyal_retainer (tearful): 陛下……戰死在南門前。南門、西門……都是從裡面被打開的。
+
+[wait time="2.2"]
+
+princess (sad): 戰死……？你在開玩笑對不對？父王是最強的，他怎麼可能……
+
+[wait time="1.4"]
+
+[background arg="res://art/backgrounds/prologue_knight_draws_weapon.png" fade="0.7"]
+[signal arg="camera_shake"]
+
+[wait time="1.2"]
+
+princess (shocked): 賽拉斯……你拔劍了？是要去打壞人嗎？帶我一起去好不好？我可以幫忙喊加油！
+
+[wait time="1.0"]
+
+loyal_retainer (tearful): 陛下最後的密令……「絕不能讓公主落入敵手。任何代價。」
+
+[wait time="1.8"]
+
+princess (shocked): ……欸？什麼意思？
+
+[wait time="0.9"]
+
+loyal_retainer (tearful): 所有密道、所有逃生路線……全被切斷了。臣殺出一條血路才到這裡。
+
+[wait time="1.6"]
+
+princess (sad): 我不懂……為什麼沒有人告訴我？大家都在說謊嗎？連你也是？
+
+[wait time="1.2"]
+
+loyal_retainer (tearful): 陛下每一天……都在祈禱這一天永遠不要到來。他把您關在這座溫柔的牢籠裡，想用無知保護您。
+
+[wait time="2.3"]
+
+loyal_retainer (tearful): 但他失敗了。臣……也失敗了。
+
+[wait time="1.8"]
+
+princess (sad): 所以……你要殺我？就像殺壞人一樣？
+
+[wait time="1.4"]
+
+loyal_retainer (tearful): 臣從您五歲開始教您騎小馬……從您八歲開始陪您看星星……從您十二歲開始，每天都在心裡默念同一句話——
 
 [wait time="2.0"]
 
-princess (sad): 戰死……？你在騙我的對不對？父王不是最厲害的嗎……
+loyal_retainer (tearful): 「但願永遠不需要執行這道命令。」
 
-[wait time="1.5"]
+[wait time="1.6"]
 
-[background arg="res://art/backgrounds/prologue_knight_draws_weapon.png" fade="0.6"]
+princess (hollow): ……原來你一直都知道。
+
+[wait time="1.2"]
+
+loyal_retainer (tearful): 請原諒臣，殿下。
 
 [wait time="1.0"]
 
-princess (shocked): 賽拉斯……你拿劍做什麼？
+[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.4"]
+
+loyal_retainer (tearful): 如果有來世……臣只求能生在一個沒有王冠、沒有密令的世界，繼續守護您……就只是，普通的賽拉斯。
 
 [wait time="0.8"]
 
-loyal_retainer (tearful): 陛下最後的密令——「絕不能讓公主落入敵人手中。不惜一切代價。」
+princess (hollow): ……賽拉斯，你在哭喔。
 
-[wait time="1.5"]
+[wait time="0.6"]
 
-princess (shocked): 你是來保護我的對不對？帶我去找父王嘛……
+loyal_retainer (tearful): 對不起。
 
-[wait time="0.8"]
+[wait time="0.4"]
 
-loyal_retainer (tearful): 所有逃生通道都被切斷了。臣殺穿一路的敵兵才到這裡，一切都太遲了。
+[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX"]
 
-[wait time="1.5"]
+princess (hollow): 啊——
 
-princess (sad): 我不懂……為什麼都沒有人告訴我外面發生了什麼事……
-
-[wait time="1.0"]
-
-loyal_retainer (tearful): 陛下每一天都在努力，想讓這一天不要來臨。但他失敗了。臣也失敗了。
-
-[wait time="2.0"]
-
-loyal_retainer (tearful): 請原諒臣。
-
-[wait time="1.0"]
-
-[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.3"]
-
-loyal_retainer (tearful): 如果有來世……臣希望能在和平的世界裡，繼續守護您。
-
-[wait time="0.5"]
-
-# === CUT TO SILENCE ===
 [signal arg="cut_to_silence"]
 
-[wait time="0.1"]
+[wait time="0.15"]
 
-（啊——）
+（……不痛。）
 
-[signal arg="death_fade"]
-[background arg="res://art/backgrounds/darkness.png" fade="1.0"]
+[wait time="1.2"]
 
-[wait time="2.0"]
+（只是很冷。像冬天第一次打開窗戶的時候。）
 
-（不痛。只是很冷。像是被冬天的風吹了一下。）
+[wait time="1.8"]
 
-[wait time="1.5"]
+（賽拉斯的臉好模糊……他在哭。為什麼呢？明明是他動的手。）
 
-（賽拉斯的臉好模糊……他好像在哭。為什麼要哭呢？）
+[wait time="2.2"]
 
-[wait time="2.0"]
-
-（……為什麼所有人都拋下了我？）
+（……為什麼所有人都知道，只有我不知道？）
 
 [wait time="3.0"]
 

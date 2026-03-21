@@ -1,57 +1,53 @@
 # 第 2 輪迴：Bad End B — 民心之刃
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.5"]
+[background arg="res://art/backgrounds/lower_district_night.png" fade="0.6"]
 
 join princess left
 join mob_leader right
 
-mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們。妳排在他們後面。
+mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們……妳，排在他們後面。
 
-[wait time="0.5"]
-
-mob_leader (grieving): 帶走她。
+princess (hollow): ……我懂了。
 
 [wait time="0.8"]
 
-# [PLACEHOLDER] [background arg="res://art/backgrounds/city_gate.png" fade="0.5"]
+# 轉場：城門外
+[background arg="res://art/backgrounds/city_gate_night.png" fade="0.7"]
 
-mob_npc_c: 公主？你們比約定的還早。帶走她。
+mob_npc_c: 公主？你們比約定的早。帶過來。
 
-mob_leader (hesitant): 等等——你們答應過的糧食呢？
+mob_leader (hesitant): 等等……你們答應的糧食呢？
 
-mob_npc_c: 打下城之後再說。
+mob_npc_c (cold): 打下王城之後再說。誰知道你們是不是在騙我們？
 
-[wait time="1.0"]
+mob_leader (shocked): ……什麼？
 
-mob_leader (hesitant): ……什麼？
+princess: （我早就知道會這樣。但我還是選擇相信——因為我以為只要展現誠意，只要讓他們看到我的眼淚，就夠了。）
 
-[wait time="0.5"]
-
-princess: （我早就知道會這樣。但我還是選擇了相信——因為我以為展現誠意就夠了。飢餓和仇恨面前，誠意一文不值。）
-
-[wait time="1.0"]
-
-leave princess
-leave mob_leader
+princess (hollow): （飢餓面前，誠意一文不值。仇恨面前，真相來得太遲，就和謊言一樣。）
 
 [signal arg="cut_to_silence"]
 
-[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+[wait time="1.0"]
 
-[wait time="3.0"]
+leave --All--
 
-「真相說得太遲，就和謊言沒有區別。」
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
-[wait time="2.0"]
+[wait time="3.5"]
 
-帶著這份記憶……回到一切開始之前。
+princess: 「真相說得太遲，就和謊言沒有區別。」
 
-[wait time="1.5"]
+[wait time="2.5"]
 
-[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+princess: （下一次……我不能再只靠「人民」。也不能只靠「忠臣」。我得找到真正能改變一切的人——即使他曾經拿劍指著我的心臟。）
 
-# === 獲得情報 ===
+[wait time="1.8"]
+
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
 [signal arg="intel:intel_mob_manipulation"]
-[signal arg="death_context:{'death_message': '你被信任的平民出賣給敵軍。\n\n「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation'], 'killer': 'mob'}"]
+[signal arg="intel:intel_starvation_real"]
+[signal arg="intel:intel_bruno_wife_death"]
+[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。\\n\\n「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation', 'intel_starvation_real', 'intel_bruno_wife_death'], 'killer': 'mob'}"]
 [signal arg="trigger_death"]

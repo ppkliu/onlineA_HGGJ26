@@ -62,6 +62,30 @@
 "mirror": false,
 "scale": 1.0,
 "scene": ""
+},
+"hollow": {
+"export_overrides": {
+"image": "res://art/characters/princess_sad.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"awed": {
+"export_overrides": {
+"image": "res://art/characters/princess_shocked.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"cold": {
+"export_overrides": {
+"image": "res://art/characters/princess_determined.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
 }
 },
 &"scale": 1.0

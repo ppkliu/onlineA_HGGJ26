@@ -1,21 +1,22 @@
-# 序章：死亡情報畫面 → 獲得情報 → 輪迴啟動
+# 序章：死亡情報畫面 → 輪迴啟動
 
-[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
-[wait time="3.0"]
+[wait time="3.5"]
 
 「無知，是最溫柔的死刑。」
 
-[wait time="2.0"]
+[wait time="2.8"]
 
 帶著這份記憶……回到一切開始之前。
 
-[wait time="1.5"]
+[wait time="1.8"]
 
-[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
 
 # === 獲得情報（透過 signal 傳遞）===
 [signal arg="intel:intel_city_fall"]
 [signal arg="intel:intel_assassination"]
-[signal arg="death_context:{'death_message': '你被最信任的騎士長刺殺身亡。\n\n「無知，是最溫柔的死刑。」', 'intel_reward': ['intel_city_fall', 'intel_assassination'], 'killer': 'retainer'}"]
+[signal arg="intel:intel_magic_core_sabotage"]
+[signal arg="death_context:{'death_message': '你被最信任的騎士長親手刺殺。\\n\\n「無知，是最溫柔的死刑。」\\n\\n他哭了。你卻到死都無法理解為什麼。', 'intel_reward': ['intel_city_fall', 'intel_assassination', 'intel_magic_core_sabotage'], 'killer': 'retainer'}"]
 [signal arg="trigger_death"]
