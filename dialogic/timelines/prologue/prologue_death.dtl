@@ -3,15 +3,15 @@
 [style name="flashback_style"]
 [background arg="res://art/backgrounds/darkness.png" fade="2.0"]
 
-艾蓮娜: （……一片黑暗。）
-艾蓮娜: （我死了嗎……？）
-艾蓮娜: （王城在燃燒……人們在逃亡……而我……被最信任的人所殺。）
+princess: （……一片黑暗。）
+princess: （我死了嗎……？）
+princess: （王城在燃燒……人們在逃亡……而我……被最信任的人所殺。）
 
 [wait time="1.5"]
 
-艾蓮娜: （為什麼？這一切……到底是為什麼？）
-艾蓮娜: （如果……如果能回到一切發生之前……）
-艾蓮娜: （如果能知道真相……是不是就能改變結局？）
+princess: （為什麼？這一切……到底是為什麼？）
+princess: （如果……如果能回到一切發生之前……）
+princess: （如果能知道真相……是不是就能改變結局？）
 
 [wait time="2.0"]
 

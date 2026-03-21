@@ -2,20 +2,20 @@
 
 [style name="flashback_style"]
 
-賽拉斯 (tearful): 殿下……我一直在守護您。
-賽拉斯 (tearful): 從您出生那天起，我就發誓要用我的一生來保護您。
+loyal_retainer (tearful): 殿下……我一直在守護您。
+loyal_retainer (tearful): 從您出生那天起，我就發誓要用我的一生來保護您。
 
-艾蓮娜: 賽拉斯……你在說什麼？我們快走吧！
+princess: 賽拉斯……你在說什麼？我們快走吧！
 
-賽拉斯 (tearful): 但是……這個世界已經不需要被保護的公主了。
-賽拉斯 (tearful): 如果……如果您繼續活著，等待您的只有更殘酷的命運。
+loyal_retainer (tearful): 但是……這個世界已經不需要被保護的公主了。
+loyal_retainer (tearful): 如果……如果您繼續活著，等待您的只有更殘酷的命運。
 
-艾蓮娜 (shocked): ……你在說什麼？
+princess (shocked): ……你在說什麼？
 
 [wait time="0.5"]
 
-賽拉斯 (tearful): 請原諒我，殿下。
-賽拉斯 (tearful): 這是……我最後能為您做的事了。
+loyal_retainer (tearful): 請原諒我，殿下。
+loyal_retainer (tearful): 這是……我最後能為您做的事了。
 
 [wait time="0.3"]
 
@@ -24,14 +24,14 @@
 [wait time="0.8"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/sword_stab.ogg" volume="-10"]
 
-艾蓮娜: ……！
+princess: ……！
 
 [wait time="1.5"]
 
-艾蓮娜: （……好痛。胸口好痛。）
-艾蓮娜: （……為什麼？賽拉斯……為什麼……？）
-艾蓮娜: （我什麼都不知道……我什麼都不明白……）
-艾蓮娜: （眼前的一切……正在褪去顏色……）
+princess: （……好痛。胸口好痛。）
+princess: （……為什麼？賽拉斯……為什麼……？）
+princess: （我什麼都不知道……我什麼都不明白……）
+princess: （眼前的一切……正在褪去顏色……）
 
 [wait time="2.0"]
 

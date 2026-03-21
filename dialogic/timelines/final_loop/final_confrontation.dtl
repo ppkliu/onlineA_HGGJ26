@@ -4,60 +4,60 @@
 # [PLACEHOLDER] [background arg="res://art/backgrounds/throne_room.png" fade="1.0"]
 # [PLACEHOLDER] [music path="res://audio/bgm/final_truth.ogg" fade="2.0"]
 
-艾蓮娜 (determined): （這一次……我知道了所有的真相。）
-艾蓮娜 (determined): （維克多大臣是內應。他偽造了國王的命令，瓦解了邊境防線。）
-艾蓮娜 (determined): （而賽拉斯……他知道這一切，卻選擇了最殘酷的方式來保護我。）
-艾蓮娜 (determined): （但這一次不一樣。我不再無知。我要改變結局。）
+princess (determined): （這一次……我知道了所有的真相。）
+princess (determined): （維克多大臣是內應。他偽造了國王的命令，瓦解了邊境防線。）
+princess (determined): （而賽拉斯……他知道這一切，卻選擇了最殘酷的方式來保護我。）
+princess (determined): （但這一次不一樣。我不再無知。我要改變結局。）
 
 [wait time="1.0"]
 
-艾蓮娜: 賽拉斯，我有話對你說。
+princess: 賽拉斯，我有話對你說。
 
-賽拉斯: 殿下？
+loyal_retainer: 殿下？
 
-艾蓮娜: 我知道維克多大臣在做什麼。我知道邊境的命令是偽造的。
+princess: 我知道維克多大臣在做什麼。我知道邊境的命令是偽造的。
 
-賽拉斯 (shocked): ……！殿下，您……您怎麼——
+loyal_retainer (shocked): ……！殿下，您……您怎麼——
 
-艾蓮娜: 我也知道……你打算在最後關頭做什麼。
+princess: 我也知道……你打算在最後關頭做什麼。
 
 [wait time="0.5"]
 
-賽拉斯 (tearful): ……殿下。
-賽拉斯 (tearful): 您……都知道了？
+loyal_retainer (tearful): ……殿下。
+loyal_retainer (tearful): 您……都知道了？
 
-艾蓮娜: 你想殺了我，對嗎？因為你覺得……如果王城陷落，等待我的命運比死更可怕。
+princess: 你想殺了我，對嗎？因為你覺得……如果王城陷落，等待我的命運比死更可怕。
 
-賽拉斯 (tearful): ……是的。
-賽拉斯 (tearful): 敵國對俘虜的公主……不會有任何仁慈。
-賽拉斯 (tearful): 我……我只是想讓您免受那樣的痛苦……
+loyal_retainer (tearful): ……是的。
+loyal_retainer (tearful): 敵國對俘虜的公主……不會有任何仁慈。
+loyal_retainer (tearful): 我……我只是想讓您免受那樣的痛苦……
 
-艾蓮娜 (sad): 所以你選擇了最殘忍的溫柔。
+princess (sad): 所以你選擇了最殘忍的溫柔。
 
-賽拉斯 (tearful): ……
+loyal_retainer (tearful): ……
 
 [wait time="1.0"]
 
-艾蓮娜 (determined): 但你錯了，賽拉斯。
-艾蓮娜 (determined): 你以為我什麼都不知道，什麼都做不了。
-艾蓮娜 (determined): 但真正讓這個國家走向毀滅的……不是敵人的強大，而是我們的無知。
+princess (determined): 但你錯了，賽拉斯。
+princess (determined): 你以為我什麼都不知道，什麼都做不了。
+princess (determined): 但真正讓這個國家走向毀滅的……不是敵人的強大，而是我們的無知。
 
-賽拉斯: 殿下……
+loyal_retainer: 殿下……
 
-艾蓮娜 (determined): 現在聽我說。我們還有半年的時間。
-艾蓮娜 (determined): 召集莉迪亞將軍，撤銷偽造的調防命令。
-艾蓮娜 (determined): 在朝會上揭發維克多大臣的陰謀。
-艾蓮娜 (determined): 鞏固東部防線，與鄰國建立真正的同盟。
+princess (determined): 現在聽我說。我們還有半年的時間。
+princess (determined): 召集莉迪亞將軍，撤銷偽造的調防命令。
+princess (determined): 在朝會上揭發維克多大臣的陰謀。
+princess (determined): 鞏固東部防線，與鄰國建立真正的同盟。
 
-賽拉斯: ……殿下，您……變了。
+loyal_retainer: ……殿下，您……變了。
 
-艾蓮娜: 不。我只是終於睜開了眼睛。
+princess: 不。我只是終於睜開了眼睛。
 
 [wait time="0.5"]
 
-賽拉斯 (tearful): ……好。
-賽拉斯: 如果殿下有這樣的覺悟……那我賽拉斯，將追隨您到最後。
-賽拉斯: 這一次，不是用劍……而是用忠誠。
+loyal_retainer (tearful): ……好。
+loyal_retainer: 如果殿下有這樣的覺悟……那我賽拉斯，將追隨您到最後。
+loyal_retainer: 這一次，不是用劍……而是用忠誠。
 
 [wait time="1.0"]
 
