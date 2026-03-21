@@ -23,3 +23,7 @@ mono_crash.*.json
 
 # Environment
 .env
+
+# Dialogic 2 plugin (installed via Asset Library)
+addons/dialogic/
+!addons/dialogic/custom_events/
