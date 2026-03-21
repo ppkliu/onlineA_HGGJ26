@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" path="res://art/backgrounds/princess_room_gj.png" id="2_bg"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
 [ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
-[ext_resource type="Texture2D" path="res://art/characters/maid_npc.png" id="5_maid"]
+[ext_resource type="SpriteFrames" path="res://art/characters/maid_npc.tres" id="5_maid_frames"]
 [ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
@@ -69,9 +69,11 @@ shape = SubResource("CircleShape2D_interact_detect")
 [node name="MaidNPC" type="CharacterBody2D" parent="."]
 position = Vector2(1300, 720)
 
-[node name="Sprite2D" type="Sprite2D" parent="MaidNPC"]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("5_maid")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MaidNPC"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("5_maid_frames")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC"]
 position = Vector2(0, 40)

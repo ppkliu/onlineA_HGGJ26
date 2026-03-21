@@ -132,14 +132,14 @@ loyal_retainer (tearful): 請原諒臣。
 
 [wait time="1.0"]
 
+[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.3"]
+
 loyal_retainer (tearful): 如果有來世……臣希望能在和平的世界裡，繼續守護您。
 
 [wait time="2.5"]
 
 # === CUT TO SILENCE ===
 [signal arg="cut_to_silence"]
-
-[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.0"]
 
 [wait time="1.0"]
 
