@@ -1,21 +1,24 @@
 {
-"@path": "res://dialogic/characters/suspect_b.dch",
-"color": "Color(0.3, 0.7, 0.4, 1)",
-"custom_info": {},
-"description": "邊境將軍，戰功彪炳。收到了矛盾的命令，在忠誠與疑惑之間掙扎。",
-"display_name": "莉迪亞將軍",
-"mirror": false,
-"nicknames": ["莉迪亞", "將軍"],
-"offset": "Vector2(0, 0)",
-"portraits": {
-	"default": {
-		"export_overrides": {
-			"image": "\"res://art/characters/suspect_b_default.svg\""
-		},
-		"mirror": false,
-		"scale": 1.0,
-		"scene": ""
-	}
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.3, 0.7, 0.4, 1),
+&"custom_info": {},
+&"default_portrait": "default",
+&"description": "邊境將軍，戰功彪炳。收到了矛盾的命令，在忠誠與疑惑之間掙扎。",
+&"display_name": "莉迪亞將軍",
+&"mirror": false,
+&"nicknames": ["莉迪亞", "將軍"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/suspect_b_default.svg"
 },
-"scale": 1.0
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
 }

@@ -1,21 +1,24 @@
 {
-"@path": "res://dialogic/characters/suspect_c.dch",
-"color": "Color(0.6, 0.4, 0.8, 1)",
-"custom_info": {},
-"description": "王室祭司，掌管神殿。看似超然世外，卻對王國的秘密知之甚深。",
-"display_name": "艾爾文祭司",
-"mirror": false,
-"nicknames": ["艾爾文", "祭司"],
-"offset": "Vector2(0, 0)",
-"portraits": {
-	"default": {
-		"export_overrides": {
-			"image": "\"res://art/characters/suspect_c_default.svg\""
-		},
-		"mirror": false,
-		"scale": 1.0,
-		"scene": ""
-	}
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.6, 0.4, 0.8, 1),
+&"custom_info": {},
+&"default_portrait": "default",
+&"description": "王室祭司，掌管神殿。看似超然世外，卻對王國的秘密知之甚深。",
+&"display_name": "艾爾文祭司",
+&"mirror": false,
+&"nicknames": ["艾爾文", "祭司"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/suspect_c_default.svg"
 },
-"scale": 1.0
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
 }
