@@ -1,0 +1,80 @@
+# 第 3 輪迴：尋找達爾 — Day 1-30
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/investigation_cold.ogg" fade="2.0"]
+
+join princess left
+
+princess: （下城區暗巷。刻意避開布魯諾的勢力範圍。我不需要任何人的幫忙。）
+
+[wait time="0.8"]
+
+# === 打聽達爾 ===
+
+join old_woman right
+
+princess (disguised): 老人家，請問你知道一個被弄瞎眼的老工匠嗎？他以前幫王宮做過工程。
+
+old_woman: 達爾？東邊廢井旁邊的磚房。但不要帶任何人去——他那雙眼睛就是因為知道了不該知道的事才被弄瞎的。
+
+leave old_woman
+
+[wait time="1.0"]
+
+# === 與達爾的對話 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/dal_house.png" fade="0.5"]
+
+join dal right
+
+dal (wary): 你的腳步聲太輕了。不是下城區的人。走吧。
+
+princess (determined): 我知道國王在備戰，也知道有人在煽動暴民。你幫國王建了什麼東西——所以才被弄瞎了眼睛。
+
+[wait time="1.0"]
+
+dal (quiet): ……
+
+[wait time="0.5"]
+
+dal (quiet): 好吧。你坐下。
+
+[wait time="0.8"]
+
+# === 達爾的完整證詞 ===
+
+dal (quiet): 兩年前國王找到我。他說朝中有叛徒，魔法陣如果被從內部破壞，城牆就是廢紙。他要我修一套不依賴魔法的地下防禦系統。
+
+[wait time="1.0"]
+
+dal (quiet): 徵兵、加稅、儲糧——全是為了這個工程。他用自己的名譽當代價掩護施工。
+
+[wait time="1.0"]
+
+dal (quiet): 工程完工第二天夜裡，三個黑衣人來了。
+
+[wait time="0.8"]
+
+dal (quiet): 領頭的人說話很輕、很慢，像在唸什麼好聽的詩——
+
+[wait time="0.5"]
+
+dal (quiet): 他們沒殺我。弄瞎我的眼睛比殺了我更安靜。
+
+[wait time="1.5"]
+
+dal (quiet): 防線啟動需要三個人同時操作三個機關。國王知道位置。我也知道——但我看不見路了。
+
+[wait time="1.0"]
+
+# === 獲得情報 ===
+[signal arg="intel:intel_king_truth"]
+
+princess: （……國王建了地下防線。徵兵和加稅全是為了這個。但弄瞎達爾的是誰？說話像在唸詩——……那不是父王的風格。但如果他故意壓低聲音呢？）
+
+[wait time="1.0"]
+
+leave dal
+leave princess
+
+jump 03_underground/

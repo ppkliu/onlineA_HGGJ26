@@ -47,10 +47,9 @@ princess: 帶著這份記憶……回到一切開始之前。
 
 [wait time="1.5"]
 
-# [PLACEHOLDER] [sound path="res://audio/sfx/loop_restart.ogg"]
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
 
 # === 獲得情報 ===
-[intel intel_chancellor_betrayal]
-
-[signal arg="death_context:{'death_message': '你被宰相的謊言操弄，親手交出了兵符，導致王城陷落。\n\n「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': 'intel_chancellor_betrayal', 'killer': 'chancellor'}"]
+[signal arg="intel:intel_chancellor_betrayal"]
+[signal arg="death_context:{'death_message': '你被宰相的謊言操弄，親手交出了兵符，導致王城陷落。\n\n「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]

@@ -10,14 +10,16 @@ princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎
 
 [wait time="1.0"]
 
-# 門外走廊傳來重物倒地與拖行聲
 [sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX"]
+[signal arg="camera_shake"]
 
 [wait time="0.3"]
 
 princess (shocked): 哇！好大聲！……莉娜——？你在外面嗎？
 
 [wait time="0.8"]
+
+princess (default): 門怎麼打不開……算了，等莉娜來就好了。
 
 [sound path="res://audio/sfx/door_knock.ogg" bus="SFX"]
 
@@ -27,15 +29,13 @@ princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生
 
 [wait time="1.2"]
 
-# 遠處的慘叫聲突然變大——有人在走廊上奔跑
 [sound path="res://audio/sfx/running_screams.ogg" bus="SFX"]
 
 princess (default): 嗯？好像有很多人在跑……啊！有人來了！是莉娜來接我了嗎——
 
 [wait time="1.5"]
 
-# 沉重的腳步聲急促靠近。金屬盔甲的碰撞聲。門鎖被暴力扭斷的尖銳聲響
 [sound path="res://audio/sfx/armor_approach.ogg" bus="SFX"]
 [sound path="res://audio/sfx/lock_break.ogg" bus="SFX"]
 
-jump prologue_assassination/
+jump 02_prologue_assassination/

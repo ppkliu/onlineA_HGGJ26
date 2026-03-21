@@ -1,0 +1,46 @@
+# 第 3 輪迴：發現地下防線 — Day 45-60
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/underground.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/underground.ogg" fade="2.0"]
+
+join princess left
+
+princess (awed): （城堡地下。秘密入口。石壁上刻著精密的機關紋路。拉閘、落石、陷阱——一套完整的地下防禦工事。）
+
+[wait time="1.0"]
+
+princess (awed): ……這就是父王花了兩年建的東西。
+
+[wait time="1.0"]
+
+# === 鎖住的糧倉 ===
+
+princess: （防線一側，厚重鐵門，掛著大鎖。透過鐵柵欄看進去——堆滿糧袋，足以養活下城區幾個月。）
+
+[wait time="0.8"]
+
+princess (angry): 下城區的人在餓死——而糧食被鎖在這裡。
+
+[wait time="1.0"]
+
+princess: （鎖上有一個印記……不是王家紋章，是「財政署」的印章。鎖的製造日期比防線完工晚了三個月。）
+
+[wait time="0.8"]
+
+princess: （……財政署。是誰管的？……算了，這不重要。重要的是父王把糧食鎖在這裡，讓平民挨餓。）
+
+[wait time="0.5"]
+
+# === 能源管線 ===
+
+princess: （地下入口附近的能源管線上——有不自然的腐蝕痕跡。像是有人定期往裡面注入了什麼東西。）
+
+# === 獲得情報 ===
+[signal arg="intel:intel_magic_sabotage"]
+
+[wait time="1.0"]
+
+leave princess
+
+jump 04_misunderstanding/

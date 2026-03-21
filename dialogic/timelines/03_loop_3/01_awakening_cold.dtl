@@ -1,0 +1,42 @@
+# 第 3 輪迴：心死之後醒來
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
+# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+
+join princess left
+
+princess (hollow): ……第三次了。
+
+[wait time="1.0"]
+
+princess: （貴族不可信。平民不可信。每一次我相信了什麼人，就被那個人毀掉了。）
+
+[wait time="0.8"]
+
+princess: （但有一個人我一直在迴避——父王。宰相的帳簿是假的，平民被人操弄，那父王到底是什麼？）
+
+[wait time="1.0"]
+
+princess (cold): （這一次，我不找盟友。一個人，去挖出所有的真相。）
+
+[wait time="0.8"]
+
+join maid right
+
+maid (default): 殿下～早安！宰相大人——
+
+princess (cold): 退回去。幫我準備偽裝，我要去找一個人。
+
+maid (default): 殿下……？
+
+princess (cold): 不要跟任何人說。
+
+[wait time="0.5"]
+
+[signal arg="day_counter:180"]
+
+leave princess
+leave maid
+
+jump 02_search_dal/

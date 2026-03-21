@@ -13,13 +13,8 @@
 [wait time="1.5"]
 
 [sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
-# 微弱的、倒轉的音樂盒聲響，像是時鐘被倒撥
 
-# === 獲得情報 ===
-[intel intel_city_fall]
-[intel intel_assassination]
-
-# === 獲得情報（透過 signal 傳遞，避免顯示為文字）===
+# === 獲得情報（透過 signal 傳遞）===
 [signal arg="intel:intel_city_fall"]
 [signal arg="intel:intel_assassination"]
 [signal arg="death_context:{'death_message': '你被最信任的騎士長刺殺身亡。\n\n「無知，是最溫柔的死刑。」', 'intel_reward': ['intel_city_fall', 'intel_assassination'], 'killer': 'retainer'}"]
