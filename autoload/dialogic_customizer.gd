@@ -10,8 +10,8 @@ extends Node
 const BOX_WIDTH_RATIO := 0.75
 const BOX_HEIGHT_RATIO := 0.25
 const BOX_OPACITY := 0.5
-const NAME_LABEL_OPACITY := 0.55
-const NAME_LABEL_OFFSET := Vector2(10, -60)
+const NAME_LABEL_OPACITY := 0.52
+const NAME_LABEL_OFFSET := Vector2(10, -75)
 const MIN_FONT_SIZE := 20
 
 var _base_font_size := 0
@@ -29,7 +29,8 @@ func _on_node_added(node: Node) -> void:
 		# 等 Dialogic 完成初始化
 		await get_tree().process_frame
 		await get_tree().process_frame
-		_customize_textbox(node)
+		if is_instance_valid(node) and node.is_inside_tree():
+			_customize_textbox(node)
 
 
 func _customize_textbox(layer: Node) -> void:
