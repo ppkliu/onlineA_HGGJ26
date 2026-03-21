@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7khuqaln3muh"
-valid=false
+path="res://.godot/imported/chancellor_cold.svg-812527aacc045ffc2599e638b1f78fa8.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://art/characters/chancellor_cold.svg"
+dest_files=["res://.godot/imported/chancellor_cold.svg-812527aacc045ffc2599e638b1f78fa8.ctex"]
 
 [params]
 
