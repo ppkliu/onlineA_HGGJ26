@@ -4,28 +4,54 @@
 # [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
 
-[wait time="1.5"]
+[wait time="2.0"]
 
 princess (default): 嗯……好吵喔……是在辦什麼慶典嗎？
+
+[wait time="1.0"]
+
+princess (default): 窗戶外面紅紅的……是煙火嗎？好漂亮……
+
+[wait time="1.2"]
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/corridor_crash.ogg"]
 [signal arg="camera_shake"]
 
-princess (shocked): 哇！好大聲！莉娜——？你在外面嗎？幫我開一下門嘛——
+[wait time="0.5"]
 
-princess: （咦，門怎麼打不開……一定是莉娜忘記了。算了，等她來就好了。）
+princess (shocked): 哇！好大聲！
 
 [wait time="0.8"]
 
-princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生的……外面大概只是在演習吧？
+princess (default): 莉娜——？你在外面嗎？幫我開一下門嘛——
 
 [wait time="1.0"]
 
+princess: （咦，門怎麼打不開……）
+
+[wait time="0.8"]
+
+princess: （一定是莉娜忘記了。算了，等她來就好了。）
+
+[wait time="1.5"]
+
+princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生的……
+
+[wait time="1.0"]
+
+princess (default): 外面大概只是在演習吧？每次演習都好吵……
+
+[wait time="1.5"]
+
 # [PLACEHOLDER] [sound path="res://audio/sfx/running_screams.ogg"]
+
+princess (default): 嗯？好像有很多人在跑？
+
+[wait time="1.0"]
 
 princess (default): 啊！有人來了！是莉娜來接我了嗎——
 
-[wait time="1.5"]
+[wait time="2.0"]
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/armor_approach.ogg"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/lock_break.ogg"]

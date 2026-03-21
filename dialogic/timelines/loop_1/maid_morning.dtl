@@ -3,28 +3,76 @@
 join princess left
 join maid right
 
-maid (default): 殿下～早安！宰相大人送來了南國的寶石呢！邊境的小毛賊陛下已經派人處理了，您完全不需要操心～
-
-princess (shocked): 莉娜……妳有沒有覺得……今天好像在哪裡經歷過？
-
-maid (default): 殿下在說什麼呀？您是不是做惡夢了？
-
-princess: （一模一樣。她的聲音、語氣、端著銀盤走進來的方式。如果這不是夢……那我回到了過去？）
+maid (default): 殿下～早安！宰相大人送來了南國的寶石呢！
 
 [wait time="0.5"]
 
-princess: （宰相大人一直對我很溫柔。或許他知道些什麼。）
+maid (default): 邊境的小毛賊陛下已經派人處理了，您完全不需要操心～
+
+[wait time="1.0"]
+
+princess (shocked): ……莉娜？
+
+[wait time="0.8"]
+
+maid (default): 怎麼了殿下？您臉色好差，是不是沒睡好？
+
+[wait time="1.0"]
+
+princess (shocked): 莉娜……你剛才說什麼？
+
+[wait time="0.5"]
+
+maid (default): 嗯？我說宰相大人送來了南國的寶石呀。殿下您果然還在發呆呢～
+
+[wait time="1.5"]
+
+princess: （……這些話。我好像在哪裡聽過。一模一樣。連語氣都一樣。）
+
+[wait time="1.0"]
+
+princess: （不對。一定是我太緊張了。剛才的夢太可怕了，所以……）
+
+[wait time="1.5"]
+
+princess (shocked): 莉娜……今天是什麼日子？
+
+[wait time="0.5"]
+
+maid (default): 今天？就是普通的星期三呀。殿下怎麼連日子都忘了？您真的是做惡夢了吧。
+
+[wait time="1.5"]
+
+princess: （星期三。跟夢裡的……一樣。）
+
+[wait time="1.0"]
+
+princess: （不、一定是巧合。一定是的。）
+
+[wait time="2.0"]
+
+princess: （可是……如果不是夢呢？如果那些事是真的呢？）
+
+[wait time="1.0"]
+
+princess: （宰相大人一直對我很溫柔。也許……也許他知道些什麼。）
+
+[wait time="1.5"]
 
 # 系統提示
 [signal arg="day_counter:180"]
 
 - 去找宰相大人談談
-	princess (determined): 莉娜，幫我更衣。我要去見宰相大人。
-	maid (default): 咦？殿下今天怎麼突然想見宰相大人？好的好的，我馬上準備！
+	princess: 莉娜……幫我更衣。我想去見宰相大人。
+	[wait time="0.5"]
+	maid (default): 咦？殿下今天怎麼突然想見宰相大人？
+	[wait time="0.5"]
+	maid (default): 好的好的，我馬上準備！
 	leave princess
 	leave maid
 	jump investigation_a/
 - 先在房間裡看看
-	princess: （……不急。讓我先想想。）
+	princess: （……我再想想。也許只是夢。應該只是夢。）
+	[wait time="0.5"]
 	leave princess
 	leave maid

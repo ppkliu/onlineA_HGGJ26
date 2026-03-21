@@ -17,7 +17,7 @@
 &"portraits": {
 "angry": {
 "export_overrides": {
-"image": "res://art/characters/princess_angry.svg"
+"image": "res://art/characters/princess_angry.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -33,7 +33,7 @@
 },
 "determined": {
 "export_overrides": {
-"image": "res://art/characters/princess_determined.svg"
+"image": "res://art/characters/princess_determined.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -41,7 +41,7 @@
 },
 "sad": {
 "export_overrides": {
-"image": "res://art/characters/princess_sad.svg"
+"image": "res://art/characters/princess_sad.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -49,7 +49,7 @@
 },
 "shocked": {
 "export_overrides": {
-"image": "res://art/characters/princess_shocked.svg"
+"image": "res://art/characters/princess_shocked.png"
 },
 "mirror": false,
 "scale": 1.0,

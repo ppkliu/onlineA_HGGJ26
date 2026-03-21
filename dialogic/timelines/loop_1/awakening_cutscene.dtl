@@ -3,18 +3,52 @@
 # [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
 # [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
 
+[wait time="1.5"]
+
 join princess center
 
 princess (shocked): ——！
 
-[wait time="0.5"]
+[wait time="1.5"]
 
-princess: （心臟在狂跳。我還記得那把劍、賽拉斯的眼淚、胸口被貫穿的觸感。但我活著。指甲上還塗著昨天的蔻丹。）
+princess: （……）
 
-princess (shocked): 這……是夢嗎……？
+[wait time="1.0"]
 
-[wait time="0.5"]
+princess: （好亮……這是哪裡？）
 
-princess: （……莉娜好像在房間裡。先去找她說說話。）
+[wait time="1.0"]
+
+princess: （手指……還能動。指甲上還塗著昨天的蔻丹。）
+
+[wait time="1.5"]
+
+princess (shocked): （我的胸口……沒有傷口？）
+
+[wait time="1.0"]
+
+princess: （可是我明明記得……那把劍……賽拉斯的臉……好冷好冷的感覺……）
+
+[wait time="2.0"]
+
+princess (shocked): ……是夢嗎？
+
+[wait time="1.5"]
+
+princess: （不……太真實了。那種冷，不是夢裡會有的。）
+
+[wait time="1.5"]
+
+princess: （可是我活著。這裡是我的房間。一切好像都跟平常一樣。）
+
+[wait time="2.0"]
+
+princess: （我不懂發生了什麼事……但是莉娜好像在房間裡。）
+
+[wait time="1.0"]
+
+princess: （先去找她說說話吧……也許她知道些什麼。）
+
+[wait time="1.0"]
 
 leave princess

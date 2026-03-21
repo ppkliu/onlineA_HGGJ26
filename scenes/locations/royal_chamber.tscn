@@ -66,8 +66,8 @@ shape = SubResource("RectangleShape2D_player")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractionDetector"]
 shape = SubResource("CircleShape2D_interact_detect")
 
-[node name="MaidNPC" type="StaticBody2D" parent="."]
-position = Vector2(1300, 700)
+[node name="MaidNPC" type="CharacterBody2D" parent="."]
+position = Vector2(1300, 720)
 
 [node name="Sprite2D" type="Sprite2D" parent="MaidNPC"]
 scale = Vector2(0.15, 0.15)
