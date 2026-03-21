@@ -1,0 +1,199 @@
+[gd_scene load_steps=3 format=3 uid="uid://dialog_ctx_menu"]
+
+[ext_resource type="Script" path="res://scenes/ui/dialog_context_menu.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.08, 0.06, 0.12, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.6, 0.3, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+
+[node name="DialogContextMenu" type="CanvasLayer"]
+layer = 100
+process_mode = 3
+script = ExtResource("1")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="Panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -260.0
+offset_right = 240.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "選項"
+horizontal_alignment = 1
+
+[node name="HSep1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="FontSizeRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="FontSizeLabel" type="Label" parent="Panel/VBox/FontSizeRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "字型大小"
+size_flags_horizontal = 0
+
+[node name="FontSizeSlider" type="HSlider" parent="Panel/VBox/FontSizeRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 32.0
+max_value = 96.0
+step = 4.0
+value = 68.0
+
+[node name="FontSizeValue" type="Label" parent="Panel/VBox/FontSizeRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(50, 0)
+text = "68"
+horizontal_alignment = 2
+
+[node name="SpeedRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SpeedLabel" type="Label" parent="Panel/VBox/SpeedRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "對話速度"
+size_flags_horizontal = 0
+
+[node name="SpeedSlider" type="HSlider" parent="Panel/VBox/SpeedRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.2
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="SpeedValue" type="Label" parent="Panel/VBox/SpeedRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(50, 0)
+text = "1.0"
+horizontal_alignment = 2
+
+[node name="FastForwardRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="FastForwardLabel" type="Label" parent="Panel/VBox/FastForwardRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "加速倍率"
+size_flags_horizontal = 0
+
+[node name="FastForwardSlider" type="HSlider" parent="Panel/VBox/FastForwardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 2.0
+max_value = 10.0
+step = 0.5
+value = 6.0
+
+[node name="FastForwardValue" type="Label" parent="Panel/VBox/FastForwardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(50, 0)
+text = "6.0x"
+horizontal_alignment = 2
+
+[node name="OpacityRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="OpacityLabel" type="Label" parent="Panel/VBox/OpacityRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "對話框透明度"
+size_flags_horizontal = 0
+
+[node name="OpacitySlider" type="HSlider" parent="Panel/VBox/OpacityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="OpacityValue" type="Label" parent="Panel/VBox/OpacityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(60, 0)
+text = "50%"
+horizontal_alignment = 2
+
+[node name="HSep2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SaveRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="Panel/VBox/SaveRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "儲存紀錄"
+
+[node name="SaveCountLabel" type="Label" parent="Panel/VBox/SaveRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "(0/3)"
+horizontal_alignment = 2
+
+[node name="HSep3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "回到遊戲"
+
+[node name="MenuButton" type="Button" parent="Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "回到首頁"
