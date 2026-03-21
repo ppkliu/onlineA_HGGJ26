@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
+[ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
+
+[sub_resource type="Resource" id="intel_city_fall"]
+script = ExtResource("2")
+id = "intel_city_fall"
+title = "城破的結果"
+description = "王城在大火中陷落，一切都在一夜之間崩塌。這是公主親眼見證的末日。"
+category = &"general"
+source_loop = 0
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_retainer_motive"]
+script = ExtResource("2")
+id = "intel_retainer_motive"
+title = "忠臣的理由"
+description = "忠臣含淚刺殺公主——他說這是為了保護她免受更殘酷的命運。但這真的是全部的理由嗎？"
+category = &"character"
+source_loop = 1
+unlocks_branches = ["branch_b"]
+
+[sub_resource type="Resource" id="intel_faction_a"]
+script = ExtResource("2")
+id = "intel_faction_a"
+title = "勢力 A 的線索"
+description = "王國內部存在一股暗流——某些貴族似乎早已知道戰爭將至，卻選擇了沉默。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = ["branch_c"]
+
+[sub_resource type="Resource" id="intel_faction_b"]
+script = ExtResource("2")
+id = "intel_faction_b"
+title = "勢力 B 的線索"
+description = "邊境的將軍們收到了矛盾的命令——有人在刻意削弱王國的防線。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = ["branch_d"]
+
+[sub_resource type="Resource" id="intel_conspiracy_evidence"]
+script = ExtResource("2")
+id = "intel_conspiracy_evidence"
+title = "陰謀的證據"
+description = "一封被燒毀大半的密信殘片，上面的印章指向了王國最不可能的方向。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = ["branch_confrontation"]
+
+[sub_resource type="Resource" id="intel_dungeon_key"]
+script = ExtResource("2")
+id = "intel_dungeon_key"
+title = "地下牢的秘密"
+description = "城堡地下牢中關押著一個不應該存在的囚犯——他知道一切的真相。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = ["branch_dungeon"]
+
+[sub_resource type="Resource" id="intel_retainer_past"]
+script = ExtResource("2")
+id = "intel_retainer_past"
+title = "忠臣的過去"
+description = "忠臣並非天生的守護者——他曾經是另一個陣營的人。他的轉變背後藏著無法言說的秘密。"
+category = &"character"
+source_loop = 4
+unlocks_branches = ["branch_truth"]
+
+[sub_resource type="Resource" id="intel_true_traitor"]
+script = ExtResource("2")
+id = "intel_true_traitor"
+title = "真正的內鬼"
+description = "所有的線索最終指向了一個令人心碎的事實——背叛王國的人，竟是公主最信任的人之一。"
+category = &"truth"
+source_loop = 5
+unlocks_branches = ["final_branch"]
+
+[resource]
+script = ExtResource("1")
+items = [SubResource("intel_city_fall"), SubResource("intel_retainer_motive"), SubResource("intel_faction_a"), SubResource("intel_faction_b"), SubResource("intel_conspiracy_evidence"), SubResource("intel_dungeon_key"), SubResource("intel_retainer_past"), SubResource("intel_true_traitor")]
