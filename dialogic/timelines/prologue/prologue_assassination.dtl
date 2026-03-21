@@ -58,6 +58,8 @@ loyal_retainer (tearful): 殿下，請聽臣說。
 
 # 賽拉斯緩緩站起來。他拔出了劍。劍身上的血跡在火光中發出暗紅色的光
 
+[background arg="res://art/backgrounds/prologue_knight_draws_weapon.png" fade="0.6"]
+
 princess (shocked): 你……你在做什麼？
 
 loyal_retainer (tearful): 陛下最後的密令——
@@ -103,6 +105,7 @@ loyal_retainer (tearful): 如果有來世……臣希望能在一個和平的世
 [signal arg="cut_to_silence"]
 
 # 畫面慢動作。賽拉斯舉劍。火光在劍刃上流動
+[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.3"]
 
 princess (sad): ——
 
