@@ -1,46 +1,46 @@
-# 第 2 輪迴：路線 B — 庭園調查（新解鎖劇情）
+# 第 2 輪迴：潛入下城區 — 布魯諾、生活、坦白身份
 
 [style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/garden.png" fade="0.8"]
-# [PLACEHOLDER] [music path="res://audio/bgm/investigation.ogg" fade="2.0"]
 
-princess: （庭園……平時這裡是我最喜歡的地方。但現在我無心欣賞花朵。）
+# === Day 1-15：接觸布魯諾 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
 
-[wait time="0.5"]
+# 鐵匠鋪。布魯諾在砸鐵，更像是在發洩
 
-suspect_b: 殿下？真難得在庭園看到您一個人。
+princess (disguised): 打擾了。我是從內城逃出來的家僕，主人家因為反對國王的政策被抄了。
 
-princess: 莉迪亞將軍。
-
-suspect_b: 您看起來心事重重。有什麼煩惱嗎？
-
-if IntelSystem.has_intel("intel_faction_b"):
-	princess: 將軍……最近邊境的情況如何？
-	suspect_b: ……殿下為何突然問起邊境的事？
-	princess: 我聽說……邊境收到了一些新的命令？
-	suspect_b: 是的。陛下的密令——要求我們將東部的守軍調往北方。
-	suspect_b: 說實話，我覺得這個部署很奇怪。東部防線空虛的話……
-	princess: （果然如此。那道命令是偽造的。）
-	princess: 將軍，如果我說……那道命令可能不是父王下的呢？
-	suspect_b: ……什麼？殿下，您在說什麼？
-	princess: 我只是有一個假設。請將軍先不要執行那道命令。
-	suspect_b: ……殿下，這可是違抗王命……
-	princess (determined): 相信我，將軍。
-	suspect_b: ……我會考慮的。
-else:
-	princess: 沒什麼……只是想散散心。
-	suspect_b: 那要我陪您走走嗎？
-	princess: 不用了，謝謝將軍。
+mob_leader (suspicious): 妳的口音不像下城區的人。……哼。至少妳主人家還有骨氣。
 
 [wait time="0.5"]
 
-princess: （庭園的角落裡……有一扇我從未注意過的門。）
-princess: （它通往……地下？）
+# === Day 15-30：蒙太奇 ===
 
-princess: （門被鎖住了。上面刻著奇怪的紋章。）
-princess: （這或許就是通往地下牢的入口。如果能找到鑰匙……）
+princess: （物資越來越少。孩子們用泥巴捏「麵包」假裝吃。莉娜的哥哥帶著傷從前線偷跑回來。）
 
-# 獲得情報：地下牢的秘密（鑰匙線索）
-[intel intel_dungeon_key]
+princess: （他們不是暴民，是被逼到牆角的普通人。）
 
-princess: （今天先到這裡吧。我需要在其他地方找到打開這扇門的方法。）
+[wait time="0.5"]
+
+# === Day 30：坦白身份 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/blacksmith.png" fade="0.5"]
+
+princess (determined): 布魯諾。我不是什麼家僕。我是公主艾蓮娜。
+
+mob_leader (angry): ……什麼？
+
+princess (determined): 在你打我之前——聽我說。宰相莫里昂是叛徒，和敵國有密約。你們的饑荒和重稅，有一部分是備戰代價，但更大的部分是宰相暗中搞鬼。
+
+princess (determined): 我可以打開王家糧倉，先讓城裡的人吃飽，然後一起對付真正的敵人。
+
+mob_leader (grieving): 妳知道我老婆怎麼死的嗎？難產，需要一種草藥。但草藥全被徵為軍需了。我老婆的命，值不了一包草藥。
+
+princess (sad): ……對不起。但我能做的只有——讓以後不再有人經歷同樣的事。
+
+mob_leader (hesitant): ……給我三天。
+
+[wait time="0.5"]
+
+[intel intel_mob_contact]
+
+jump branch_a_revisit/

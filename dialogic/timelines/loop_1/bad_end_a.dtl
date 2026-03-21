@@ -1,0 +1,56 @@
+# 第 1 輪迴：Bad End A — 被操弄的正義
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/castle_wall_burning.png" fade="0.5"]
+
+[signal arg="cut_to_silence"]
+
+[wait time="1.0"]
+
+join princess center
+
+princess: （城牆上。敵軍如潮水般湧入城中。我跪在地上，看著火光吞噬自己的家。）
+
+[wait time="1.0"]
+
+# 遠處——賽拉斯的聲音在喊什麼。但太遠了，聽不清
+
+princess: （宰相是叛徒。）
+
+princess: （父王不是暴君——至少不完全是。）
+
+princess (sad): （是我害了所有人。因為我什麼都不知道，卻以為自己知道了一切。）
+
+[wait time="1.0"]
+
+princess: （如果還有下一次……我絕不會再相信任何一個主動對我微笑的人。）
+
+[wait time="1.5"]
+
+[signal arg="death_fade"]
+
+leave --All--
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+
+[wait time="3.0"]
+
+princess: 「最溫柔的謊言，造成最致命的背叛。」
+
+[wait time="2.5"]
+
+princess: （如果能重來……這一次，我不會再被任何人牽著走。）
+princess: （我要用自己的眼睛去看，用自己的腳去走。）
+
+[wait time="2.0"]
+
+princess: 帶著這份記憶……回到一切開始之前。
+
+[wait time="1.5"]
+
+# [PLACEHOLDER] [sound path="res://audio/sfx/loop_restart.ogg"]
+
+# === 獲得情報 ===
+[intel intel_chancellor_betrayal]
+
+[signal arg="death_context:{'death_message': '你被宰相的謊言操弄，親手交出了兵符，導致王城陷落。\n\n「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': 'intel_chancellor_betrayal', 'killer': 'chancellor'}"]
+[signal arg="trigger_death"]

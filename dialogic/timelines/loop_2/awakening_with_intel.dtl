@@ -1,35 +1,23 @@
-# 第 2 輪迴：帶著情報醒來
+# 第 2 輪迴：帶著憤怒醒來
 
 [style name="default_style"]
 # [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
 # [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
 
-princess: ……
+princess (hollow): ……又回來了。
 
 [wait time="0.5"]
 
-princess: （又回來了。又一次醒在這張床上。）
-princess: （但這一次，我知道了更多。）
+princess: （宰相是叛徒——這一點我確定了。但下城區的饑荒是真的。我不會再相信任何貴族。只能靠那些真正受苦的人了。）
 
-if IntelSystem.has_intel("intel_retainer_motive"):
-	princess: （賽拉斯……他在序章中殺了我，是為了「保護」我。）
-	princess: （但上一次殺我的人……穿的是大臣的袍服。）
-	princess: （也就是說……還有另一股勢力想要我的命。）
-	princess (determined): （賽拉斯可能是為了搶在他們之前……才親手……）
+maid (default): 殿下～早安！宰相大人送來了——
 
-if IntelSystem.has_intel("intel_faction_a"):
-	princess: （維克多大臣確實在隱瞞什麼。我必須更謹慎地調查他。）
+princess (determined): 莉娜，把寶石退回去。幫我準備一套不顯眼的衣服。我要去下城區。
+
+maid (confused): 殿下……？
 
 [wait time="0.5"]
 
-princess (determined): （這一次，我要走不同的路。）
+[signal arg="day_counter:180"]
 
-- 再次前往王座大廳（帶著新情報）[if IntelSystem.has_intel("intel_retainer_motive")]
-	jump branch_a_revisit/
-- 前往庭園調查 [if IntelSystem.has_intel("intel_faction_a")]
-	jump branch_b_unlock/
-- 質問忠臣 [if IntelSystem.check_branch_condition(["intel_retainer_motive", "intel_conspiracy_evidence"])]
-	princess (determined): （我已經掌握了足夠的線索。是時候和賽拉斯攤牌了。）
-	jump final_confrontation/
-- 前往王座大廳調查
-	jump investigation_a/
+jump branch_b_unlock/

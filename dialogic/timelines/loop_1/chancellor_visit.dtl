@@ -1,0 +1,42 @@
+# 第 1 輪迴：宰相的來訪 — 花園露台
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/garden_terrace.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0"]
+
+join princess left
+join chancellor right
+
+chancellor (concerned): 殿下，聽說您今早的精神不太好？莉娜很擔心您呢。
+
+princess: 宰相大人……我做了一個很可怕的夢。
+
+chancellor (concerned): 臣洗耳恭聽。殿下的煩惱，就是臣的煩惱。
+
+princess: （他的聲音很輕、很慢，像是在安撫一隻受驚的小鳥。和城堡裡那些板著臉的人不一樣，宰相大人總是這麼溫柔。）
+
+princess: 我夢見……城破了。父王死了。賽拉斯拿劍殺了我。
+
+[wait time="0.8"]
+
+chancellor (concerned): ……
+
+princess: （莫里昂的表情變了——從驚訝，到凝重，到一種複雜的沉痛。他放下茶杯，雙手交握。）
+
+chancellor (serious): 殿下，請原諒臣接下來要說的話。這些話本不應該由臣來說……但既然殿下已經感受到了什麼，臣不能再沉默了。
+
+princess (shocked): 您……知道什麼？
+
+chancellor (serious): 臣知道陛下一直瞞著殿下很多事。邊境的「小毛賊」——其實是一支十萬人的大軍。戰爭已經迫在眉睫。
+
+chancellor (serious): 但讓臣真正痛心的不是戰爭——是陛下為了戰爭做的那些事。
+
+princess (shocked): ……父王做了什麼？
+
+chancellor (sad): 殿下……明天臣帶您看看證據。今天先休息吧。有些事情，需要有心理準備才能面對。
+
+[wait time="0.5"]
+
+leave chancellor
+leave princess
+
+jump evidence/

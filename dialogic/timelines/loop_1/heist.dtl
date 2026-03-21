@@ -1,0 +1,53 @@
+# 第 1 輪迴：公主的決心 + 偷取兵符 — Day 4-5
+
+# === Day 4 深夜 — 宰相書房 ===
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/chancellor_study_night.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/tension_stealth.ogg" fade="2.0"]
+
+join princess left
+join chancellor right
+
+princess (determined): 宰相大人。如果我說……我想阻止父王繼續這樣做下去。您願意幫我嗎？
+
+chancellor (relieved): 殿下終於做出了決定。臣等這句話很久了。
+
+chancellor (serious): 臣有一個計劃。城防的指揮調度需要兵符——那塊令牌掌控著全城守軍的部署權。如果我們能拿到兵符，就能重新調配兵力，用和平的方式結束這場不必要的戰爭。
+
+chancellor (serious): 我們不是在叛變——我們是在救這個國家。在陛下把它徹底毀掉之前。
+
+princess (determined): 兵符在哪裡？
+
+chancellor (serious): 在國王寢宮的暗格中。殿下是公主，進入國王寢宮不會被阻攔。
+
+princess: ……我真的要這麼做嗎？
+
+chancellor (sad): 殿下。您今天在下城區看到的那個女人——抱著生病孩子的那個——如果什麼都不做，她的孩子活不過這個冬天。
+
+princess (determined): ……我去。
+
+leave chancellor
+
+[wait time="1.0"]
+
+# === Day 5 深夜 — 國王寢宮 ===
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/king_chamber_night.png" fade="0.5"]
+
+princess: （國王的寢宮。深夜。父王不在——他整夜都在密室中處理軍務。）
+
+[wait time="0.5"]
+
+princess: （暗格裡……找到了。一枚沉甸甸的金屬令牌，刻著王家紋章。）
+
+princess: （這東西的重量——它掌控著整座城市的命運。）
+
+princess: （對不起，父王。但我不能再讓你傷害更多人了。）
+
+[wait time="0.8"]
+
+princess: （我把兵符藏在斗篷裡，走出了國王的寢宮。）
+
+leave princess
+
+jump betrayal/

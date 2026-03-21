@@ -28,6 +28,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"chancellor": "res://dialogic/characters/chancellor.dch",
 "loyal_retainer": "res://dialogic/characters/loyal_retainer.dch",
 "maid": "res://dialogic/characters/maid.dch",
 "princess": "res://dialogic/characters/princess.dch",
@@ -38,12 +39,18 @@ directories/dch_directory={
 directories/dtl_directory={
 "awakening": "res://dialogic/timelines/loop_1/awakening.dtl",
 "awakening_with_intel": "res://dialogic/timelines/loop_2/awakening_with_intel.dtl",
+"bad_end_a": "res://dialogic/timelines/loop_1/bad_end_a.dtl",
+"betrayal": "res://dialogic/timelines/loop_1/betrayal.dtl",
 "branch_a_death": "res://dialogic/timelines/loop_1/branch_a_death.dtl",
 "branch_a_revisit": "res://dialogic/timelines/loop_2/branch_a_revisit.dtl",
 "branch_b_death": "res://dialogic/timelines/loop_2/branch_b_death.dtl",
 "branch_b_unlock": "res://dialogic/timelines/loop_2/branch_b_unlock.dtl",
+"chancellor_visit": "res://dialogic/timelines/loop_1/chancellor_visit.dtl",
+"evidence": "res://dialogic/timelines/loop_1/evidence.dtl",
 "final_confrontation": "res://dialogic/timelines/final_loop/final_confrontation.dtl",
+"heist": "res://dialogic/timelines/loop_1/heist.dtl",
 "investigation_a": "res://dialogic/timelines/loop_1/investigation_a.dtl",
+"lower_district": "res://dialogic/timelines/loop_1/lower_district.dtl",
 "prologue_assassination": "res://dialogic/timelines/prologue/prologue_assassination.dtl",
 "prologue_death": "res://dialogic/timelines/prologue/prologue_death.dtl",
 "prologue_main": "res://dialogic/timelines/prologue/prologue_main.dtl",
