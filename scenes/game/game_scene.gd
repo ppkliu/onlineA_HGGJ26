@@ -15,7 +15,11 @@ func _ready() -> void:
 
 func _start_prologue() -> void:
 	AudioManager.play_prologue_epic()
-	Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
+	var layout := Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
+	if layout:
+		print("[GameScene] Dialogic layout created: ", layout.name)
+	else:
+		push_error("[GameScene] Dialogic.start() returned null — no layout was created!")
 
 
 func _start_loop() -> void:

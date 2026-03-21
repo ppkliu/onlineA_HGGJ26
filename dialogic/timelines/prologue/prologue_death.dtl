@@ -1,9 +1,16 @@
-# 序章：公主死亡 → 獲得第一條情報 → 輪迴啟動
+# 序章：死亡情報畫面 → 獲得情報 → 輪迴啟動
 
-[style name="flashback_style"]
 [background arg="res://art/backgrounds/darkness.png" fade="2.0"]
 
-princess: （……一片黑暗。）
+[wait time="3.0"]
+
+# 純黑畫面。幾秒鐘的完全黑暗與靜默
+# 畫面中央緩緩浮現白色文字
+
+princess: 「無知，是最溫柔的死刑。」
+
+[wait time="2.5"]
+
 princess: （我死了嗎……？）
 princess: （王城在燃燒……人們在逃亡……而我……被最信任的人所殺。）
 
@@ -15,10 +22,17 @@ princess: （如果能知道真相……是不是就能改變結局？）
 
 [wait time="2.0"]
 
+# 畫面底部浮現
+princess: 帶著這份記憶……回到一切開始之前。
+
+[wait time="1.5"]
+
+# [PLACEHOLDER] [sound path="res://audio/sfx/loop_restart.ogg"]
+# 微弱的、倒轉的音樂盒聲響，像是時鐘被倒撥
+
 # === 獲得情報 ===
 [intel intel_city_fall]
+[intel intel_assassination]
 
-[signal arg="death_context:{'death_message': '你被最信任的忠臣刺殺身亡。', 'intel_reward': 'intel_city_fall', 'killer': 'retainer'}"]
+[signal arg="death_context:{'death_message': '你被最信任的騎士長刺殺身亡。\\n\\n「無知，是最溫柔的死刑。」', 'intel_reward': ['intel_city_fall', 'intel_assassination'], 'killer': 'retainer'}"]
 [signal arg="trigger_death"]
-
-# 輪迴重啟由 LoopManager 處理

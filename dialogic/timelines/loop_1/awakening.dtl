@@ -27,6 +27,6 @@ princess (determined): （那麼這一次，我不能再像以前一樣什麼都
 princess (determined): （我必須找出真相——到底是誰毀了這個國家。）
 
 - 前往王座大廳調查
-	[jump timeline="res://dialogic/timelines/loop_1/investigation_a.dtl"]
+	jump investigation_a/
 - 潛入地下牢 [if IntelSystem.has_intel("intel_dungeon_key")]
-	[jump timeline="res://dialogic/timelines/loop_2/branch_b_unlock.dtl"]
+	jump branch_b_unlock/

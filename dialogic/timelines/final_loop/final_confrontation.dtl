@@ -61,4 +61,4 @@ loyal_retainer: 這一次，不是用劍……而是用忠誠。
 
 [wait time="1.0"]
 
-[jump timeline="res://dialogic/timelines/final_loop/true_ending.dtl"]
+jump true_ending/

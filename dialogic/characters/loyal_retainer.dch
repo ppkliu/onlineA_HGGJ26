@@ -38,6 +38,14 @@
 "mirror": false,
 "scale": 1.0,
 "scene": ""
+},
+"exhausted": {
+"export_overrides": {
+"image": "res://art/characters/retainer_serious.svg"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
 }
 },
 &"scale": 1.0

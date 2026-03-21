@@ -48,7 +48,12 @@ directories/dtl_directory={
 "prologue_main": "res://dialogic/timelines/prologue/prologue_main.dtl",
 "true_ending": "res://dialogic/timelines/final_loop/true_ending.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres",
+"Visual Novel Style": "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
+}
+layout/default_style="res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
+layout/style_list=["res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"]
 
 [display]
 
