@@ -1,17 +1,110 @@
-[gd_scene load_steps=2 format=3 uid="uid://garden001"]
+[gd_scene load_steps=13 format=3 uid="uid://garden001"]
 
-[ext_resource type="Script" path="res://scenes/locations/garden.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/locations/garden.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://art/backgrounds/restaurant.png" id="2_bg"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
+[ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
+[ext_resource type="SpriteFrames" path="res://art/characters/general_npc.tres" id="5_npc_frames"]
+[ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(50, 24)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact_detect"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc_body"]
+size = Vector2(60, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_npc_interact"]
+radius = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_top"]
+size = Vector2(1920, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bottom"]
+size = Vector2(1920, 40)
 
 [node name="Garden" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.12, 0.18, 0.1, 1)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_bg")
 
-[node name="LocationLabel" type="Label" parent="."]
+[node name="SpawnPoint_Default" type="Marker2D" parent="."]
+position = Vector2(400, 720)
+
+[node name="SpawnPoint_FromCorridor" type="Marker2D" parent="."]
+position = Vector2(200, 720)
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(400, 720)
+script = ExtResource("3_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("4_frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_player")
+
+[node name="InteractionDetector" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractionDetector"]
+shape = SubResource("CircleShape2D_interact_detect")
+
+[node name="GeneralNPC" type="CharacterBody2D" parent="."]
+position = Vector2(1300, 720)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GeneralNPC"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("5_npc_frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeneralNPC"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_npc_body")
+
+[node name="InteractionArea" type="Area2D" parent="GeneralNPC"]
+script = ExtResource("6_npc")
+timeline_path = "res://dialogic/timelines/loop_1/lower_district.dtl"
+npc_name = "將軍"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeneralNPC/InteractionArea"]
+shape = SubResource("CircleShape2D_npc_interact")
+
+[node name="InteractLabel" type="Label" parent="GeneralNPC/InteractionArea"]
+offset_left = -80.0
+offset_top = -160.0
+offset_right = 80.0
+offset_bottom = -120.0
+text = "按 E 對話"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="TopWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+position = Vector2(960, 620)
+shape = SubResource("RectangleShape2D_top")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+position = Vector2(960, 820)
+shape = SubResource("RectangleShape2D_bottom")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="LocationLabel" type="Label" parent="UILayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

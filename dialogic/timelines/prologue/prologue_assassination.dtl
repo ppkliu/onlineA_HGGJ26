@@ -84,28 +84,21 @@ loyal_retainer (tearful): 請原諒臣。
 
 loyal_retainer (tearful): 如果有來世……臣希望能在和平的世界裡，繼續守護您。
 
-[wait time="2.5"]
+[wait time="0.5"]
 
 # === CUT TO SILENCE ===
 [signal arg="cut_to_silence"]
 
-[wait time="1.0"]
+[wait time="0.1"]
 
 （啊——）
 
-[wait time="1.5"]
+[signal arg="death_fade"]
+[background arg="res://art/backgrounds/darkness.png" fade="1.0"]
+
+[wait time="2.0"]
 
 （不痛。只是很冷。像是被冬天的風吹了一下。）
-
-[wait time="1.5"]
-
-（為什麼……腳站不住了……）
-
-[wait time="1.5"]
-
-[signal arg="death_fade"]
-
-[background arg="res://art/backgrounds/darkness.png" fade="1.5"]
 
 [wait time="1.5"]
 
