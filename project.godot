@@ -23,11 +23,39 @@ IntelSystem="*res://autoload/intel_system.gd"
 LoopManager="*res://autoload/loop_manager.gd"
 AudioManager="*res://autoload/audio_manager.gd"
 SceneTransition="*res://autoload/scene_transition.tscn"
+Dialogic="*uid://ds2q0uclmolvu"
+
+[dialogic]
+
+directories/dch_directory={
+"loyal_retainer": "res://dialogic/characters/loyal_retainer.dch",
+"princess": "res://dialogic/characters/princess.dch",
+"suspect_a": "res://dialogic/characters/suspect_a.dch",
+"suspect_b": "res://dialogic/characters/suspect_b.dch",
+"suspect_c": "res://dialogic/characters/suspect_c.dch"
+}
+directories/dtl_directory={
+"awakening": "res://dialogic/timelines/loop_1/awakening.dtl",
+"awakening_with_intel": "res://dialogic/timelines/loop_2/awakening_with_intel.dtl",
+"branch_a_death": "res://dialogic/timelines/loop_1/branch_a_death.dtl",
+"branch_a_revisit": "res://dialogic/timelines/loop_2/branch_a_revisit.dtl",
+"branch_b_death": "res://dialogic/timelines/loop_2/branch_b_death.dtl",
+"branch_b_unlock": "res://dialogic/timelines/loop_2/branch_b_unlock.dtl",
+"final_confrontation": "res://dialogic/timelines/final_loop/final_confrontation.dtl",
+"investigation_a": "res://dialogic/timelines/loop_1/investigation_a.dtl",
+"prologue_assassination": "res://dialogic/timelines/prologue/prologue_assassination.dtl",
+"prologue_death": "res://dialogic/timelines/prologue/prologue_death.dtl",
+"prologue_main": "res://dialogic/timelines/prologue/prologue_main.dtl",
+"true_ending": "res://dialogic/timelines/final_loop/true_ending.dtl"
+}
+layout/style_directory={}
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -35,11 +63,24 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Break the Loop"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
 [input]
 
 open_journal={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }

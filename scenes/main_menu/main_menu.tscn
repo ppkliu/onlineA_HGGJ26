@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://mainmenu001"]
+[gd_scene format=3 uid="uid://mainmenu001"]
 
-[ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="1"]
+[ext_resource type="Script" uid="uid://cg7jt2y5vtus7" path="res://scenes/main_menu/main_menu.gd" id="1"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1281599028]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=616900606]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.05, 0.03, 0.08, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=452853461]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,32 +34,32 @@ offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1839307542]
 layout_mode = 2
 text = "Break the Loop"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Subtitle" type="Label" parent="VBoxContainer"]
+[node name="Subtitle" type="Label" parent="VBoxContainer" unique_id=1179970025]
 layout_mode = 2
 text = "完美公主的無知，造就了亡國的迴圈"
 horizontal_alignment = 1
 
-[node name="Spacer" type="Control" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=640098592]
 custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
 
-[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=1335776682]
 unique_name_in_owner = true
 layout_mode = 2
 text = "新遊戲"
 
-[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=2053278988]
 unique_name_in_owner = true
 layout_mode = 2
 text = "繼續"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1175158551]
 unique_name_in_owner = true
 layout_mode = 2
 text = "退出"
