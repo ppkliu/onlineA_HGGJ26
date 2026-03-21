@@ -1,6 +1,6 @@
 # 序章：亡國之夜 — 公主寢房
 
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.5"]
+[background arg="res://art/backgrounds/prologue_princess_room.png" fade="1.5"]
 # [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
 

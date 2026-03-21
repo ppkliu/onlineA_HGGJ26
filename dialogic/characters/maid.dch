@@ -1,0 +1,28 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.9, 0.6, 0.7, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "公主身邊最親近的侍女，開朗活潑卻隱藏著家庭的苦難。用笑容包裝痛苦，是體制的受害者。",
+&"display_name": "莉娜",
+&"mirror": false,
+&"nicknames": ["侍女", "莉娜"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/maid_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
