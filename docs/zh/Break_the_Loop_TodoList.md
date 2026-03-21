@@ -6,12 +6,12 @@
 
 ## Phase 0：專案初始化
 
-- [ ] 建立 Godot 4.6.1 專案，設定專案名稱與基本參數
-- [ ] 設定解析度 1920×1080，Stretch Mode = `canvas_items`
+- [x] 建立 Godot 4.6.1 專案，設定專案名稱與基本參數
+- [x] 設定解析度 1920×1080，Stretch Mode = `canvas_items`
 - [ ] 安裝 Dialogic 2 插件並啟用
-- [ ] 建立完整目錄結構（`autoload/`、`scenes/`、`resources/`、`art/`、`audio/`、`shaders/`、`dialogic/`）
-- [ ] 設定版本控制（`.gitignore` 加入 Godot 預設忽略項）
-- [ ] 建立 `project.godot` 中的 Autoload 註冊（GameManager、IntelSystem、LoopManager、AudioManager、SceneTransition）
+- [x] 建立完整目錄結構（`autoload/`、`scenes/`、`resources/`、`art/`、`audio/`、`shaders/`、`dialogic/`）
+- [x] 設定版本控制（`.gitignore` 加入 Godot 預設忽略項）
+- [x] 建立 `project.godot` 中的 Autoload 註冊（GameManager、IntelSystem、LoopManager、AudioManager、SceneTransition）
 
 ---
 
@@ -19,34 +19,34 @@
 
 ### 1.1 情報繼承變數系統（IntelSystem）
 
-- [ ] 建立 `intel_item.gd` Resource 腳本（id、title、description、category、source_loop、unlocks_branches）
-- [ ] 建立 `intel_database.tres` 情報資料庫，填入 8-12 條核心情報定義
-- [ ] 實作 `intel_system.gd` Autoload
-  - [ ] `acquire_intel()` — 獲得情報並發出信號
-  - [ ] `has_intel()` — 單一情報檢查
-  - [ ] `check_branch_condition()` — 多情報 AND 條件檢查
-  - [ ] `trigger_loop_reset()` — 輪迴重置（保留情報）
-  - [ ] `reset_all()` — 新遊戲完全重置
-- [ ] 實作自動存檔 / 讀檔（JSON 持久化到 `user://`）
+- [x] 建立 `intel_item.gd` Resource 腳本（id、title、description、category、source_loop、unlocks_branches）
+- [x] 建立 `intel_database.tres` 情報資料庫，填入 8-12 條核心情報定義
+- [x] 實作 `intel_system.gd` Autoload
+  - [x] `acquire_intel()` — 獲得情報並發出信號
+  - [x] `has_intel()` — 單一情報檢查
+  - [x] `check_branch_condition()` — 多情報 AND 條件檢查
+  - [x] `trigger_loop_reset()` — 輪迴重置（保留情報）
+  - [x] `reset_all()` — 新遊戲完全重置
+- [x] 實作自動存檔 / 讀檔（JSON 持久化到 `user://`）
 - [ ] 單元測試：確認情報跨輪迴保留、分支條件正確判定
 
 ### 1.2 輪迴管理器（LoopManager）
 
-- [ ] 實作 `loop_manager.gd` Autoload
-  - [ ] `trigger_death()` — 死亡觸發流程（獲得情報 → 死亡畫面 → 輪迴重置）
-  - [ ] `_reset_loop()` — 場景狀態清除 + 轉場到起點
-  - [ ] `_update_phase()` — 根據輪迴數 / 情報量判定當前階段
-- [ ] 定義 LoopPhase 枚舉（PROLOGUE / EARLY / MID / FINAL）
-- [ ] 實作 `scene_states` 字典管理（每輪迴內的一次性事件追蹤）
+- [x] 實作 `loop_manager.gd` Autoload
+  - [x] `trigger_death()` — 死亡觸發流程（獲得情報 → 死亡畫面 → 輪迴重置）
+  - [x] `_reset_loop()` — 場景狀態清除 + 轉場到起點
+  - [x] `_update_phase()` — 根據輪迴數 / 情報量判定當前階段
+- [x] 定義 LoopPhase 枚舉（PROLOGUE / EARLY / MID / FINAL）
+- [x] 實作 `scene_states` 字典管理（每輪迴內的一次性事件追蹤）
 
 ### 1.3 場景轉場控制（SceneTransition）
 
-- [ ] 建立 `scene_transition.tscn`（CanvasLayer + ColorRect + AnimationPlayer）
-- [ ] 製作轉場動畫
-  - [ ] `fade_out` / `fade_in` — 一般場景切換（黑色淡入淡出）
-  - [ ] `loop_restart_out` / `loop_restart_in` — 輪迴重啟（白光閃爍 → 漸入）
-  - [ ] `death_fade` / `death_reveal` — 死亡轉場（紅色褪入黑暗）
-- [ ] 實作 `transition_to()` 方法，支援三種 TransitionType
+- [x] 建立 `scene_transition.tscn`（CanvasLayer + ColorRect + AnimationPlayer）
+- [x] 製作轉場動畫
+  - [x] `fade_out` / `fade_in` — 一般場景切換（黑色淡入淡出）
+  - [x] `loop_restart_out` / `loop_restart_in` — 輪迴重啟（白光閃爍 → 漸入）
+  - [x] `death_fade` / `death_reveal` — 死亡轉場（紅色褪入黑暗）
+- [x] 實作 `transition_to()` 方法，支援三種 TransitionType
 
 ---
 
@@ -54,49 +54,49 @@
 
 ### 2.1 角色建立
 
-- [ ] 建立公主角色 `.dch`（含多表情立繪佔位：default、sad、angry、shocked、determined）
-- [ ] 建立忠臣角色 `.dch`
-- [ ] 建立嫌疑人 A `.dch`
-- [ ] 建立嫌疑人 B `.dch`
-- [ ] 建立嫌疑人 C `.dch`（選配，視時間決定）
+- [x] 建立公主角色 `.dch`（含多表情立繪佔位：default、sad、angry、shocked、determined）
+- [x] 建立忠臣角色 `.dch`
+- [x] 建立嫌疑人 A `.dch`
+- [x] 建立嫌疑人 B `.dch`
+- [x] 建立嫌疑人 C `.dch`（選配，視時間決定）
 
 ### 2.2 對話樣式
 
-- [ ] 設定 `default_style.tres` — 一般對話框樣式（暗色系底框、白色文字）
-- [ ] 設定 `flashback_style.tres` — 回憶 / 死亡場景樣式（帶昏黃濾鏡的對話框）
+- [x] 設定 `default_style.tres` — 一般對話框樣式（暗色系底框、白色文字）
+- [x] 設定 `flashback_style.tres` — 回憶 / 死亡場景樣式（帶昏黃濾鏡的對話框）
 - [ ] 調整字體（建議支援中文的 Noto Sans TC 或類似字體）
 
 ### 2.3 時間線撰寫
 
 #### 序章
 
-- [ ] `prologue_main.dtl` — 王城陷落開場敘事
-- [ ] `prologue_assassination.dtl` — 忠臣刺殺場景（含 Cut to Silence 觸發）
-- [ ] `prologue_death.dtl` — 公主死亡 → 獲得第一條情報 → 輪迴啟動
+- [x] `prologue_main.dtl` — 王城陷落開場敘事
+- [x] `prologue_assassination.dtl` — 忠臣刺殺場景（含 Cut to Silence 觸發）
+- [x] `prologue_death.dtl` — 公主死亡 → 獲得第一條情報 → 輪迴啟動
 
 #### 第 1 輪迴
 
-- [ ] `loop1/awakening.dtl` — 公主在寢宮醒來，帶著記憶的獨白
-- [ ] `loop1/investigation_a.dtl` — 調查場景 A（唯一可選路線）
-- [ ] `loop1/branch_a_death.dtl` — 壞結局 A → 獲得情報 ①
+- [x] `loop1/awakening.dtl` — 公主在寢宮醒來，帶著記憶的獨白
+- [x] `loop1/investigation_a.dtl` — 調查場景 A（唯一可選路線）
+- [x] `loop1/branch_a_death.dtl` — 壞結局 A → 獲得情報 ①
 
 #### 第 2 輪迴
 
-- [ ] `loop2/awakening_with_intel.dtl` — 帶情報醒來，新的內心獨白
-- [ ] `loop2/branch_a_revisit.dtl` — 路線 A 重訪（因新情報出現新對話）
-- [ ] `loop2/branch_b_unlock.dtl` — 路線 B 解鎖後的新劇情
+- [x] `loop2/awakening_with_intel.dtl` — 帶情報醒來，新的內心獨白
+- [x] `loop2/branch_a_revisit.dtl` — 路線 A 重訪（因新情報出現新對話）
+- [x] `loop2/branch_b_unlock.dtl` — 路線 B 解鎖後的新劇情
 - [ ] `loop2/branch_b_death.dtl` — 壞結局 B → 獲得情報 ②（選配）
 
 #### 最終輪迴
 
-- [ ] `final/final_confrontation.dtl` — 揭露真相的最終對質
-- [ ] `final/true_ending.dtl` — 唯一真結局
+- [x] `final/final_confrontation.dtl` — 揭露真相的最終對質
+- [x] `final/true_ending.dtl` — 唯一真結局
 
 ### 2.4 Dialogic 與 IntelSystem 橋接
 
-- [ ] 實作 Dialogic 自訂事件 `DialogicIntelEvent`（在 timeline 中觸發情報獲取）
-- [ ] 實作 `_sync_to_dialogic()` — 將 IntelSystem 狀態同步到 Dialogic 變數
-- [ ] 在分歧選擇肢中加入 `[if IntelSystem.has_intel(...)]` 條件鎖定
+- [x] 實作 Dialogic 自訂事件 `DialogicIntelEvent`（在 timeline 中觸發情報獲取）
+- [x] 實作 `_sync_to_dialogic()` — 將 IntelSystem 狀態同步到 Dialogic 變數
+- [x] 在分歧選擇肢中加入 `[if IntelSystem.has_intel(...)]` 條件鎖定
 - [ ] 測試：確認選擇肢根據情報狀態正確顯示 / 隱藏
 
 ---
@@ -105,27 +105,27 @@
 
 ### 3.1 遊戲場景
 
-- [ ] `main_menu.tscn` — 主選單（新遊戲 / 繼續 / 退出）
-- [ ] `game_scene.tscn` — 遊戲主場景容器（載入子場景 + Dialogic 對話層）
-- [ ] `royal_chamber.tscn` — 公主寢宮（輪迴起點）
-- [ ] `throne_room.tscn` — 王座大廳（序章 + 調查場景）
-- [ ] `castle_corridor.tscn` — 城堡走廊（場景間移動）（選配）
-- [ ] `garden.tscn` — 庭園（調查場景）（選配）
+- [x] `main_menu.tscn` — 主選單（新遊戲 / 繼續 / 退出）
+- [x] `game_scene.tscn` — 遊戲主場景容器（載入子場景 + Dialogic 對話層）
+- [x] `royal_chamber.tscn` — 公主寢宮（輪迴起點）
+- [x] `throne_room.tscn` — 王座大廳（序章 + 調查場景）
+- [x] `castle_corridor.tscn` — 城堡走廊（場景間移動）（選配）
+- [x] `garden.tscn` — 庭園（調查場景）（選配）
 
 ### 3.2 UI 介面
 
-- [ ] `intel_journal.tscn` — 情報日誌
-  - [ ] 分類頁籤切換（人物 / 陰謀 / 線索 / 真相）
-  - [ ] 情報卡片列表顯示
-  - [ ] 「NEW」標記動畫
-  - [ ] 快捷鍵綁定（`Tab` 或 `J`）
-- [ ] `death_screen.tscn` — 死亡情報獲得畫面
-  - [ ] 死因摘要文字顯示
-  - [ ] 情報卡片翻轉動畫
-  - [ ] 「帶著新的知識，回到過去……」提示文字
-  - [ ] 自動倒數 → 輪迴轉場
-- [ ] `loop_indicator.tscn` — 輪迴次數指示器（畫面角落）
-- [ ] `choice_panel.tscn` — 增強版選擇面板（鎖定選項灰色顯示 + 鎖頭圖示）
+- [x] `intel_journal.tscn` — 情報日誌
+  - [x] 分類頁籤切換（人物 / 陰謀 / 線索 / 真相）
+  - [x] 情報卡片列表顯示
+  - [x] 「NEW」標記動畫
+  - [x] 快捷鍵綁定（`Tab` 或 `J`）
+- [x] `death_screen.tscn` — 死亡情報獲得畫面
+  - [x] 死因摘要文字顯示
+  - [x] 情報卡片翻轉動畫
+  - [x] 「帶著新的知識，回到過去……」提示文字
+  - [x] 自動倒數 → 輪迴轉場
+- [x] `loop_indicator.tscn` — 輪迴次數指示器（畫面角落）
+- [x] `choice_panel.tscn` — 增強版選擇面板（鎖定選項灰色顯示 + 鎖頭圖示）
 
 ---
 
@@ -175,9 +175,9 @@
 
 ## Phase 6：Shader 效果
 
-- [ ] `vignette.gdshader` — 暗角效果（調查場景常駐）
-- [ ] `sepia_flashback.gdshader` — 昏黃回憶色調濾鏡
-- [ ] `death_fade.gdshader` — 死亡紅色褪入黑暗效果
+- [x] `vignette.gdshader` — 暗角效果（調查場景常駐）
+- [x] `sepia_flashback.gdshader` — 昏黃回憶色調濾鏡
+- [x] `death_fade.gdshader` — 死亡紅色褪入黑暗效果
 
 ---
 
