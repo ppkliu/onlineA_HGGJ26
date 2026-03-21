@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="768" viewBox="0 0 512 768">
+  <rect width="512" height="768" fill="#c48fbf"/>
+  <rect x="10" y="10" width="492" height="748" rx="12" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8,4" opacity="0.5"/>
+  <!-- Silhouette -->
+  <ellipse cx="256" cy="280" rx="90" ry="110" fill="#a06a9a" opacity="0.7"/>
+  <ellipse cx="256" cy="440" rx="130" ry="160" fill="#a06a9a" opacity="0.7"/>
+  <!-- Text -->
+  <text x="256" y="640" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="bold" fill="#fff">Princess</text>
+  <text x="256" y="680" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#f0d0ee">Default</text>
+  <text x="256" y="740" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#fff" opacity="0.6" letter-spacing="4">PLACEHOLDER</text>
+</svg>

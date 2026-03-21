@@ -14,7 +14,7 @@
 "portraits": {
 	"default": {
 		"export_overrides": {
-			"image": "\"res://art/characters/retainer_default.png\""
+			"image": "\"res://art/characters/retainer_default.svg\""
 		},
 		"mirror": false,
 		"scale": 1.0,
@@ -22,7 +22,7 @@
 	},
 	"tearful": {
 		"export_overrides": {
-			"image": "\"res://art/characters/retainer_tearful.png\""
+			"image": "\"res://art/characters/retainer_tearful.svg\""
 		},
 		"mirror": false,
 		"scale": 1.0,
@@ -30,7 +30,7 @@
 	},
 	"serious": {
 		"export_overrides": {
-			"image": "\"res://art/characters/retainer_serious.png\""
+			"image": "\"res://art/characters/retainer_serious.svg\""
 		},
 		"mirror": false,
 		"scale": 1.0,
