@@ -1,144 +1,111 @@
-# 序章：騎士長的到來 — 城破告知、刺殺、Cut to Silence
-
-# === 騎士長登場 ===
-# 門被猛力撞開。賽拉斯站在門口，銀色盔甲沾滿黑色血污，半邊披風燒焦，劍上還在滴血
+# 序章：騎士長的到來 — 城破告知、刺殺
 
 [background arg="res://art/backgrounds/prologue_knight_arrives.png" fade="0.8"]
 
+[wait time="1.0"]
+
 loyal_retainer (tearful): ……殿下。
-
-princess (default): 賽拉斯！太好了，你來了！父王派你來接我的對不對？快帶我離開這裡——
-
-princess: （我看到他了。那個從小保護我的騎士長，比任何城牆都可靠的人。我朝他跑過去。）
-
-loyal_retainer (tearful): ……
 
 [wait time="0.8"]
 
 # 賽拉斯沒有張開雙臂迎接她。他一步步走進房間，反手關上了門
 [sound path="res://audio/sfx/door_close.ogg" bus="SFX"]
 
-princess: （他沒有接住我。他走進房間，把門關上了。走廊的嘈雜聲被隔絕了大半。）
+[wait time="0.8"]
 
-[wait time="0.5"]
+princess (default): 你衣服上怎麼紅紅的？還臭臭的？莉娜看到會唸你的喔。
 
-princess (shocked): 賽……賽拉斯？你受傷了嗎？你身上好多血……
+[wait time="0.8"]
 
 loyal_retainer (tearful): 殿下，城破了。
 
-princess (shocked): 城破……？怎麼會？魔法陣不是——
-
-loyal_retainer (exhausted): 魔法陣在三天前就失效了。有人從內部切斷了能源核心。
-
-princess (shocked): 失效了？三天前？為什麼沒有人告訴我！
-
-loyal_retainer (tearful): ……
-
-princess (angry): 父王呢？父王在哪裡？帶我去找父王！他一定有辦法的——
-
-loyal_retainer (tearful): 陛下他……
-
-[wait time="1.0"]
-
-# 賽拉斯單膝跪下。動作僵硬，像是一座正在崩塌的鐵塔
-
-loyal_retainer (tearful): 陛下已經……戰死在城門前了。是臣……親手收的遺體。
-
-[wait time="1.0"]
-
-princess (shocked): ……你說什麼？
-
-loyal_retainer (tearful): 外面全是敵軍和叛軍。南門、西門都被打開了——是城裡的人打開的。
-
-princess (sad): 不……不對，你騙我的對不對？父王那麼強……他怎麼會……
-
-loyal_retainer (tearful): 殿下，請聽臣說。
-
-[wait time="0.5"]
-
-# 賽拉斯緩緩站起來。他拔出了劍。劍身上的血跡在火光中發出暗紅色的光
-
-[background arg="res://art/backgrounds/prologue_knight_draws_weapon.png" fade="0.6"]
-
-princess (shocked): 你……你在做什麼？
-
-loyal_retainer (tearful): 陛下最後的密令——
-
-[wait time="0.3"]
-
-# 他的聲音在顫抖，握劍的手也在顫抖。但劍尖指向了艾蓮娜
-
-loyal_retainer (tearful): 「絕不能讓公主落入敵人手中。不惜一切代價。」
-
-princess (shocked): 什麼……？你要殺我？
-
-princess (angry): 你是來救我的，不是嗎！帶我逃出去啊！外面那麼大，一定有——
-
-loyal_retainer (tearful): 沒有地方了，殿下。城外是十萬敵軍，城內是暴民和叛軍。所有的逃生通道都已經被切斷了。
-
-loyal_retainer (tearful): 臣殺了一路的敵兵才到這裡。門外的屍體……臣最多再撐半炷香。然後他們就會破門而入。
-
-loyal_retainer (tearful): 他們會對您做什麼……臣不敢想。陛下也不敢想。所以他給了臣這道命令。
-
-princess (sad): 不……我不要死……我不想死……
-
-princess: （我在後退。後背撞到了牆壁，冰冷的石頭穿透單薄的睡衣。我已經無路可退了。）
-
-princess (angry): 父王……父王為什麼不帶我一起走！為什麼把我一個人丟在這裡！
-
-loyal_retainer (tearful): 陛下他……每一天都在努力，想讓這一天不要來臨。
-
-loyal_retainer (tearful): 但他失敗了。臣也失敗了。
-
-[wait time="1.0"]
-
-# 淚水從賽拉斯的眼眶滑落，滴在染血的盔甲上。嘴唇在發抖，但握劍的手反而不再顫抖了
-
-loyal_retainer (tearful): 請原諒臣的無能，殿下。
-
-loyal_retainer (tearful): 如果有來世……臣希望能在一個和平的世界裡，繼續守護您。
-
 [wait time="1.5"]
 
-# === CUT TO SILENCE ===
-# 所有聲音瞬間消失。BGM、火焰聲、遠處的喊殺聲，全部歸零
-[signal arg="cut_to_silence"]
-
-# 畫面慢動作。賽拉斯舉劍。火光在劍刃上流動
-[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.3"]
-
-princess (sad): ——
-
-princess: （我想大喊，但喉嚨發不出聲音。我看著他的眼睛——那雙永遠嚴肅、永遠可靠的眼睛裡，現在只剩下碎裂的光。）
+princess (shocked): 城破？那是什麼意思？城牆裂開了嗎？
 
 [wait time="0.8"]
 
-# sword_stab — 極低音量、極短。不是影視劇裡誇張的刺入聲，而是一聲悶響
-# AudioManager.cut_to_silence() 已包含 0.8s 延遲後播放 sword_stab.ogg
+loyal_retainer (exhausted): 魔法陣三天前就失效了。有人從內部切斷了能源核心。
 
-[wait time="1.5"]
+[wait time="1.0"]
 
-# 畫面開始褪色。色彩像是被抽乾，只剩下劍刃上的那一抹紅
-[signal arg="death_fade"]
+princess (shocked): 可是父王說，魔法陣會一直保護我們的呀……
 
-princess: （……不痛。）
+[wait time="1.2"]
 
-[wait time="0.5"]
+# 賽拉斯單膝跪下
 
-princess: （只是很冷。）
-
-[wait time="0.8"]
-
-princess: （……為什麼。）
-
-princess: （為什麼所有人都拋下了我？）
-
-[wait time="0.5"]
-
-princess: （我到底做錯了什麼……）
+loyal_retainer (tearful): 陛下已經……戰死在城門前了。南門、西門都被人從裡面打開了。
 
 [wait time="2.0"]
 
-# 紅色從畫面中央向外擴散，吞噬一切，沉入完全的黑暗
+princess (sad): 戰死……？你在騙我的對不對？父王不是最厲害的嗎……
+
+[wait time="1.5"]
+
+# 賽拉斯站起來，拔出劍
+[background arg="res://art/backgrounds/prologue_knight_draws_weapon.png" fade="0.6"]
+
+[wait time="1.0"]
+
+princess (shocked): 賽拉斯……你拿劍做什麼？
+
+[wait time="0.8"]
+
+loyal_retainer (tearful): 陛下最後的密令——「絕不能讓公主落入敵人手中。不惜一切代價。」
+
+[wait time="1.5"]
+
+princess (shocked): 你是來保護我的對不對？帶我去找父王嘛……
+
+[wait time="0.8"]
+
+loyal_retainer (tearful): 所有逃生通道都被切斷了。臣殺穿一路的敵兵才到這裡，一切都太遲了。
+
+[wait time="1.5"]
+
+princess (sad): 我不懂……為什麼都沒有人告訴我外面發生了什麼事……
+
+[wait time="1.0"]
+
+loyal_retainer (tearful): 陛下每一天都在努力，想讓這一天不要來臨。但他失敗了。臣也失敗了。
+
+[wait time="2.0"]
+
+# 淚水滑落。握劍的手反而不再顫抖
+
+loyal_retainer (tearful): 請原諒臣。
+
+[wait time="1.0"]
+
+[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.3"]
+
+loyal_retainer (tearful): 如果有來世……臣希望能在和平的世界裡，繼續守護您。
+
+[wait time="0.5"]
+
+# === CUT TO SILENCE ===
+[signal arg="cut_to_silence"]
+
+[wait time="0.1"]
+
+（啊——）
+
+[signal arg="death_fade"]
+[background arg="res://art/backgrounds/darkness.png" fade="1.0"]
+
+[wait time="2.0"]
+
+（不痛。只是很冷。像是被冬天的風吹了一下。）
+
+[wait time="1.5"]
+
+（賽拉斯的臉好模糊……他好像在哭。為什麼要哭呢？）
+
+[wait time="2.0"]
+
+（……為什麼所有人都拋下了我？）
+
+[wait time="3.0"]
 
 jump prologue_death/

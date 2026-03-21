@@ -1,0 +1,44 @@
+# 第 1 輪迴：下城區見聞 — Day 3
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
+
+join princess left
+
+princess: （下城區……街道兩旁的房屋門窗緊閉。牆上寫著炭筆標語：「暴君去死」「把我們的孩子還來」。）
+
+princess (sad): 這就是……我的城市？
+
+[wait time="0.5"]
+
+join maid right
+
+maid: 殿下……我一直不敢告訴您。
+
+princess: 莉娜？
+
+maid: 我哥哥……就是在這裡被帶走的。他被徵去前線了。媽媽一個人撐不住……
+
+[wait time="0.5"]
+
+princess (sad): 莉娜……你為什麼不早點告訴我？
+
+maid: 殿下已經夠辛苦了。我不想讓您擔心……
+
+princess: （一個女人抱著生病的嬰兒坐在門口。她的眼神空洞，像是已經放棄了什麼。）
+
+princess (sad): ……
+
+princess: （宰相大人說的是真的。父王把這些人的血和汗都榨乾了。徵兵、重稅、糧食短缺——全是他造成的。）
+
+princess: （為什麼？就為了一個打不贏的戰爭？）
+
+[wait time="1.0"]
+
+leave maid
+
+princess (determined): （不行。我不能繼續裝作不知道了。）
+
+leave princess
+
+jump heist/

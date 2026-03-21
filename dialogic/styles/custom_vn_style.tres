@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://bwdcbxscrs4uf"]
+
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="1_style"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_layer"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="3_bg"]
+[ext_resource type="PackedScene" path="res://dialogic/styles/custom_portrait_layer.tscn" id="4_portrait"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="5_textbox"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="6_input"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="7_glossary"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="8_choice"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="9_textinput"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="10_history"]
+
+[sub_resource type="Resource" id="Resource_base"]
+script = ExtResource("2_layer")
+
+[sub_resource type="Resource" id="Resource_bg"]
+script = ExtResource("2_layer")
+scene = ExtResource("3_bg")
+
+[sub_resource type="Resource" id="Resource_portrait"]
+script = ExtResource("2_layer")
+scene = ExtResource("4_portrait")
+
+[sub_resource type="Resource" id="Resource_input"]
+script = ExtResource("2_layer")
+scene = ExtResource("6_input")
+
+[sub_resource type="Resource" id="Resource_textbox"]
+script = ExtResource("2_layer")
+scene = ExtResource("5_textbox")
+overrides = {
+"box_margin_bottom": 20,
+"box_size": Vector2(1400, 240),
+"name_label_custom_font_size": 32,
+"name_label_use_global_font_size": false,
+"text_size": 28,
+"text_use_global_size": false
+}
+
+[sub_resource type="Resource" id="Resource_glossary"]
+script = ExtResource("2_layer")
+scene = ExtResource("7_glossary")
+
+[sub_resource type="Resource" id="Resource_choice"]
+script = ExtResource("2_layer")
+scene = ExtResource("8_choice")
+
+[sub_resource type="Resource" id="Resource_textinput"]
+script = ExtResource("2_layer")
+scene = ExtResource("9_textinput")
+
+[sub_resource type="Resource" id="Resource_history"]
+script = ExtResource("2_layer")
+scene = ExtResource("10_history")
+
+[resource]
+script = ExtResource("1_style")
+name = "Custom VN Style"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_base"),
+"10": SubResource("Resource_bg"),
+"11": SubResource("Resource_portrait"),
+"12": SubResource("Resource_input"),
+"13": SubResource("Resource_textbox"),
+"14": SubResource("Resource_glossary"),
+"15": SubResource("Resource_choice"),
+"16": SubResource("Resource_textinput"),
+"17": SubResource("Resource_history")
+}
+metadata/_latest_layer = "17"

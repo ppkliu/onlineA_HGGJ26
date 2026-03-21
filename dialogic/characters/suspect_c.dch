@@ -13,7 +13,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/suspect_c_default.svg"
+"image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
 "scale": 1.0,

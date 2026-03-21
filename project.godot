@@ -29,6 +29,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"chancellor": "res://dialogic/characters/chancellor.dch",
 "loyal_retainer": "res://dialogic/characters/loyal_retainer.dch",
 "maid": "res://dialogic/characters/maid.dch",
 "princess": "res://dialogic/characters/princess.dch",
@@ -38,24 +39,33 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "awakening": "res://dialogic/timelines/loop_1/awakening.dtl",
+"awakening_cutscene": "res://dialogic/timelines/loop_1/awakening_cutscene.dtl",
 "awakening_with_intel": "res://dialogic/timelines/loop_2/awakening_with_intel.dtl",
+"bad_end_a": "res://dialogic/timelines/loop_1/bad_end_a.dtl",
+"betrayal": "res://dialogic/timelines/loop_1/betrayal.dtl",
 "branch_a_death": "res://dialogic/timelines/loop_1/branch_a_death.dtl",
 "branch_a_revisit": "res://dialogic/timelines/loop_2/branch_a_revisit.dtl",
 "branch_b_death": "res://dialogic/timelines/loop_2/branch_b_death.dtl",
 "branch_b_unlock": "res://dialogic/timelines/loop_2/branch_b_unlock.dtl",
+"chancellor_visit": "res://dialogic/timelines/loop_1/chancellor_visit.dtl",
+"evidence": "res://dialogic/timelines/loop_1/evidence.dtl",
 "final_confrontation": "res://dialogic/timelines/final_loop/final_confrontation.dtl",
+"heist": "res://dialogic/timelines/loop_1/heist.dtl",
 "investigation_a": "res://dialogic/timelines/loop_1/investigation_a.dtl",
+"lower_district": "res://dialogic/timelines/loop_1/lower_district.dtl",
+"maid_morning": "res://dialogic/timelines/loop_1/maid_morning.dtl",
 "prologue_assassination": "res://dialogic/timelines/prologue/prologue_assassination.dtl",
 "prologue_death": "res://dialogic/timelines/prologue/prologue_death.dtl",
 "prologue_main": "res://dialogic/timelines/prologue/prologue_main.dtl",
 "true_ending": "res://dialogic/timelines/final_loop/true_ending.dtl"
 }
 layout/style_directory={
-"": "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres",
+"": "res://dialogic/styles/custom_vn_style.tres",
+"Custom VN Style": "res://dialogic/styles/custom_vn_style.tres",
 "Visual Novel Style": "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
 }
-layout/default_style="res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
-layout/style_list=["res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"]
+layout/default_style="res://dialogic/styles/custom_vn_style.tres"
+layout/style_list=["res://dialogic/styles/custom_vn_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"]
 
 [display]
 
@@ -90,5 +100,11 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
 ]
 }

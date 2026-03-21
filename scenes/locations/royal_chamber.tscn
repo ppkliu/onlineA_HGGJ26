@@ -5,15 +5,100 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/tutorial_prompt.tscn" id="3"]
 
 [node name="RoyalChamber" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.15, 0.1, 0.2, 1)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_bg")
 
-[node name="LocationLabel" type="Label" parent="."]
+[node name="SpawnPoint_Default" type="Marker2D" parent="."]
+position = Vector2(500, 720)
+
+[node name="SpawnPoint_Left" type="Marker2D" parent="."]
+position = Vector2(200, 720)
+
+[node name="SpawnPoint_Right" type="Marker2D" parent="."]
+position = Vector2(1720, 720)
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(500, 720)
+script = ExtResource("3_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("4_frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_player")
+
+[node name="InteractionDetector" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractionDetector"]
+shape = SubResource("CircleShape2D_interact_detect")
+
+[node name="MaidNPC" type="CharacterBody2D" parent="."]
+position = Vector2(1300, 720)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MaidNPC"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("5_maid_frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_maid_body")
+
+[node name="InteractionArea" type="Area2D" parent="MaidNPC"]
+script = ExtResource("6_npc")
+timeline_path = "res://dialogic/timelines/loop_1/maid_morning.dtl"
+npc_name = "莉娜"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC/InteractionArea"]
+shape = SubResource("CircleShape2D_maid_interact")
+
+[node name="InteractLabel" type="Label" parent="MaidNPC/InteractionArea"]
+offset_left = -80.0
+offset_top = -160.0
+offset_right = 80.0
+offset_bottom = -120.0
+text = "按 E 對話"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="TopWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+position = Vector2(960, 620)
+shape = SubResource("RectangleShape2D_top")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+position = Vector2(960, 820)
+shape = SubResource("RectangleShape2D_bottom")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+position = Vector2(80, 540)
+shape = SubResource("RectangleShape2D_left")
+
+[node name="RightWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+position = Vector2(1840, 540)
+shape = SubResource("RectangleShape2D_right")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="LocationLabel" type="Label" parent="UILayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

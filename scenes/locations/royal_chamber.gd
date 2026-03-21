@@ -1,13 +1,17 @@
 extends Node2D
 
-## 公主寢宮 — 每次輪迴的起點場景
+@onready var player: CharacterBody2D = $Player
+@onready var background: Sprite2D = $Background
+var _awakening_done: bool = false
 
 
 func _ready() -> void:
+	_fit_background_to_viewport()
+	player.set_can_move(false)
+
 	AudioManager.play_loop_restart()
 	FlowLogger.log_event("scene", "Royal chamber ready", {"phase": LoopManager.LoopPhase.keys()[LoopManager.current_phase], "loop": IntelSystem.current_loop})
 
-	# 根據輪迴階段觸發不同的 Dialogic 時間線
 	match LoopManager.current_phase:
 		LoopManager.LoopPhase.EARLY:
 			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "awakening"})

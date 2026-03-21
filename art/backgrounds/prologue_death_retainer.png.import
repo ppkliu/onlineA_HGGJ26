@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2g31cxptn25b"
-valid=false
+uid="uid://cm5druyf02fx2"
+path="res://.godot/imported/prologue_death_retainer.png-fbb126406ba91d205f6faefdf32c8627.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://art/backgrounds/prologue_death_retainer.png"
+dest_files=["res://.godot/imported/prologue_death_retainer.png-fbb126406ba91d205f6faefdf32c8627.ctex"]
 
 [params]
 

@@ -1,59 +1,79 @@
-# 第 1 輪迴：調查場景 A — 王座大廳
+# 第 1 輪迴：宰相的操弄 — 來訪、偽證、下城區、偷兵符
 
 [style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
-# [PLACEHOLDER] [music path="res://audio/bgm/investigation.ogg" fade="2.0"]
 
-princess: （王座大廳……一切都還完好無損。半年後，這裡將化為灰燼。）
+# === Day 1 下午：宰相花園來訪 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/garden_terrace.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0"]
+
+join princess left
+join chancellor right
+
+chancellor (concerned): 殿下，聽說您今早精神不太好？
+
+princess (hesitant): 宰相大人……我做了一個很可怕的夢。城破了，父王死了，賽拉斯殺了我。
+
+chancellor (serious): 殿下已經感受到了什麼……臣不能再沉默了。邊境的「小毛賊」其實是十萬大軍。戰爭迫在眉睫。
+
+chancellor (serious): 但讓臣痛心的不是戰爭——是陛下為了戰爭做的那些事。
+
+[wait time="0.8"]
+
+# === Day 2：宰相的偽證 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
+
+chancellor (serious): 過去兩年，陛下以「戰備」為名徵收了三倍稅金，實際用於軍備的不到三成。邊防將領的密報顯示——陛下一年前主動挑釁敵國，激化了衝突。
+
+chancellor (sad): 臣多次勸諫，陛下不聽。上個月兩名反對加稅的官員被以「通敵」罪下獄。
+
+chancellor (determined): 如果連殿下都不知道真相——這個國家就真的沒救了。
+
+princess (shocked): 父王他……為什麼要這麼做？
 
 [wait time="0.5"]
 
-princess: （先去找賽拉斯問問情況。如果能了解他的想法……）
+# === Day 3：下城區見聞 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
 
-loyal_retainer: 殿下？您怎麼來了？今天沒有特別的朝會。
+leave chancellor
+join maid right
 
-princess: 賽拉斯……我……
-princess: （我該怎麼說？「你半年後會殺了我」？）
+princess (sad): 這就是……我的城市？
 
-- 直接質問賽拉斯
-	princess: 賽拉斯，如果有一天王城遭到攻擊……你會怎麼做？
-	loyal_retainer (serious): ……殿下為何突然問這樣的問題？
-	loyal_retainer: 我的職責是守護您。無論發生什麼。
-	princess: （他的表情……一如既往的忠誠。但我知道，事實並非如此簡單。）
-- 假裝閒逛
-	princess: 啊，沒什麼。只是隨便走走。
-	loyal_retainer: 那請小心。最近宮中的氣氛有些不太對勁。
-	princess: （不太對勁……？）
+maid (crying): 殿下……我哥哥就是在這裡被帶走的。
+
+princess: （牆上的標語：「暴君去死」。骨瘦如柴的孩子蹲在巷口。宰相說的是真的。）
 
 [wait time="0.5"]
 
-princess: （我注意到大廳角落有一些文件……）
+# === Day 4：公主的決心 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/chancellor_study.png" fade="0.5"]
 
-suspect_a: 哦？公主殿下？這可是少見。殿下平時很少來王座大廳。
+leave maid
+join chancellor right
 
-princess: 維克多大臣。最近朝政順利嗎？
+princess (determined): 宰相大人，我想阻止父王繼續這樣做。您願意幫我嗎？
 
-suspect_a: 當然，殿下。一切都在掌控之中。
+chancellor (serious): 城防指揮需要兵符——在國王寢宮的暗格中。殿下進入不會被阻攔。拿到兵符，就能和平地結束這場戰爭。
 
-princess: （他的笑容……總覺得藏著什麼。）
-princess: （但我現在知道的太少了，什麼都問不出來。）
+princess (determined): ……我去。
+
+[wait time="0.5"]
+
+# === Day 5：偷取兵符 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/king_chamber.png" fade="0.5"]
+# [PLACEHOLDER] [music path="res://audio/bgm/tension_stealth.ogg" fade="1.0"]
+
+leave chancellor
+
+princess: （暗格中，沉甸甸的金屬令牌。對不起，父王。但我不能再讓你傷害更多人了。）
 
 [wait time="1.0"]
 
-princess: （嘗試翻看桌上的文件——）
-
-suspect_a: 殿下，這些是機密政務文書，恐怕不適合——
-
-princess: 我只是好奇而已。
-
-suspect_a: ……公主殿下還是不要介入政事比較好。
-
-[wait time="0.5"]
-
-princess: （被擋了下來。看來用這種方式行不通。）
-princess: （但至少我知道了——維克多大臣似乎在隱藏什麼。）
-
-# 獲得情報：勢力 A 的線索
+# 獲得情報
 [intel intel_faction_a]
+
+leave princess
 
 jump branch_a_death/

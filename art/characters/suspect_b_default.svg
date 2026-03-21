@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="768" viewBox="0 0 512 768">
-  <rect width="512" height="768" fill="#5a1a1a"/>
-  <rect x="10" y="10" width="492" height="748" rx="12" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8,4" opacity="0.5"/>
-  <!-- Silhouette -->
-  <ellipse cx="256" cy="280" rx="90" ry="110" fill="#401010" opacity="0.7"/>
-  <ellipse cx="256" cy="440" rx="130" ry="160" fill="#401010" opacity="0.7"/>
-  <!-- Text -->
-  <text x="256" y="640" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="bold" fill="#fff">Suspect B</text>
-  <text x="256" y="680" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#d09090">Default</text>
-  <text x="256" y="740" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#fff" opacity="0.6" letter-spacing="4">PLACEHOLDER</text>
+  <rect width="512" height="768" rx="16" fill="#4DB366"/>
+  <rect x="8" y="8" width="496" height="752" rx="12" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="8,4" opacity="0.4"/>
+  <ellipse cx="256" cy="260" rx="80" ry="100" fill="#3D9955" opacity="0.6"/>
+  <ellipse cx="256" cy="420" rx="110" ry="140" fill="#3D9955" opacity="0.6"/>
+  <text x="256" y="590" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#FFFFFF">莉迪亞將軍</text>
+  <text x="256" y="650" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#D0FFD8">預設</text>
+  <text x="256" y="730" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#FFFFFF" opacity="0.5" letter-spacing="6">PLACEHOLDER</text>
 </svg>

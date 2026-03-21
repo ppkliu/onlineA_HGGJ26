@@ -4,41 +4,33 @@
 # [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
 
-[wait time="1.5"]
+[wait time="2.0"]
 
-princess (shocked): 怎、怎麼回事……外面好吵……
+princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎？
 
-[wait time="0.8"]
-
-princess: （我從床上坐起來。窗外的天空是不對的——不是夜晚該有的黑色，而是一種翻攪著的橘紅，像是有人把整座城點燃了。）
-
-[signal arg="camera_shake"]
+[wait time="1.0"]
 
 # 門外走廊傳來重物倒地與拖行聲
 [sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX"]
 
-princess (shocked): 來人！莉娜？有人在嗎？
+[wait time="0.3"]
 
-[wait time="0.5"]
+princess (shocked): 哇！好大聲！……莉娜——？你在外面嗎？
 
-princess: （我跑到門邊，但門被從外面鎖住了。我拍打著門板，指節很快就開始發疼。沒有人回應。）
+[wait time="0.8"]
 
 [sound path="res://audio/sfx/door_knock.ogg" bus="SFX"]
 
 [wait time="1.0"]
 
-princess (sad): 父王……父王一定會派人來的。對，父王說過，這座城堡有神明賜予的魔法守護，絕對不會有事的……
-
-[wait time="0.8"]
-
-princess: （我把自己縮在床角，抱著膝蓋。禮儀導師說過，公主不應該哭。但我的牙齒一直在打顫。）
+princess (default): 父王說過，有魔法陣在，什麼壞事都不會發生的。外面大概只是在演習吧。
 
 [wait time="1.2"]
 
 # 遠處的慘叫聲突然變大——有人在走廊上奔跑
 [sound path="res://audio/sfx/running_screams.ogg" bus="SFX"]
 
-princess (shocked): 是救兵嗎……？！
+princess (default): 嗯？好像有很多人在跑……啊！有人來了！是莉娜來接我了嗎——
 
 [wait time="1.5"]
 

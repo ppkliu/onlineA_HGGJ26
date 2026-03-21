@@ -17,7 +17,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/maid_default.png"
+"image": "res://art/characters/maid_portrait.png"
 },
 "mirror": false,
 "scale": 1.0,

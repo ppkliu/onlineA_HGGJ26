@@ -1,58 +1,37 @@
-# 第 2 輪迴：壞結局 B — 在庭園地下牢入口被伏擊
+# 第 2 輪迴：Bad End B — 民心之刃
 
 [style name="default_style"]
-[background arg="res://art/backgrounds/garden.png" fade="0.5"]
 
-princess: （我找到了地下牢的入口……但門上的鎖紋章需要特殊的鑰匙。）
-princess: （讓我仔細看看這個紋章……）
+# === 被押送 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.5"]
 
-[wait time="0.5"]
+join princess left
+join mob_leader right
 
-princess: （這個紋章……不是王室的紋章。是另一個家族的標誌。）
-princess: （等等……這不是維克多大臣的家族紋章嗎？）
-
-princess (shocked): （如果地下牢的入口刻著大臣家族的紋章……）
-princess (shocked): （那這座地下牢，是大臣私自建造的？王室根本不知道它的存在？）
+mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們。妳排在他們後面。帶走她。
 
 [wait time="0.5"]
 
-princess: （我得記住這個發現。但現在，我需要找到鑰匙——）
+# [PLACEHOLDER] [background arg="res://art/backgrounds/city_gate.png" fade="0.5"]
 
-suspect_c: ……公主殿下。夜間在庭園散步，可不太安全。
+mob_npc_c: 公主？你們比約定的還早。帶走她。
 
-princess (shocked): 艾爾文祭司？你怎麼會在這裡？
+mob_leader (hesitant): 等等——你們答應過的糧食呢？
 
-suspect_c: 我經常在夜間到庭園祈禱。倒是殿下……對這扇門很感興趣嗎？
+mob_npc_c: 打下城之後再說。
 
-princess: 我只是偶然發現的。
+[wait time="0.5"]
 
-suspect_c: ……殿下。有些真相，知道得太多並不是好事。
+princess: （我早就知道會這樣。但我還是選擇了相信——因為我以為展現誠意就夠了。飢餓和仇恨面前，誠意一文不值。）
 
-princess: （他知道這扇門的事？）
+[wait time="1.0"]
 
-suspect_c: 尤其是……對於即將失去一切的人而言。
-
-[wait time="0.3"]
-
-princess (shocked): ……什麼意思？
+leave princess
+leave mob_leader
 
 [signal arg="cut_to_silence"]
-[wait time="0.8"]
 
-princess: （背後……有人。）
-princess: （不是祭司……是從暗處出現的身影。）
-princess: （祭司……他是故意把我引到這裡的嗎？）
+[wait time="1.5"]
 
-[wait time="1.0"]
-
-princess: （又一次……但這次我知道了更多。）
-princess: （祭司不是表面上的超然世外。他也牽扯在這場陰謀之中。）
-princess: （地下牢……大臣的紋章……祭司的試探……）
-princess: （所有的線索正在拼湊成一幅完整的圖畫。）
-
-[wait time="1.0"]
-
-# 壞結局 B → 獲得情報：忠臣的過去
-# 死亡前祭司的暗示讓公主理解忠臣的背景
-[signal arg="death_context:{'death_message': '你在庭園地下牢入口被伏擊。\\n艾爾文祭司似乎知道更多——他並不像表面上那樣無害。', 'intel_reward': 'intel_retainer_past', 'killer': 'ambush'}"]
+[signal arg="death_context:{'death_message': '你被信任的平民出賣給敵軍。\n\n「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation'], 'killer': 'mob'}"]
 [signal arg="trigger_death"]
