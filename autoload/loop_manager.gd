@@ -1,0 +1,99 @@
+extends Node
+
+## 輪迴管理器 — 控制死亡、重生、場景重置的完整流程
+
+signal loop_started(loop_number: int)
+signal death_triggered(death_context: Dictionary)
+signal loop_phase_changed(phase: StringName)
+
+enum LoopPhase {
+	PROLOGUE,       # 第 0 輪迴（序章）
+	EARLY,          # 第 1-2 輪迴（摸索期）
+	MID,            # 中期輪迴（推理期）
+	FINAL,          # 最終輪迴
+}
+
+var current_phase: LoopPhase = LoopPhase.PROLOGUE
+# 當前輪迴中的場景進度狀態（每次輪迴重置）
+var scene_states: Dictionary = {}
+
+
+func _ready() -> void:
+	_update_phase()
+
+
+## 觸發死亡 → 進入死亡畫面 → 獲得情報 → 輪迴重啟
+func trigger_death(context: Dictionary = {}) -> void:
+	# context 範例：{ "killer": "retainer", "intel_reward": "intel_001", "scene": "throne_room" }
+
+	death_triggered.emit(context)
+
+	# 1. 獲得此次死亡帶來的情報
+	if context.has("intel_reward"):
+		var rewards: Array = []
+		if context["intel_reward"] is Array:
+			rewards = context["intel_reward"]
+		else:
+			rewards = [context["intel_reward"]]
+		for reward in rewards:
+			IntelSystem.acquire_intel(reward)
+
+	# 2. 顯示死亡畫面 + 情報獲得動畫（由 UI 層處理）
+	await _show_death_screen(context)
+
+	# 3. 執行輪迴重置
+	_reset_loop()
+
+
+## 輪迴重置
+func _reset_loop() -> void:
+	IntelSystem.trigger_loop_reset()
+	scene_states.clear()
+	_update_phase()
+	loop_started.emit(IntelSystem.current_loop)
+
+	# 轉場到公主寢宮（輪迴起點）
+	SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
+		SceneTransition.TransitionType.LOOP_RESTART)
+
+
+## 根據輪迴次數與情報量更新階段
+func _update_phase() -> void:
+	var loop = IntelSystem.current_loop
+	var intel_count = IntelSystem.acquired_intels.size()
+
+	var old_phase = current_phase
+	if loop == 0:
+		current_phase = LoopPhase.PROLOGUE
+	elif loop <= 2:
+		current_phase = LoopPhase.EARLY
+	elif intel_count >= _get_final_threshold():
+		current_phase = LoopPhase.FINAL
+	else:
+		current_phase = LoopPhase.MID
+
+	if current_phase != old_phase:
+		loop_phase_changed.emit(StringName(LoopPhase.keys()[current_phase]))
+
+
+func _get_final_threshold() -> int:
+	# 需要收集到的情報數量才能進入最終輪迴
+	return 8  # 根據實際情報數量調整
+
+
+func _show_death_screen(context: Dictionary) -> void:
+	var death_screen = load("res://scenes/ui/death_screen.tscn").instantiate()
+	get_tree().root.add_child(death_screen)
+	death_screen.setup(context)
+	await death_screen.animation_completed
+	death_screen.queue_free()
+
+
+## 設定場景狀態（用於追蹤當前輪迴內的一次性事件）
+func set_scene_state(key: String, value: Variant) -> void:
+	scene_states[key] = value
+
+
+## 取得場景狀態
+func get_scene_state(key: String, default: Variant = null) -> Variant:
+	return scene_states.get(key, default)
