@@ -5,6 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	GameManager.change_state(GameManager.GameState.PLAYING)
+	FlowLogger.log_event("scene", "Game scene ready", {"loop": IntelSystem.current_loop})
 
 	# 序章開始
 	if IntelSystem.current_loop == 0:
@@ -15,6 +16,7 @@ func _ready() -> void:
 
 func _start_prologue() -> void:
 	AudioManager.play_prologue_epic()
+	FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "prologue_main"})
 	var layout := Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
 	if layout:
 		print("[GameScene] Dialogic layout created: ", layout.name)
@@ -24,5 +26,6 @@ func _start_prologue() -> void:
 
 func _start_loop() -> void:
 	# 載入對應輪迴階段的場景
+	FlowLogger.log_event("scene", "Start loop flow", {"phase": LoopManager.LoopPhase.keys()[LoopManager.current_phase]})
 	SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
 		SceneTransition.TransitionType.FADE_BLACK)

@@ -22,6 +22,7 @@ GameManager="*res://autoload/game_manager.gd"
 IntelSystem="*res://autoload/intel_system.gd"
 LoopManager="*res://autoload/loop_manager.gd"
 AudioManager="*res://autoload/audio_manager.gd"
+FlowLogger="*res://autoload/flow_logger.gd"
 SceneTransition="*res://autoload/scene_transition.tscn"
 Dialogic="*uid://ds2q0uclmolvu"
 
@@ -60,8 +61,10 @@ layout/style_list=["res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_De
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
 window/size/window_width_override=1280
 window/size/window_height_override=720
+window/size/resizable=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
