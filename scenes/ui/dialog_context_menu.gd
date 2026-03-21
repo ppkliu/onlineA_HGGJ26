@@ -142,19 +142,16 @@ func _apply_text_speed(multiplier: float) -> void:
 ## ── 字型大小 ──────────────────────────────────────
 
 func _get_current_font_size() -> float:
-	var textbox_layer := _find_vn_textbox_layer()
-	if textbox_layer:
-		return textbox_layer.get("text_size") as float
+	if DialogicCustomizer:
+		return DialogicCustomizer.get_current_font_size() as float
 	var vp_h := get_viewport().get_visible_rect().size.y
 	return round(vp_h * 0.25 / 3.0)
 
 
 func _on_font_size_changed(value: float) -> void:
 	font_size_label.text = str(int(value))
-	var textbox_layer := _find_vn_textbox_layer()
-	if textbox_layer:
-		textbox_layer.text_size = int(value)
-		textbox_layer._apply_text_settings()
+	if DialogicCustomizer:
+		DialogicCustomizer.set_font_size(int(value))
 
 
 ## ── 對話速度 ──────────────────────────────────────
@@ -183,22 +180,13 @@ func _on_fast_forward_changed(value: float) -> void:
 ## ── 對話框透明度 ──────────────────────────────────
 
 func _get_current_opacity() -> float:
-	var textbox_layer := _find_vn_textbox_layer()
-	if textbox_layer:
-		var panel_node: PanelContainer = textbox_layer.get_node_or_null("%DialogTextPanel")
-		if panel_node:
-			return panel_node.self_modulate.a
-	return 0.5
+	return DialogicCustomizer.BOX_OPACITY if DialogicCustomizer else 0.5
 
 
 func _on_opacity_changed(value: float) -> void:
 	opacity_label.text = "%d%%" % int(value * 100)
-	var textbox_layer := _find_vn_textbox_layer()
-	if textbox_layer:
-		var panel_node: PanelContainer = textbox_layer.get_node_or_null("%DialogTextPanel")
-		if panel_node:
-			var c := panel_node.self_modulate
-			panel_node.self_modulate = Color(c.r, c.g, c.b, value)
+	if DialogicCustomizer:
+		DialogicCustomizer.set_box_opacity(value)
 
 
 ## ── 儲存紀錄 ──────────────────────────────────────
@@ -257,21 +245,3 @@ func _count_existing_saves() -> void:
 		dir.list_dir_end()
 
 
-func _find_vn_textbox_layer() -> Node:
-	var tree := get_tree()
-	if not tree:
-		return null
-	for node in tree.get_nodes_in_group("dialogic_layout_layer"):
-		if node.has_method("_apply_text_settings"):
-			return node
-	return _find_node_recursive(tree.root, "VN_TextboxLayer")
-
-
-func _find_node_recursive(node: Node, target_name: String) -> Node:
-	if node.name == target_name:
-		return node
-	for child in node.get_children():
-		var result := _find_node_recursive(child, target_name)
-		if result:
-			return result
-	return null
