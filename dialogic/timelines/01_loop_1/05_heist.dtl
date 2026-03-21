@@ -32,9 +32,11 @@ leave chancellor
 
 [background arg="res://art/backgrounds/king_chamber_night.png" fade="0.6"]
 
-princess: （父王不在……暗格打開了。一枚沉重的金屬印璽，刻著王家雙頭獅。）
+princess: （父王不在……暗格打開了。一枚沉重的金屬印璽，刻著王家雙頭獅。跟父王書房裡掛的那面盾牌上的紋章一模一樣。）
 
-princess: （對不起，父王。但我不能再讓你傷害更多人了。）
+princess: （小時候，父王把我抱在膝蓋上，指著那面盾牌說：「這兩頭獅子，一頭守護人民，一頭守護家人。」）
+
+princess: （對不起，父王。你說它守護人民……但下城區的人都在詛咒你的名字。我不能假裝沒看到了。）
 
 [wait time="1.0"]
 
