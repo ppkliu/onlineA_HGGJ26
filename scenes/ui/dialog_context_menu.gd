@@ -109,6 +109,11 @@ func _start_fast_forward() -> void:
 	# 加速文字顯示
 	var fast_speed := _normal_text_speed / _fast_forward_multiplier
 	_apply_text_speed(fast_speed)
+	# 啟用 auto_skip 讓 wait 事件也加速（不跳過，縮短等待時間）
+	if Dialogic and Dialogic.has_subsystem("Inputs"):
+		Dialogic.Inputs.auto_skip.disable_on_user_input = false
+		Dialogic.Inputs.auto_skip.time_per_event = 0.01
+		Dialogic.Inputs.auto_skip.enabled = true
 	# 立刻推進一次，然後開始持續推進
 	_try_advance_dialog()
 	_ff_advance_timer.start()
@@ -118,6 +123,10 @@ func _stop_fast_forward() -> void:
 	_is_fast_forwarding = false
 	_ff_advance_timer.stop()
 	_apply_text_speed(_normal_text_speed)
+	# 關閉 auto_skip
+	if Dialogic and Dialogic.has_subsystem("Inputs"):
+		Dialogic.Inputs.auto_skip.enabled = false
+		Dialogic.Inputs.auto_skip.disable_on_user_input = true
 
 
 func _on_ff_advance_tick() -> void:
