@@ -1,0 +1,63 @@
+# 最終輪迴：揭露宰相 — Day 7
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/final_truth.ogg" fade="2.0"]
+
+join princess left
+join chancellor right
+
+princess (determined): 父王，女兒有話要說。關於這座城市的存亡。
+
+chancellor (default): 公主最近精神不穩定，臣建議——
+
+princess (determined): 宰相大人，我建議您閉嘴。
+
+[wait time="1.0"]
+
+princess (determined): 父王。女兒知道地下防線、戰備儲糧、秘密訓練的民兵——全部。也知道您為什麼要這麼做。
+
+[wait time="0.5"]
+
+princess (determined): 您不知道叛徒是誰，所以不敢信任任何人。但無知不是保護，無知是監獄。
+
+[wait time="1.0"]
+
+princess (determined): 宰相莫里昂——
+
+[wait time="0.5"]
+
+princess (determined): 兩年前您派人弄瞎了總工匠達爾——因為他記住了您的聲音：「很輕、很慢，像在唸詩。」
+
+[wait time="0.8"]
+
+princess (determined): 一年前您和敵國簽了密約，每月以督察之名對魔法陣注入腐蝕劑。
+
+[wait time="0.8"]
+
+princess (determined): 半年來您截留了父王撥給下城區的救濟糧——用財政署的大鎖鎖住糧倉。
+
+[wait time="1.0"]
+
+chancellor (cold): 這些指控沒有證據——
+
+princess (determined): 賽拉斯。
+
+[wait time="0.5"]
+
+princess: （賽拉斯放下布包——魔法陣被動過手腳的核心元件和通敵密函。）
+
+[wait time="1.5"]
+
+king: 朕等一個證據等了兩年。沒想到是朕的女兒先找到了答案。——拿下。
+
+[wait time="1.0"]
+
+chancellor (cold): 殿下比臣想的聰明。可惜，太遲了一點。
+
+leave princess
+leave chancellor
+
+[wait time="1.0"]
+
+jump 05_dawn/

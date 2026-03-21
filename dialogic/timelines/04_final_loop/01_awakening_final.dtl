@@ -1,0 +1,47 @@
+# 最終輪迴：最後一次醒來
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
+# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+
+join princess center
+
+princess (determined): ……
+
+[wait time="1.0"]
+
+princess: （那個聲音——「說話很輕、很慢，像在唸詩。」不是父王。是宰相。）
+
+[wait time="0.8"]
+
+princess: （弄瞎達爾的是宰相。鎖糧倉的是他。操弄暴民的是他。破壞魔法陣的也是他。）
+
+[wait time="1.0"]
+
+princess: （父王不是冷血的實用主義者——他是被叛徒包圍、孤軍奮戰的人。）
+
+[wait time="1.0"]
+
+princess (determined): （父王，對不起。這次，換我來保護你了。但我不會再一個人行動——我需要對的人，在對的時間，也知道真相。）
+
+[wait time="0.8"]
+
+join maid right
+
+maid (default): 殿下～早安！宰——
+
+princess (determined): 莉娜，退回寶石。去告訴賽拉斯：我知道父王的密令，也知道他一直在做什麼。讓他天黑後到我房間來。
+
+maid (default): 殿下好像突然變了一個人……
+
+princess (determined): 因為我醒了。
+
+leave maid
+
+[wait time="0.5"]
+
+[signal arg="day_counter:180"]
+
+leave princess
+
+jump 02_recruit_silas/

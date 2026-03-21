@@ -1,0 +1,66 @@
+# 第 3 輪迴：Bad End C — 棋差一步
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/tower_room.png" fade="0.5"]
+
+join princess center
+
+princess: （塔樓。石壁冰冷，窗戶被釘死。）
+
+[wait time="1.0"]
+
+princess: （我知道的夠多了——地下防線、宰相可能有問題、父王為了大局犧牲所有人。但這些知識在石壁面前一文不值。）
+
+[wait time="1.0"]
+
+princess (cold): （一個人知道真相是不夠的。）
+
+[wait time="1.5"]
+
+princess: （等等。達爾說的那個聲音——「說話很輕、很慢，像在唸詩。」）
+
+[wait time="1.0"]
+
+princess: （……宰相。宰相莫里昂說話就是那種語調。他在花園裡對我說話的時候——「殿下，臣洗耳恭聽」——就是那種聲音。）
+
+[wait time="1.0"]
+
+princess (shocked): （如果弄瞎達爾的不是父王——是宰相？）
+
+[wait time="0.5"]
+
+princess (shocked): （那鎖住糧倉的也不是父王——糧倉鎖上印的是財政署的印記——財政署是宰相管的！）
+
+[wait time="0.8"]
+
+# 遠處傳來城門被撞開的聲音。塔樓在震動中搖晃
+# [PLACEHOLDER] [sound path="res://audio/sfx/gate_open_heavy.ogg"]
+
+[signal arg="camera_shake"]
+
+princess (shocked): 不——差一步……只差最後一步就能拼出完整的真相——
+
+[wait time="1.0"]
+
+leave princess
+
+[signal arg="cut_to_silence"]
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+
+[wait time="3.0"]
+
+「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」
+
+[wait time="2.0"]
+
+帶著這份記憶……回到一切開始之前。
+
+[wait time="1.5"]
+
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+
+# === 獲得情報 ===
+[signal arg="intel:intel_chancellor_treason"]
+[signal arg="death_context:{'death_message': '你被宰相幽禁在塔樓中，眼睜睜看著城破。\n\n「一個人知道真相是不夠的。你需要讓對的人，在對的時間，也知道真相。」', 'intel_reward': ['intel_chancellor_treason'], 'killer': 'chancellor'}"]
+[signal arg="trigger_death"]

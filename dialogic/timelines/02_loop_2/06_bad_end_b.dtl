@@ -1,16 +1,18 @@
 # 第 2 輪迴：Bad End B — 民心之刃
 
 [style name="default_style"]
-
-# === 被押送 ===
 # [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.5"]
 
 join princess left
 join mob_leader right
 
-mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們。妳排在他們後面。帶走她。
+mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們。妳排在他們後面。
 
 [wait time="0.5"]
+
+mob_leader (grieving): 帶走她。
+
+[wait time="0.8"]
 
 # [PLACEHOLDER] [background arg="res://art/backgrounds/city_gate.png" fade="0.5"]
 
@@ -19,6 +21,10 @@ mob_npc_c: 公主？你們比約定的還早。帶走她。
 mob_leader (hesitant): 等等——你們答應過的糧食呢？
 
 mob_npc_c: 打下城之後再說。
+
+[wait time="1.0"]
+
+mob_leader (hesitant): ……什麼？
 
 [wait time="0.5"]
 
@@ -31,7 +37,21 @@ leave mob_leader
 
 [signal arg="cut_to_silence"]
 
+[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+
+[wait time="3.0"]
+
+「真相說得太遲，就和謊言沒有區別。」
+
+[wait time="2.0"]
+
+帶著這份記憶……回到一切開始之前。
+
 [wait time="1.5"]
 
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+
+# === 獲得情報 ===
+[signal arg="intel:intel_mob_manipulation"]
 [signal arg="death_context:{'death_message': '你被信任的平民出賣給敵軍。\n\n「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation'], 'killer': 'mob'}"]
 [signal arg="trigger_death"]

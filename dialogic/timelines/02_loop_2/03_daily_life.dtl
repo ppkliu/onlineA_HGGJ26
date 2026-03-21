@@ -1,0 +1,36 @@
+# 第 2 輪迴：下城區生活蒙太奇 — Day 15-30
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+
+join princess left
+
+princess: （第十五天。物資越來越少。）
+
+[wait time="0.8"]
+
+princess: （老人坐在巷口回憶：「王后還在的時候，每年秋天都有糧食發下來。那時候孩子們胖嘟嘟的。」）
+
+[wait time="1.0"]
+
+princess: （孩子們用泥巴捏「麵包」假裝吃。他們的肚子圓鼓鼓的，但不是因為吃飽——是因為營養不良的水腫。）
+
+[wait time="1.0"]
+
+princess: （莉娜的哥哥帶著傷從前線偷跑回來。他的左臂被砍了一刀，草草包紮，已經開始發黑。莉娜哭著幫他換藥。）
+
+[wait time="1.2"]
+
+princess: （他們不是暴民。他們是被逼到牆角的普通人。）
+
+[wait time="0.8"]
+
+princess: （宰相利用了他們的痛苦——但痛苦本身不全是宰相製造的。重稅、徵兵、糧食短缺……這些是真的。）
+
+[wait time="1.0"]
+
+princess (determined): （我不能再只是看著了。我必須做點什麼。）
+
+leave princess
+
+jump 04_confession/

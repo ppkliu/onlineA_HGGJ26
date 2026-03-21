@@ -1,0 +1,50 @@
+# 最終輪迴：真結局 — 破曉（Day 180）
+
+[style name="default_style"]
+
+[wait time="1.0"]
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/city_wall_dawn.png" fade="1.5"]
+# [PLACEHOLDER] [music path="res://audio/bgm/final_truth.ogg" fade="2.0"]
+
+join princess left
+join loyal_retainer right
+
+loyal_retainer (relieved): 殿下，敵軍已經開始撤退了。
+
+[wait time="1.0"]
+
+princess (sad): 父王呢？
+
+loyal_retainer (relieved): 陛下讓臣轉告——「朕欠你一個道歉。但朕不後悔保護你。只後悔低估了你。」
+
+[wait time="2.0"]
+
+princess: （城下。布魯諾的兒子騎在他肩上，手裡抓著白麵包。莉娜衝上去抱住歸來的哥哥。遠處有人在幫達爾修房子。）
+
+[wait time="1.5"]
+
+princess (sad): 賽拉斯。那道密令——你現在可以撕掉了。
+
+[wait time="1.0"]
+
+princess: （賽拉斯從盔甲內襯取出那張汗水浸透、反覆折疊到邊角起毛的紙條，撕成碎片。碎片在晨風中飛散，像白色的蝴蝶。）
+
+[wait time="1.5"]
+
+loyal_retainer (tearful): 臣守護了您十七年。這是第一次……臣不需要用劍來守護您了。
+
+[wait time="2.0"]
+
+princess: （這就是我死了那麼多次想要到達的地方。不是打敗了誰——只是讓所有人都不需要再痛苦了。）
+
+[wait time="1.5"]
+
+princess (default): 太陽出來了。
+
+leave princess
+leave loyal_retainer
+
+[wait time="2.0"]
+
+jump 06_epilogue/

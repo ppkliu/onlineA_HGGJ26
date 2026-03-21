@@ -10,7 +10,9 @@ princess (hollow): ……又回來了。
 
 [wait time="0.5"]
 
-princess: （宰相是叛徒——這一點我確定了。但下城區的饑荒是真的。我不會再相信任何貴族。只能靠那些真正受苦的人了。）
+princess: （宰相是叛徒——這一點我確定了。但下城區的饑荒是真的，莉娜哥哥被徵兵也是真的。我不會再相信任何貴族。只能靠那些真正受苦的人了。）
+
+[wait time="1.0"]
 
 join maid right
 
@@ -20,6 +22,8 @@ princess (determined): 莉娜，把寶石退回去。幫我準備一套不顯眼
 
 maid (confused): 殿下……？
 
+princess (determined): 不要問為什麼。快去。
+
 [wait time="0.5"]
 
 [signal arg="day_counter:180"]
@@ -27,4 +31,4 @@ maid (confused): 殿下……？
 leave princess
 leave maid
 
-jump branch_b_unlock/
+jump 02_infiltration/

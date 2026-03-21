@@ -1,0 +1,22 @@
+# 最終輪迴：尾聲
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+
+[wait time="1.5"]
+
+join princess center
+
+princess: 「打破迴圈的方式，不是改變過去。而是在重複中，選擇成為一個不同的人。」
+
+[wait time="2.0"]
+
+princess: 「她不再是那個等人來救的公主。她成為了拯救所有人的人。」
+
+leave princess
+
+[wait time="2.0"]
+
+# === BREAK THE LOOP — TRUE END ===
+
+[signal arg="true_ending_reached"]
+[signal arg="show_credits"]

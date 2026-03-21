@@ -1,0 +1,46 @@
+# 第 3 輪迴：錯誤的結論 — Day 60-90
+
+[style name="default_style"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/dal_house.png" fade="0.5"]
+
+join princess left
+join dal right
+
+# === 回去質問達爾 ===
+
+princess (cold): 弄瞎你的人——是國王嗎？
+
+[wait time="1.0"]
+
+dal (quiet): 我看不見他們的臉。只記得那個聲音——說話很輕、很慢，像在唸詩。
+
+[wait time="1.5"]
+
+princess: （父王的聲音粗獷低沉，不會「輕聲細語」。但如果他故意壓低聲音呢？）
+
+[wait time="1.0"]
+
+princess: （徵兵、加稅、鎖糧倉、弄瞎工匠……）
+
+[wait time="0.8"]
+
+princess (cold): （父王是一個絕對冷血的實用主義者。他不是暴君——暴君不會建防線。他是比暴君更可怕的東西：為了「大局」可以犧牲任何人的人。）
+
+[wait time="1.0"]
+
+leave dal
+
+# === 蒙太奇：錯誤的行動 ===
+# [PLACEHOLDER] [background arg="res://art/backgrounds/castle_corridor.png" fade="0.5"]
+
+princess (cold): （既然如此——我只能用父王的方式。保全內城和地下防線。下城區的人……只能靠他們自己了。）
+
+[wait time="1.0"]
+
+princess: （我開始加固內城的防禦，忽略下城區的求援。用同樣冷血的邏輯——犧牲少數，保住多數。）
+
+[wait time="1.0"]
+
+leave princess
+
+jump 05_chancellor_strike/
