@@ -1,0 +1,20 @@
+# 第 1 輪迴：醒來（短場景 — 播完後進入自由移動）
+
+# [PLACEHOLDER] [background arg="res://art/backgrounds/prologue_princess_room.png" fade="1.0"]
+# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+
+join princess center
+
+princess (shocked): ——！
+
+[wait time="0.5"]
+
+princess: （心臟在狂跳。我還記得那把劍、賽拉斯的眼淚、胸口被貫穿的觸感。但我活著。指甲上還塗著昨天的蔻丹。）
+
+princess (shocked): 這……是夢嗎……？
+
+[wait time="0.5"]
+
+princess: （……莉娜好像在房間裡。先去找她說說話。）
+
+leave princess

@@ -5,6 +5,9 @@
 # === 被押送 ===
 # [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.5"]
 
+join princess left
+join mob_leader right
+
 mob_leader (grieving): 我答應過很多人。我老婆、我兒子、我的兄弟們。妳排在他們後面。帶走她。
 
 [wait time="0.5"]
@@ -22,6 +25,9 @@ mob_npc_c: 打下城之後再說。
 princess: （我早就知道會這樣。但我還是選擇了相信——因為我以為展現誠意就夠了。飢餓和仇恨面前，誠意一文不值。）
 
 [wait time="1.0"]
+
+leave princess
+leave mob_leader
 
 [signal arg="cut_to_silence"]
 

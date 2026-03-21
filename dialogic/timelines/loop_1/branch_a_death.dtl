@@ -5,6 +5,9 @@
 # === Day 6：撕下偽裝 ===
 # [PLACEHOLDER] [background arg="res://art/backgrounds/city_wall.png" fade="0.8"]
 
+join princess left
+join chancellor right
+
 chancellor (default): 這個國家……終於要迎來新的主人了。
 
 princess (confused): 什麼？我們不是要和平地——
@@ -35,6 +38,9 @@ chancellor (cold): 再見了，公主殿下。
 [signal arg="cut_to_silence"]
 
 princess: （宰相是叛徒。父王不是暴君。是我害了所有人——因為我什麼都不知道，卻以為自己知道了一切。）
+
+leave princess
+leave chancellor
 
 [wait time="1.5"]
 

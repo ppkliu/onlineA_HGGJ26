@@ -4,11 +4,15 @@
 # [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
 # [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
 
+join princess left
+
 princess (hollow): ……又回來了。
 
 [wait time="0.5"]
 
 princess: （宰相是叛徒——這一點我確定了。但下城區的饑荒是真的。我不會再相信任何貴族。只能靠那些真正受苦的人了。）
+
+join maid right
 
 maid (default): 殿下～早安！宰相大人送來了——
 
@@ -19,5 +23,8 @@ maid (confused): 殿下……？
 [wait time="0.5"]
 
 [signal arg="day_counter:180"]
+
+leave princess
+leave maid
 
 jump branch_b_unlock/

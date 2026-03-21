@@ -2,13 +2,33 @@ extends CanvasLayer
 
 const TransitionType = TransitionConstants.TransitionType
 
+signal transition_midpoint
+signal transition_finished
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var color_rect: ColorRect = $ColorRect
 
-signal transition_midpoint  # 轉場中點（可在此切換場景）
+var target_spawn_point: StringName = &""
+var _is_transitioning: bool = false
 
 
-func transition_to(scene_path: String, type: TransitionConstants.TransitionType = TransitionConstants.TransitionType.FADE_BLACK) -> void:
+func transition_to(
+	scene_path: String,
+	type: TransitionConstants.TransitionType = TransitionConstants.TransitionType.FADE_BLACK,
+	spawn_point_name: StringName = &""
+) -> void:
+	if _is_transitioning:
+		return
+
+	if scene_path.is_empty():
+		push_warning("SceneTransition.transition_to called with an empty scene path.")
+		return
+
+	_is_transitioning = true
+	target_spawn_point = spawn_point_name
+	color_rect.visible = true
+	color_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+
 	match type:
 		TransitionConstants.TransitionType.FADE_BLACK:
 			animation_player.play("fade_out")
@@ -22,6 +42,8 @@ func transition_to(scene_path: String, type: TransitionConstants.TransitionType 
 
 	get_tree().change_scene_to_file(scene_path)
 
+	await get_tree().process_frame
+
 	match type:
 		TransitionConstants.TransitionType.FADE_BLACK:
 			animation_player.play("fade_in")
@@ -31,3 +53,19 @@ func transition_to(scene_path: String, type: TransitionConstants.TransitionType 
 			animation_player.play("death_reveal")
 
 	await animation_player.animation_finished
+
+	color_rect.color = Color(0, 0, 0, 0)
+	color_rect.visible = false
+	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_is_transitioning = false
+	transition_finished.emit()
+
+
+func consume_target_spawn_point() -> StringName:
+	var sp := target_spawn_point
+	target_spawn_point = &""
+	return sp
+
+
+func is_transitioning() -> bool:
+	return _is_transitioning

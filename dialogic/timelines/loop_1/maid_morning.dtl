@@ -1,0 +1,30 @@
+# 第 1 輪迴：莉娜的早安問候（房間內對話）
+
+join princess left
+join maid right
+
+maid (default): 殿下～早安！宰相大人送來了南國的寶石呢！邊境的小毛賊陛下已經派人處理了，您完全不需要操心～
+
+princess (shocked): 莉娜……妳有沒有覺得……今天好像在哪裡經歷過？
+
+maid (default): 殿下在說什麼呀？您是不是做惡夢了？
+
+princess: （一模一樣。她的聲音、語氣、端著銀盤走進來的方式。如果這不是夢……那我回到了過去？）
+
+[wait time="0.5"]
+
+princess: （宰相大人一直對我很溫柔。或許他知道些什麼。）
+
+# 系統提示
+[signal arg="day_counter:180"]
+
+- 去找宰相大人談談
+	princess (determined): 莉娜，幫我更衣。我要去見宰相大人。
+	maid (default): 咦？殿下今天怎麼突然想見宰相大人？好的好的，我馬上準備！
+	leave princess
+	leave maid
+	jump investigation_a/
+- 先在房間裡看看
+	princess: （……不急。讓我先想想。）
+	leave princess
+	leave maid

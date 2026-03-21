@@ -6,6 +6,8 @@
 
 [wait time="1.5"]
 
+join princess center
+
 princess (shocked): 怎、怎麼回事……外面好吵……
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/corridor_crash.ogg"]
@@ -29,5 +31,7 @@ princess (shocked): 是救兵嗎……？！
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/armor_approach.ogg"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/lock_break.ogg"]
+
+leave princess
 
 jump prologue_assassination/

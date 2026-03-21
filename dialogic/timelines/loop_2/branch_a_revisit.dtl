@@ -5,6 +5,8 @@
 # === Day 45-55：地下酒窖 ===
 # [PLACEHOLDER] [background arg="res://art/backgrounds/cellar.png" fade="0.8"]
 
+join mob_leader center
+
 mob_leader (conflicted): 她說她是公主，說宰相是叛徒，說可以打開糧倉。
 
 mob_npc_c: 她是公主——敵國的人肯定願意出大價錢買她。
@@ -16,5 +18,7 @@ mob_leader (conflicted): 等等。我答應過她——
 mob_npc_c: 她爹把我們的孩子送去送死，她說幾句好聽的話就能一筆勾銷？
 
 [wait time="1.0"]
+
+leave mob_leader
 
 jump branch_b_death/

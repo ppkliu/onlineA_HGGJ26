@@ -1,17 +1,123 @@
-[gd_scene load_steps=2 format=3 uid="uid://royalchamber001"]
+[gd_scene load_steps=15 format=3 uid="uid://royalchamber001"]
 
-[ext_resource type="Script" path="res://scenes/locations/royal_chamber.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/locations/royal_chamber.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://art/backgrounds/prologue_princess_room.png" id="2_bg"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
+[ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
+[ext_resource type="Texture2D" path="res://art/characters/maid_default.png" id="5_maid"]
+[ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(50, 24)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact_detect"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_maid_body"]
+size = Vector2(60, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_maid_interact"]
+radius = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_top"]
+size = Vector2(1920, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bottom"]
+size = Vector2(1920, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_left"]
+size = Vector2(40, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_right"]
+size = Vector2(40, 1080)
 
 [node name="RoyalChamber" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.15, 0.1, 0.2, 1)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_bg")
 
-[node name="LocationLabel" type="Label" parent="."]
+[node name="SpawnPoint_Default" type="Marker2D" parent="."]
+position = Vector2(960, 650)
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(960, 650)
+script = ExtResource("3_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("4_frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_player")
+
+[node name="InteractionDetector" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractionDetector"]
+shape = SubResource("CircleShape2D_interact_detect")
+
+[node name="MaidNPC" type="StaticBody2D" parent="."]
+position = Vector2(1400, 600)
+
+[node name="Sprite2D" type="Sprite2D" parent="MaidNPC"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_maid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_maid_body")
+
+[node name="InteractionArea" type="Area2D" parent="MaidNPC"]
+script = ExtResource("6_npc")
+timeline_path = "res://dialogic/timelines/loop_1/maid_morning.dtl"
+npc_name = "莉娜"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaidNPC/InteractionArea"]
+shape = SubResource("CircleShape2D_maid_interact")
+
+[node name="InteractLabel" type="Label" parent="MaidNPC/InteractionArea"]
+offset_left = -60.0
+offset_top = -120.0
+offset_right = 60.0
+offset_bottom = -90.0
+text = "按 E 對話"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="TopWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+position = Vector2(960, 480)
+shape = SubResource("RectangleShape2D_top")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+position = Vector2(960, 800)
+shape = SubResource("RectangleShape2D_bottom")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+position = Vector2(100, 540)
+shape = SubResource("RectangleShape2D_left")
+
+[node name="RightWall" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+position = Vector2(1820, 540)
+shape = SubResource("RectangleShape2D_right")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="LocationLabel" type="Label" parent="UILayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

@@ -8,6 +8,9 @@
 
 # 鐵匠鋪。布魯諾在砸鐵，更像是在發洩
 
+join princess left
+join mob_leader right
+
 princess (disguised): 打擾了。我是從內城逃出來的家僕，主人家因為反對國王的政策被抄了。
 
 mob_leader (suspicious): 妳的口音不像下城區的人。……哼。至少妳主人家還有骨氣。
@@ -42,5 +45,8 @@ mob_leader (hesitant): ……給我三天。
 [wait time="0.5"]
 
 [intel intel_mob_contact]
+
+leave princess
+leave mob_leader
 
 jump branch_a_revisit/
