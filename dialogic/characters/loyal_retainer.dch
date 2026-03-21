@@ -17,7 +17,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/retainer_default.png"
+"image": "res://art/characters/knight_portrait.png"
 },
 "mirror": false,
 "scale": 1.0,

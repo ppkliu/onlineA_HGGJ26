@@ -4,8 +4,6 @@
 
 [wait time="3.0"]
 
-join princess center
-
 princess: 「無知，是最溫柔的死刑。」
 
 [wait time="2.0"]
@@ -15,8 +13,6 @@ princess: 帶著這份記憶……回到一切開始之前。
 [wait time="1.5"]
 
 # [PLACEHOLDER] [sound path="res://audio/sfx/loop_restart.ogg"]
-
-leave princess
 
 # === 獲得情報 ===
 [intel intel_city_fall]

@@ -1,6 +1,6 @@
 # 第 1 輪迴：醒來（短場景 — 播完後進入自由移動）
 
-# [PLACEHOLDER] [background arg="res://art/backgrounds/prologue_princess_room.png" fade="1.0"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
 # [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
 
 join princess center

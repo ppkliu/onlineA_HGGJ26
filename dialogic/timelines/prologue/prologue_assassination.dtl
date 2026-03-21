@@ -2,9 +2,6 @@
 
 [background arg="res://art/backgrounds/prologue_knight_arrives.png" fade="0.8"]
 
-join princess left
-join loyal_retainer right
-
 loyal_retainer (tearful): ……殿下。
 
 princess (default): 賽拉斯！父王派你來的對不對？快帶我離開——
@@ -81,8 +78,5 @@ princess: （不痛。只是很冷。）
 princess: （……為什麼所有人都拋下了我？）
 
 [wait time="2.0"]
-
-leave princess
-leave loyal_retainer
 
 jump prologue_death/
