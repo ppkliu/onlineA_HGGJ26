@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mainmenu001"]
 
-[ext_resource type="Script" uid="uid://b7ys5wjp7atjx" path="res://scenes/main_menu/main_menu.gd" id="1"]
+[ext_resource type="Script" uid="uid://cg7jt2y5vtus7" path="res://scenes/main_menu/main_menu.gd" id="1"]
 
 [node name="MainMenu" type="Control" unique_id=1281599028]
 layout_mode = 3
@@ -27,21 +27,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -120.0
-offset_right = 150.0
-offset_bottom = 120.0
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1839307542]
 layout_mode = 2
+theme_override_font_sizes/font_size = 48
 text = "Break the Loop"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Subtitle" type="Label" parent="VBoxContainer" unique_id=1179970025]
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "完美公主的無知，造就了亡國的迴圈"
 horizontal_alignment = 1
 
@@ -52,14 +54,17 @@ layout_mode = 2
 [node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=1335776682]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "新遊戲"
 
 [node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=2053278988]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "繼續"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1175158551]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "退出"
