@@ -16,7 +16,7 @@ loyal_retainer (tearful): ……
 [wait time="0.8"]
 
 # 賽拉斯沒有張開雙臂迎接她。他一步步走進房間，反手關上了門
-# [PLACEHOLDER] [sound path="res://audio/sfx/door_close.ogg"]
+[sound path="res://audio/sfx/door_close.ogg" bus="SFX"]
 
 princess: （他沒有接住我。他走進房間，把門關上了。走廊的嘈雜聲被隔絕了大半。）
 

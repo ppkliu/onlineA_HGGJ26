@@ -27,7 +27,7 @@ princess: 帶著這份記憶……回到一切開始之前。
 
 [wait time="1.5"]
 
-# [PLACEHOLDER] [sound path="res://audio/sfx/loop_restart.ogg"]
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
 # 微弱的、倒轉的音樂盒聲響，像是時鐘被倒撥
 
 # === 獲得情報 ===
