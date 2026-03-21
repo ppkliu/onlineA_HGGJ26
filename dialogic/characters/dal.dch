@@ -1,0 +1,44 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.5, 0.5, 0.4, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "曾為國王設計地下防線的總工匠，因知道太多而被弄瞎。隱居在下城區廢井旁。",
+&"display_name": "達爾",
+&"mirror": false,
+&"nicknames": ["工匠", "達爾"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/dal_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"wary": {
+"export_overrides": {
+"image": "res://art/characters/dal_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"quiet": {
+"export_overrides": {
+"image": "res://art/characters/dal_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

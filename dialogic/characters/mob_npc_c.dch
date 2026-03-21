@@ -1,0 +1,52 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.5, 0.3, 0.3, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "下城區暴民之一，憤怒驅使他做出殘酷的選擇。",
+&"display_name": "暴民丙",
+&"mirror": false,
+&"nicknames": [],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/mob_npc_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"angry": {
+"export_overrides": {
+"image": "res://art/characters/mob_npc_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"sneering": {
+"export_overrides": {
+"image": "res://art/characters/mob_npc_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"cold": {
+"export_overrides": {
+"image": "res://art/characters/mob_npc_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
