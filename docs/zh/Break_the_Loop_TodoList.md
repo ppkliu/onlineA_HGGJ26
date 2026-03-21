@@ -8,7 +8,7 @@
 
 - [x] 建立 Godot 4.6.1 專案，設定專案名稱與基本參數
 - [x] 設定解析度 1920×1080，Stretch Mode = `canvas_items`
-- [ ] 安裝 Dialogic 2 插件並啟用
+- [x] 安裝 Dialogic 2 插件並啟用
 - [x] 建立完整目錄結構（`autoload/`、`scenes/`、`resources/`、`art/`、`audio/`、`shaders/`、`dialogic/`）
 - [x] 設定版本控制（`.gitignore` 加入 Godot 預設忽略項）
 - [x] 建立 `project.godot` 中的 Autoload 註冊（GameManager、IntelSystem、LoopManager、AudioManager、SceneTransition）
@@ -85,7 +85,7 @@
 - [x] `loop2/awakening_with_intel.dtl` — 帶情報醒來，新的內心獨白
 - [x] `loop2/branch_a_revisit.dtl` — 路線 A 重訪（因新情報出現新對話）
 - [x] `loop2/branch_b_unlock.dtl` — 路線 B 解鎖後的新劇情
-- [ ] `loop2/branch_b_death.dtl` — 壞結局 B → 獲得情報 ②（選配）
+- [x] `loop2/branch_b_death.dtl` — 壞結局 B → 獲得情報 ②（選配）
 
 #### 最終輪迴
 
@@ -140,10 +140,10 @@
 
 ### 4.2 角色立繪
 
-- [ ] 公主 — 至少 3 個表情（default / sad / determined）
-- [ ] 忠臣 — 至少 2 個表情（default / tearful）
-- [ ] 嫌疑人 A — 至少 1 個表情
-- [ ] 嫌疑人 B — 至少 1 個表情
+- [x] 公主 — 至少 3 個表情（default / sad / determined）
+- [x] 忠臣 — 至少 2 個表情（default / tearful）
+- [x] 嫌疑人 A — 至少 1 個表情
+- [x] 嫌疑人 B — 至少 1 個表情
 
 ### 4.3 UI 素材
 
