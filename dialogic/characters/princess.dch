@@ -1,0 +1,57 @@
+{
+"@path": "res://dialogic/characters/princess.dch",
+"color": "Color(1, 0.843, 0, 1)",
+"custom_info": {
+	"sound_mood_default": "",
+	"sound_mood_happy": "",
+	"sound_mood_sad": ""
+},
+"description": "王國嫡系公主，天真善良卻無知於世事。在輪迴中逐漸覺醒，從無知走向理解。",
+"display_name": "艾蓮娜",
+"mirror": false,
+"nicknames": ["公主", "艾蓮娜"],
+"offset": "Vector2(0, 0)",
+"portraits": {
+	"default": {
+		"export_overrides": {
+			"image": "\"res://art/characters/princess_default.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"sad": {
+		"export_overrides": {
+			"image": "\"res://art/characters/princess_sad.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"angry": {
+		"export_overrides": {
+			"image": "\"res://art/characters/princess_angry.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"shocked": {
+		"export_overrides": {
+			"image": "\"res://art/characters/princess_shocked.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"determined": {
+		"export_overrides": {
+			"image": "\"res://art/characters/princess_determined.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	}
+},
+"scale": 1.0
+}

@@ -1,0 +1,41 @@
+{
+"@path": "res://dialogic/characters/loyal_retainer.dch",
+"color": "Color(0.4, 0.5, 0.7, 1)",
+"custom_info": {
+	"sound_mood_default": "",
+	"sound_mood_happy": "",
+	"sound_mood_sad": ""
+},
+"description": "公主最信任的忠臣，沉穩可靠。在序章中含淚刺殺公主——背後藏著無法言說的苦衷。",
+"display_name": "賽拉斯",
+"mirror": false,
+"nicknames": ["忠臣", "賽拉斯"],
+"offset": "Vector2(0, 0)",
+"portraits": {
+	"default": {
+		"export_overrides": {
+			"image": "\"res://art/characters/retainer_default.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"tearful": {
+		"export_overrides": {
+			"image": "\"res://art/characters/retainer_tearful.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	},
+	"serious": {
+		"export_overrides": {
+			"image": "\"res://art/characters/retainer_serious.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	}
+},
+"scale": 1.0
+}

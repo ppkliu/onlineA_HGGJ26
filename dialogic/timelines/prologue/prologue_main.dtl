@@ -1,0 +1,30 @@
+# 序章：王城陷落 — 開場敘事
+
+[style name="flashback_style"]
+[background arg="res://art/backgrounds/city_fall.png" fade="1.5"]
+[music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
+[sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
+
+艾蓮娜 (shocked): 這是……怎麼回事？
+艾蓮娜 (shocked): 城牆外的火光……為什麼整座王城都在燃燒？
+
+[wait time="1.0"]
+
+艾蓮娜: 不、不可能……父王的軍隊應該能守住的……
+
+[signal arg="camera_shake"]
+
+艾蓮娜 (shocked): 又有爆炸聲！敵軍已經攻進來了嗎？
+
+賽拉斯: 殿下！請跟我來，這裡不安全！
+艾蓮娜: 賽拉斯！發生了什麼事？為什麼沒有人告訴我！
+
+賽拉斯 (serious): ……殿下，請不要問了。現在最重要的是離開這裡。
+艾蓮娜: 可是父王呢？母后呢？城裡的人們……
+
+賽拉斯 (tearful): ……
+賽拉斯 (tearful): 殿下……請原諒我。
+
+艾蓮娜 (shocked): 賽拉斯……？你的眼神……為什麼看起來那麼悲傷？
+
+[jump timeline="res://dialogic/timelines/prologue/prologue_assassination.dtl"]

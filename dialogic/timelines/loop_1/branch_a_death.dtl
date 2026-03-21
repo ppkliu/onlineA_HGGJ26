@@ -1,0 +1,41 @@
+# 第 1 輪迴：壞結局 A — 公主因過度追查被暗殺
+
+[style name="default_style"]
+
+[wait time="0.5"]
+
+艾蓮娜: （夜晚了……我獨自回到走廊，想去找更多線索。）
+
+[background arg="res://art/backgrounds/castle_corridor.png" fade="0.5"]
+
+艾蓮娜: （走廊很暗……只有月光透過窗戶灑進來。）
+
+[wait time="0.5"]
+
+艾蓮娜: （……有腳步聲。）
+艾蓮娜 (shocked): ！
+
+[wait time="0.3"]
+
+艾蓮娜: （誰？誰在那裡——）
+
+[signal arg="cut_to_silence"]
+[wait time="0.5"]
+
+艾蓮娜: ……！
+艾蓮娜: （又……又來了。這種感覺……）
+艾蓮娜: （是誰……這次不是賽拉斯……是另一個人……）
+艾蓮娜: （我看到了……那個人穿著……宮廷大臣的袍服……）
+
+[wait time="1.5"]
+
+艾蓮娜 (sad): （原來如此……維克多大臣……他在隱藏的，是這樣的事情嗎……）
+艾蓮娜: （記住了。這一次，我記住了兇手的衣著。）
+艾蓮娜: （下一次……我一定要做得更好。）
+
+[wait time="1.0"]
+
+# 壞結局 A → 獲得情報：忠臣的理由
+# 因為玩家在這個死亡中注意到是大臣下手而非忠臣，理解了忠臣行動背後可能有別的原因
+[signal arg="trigger_death"]
+[signal arg="death_context:{'death_message': '你在夜間調查時被不明人物暗殺。\\n但你看清了——兇手穿著宮廷大臣的袍服。', 'intel_reward': 'intel_retainer_motive', 'killer': 'unknown_assassin'}"]

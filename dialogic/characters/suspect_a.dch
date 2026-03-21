@@ -1,0 +1,21 @@
+{
+"@path": "res://dialogic/characters/suspect_a.dch",
+"color": "Color(0.8, 0.3, 0.3, 1)",
+"custom_info": {},
+"description": "宮廷大臣，掌握權勢。表面忠誠，實際上暗中操控著不為人知的勢力。",
+"display_name": "維克多大臣",
+"mirror": false,
+"nicknames": ["維克多", "大臣"],
+"offset": "Vector2(0, 0)",
+"portraits": {
+	"default": {
+		"export_overrides": {
+			"image": "\"res://art/characters/suspect_a_default.png\""
+		},
+		"mirror": false,
+		"scale": 1.0,
+		"scene": ""
+	}
+},
+"scale": 1.0
+}

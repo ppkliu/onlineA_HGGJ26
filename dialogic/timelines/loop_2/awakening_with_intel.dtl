@@ -1,0 +1,35 @@
+# 第 2 輪迴：帶著情報醒來
+
+[style name="default_style"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+
+艾蓮娜: ……
+
+[wait time="0.5"]
+
+艾蓮娜: （又回來了。又一次醒在這張床上。）
+艾蓮娜: （但這一次，我知道了更多。）
+
+if IntelSystem.has_intel("intel_retainer_motive"):
+	艾蓮娜: （賽拉斯……他在序章中殺了我，是為了「保護」我。）
+	艾蓮娜: （但上一次殺我的人……穿的是大臣的袍服。）
+	艾蓮娜: （也就是說……還有另一股勢力想要我的命。）
+	艾蓮娜 (determined): （賽拉斯可能是為了搶在他們之前……才親手……）
+
+if IntelSystem.has_intel("intel_faction_a"):
+	艾蓮娜: （維克多大臣確實在隱瞞什麼。我必須更謹慎地調查他。）
+
+[wait time="0.5"]
+
+艾蓮娜 (determined): （這一次，我要走不同的路。）
+
+- 再次前往王座大廳（帶著新情報）[if IntelSystem.has_intel("intel_retainer_motive")]
+	[jump timeline="res://dialogic/timelines/loop_2/branch_a_revisit.dtl"]
+- 前往庭園調查 [if IntelSystem.has_intel("intel_faction_a")]
+	[jump timeline="res://dialogic/timelines/loop_2/branch_b_unlock.dtl"]
+- 質問忠臣 [if IntelSystem.check_branch_condition(["intel_retainer_motive", "intel_conspiracy_evidence"])]
+	艾蓮娜 (determined): （我已經掌握了足夠的線索。是時候和賽拉斯攤牌了。）
+	[jump timeline="res://dialogic/timelines/final_loop/final_confrontation.dtl"]
+- 前往王座大廳調查
+	[jump timeline="res://dialogic/timelines/loop_1/investigation_a.dtl"]

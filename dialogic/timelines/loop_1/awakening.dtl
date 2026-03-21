@@ -1,0 +1,32 @@
+# 第 1 輪迴：公主在寢宮醒來
+
+[style name="default_style"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+
+艾蓮娜 (shocked): ！！
+
+[wait time="0.5"]
+
+艾蓮娜 (shocked): ……哈、哈……
+艾蓮娜 (shocked): （剛才……剛才那是夢嗎？）
+艾蓮娜: （不……不是夢。我記得所有的一切。）
+艾蓮娜: （大火、尖叫、賽拉斯的眼淚……然後……那把刺入胸口的劍。）
+
+[wait time="1.0"]
+
+艾蓮娜: （但我現在活著。我在我的寢宮裡。）
+艾蓮娜: （窗外的陽光……這是……半年前？）
+
+艾蓮娜 (sad): （我……回到了過去？）
+艾蓮娜 (sad): （如果這不是夢……如果我真的回到了戰爭之前……）
+
+[wait time="0.5"]
+
+艾蓮娜 (determined): （那麼這一次，我不能再像以前一樣什麼都不知道。）
+艾蓮娜 (determined): （我必須找出真相——到底是誰毀了這個國家。）
+
+- 前往王座大廳調查
+	[jump timeline="res://dialogic/timelines/loop_1/investigation_a.dtl"]
+- 潛入地下牢 [if IntelSystem.has_intel("intel_dungeon_key")]
+	[jump timeline="res://dialogic/timelines/loop_2/branch_b_unlock.dtl"]
