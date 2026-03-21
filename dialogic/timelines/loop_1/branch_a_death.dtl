@@ -37,5 +37,5 @@ princess: （下一次……我一定要做得更好。）
 
 # 壞結局 A → 獲得情報：忠臣的理由
 # 因為玩家在這個死亡中注意到是大臣下手而非忠臣，理解了忠臣行動背後可能有別的原因
-[signal arg="trigger_death"]
 [signal arg="death_context:{'death_message': '你在夜間調查時被不明人物暗殺。\\n但你看清了——兇手穿著宮廷大臣的袍服。', 'intel_reward': 'intel_retainer_motive', 'killer': 'unknown_assassin'}"]
+[signal arg="trigger_death"]

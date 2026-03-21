@@ -18,7 +18,7 @@ princess: （如果能知道真相……是不是就能改變結局？）
 # === 獲得情報 ===
 [intel intel_city_fall]
 
-[signal arg="trigger_death"]
 [signal arg="death_context:{'death_message': '你被最信任的忠臣刺殺身亡。', 'intel_reward': 'intel_city_fall', 'killer': 'retainer'}"]
+[signal arg="trigger_death"]
 
 # 輪迴重啟由 LoopManager 處理

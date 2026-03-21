@@ -54,5 +54,5 @@ princess: （所有的線索正在拼湊成一幅完整的圖畫。）
 
 # 壞結局 B → 獲得情報：忠臣的過去
 # 死亡前祭司的暗示讓公主理解忠臣的背景
-[signal arg="trigger_death"]
 [signal arg="death_context:{'death_message': '你在庭園地下牢入口被伏擊。\\n艾爾文祭司似乎知道更多——他並不像表面上那樣無害。', 'intel_reward': 'intel_retainer_past', 'killer': 'ambush'}"]
+[signal arg="trigger_death"]

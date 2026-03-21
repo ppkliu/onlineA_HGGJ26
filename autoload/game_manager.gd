@@ -11,12 +11,16 @@ enum GameState {
 }
 
 var current_state: GameState = GameState.MAIN_MENU
+var _pending_death_context: Dictionary = {}
+var _pending_trigger_death := false
 
 signal game_state_changed(new_state: GameState)
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	if Dialogic and not Dialogic.signal_event.is_connected(_on_dialogic_signal_event):
+		Dialogic.signal_event.connect(_on_dialogic_signal_event)
 
 
 func change_state(new_state: GameState) -> void:
@@ -68,3 +72,48 @@ func quit_game() -> void:
 ## 檢查是否有存檔
 func has_save_data() -> bool:
 	return FileAccess.file_exists("user://break_the_loop_save.json")
+
+
+func _on_dialogic_signal_event(argument: Variant) -> void:
+	if argument is Dictionary:
+		_handle_dialogic_signal_dict(argument)
+	elif argument is String:
+		_handle_dialogic_signal_string(argument)
+
+
+func _handle_dialogic_signal_string(argument: String) -> void:
+	match argument:
+		"cut_to_silence":
+			AudioManager.cut_to_silence()
+		"trigger_death":
+			if _pending_death_context.is_empty():
+				_pending_trigger_death = true
+			else:
+				_trigger_death_with_pending_context()
+		"camera_shake":
+			pass
+		_:
+			if argument.begins_with("death_context:"):
+				var payload := argument.trim_prefix("death_context:")
+				var parsed: Variant = JSON.parse_string(payload.replace("'", '"'))
+				if parsed is Dictionary:
+					_pending_death_context = parsed
+					if _pending_trigger_death:
+						_trigger_death_with_pending_context()
+				else:
+					push_warning("Invalid death context payload: %s" % argument)
+
+
+func _handle_dialogic_signal_dict(argument: Dictionary) -> void:
+	match argument.get("action", ""):
+		"trigger_death":
+			LoopManager.trigger_death(argument)
+		"cut_to_silence":
+			AudioManager.cut_to_silence()
+
+
+func _trigger_death_with_pending_context() -> void:
+	var context := _pending_death_context.duplicate(true)
+	_pending_death_context.clear()
+	_pending_trigger_death = false
+	LoopManager.trigger_death(context)
