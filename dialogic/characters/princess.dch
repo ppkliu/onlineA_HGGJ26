@@ -25,7 +25,7 @@
 },
 "default": {
 "export_overrides": {
-"image": "res://art/characters/princess_default.svg"
+"image": "res://art/characters/princess_default.png"
 },
 "mirror": false,
 "scale": 1.0,

@@ -29,6 +29,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 directories/dch_directory={
 "loyal_retainer": "res://dialogic/characters/loyal_retainer.dch",
+"maid": "res://dialogic/characters/maid.dch",
 "princess": "res://dialogic/characters/princess.dch",
 "suspect_a": "res://dialogic/characters/suspect_a.dch",
 "suspect_b": "res://dialogic/characters/suspect_b.dch",

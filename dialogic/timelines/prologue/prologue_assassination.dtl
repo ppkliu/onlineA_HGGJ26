@@ -3,6 +3,8 @@
 # === 騎士長登場 ===
 # 門被猛力撞開。賽拉斯站在門口，銀色盔甲沾滿黑色血污，半邊披風燒焦，劍上還在滴血
 
+[background arg="res://art/backgrounds/prologue_knight_arrives.png" fade="0.8"]
+
 loyal_retainer (tearful): ……殿下。
 
 princess (default): 賽拉斯！太好了，你來了！父王派你來接我的對不對？快帶我離開這裡——
