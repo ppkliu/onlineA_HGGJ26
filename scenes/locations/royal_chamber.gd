@@ -1,14 +1,9 @@
 extends Node2D
 
-@onready var player: CharacterBody2D = $Player
-@onready var background: Sprite2D = $Background
 var _awakening_done: bool = false
 
 
 func _ready() -> void:
-	_fit_background_to_viewport()
-	player.set_can_move(false)
-
 	AudioManager.play_loop_restart()
 	FlowLogger.log_event("scene", "Royal chamber ready", {"phase": LoopManager.LoopPhase.keys()[LoopManager.current_phase], "loop": IntelSystem.current_loop})
 
