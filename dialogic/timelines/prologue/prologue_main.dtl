@@ -1,30 +1,49 @@
-# 序章：王城陷落 — 開場敘事
+# 序章：亡國之夜 — 公主寢房
 
-[style name="flashback_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/city_fall.png" fade="1.5"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.5"]
 # [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
 # [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
 
-princess (shocked): 這是……怎麼回事？
-princess (shocked): 城牆外的火光……為什麼整座王城都在燃燒？
+[wait time="1.5"]
 
-[wait time="1.0"]
+princess (shocked): 怎、怎麼回事……外面好吵……
 
-princess: 不、不可能……父王的軍隊應該能守住的……
+[wait time="0.8"]
+
+princess: （我從床上坐起來。窗外的天空是不對的——不是夜晚該有的黑色，而是一種翻攪著的橘紅，像是有人把整座城點燃了。）
 
 [signal arg="camera_shake"]
 
-princess (shocked): 又有爆炸聲！敵軍已經攻進來了嗎？
+# 門外走廊傳來重物倒地與拖行聲
+# [PLACEHOLDER] [sound path="res://audio/sfx/corridor_crash.ogg"]
 
-loyal_retainer: 殿下！請跟我來，這裡不安全！
-princess: 賽拉斯！發生了什麼事？為什麼沒有人告訴我！
+princess (shocked): 來人！莉娜？有人在嗎？
 
-loyal_retainer (serious): ……殿下，請不要問了。現在最重要的是離開這裡。
-princess: 可是父王呢？母后呢？城裡的人們……
+[wait time="0.5"]
 
-loyal_retainer (tearful): ……
-loyal_retainer (tearful): 殿下……請原諒我。
+princess: （我跑到門邊，但門被從外面鎖住了。我拍打著門板，指節很快就開始發疼。沒有人回應。）
 
-princess (shocked): 賽拉斯……？你的眼神……為什麼看起來那麼悲傷？
+# [PLACEHOLDER] [sound path="res://audio/sfx/door_knock.ogg"]
 
-[jump timeline="res://dialogic/timelines/prologue/prologue_assassination.dtl"]
+[wait time="1.0"]
+
+princess (sad): 父王……父王一定會派人來的。對，父王說過，這座城堡有神明賜予的魔法守護，絕對不會有事的……
+
+[wait time="0.8"]
+
+princess: （我把自己縮在床角，抱著膝蓋。禮儀導師說過，公主不應該哭。但我的牙齒一直在打顫。）
+
+[wait time="1.2"]
+
+# 遠處的慘叫聲突然變大——有人在走廊上奔跑
+# [PLACEHOLDER] [sound path="res://audio/sfx/running_screams.ogg"]
+
+princess (shocked): 是救兵嗎……？！
+
+[wait time="1.5"]
+
+# 沉重的腳步聲急促靠近。金屬盔甲的碰撞聲。門鎖被暴力扭斷的尖銳聲響
+# [PLACEHOLDER] [sound path="res://audio/sfx/armor_approach.ogg"]
+# [PLACEHOLDER] [sound path="res://audio/sfx/lock_break.ogg"]
+
+jump prologue_assassination/
