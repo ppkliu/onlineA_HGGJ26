@@ -21,11 +21,13 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if Dialogic and not Dialogic.signal_event.is_connected(_on_dialogic_signal_event):
 		Dialogic.signal_event.connect(_on_dialogic_signal_event)
+	FlowLogger.log_event("game", "GameManager ready")
 
 
 func change_state(new_state: GameState) -> void:
 	current_state = new_state
 	game_state_changed.emit(new_state)
+	FlowLogger.log_event("game", "Change state", {"state": GameState.keys()[new_state]})
 
 	match new_state:
 		GameState.PAUSED:
@@ -37,6 +39,8 @@ func change_state(new_state: GameState) -> void:
 ## 開始新遊戲
 func start_new_game() -> void:
 	IntelSystem.reset_all()
+	FlowLogger.clear()
+	FlowLogger.log_event("game", "Start new game")
 	change_state(GameState.PLAYING)
 	SceneTransition.transition_to("res://scenes/game/game_scene.tscn",
 		TransitionConstants.TransitionType.FADE_BLACK)
@@ -44,6 +48,7 @@ func start_new_game() -> void:
 
 ## 繼續遊戲
 func continue_game() -> void:
+	FlowLogger.log_event("game", "Continue game", {"current_loop": IntelSystem.current_loop})
 	change_state(GameState.PLAYING)
 	# IntelSystem 在 _ready 中已自動載入存檔
 	if IntelSystem.current_loop == 0:
@@ -60,6 +65,7 @@ func continue_game() -> void:
 func return_to_menu() -> void:
 	change_state(GameState.MAIN_MENU)
 	AudioManager.stop_all()
+	FlowLogger.log_event("game", "Return to menu")
 	SceneTransition.transition_to("res://scenes/main_menu/main_menu.tscn",
 		TransitionConstants.TransitionType.FADE_BLACK)
 
@@ -75,6 +81,7 @@ func has_save_data() -> bool:
 
 
 func _on_dialogic_signal_event(argument: Variant) -> void:
+	FlowLogger.log_event("dialogic", "Received signal event", {"argument": argument})
 	if argument is Dictionary:
 		_handle_dialogic_signal_dict(argument)
 	elif argument is String:

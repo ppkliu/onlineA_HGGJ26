@@ -1,35 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://royalchamber001"]
+[gd_scene load_steps=4 format=3 uid="uid://royalchamber001"]
 
-[ext_resource type="Script" path="res://scenes/locations/royal_chamber.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://art/backgrounds/princess_room_gj.png" id="2_bg"]
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
-[ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
-[ext_resource type="SpriteFrames" path="res://art/characters/maid_npc.tres" id="5_maid_frames"]
-[ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
-size = Vector2(50, 24)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_interact_detect"]
-radius = 120.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_maid_body"]
-size = Vector2(60, 30)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_maid_interact"]
-radius = 150.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_top"]
-size = Vector2(1920, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bottom"]
-size = Vector2(1920, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_left"]
-size = Vector2(40, 1080)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_right"]
-size = Vector2(40, 1080)
+[ext_resource type="Script" path="res://scenes/locations/royal_chamber.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/loop_indicator.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/tutorial_prompt.tscn" id="3"]
 
 [node name="RoyalChamber" type="Node2D"]
 script = ExtResource("1_script")
@@ -138,3 +111,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "公主寢宮"
 horizontal_alignment = 1
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="LoopIndicator" parent="UILayer" instance=ExtResource("2")]
+
+[node name="TutorialPrompt" parent="UILayer" instance=ExtResource("3")]

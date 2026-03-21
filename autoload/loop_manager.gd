@@ -25,6 +25,7 @@ func _ready() -> void:
 ## 觸發死亡 → 進入死亡畫面 → 獲得情報 → 輪迴重啟
 func trigger_death(context: Dictionary = {}) -> void:
 	# context 範例：{ "killer": "retainer", "intel_reward": "intel_001", "scene": "throne_room" }
+	FlowLogger.log_event("death", "Trigger death", context)
 
 	death_triggered.emit(context)
 
@@ -51,6 +52,7 @@ func _reset_loop() -> void:
 	scene_states.clear()
 	_update_phase()
 	loop_started.emit(IntelSystem.current_loop)
+	FlowLogger.log_event("loop", "Reset loop scene state", {"loop": IntelSystem.current_loop, "phase": LoopPhase.keys()[current_phase]})
 
 	# 轉場到公主寢宮（輪迴起點）
 	SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
@@ -84,6 +86,7 @@ func _get_final_threshold() -> int:
 func _show_death_screen(context: Dictionary) -> void:
 	var death_screen = load("res://scenes/ui/death_screen.tscn").instantiate()
 	get_tree().root.add_child(death_screen)
+	FlowLogger.log_event("ui", "Show death screen", context)
 	death_screen.setup(context)
 	await death_screen.animation_completed
 	death_screen.queue_free()

@@ -10,33 +10,15 @@ func _ready() -> void:
 	player.set_can_move(false)
 
 	AudioManager.play_loop_restart()
+	FlowLogger.log_event("scene", "Royal chamber ready", {"phase": LoopManager.LoopPhase.keys()[LoopManager.current_phase], "loop": IntelSystem.current_loop})
 
 	match LoopManager.current_phase:
 		LoopManager.LoopPhase.EARLY:
-			_play_timeline("res://dialogic/timelines/loop_1/awakening_cutscene.dtl")
+			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "awakening"})
+			Dialogic.start("res://dialogic/timelines/loop_1/awakening.dtl")
 		LoopManager.LoopPhase.MID:
-			_play_timeline("res://dialogic/timelines/loop_2/awakening_with_intel.dtl")
+			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "awakening_with_intel"})
+			Dialogic.start("res://dialogic/timelines/loop_2/awakening_with_intel.dtl")
 		LoopManager.LoopPhase.FINAL:
-			_play_timeline("res://dialogic/timelines/final_loop/final_confrontation.dtl")
-
-
-func _fit_background_to_viewport() -> void:
-	if background == null or background.texture == null:
-		return
-	var tex_size := background.texture.get_size()
-	if tex_size.x <= 0 or tex_size.y <= 0:
-		return
-	var vp_size := get_viewport_rect().size
-	var scale_factor := maxf(vp_size.x / tex_size.x, vp_size.y / tex_size.y)
-	background.scale = Vector2(scale_factor, scale_factor)
-	background.position = vp_size / 2.0
-
-
-func _play_timeline(path: String) -> void:
-	Dialogic.start(path)
-	Dialogic.timeline_ended.connect(_on_awakening_ended, CONNECT_ONE_SHOT)
-
-
-func _on_awakening_ended() -> void:
-	_awakening_done = true
-	player.set_can_move(true)
+			FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "final_confrontation"})
+			Dialogic.start("res://dialogic/timelines/final_loop/final_confrontation.dtl")
