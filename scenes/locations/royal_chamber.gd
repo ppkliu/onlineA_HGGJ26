@@ -1,7 +1,5 @@
 extends Node2D
 
-var _awakening_done: bool = false
-
 
 func _ready() -> void:
 	AudioManager.play_loop_restart()
