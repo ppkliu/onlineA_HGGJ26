@@ -35,7 +35,7 @@ func start_new_game() -> void:
 	IntelSystem.reset_all()
 	change_state(GameState.PLAYING)
 	SceneTransition.transition_to("res://scenes/game/game_scene.tscn",
-		SceneTransition.TransitionType.FADE_BLACK)
+		TransitionConstants.TransitionType.FADE_BLACK)
 
 
 ## 繼續遊戲
@@ -45,11 +45,11 @@ func continue_game() -> void:
 	if IntelSystem.current_loop == 0:
 		# 沒有存檔，從序章開始
 		SceneTransition.transition_to("res://scenes/game/game_scene.tscn",
-			SceneTransition.TransitionType.FADE_BLACK)
+			TransitionConstants.TransitionType.FADE_BLACK)
 	else:
 		# 有存檔，從輪迴起點開始
 		SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
-			SceneTransition.TransitionType.FADE_BLACK)
+			TransitionConstants.TransitionType.FADE_BLACK)
 
 
 ## 返回主選單
@@ -57,7 +57,7 @@ func return_to_menu() -> void:
 	change_state(GameState.MAIN_MENU)
 	AudioManager.stop_all()
 	SceneTransition.transition_to("res://scenes/main_menu/main_menu.tscn",
-		SceneTransition.TransitionType.FADE_BLACK)
+		TransitionConstants.TransitionType.FADE_BLACK)
 
 
 ## 退出遊戲
