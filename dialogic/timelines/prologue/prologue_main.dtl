@@ -1,9 +1,9 @@
 # 序章：王城陷落 — 開場敘事
 
 [style name="flashback_style"]
-[background arg="res://art/backgrounds/city_fall.png" fade="1.5"]
-[music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
-[sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/city_fall.png" fade="1.5"]
+# [PLACEHOLDER] [music path="res://audio/bgm/prologue_epic.ogg" fade="2.0"]
+# [PLACEHOLDER] [sound path="res://audio/sfx/fire_burning.ogg" loop="true"]
 
 艾蓮娜 (shocked): 這是……怎麼回事？
 艾蓮娜 (shocked): 城牆外的火光……為什麼整座王城都在燃燒？

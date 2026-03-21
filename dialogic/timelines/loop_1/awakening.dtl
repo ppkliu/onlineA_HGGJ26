@@ -1,8 +1,8 @@
 # 第 1 輪迴：公主在寢宮醒來
 
 [style name="default_style"]
-[background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
-[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber.png" fade="1.0"]
+# [PLACEHOLDER] [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0"]
 
 艾蓮娜 (shocked): ！！
 

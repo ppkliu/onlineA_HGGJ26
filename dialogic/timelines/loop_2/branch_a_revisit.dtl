@@ -1,8 +1,8 @@
 # 第 2 輪迴：路線 A 重訪 — 帶著新情報重訪王座大廳
 
 [style name="default_style"]
-[background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
-[music path="res://audio/bgm/investigation.ogg" fade="2.0"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/investigation.ogg" fade="2.0"]
 
 艾蓮娜: （這一次，我知道大臣在隱藏什麼了。我不會正面去問，而是暗中觀察。）
 

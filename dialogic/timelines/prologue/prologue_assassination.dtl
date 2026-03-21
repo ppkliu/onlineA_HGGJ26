@@ -22,7 +22,7 @@
 # === CUT TO SILENCE ===
 [signal arg="cut_to_silence"]
 [wait time="0.8"]
-[sound path="res://audio/sfx/sword_stab.ogg" volume="-10"]
+# [PLACEHOLDER] [sound path="res://audio/sfx/sword_stab.ogg" volume="-10"]
 
 艾蓮娜: ……！
 

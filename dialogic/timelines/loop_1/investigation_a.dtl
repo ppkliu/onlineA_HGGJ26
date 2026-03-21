@@ -1,8 +1,8 @@
 # 第 1 輪迴：調查場景 A — 王座大廳
 
 [style name="default_style"]
-[background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
-[music path="res://audio/bgm/investigation.ogg" fade="2.0"]
+# [PLACEHOLDER] [background arg="res://art/backgrounds/throne_room.png" fade="0.8"]
+# [PLACEHOLDER] [music path="res://audio/bgm/investigation.ogg" fade="2.0"]
 
 艾蓮娜: （王座大廳……一切都還完好無損。半年後，這裡將化為灰燼。）
 
