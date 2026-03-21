@@ -30,12 +30,12 @@ scene = ExtResource("6_input")
 script = ExtResource("2_layer")
 scene = ExtResource("5_textbox")
 overrides = {
-"box_margin_bottom": 20,
-"box_size": Vector2(1400, 240),
-"name_label_custom_font_size": 32,
-"name_label_use_global_font_size": false,
-"text_size": 28,
-"text_use_global_size": false
+"box_margin_bottom": "20",
+"box_size": "Vector2(1400, 240)",
+"name_label_custom_font_size": "32",
+"name_label_use_global_font_size": "false",
+"text_size": "28",
+"text_use_global_size": "false"
 }
 
 [sub_resource type="Resource" id="Resource_glossary"]
