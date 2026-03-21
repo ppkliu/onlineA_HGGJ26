@@ -15,8 +15,7 @@ func _ready() -> void:
 
 func _start_prologue() -> void:
 	AudioManager.play_prologue_epic()
-	# 載入序章時間線（需要 Dialogic 2 插件）
-	# Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
+	Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
 
 
 func _start_loop() -> void:
