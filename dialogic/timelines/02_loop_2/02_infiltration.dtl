@@ -1,38 +1,27 @@
-# 第 2 輪迴：潛入下城區 — Day 1-15
+# 第 2 輪迴：潛入下城區 — Day 1-5
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
-# [PLACEHOLDER] [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/lower_district.png" fade="0.9"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
 
 join princess left
 
-princess: （下城區。粗布衣服、包著頭巾。我在他們眼裡只是一個逃出來的家僕。）
-
-[wait time="0.5"]
-
-join mob_leader right
-
-princess (disguised): 打擾了。我是從內城逃出來的家僕，主人家因為反對國王的政策被抄了。
-
-mob_leader (suspicious): 妳的口音不像下城區的人。
-
-[wait time="0.5"]
-
-princess (disguised): ……主人家在內城住了十幾年。口音自然不像。
-
-mob_leader (suspicious): ……哼。至少妳主人家還有骨氣。坐吧。但別亂問問題。
+princess: （粗布衣、灰頭巾。我在他們眼裡只是個逃出內城的倒楣家僕。）
 
 [wait time="0.8"]
 
-princess: （鐵匠鋪。布魯諾在砸一塊變形的鐵，更像是在發洩。他的手臂上有舊傷，指節粗大。這不是一個壞人。這是一個被逼到牆角的人。）
+join mob_leader right
+
+princess (disguised): 打擾了。我是從內城逃出來的家僕。主人因為反對加稅被抄家了。
+
+mob_leader (suspicious): 妳的口音太乾淨了。不像我們這邊的人。
+
+princess (disguised): 主人家在內城住了三代。口音當然不一樣。但我現在跟他們一樣，一無所有。
 
 [wait time="1.0"]
 
-mob_leader (suspicious): 妳會做什麼？
+mob_leader (suspicious): ……至少妳主人有骨氣。進來吧。但別亂問，別亂碰。
 
-princess (disguised): 我……我識字。可以幫忙記帳、寫信。
-
-mob_leader (suspicious): 識字的人不多。留下吧。但別給我添麻煩。
+princess: （鐵匠布魯諾。手臂上的舊傷像地圖，指節粗得像樹瘤。他砸鐵的樣子，更像在砸自己的命運。）
 
 leave princess
 leave mob_leader

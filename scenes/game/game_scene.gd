@@ -16,8 +16,8 @@ func _ready() -> void:
 
 func _start_prologue() -> void:
 	AudioManager.play_prologue_epic()
-	FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "prologue_main"})
-	var layout := Dialogic.start("res://dialogic/timelines/prologue/prologue_main.dtl")
+	FlowLogger.log_event("dialogic", "Start timeline", {"timeline": "01_prologue_main"})
+	var layout := Dialogic.start("01_prologue_main")
 	if layout:
 		print("[GameScene] Dialogic layout created: ", layout.name)
 	else:

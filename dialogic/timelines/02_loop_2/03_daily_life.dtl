@@ -1,35 +1,30 @@
-# 第 2 輪迴：下城區生活蒙太奇 — Day 15-30
+# 第 2 輪迴：下城區生活蒙太奇 — Day 5-30
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
+[background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
 
 join princess left
 
-princess: （第十五天。物資越來越少。）
+princess: （第五天。麵包屑比金幣還珍貴。）
 
-[wait time="0.8"]
+[wait time="0.7"]
 
-princess: （老人坐在巷口回憶：「王后還在的時候，每年秋天都有糧食發下來。那時候孩子們胖嘟嘟的。」）
+princess: （第十天。一個老婦人坐在巷口，喃喃：「王后還在的時候，每年秋天都有糧食下來。孩子們還會笑。現在……連哭都懶了。」）
 
-[wait time="1.0"]
+[wait time="0.9"]
 
-princess: （孩子們用泥巴捏「麵包」假裝吃。他們的肚子圓鼓鼓的，但不是因為吃飽——是因為營養不良的水腫。）
+princess: （第十五天。孩子們用泥巴捏成圓形，假裝那是麵包。他們的肚子鼓鼓的——不是飽，而是水腫。摸上去像濕棉花。）
 
-[wait time="1.0"]
+[wait time="1.1"]
 
-princess: （莉娜的哥哥帶著傷從前線偷跑回來。他的左臂被砍了一刀，草草包紮，已經開始發黑。莉娜哭著幫他換藥。）
-
-[wait time="1.2"]
-
-princess: （他們不是暴民。他們是被逼到牆角的普通人。）
-
-[wait time="0.8"]
-
-princess: （宰相利用了他們的痛苦——但痛苦本身不全是宰相製造的。重稅、徵兵、糧食短缺……這些是真的。）
+princess: （第二十天。莉娜的哥哥偷跑回來。左臂被砍斷一半，傷口發黑，臭味隔三米都能聞到。莉娜跪在地上哭著幫他洗傷，血水混著淚水流進地縫。）
 
 [wait time="1.0"]
 
-princess (determined): （我不能再只是看著了。我必須做點什麼。）
+princess: （他們不是暴民。他們是被逼瘋的普通人。）
+
+princess: （宰相利用了這痛苦。但痛苦的根……不全是他種下的。重稅、徵兵、軍需優先……這些是真的。）
+
+princess (determined): （我不能再只是旁觀。我要給他們希望。）
 
 leave princess
 

@@ -1,22 +1,20 @@
 # 最終輪迴：尾聲
 
-[background arg="res://art/backgrounds/darkness.png" fade="2.0"]
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
-[wait time="1.5"]
+[wait time="2.0"]
 
 join princess center
 
-princess: 「打破迴圈的方式，不是改變過去。而是在重複中，選擇成為一個不同的人。」
+princess (hollow): 「打破迴圈的方式，不是改變過去。而是在每一次重複裡，選擇成為一個不同的人。」
 
-[wait time="2.0"]
+princess (determined): 「她不再是那個等人來救的籠中鳥。她成為了……拯救所有人的人。」
 
-princess: 「她不再是那個等人來救的公主。她成為了拯救所有人的人。」
+princess (default): 「謝謝你陪我走到這裡。」
 
 leave princess
 
-[wait time="2.0"]
-
-# === BREAK THE LOOP — TRUE END ===
+[wait time="3.0"]
 
 [signal arg="true_ending_reached"]
 [signal arg="show_credits"]

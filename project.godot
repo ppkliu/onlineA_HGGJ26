@@ -31,34 +31,48 @@ DialogicCustomizer="*res://autoload/dialogic_customizer.gd"
 
 directories/dch_directory={
 "chancellor": "res://dialogic/characters/chancellor.dch",
+"dal": "res://dialogic/characters/dal.dch",
+"king": "res://dialogic/characters/king.dch",
 "loyal_retainer": "res://dialogic/characters/loyal_retainer.dch",
 "maid": "res://dialogic/characters/maid.dch",
+"mob_leader": "res://dialogic/characters/mob_leader.dch",
+"mob_npc_b": "res://dialogic/characters/mob_npc_b.dch",
+"mob_npc_c": "res://dialogic/characters/mob_npc_c.dch",
+"old_woman": "res://dialogic/characters/old_woman.dch",
 "princess": "res://dialogic/characters/princess.dch",
 "suspect_a": "res://dialogic/characters/suspect_a.dch",
 "suspect_b": "res://dialogic/characters/suspect_b.dch",
 "suspect_c": "res://dialogic/characters/suspect_c.dch"
 }
 directories/dtl_directory={
-"awakening": "res://dialogic/timelines/loop_1/awakening.dtl",
-"awakening_cutscene": "res://dialogic/timelines/loop_1/awakening_cutscene.dtl",
-"awakening_with_intel": "res://dialogic/timelines/loop_2/awakening_with_intel.dtl",
-"bad_end_a": "res://dialogic/timelines/loop_1/bad_end_a.dtl",
-"betrayal": "res://dialogic/timelines/loop_1/betrayal.dtl",
-"branch_a_death": "res://dialogic/timelines/loop_1/branch_a_death.dtl",
-"branch_a_revisit": "res://dialogic/timelines/loop_2/branch_a_revisit.dtl",
-"branch_b_death": "res://dialogic/timelines/loop_2/branch_b_death.dtl",
-"branch_b_unlock": "res://dialogic/timelines/loop_2/branch_b_unlock.dtl",
-"chancellor_visit": "res://dialogic/timelines/loop_1/chancellor_visit.dtl",
-"evidence": "res://dialogic/timelines/loop_1/evidence.dtl",
-"final_confrontation": "res://dialogic/timelines/final_loop/final_confrontation.dtl",
-"heist": "res://dialogic/timelines/loop_1/heist.dtl",
-"investigation_a": "res://dialogic/timelines/loop_1/investigation_a.dtl",
-"lower_district": "res://dialogic/timelines/loop_1/lower_district.dtl",
-"maid_morning": "res://dialogic/timelines/loop_1/maid_morning.dtl",
-"prologue_assassination": "res://dialogic/timelines/prologue/prologue_assassination.dtl",
-"prologue_death": "res://dialogic/timelines/prologue/prologue_death.dtl",
-"prologue_main": "res://dialogic/timelines/prologue/prologue_main.dtl",
-"true_ending": "res://dialogic/timelines/final_loop/true_ending.dtl"
+"01_awakening": "res://dialogic/timelines/01_loop_1/01_awakening.dtl",
+"01_awakening_angry": "res://dialogic/timelines/02_loop_2/01_awakening_angry.dtl",
+"01_awakening_cold": "res://dialogic/timelines/03_loop_3/01_awakening_cold.dtl",
+"01_awakening_final": "res://dialogic/timelines/04_final_loop/01_awakening_final.dtl",
+"01_prologue_main": "res://dialogic/timelines/00_prologue/01_prologue_main.dtl",
+"02_chancellor_visit": "res://dialogic/timelines/01_loop_1/02_chancellor_visit.dtl",
+"02_infiltration": "res://dialogic/timelines/02_loop_2/02_infiltration.dtl",
+"02_prologue_assassination": "res://dialogic/timelines/00_prologue/02_prologue_assassination.dtl",
+"02_recruit_silas": "res://dialogic/timelines/04_final_loop/02_recruit_silas.dtl",
+"02_search_dal": "res://dialogic/timelines/03_loop_3/02_search_dal.dtl",
+"03_calm_mob": "res://dialogic/timelines/04_final_loop/03_calm_mob.dtl",
+"03_daily_life": "res://dialogic/timelines/02_loop_2/03_daily_life.dtl",
+"03_evidence": "res://dialogic/timelines/01_loop_1/03_evidence.dtl",
+"03_prologue_death": "res://dialogic/timelines/00_prologue/03_prologue_death.dtl",
+"03_underground": "res://dialogic/timelines/03_loop_3/03_underground.dtl",
+"04_confession": "res://dialogic/timelines/02_loop_2/04_confession.dtl",
+"04_expose_chancellor": "res://dialogic/timelines/04_final_loop/04_expose_chancellor.dtl",
+"04_lower_district": "res://dialogic/timelines/01_loop_1/04_lower_district.dtl",
+"04_misunderstanding": "res://dialogic/timelines/03_loop_3/04_misunderstanding.dtl",
+"05_chancellor_strike": "res://dialogic/timelines/03_loop_3/05_chancellor_strike.dtl",
+"05_dawn": "res://dialogic/timelines/04_final_loop/05_dawn.dtl",
+"05_heist": "res://dialogic/timelines/01_loop_1/05_heist.dtl",
+"05_mob_trial": "res://dialogic/timelines/02_loop_2/05_mob_trial.dtl",
+"06_bad_end_b": "res://dialogic/timelines/02_loop_2/06_bad_end_b.dtl",
+"06_bad_end_c": "res://dialogic/timelines/03_loop_3/06_bad_end_c.dtl",
+"06_betrayal": "res://dialogic/timelines/01_loop_1/06_betrayal.dtl",
+"06_epilogue": "res://dialogic/timelines/04_final_loop/06_epilogue.dtl",
+"07_bad_end_a": "res://dialogic/timelines/01_loop_1/07_bad_end_a.dtl"
 }
 layout/style_directory={
 "": "res://dialogic/styles/custom_vn_style.tres",
@@ -72,9 +86,11 @@ layout/style_list=["res://dialogic/styles/custom_vn_style.tres", "res://addons/d
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 

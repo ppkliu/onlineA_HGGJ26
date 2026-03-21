@@ -1,40 +1,29 @@
-# 第 3 輪迴：宰相的反撲 — Day 90-120
+# 第 3 輪迴：宰相的反撲 — Day 90-120（深夜寢房）
 
-[style name="default_style"]
-# [PLACEHOLDER] [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.5"]
-# [PLACEHOLDER] [music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.7"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.5"]
 
 join princess left
 
-princess: （深夜。寢房的門突然被打開。）
+princess: （門突然被推開。）
 
-[wait time="0.5"]
+[wait time="0.6"]
 
 join chancellor right
 
-chancellor (cold): 殿下，您在地下通道留下了腳印，在達爾的屋子裡留下了芳香油的味道，在暗道裡觸發了臣設下的警報。
-
-[wait time="1.0"]
+chancellor (cold): 殿下，您在地下留了腳印，在達爾屋裡留了玫瑰油味，在暗道觸發了臣的警報。
 
 chancellor (cold): 您知道得太多了。
 
-[wait time="0.5"]
-
 princess (angry): 莫里昂——
 
-chancellor (cold): 但您犯了一個錯：您一個人來。
+chancellor (cold): 但您犯了最大錯誤：您一個人來。
 
-[wait time="0.8"]
+princess (angry): 賽拉斯呢——
 
-princess (angry): 賽拉斯在哪裡——
+chancellor (cold): 今晚被臣派去北境巡視。趕不回來。
 
-chancellor (cold): 今晚被臣派去北邊巡邏了。來不及回來。
-
-[wait time="1.0"]
-
-chancellor (cold): 帶走她。安排到塔樓最高層。對外宣稱公主感染了傳染病。
-
-[wait time="0.5"]
+chancellor (cold): 帶走她。關進最高塔樓。對外說公主染上惡疾，任何人不得探視。
 
 leave princess
 leave chancellor
