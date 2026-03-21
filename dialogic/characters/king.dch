@@ -1,0 +1,28 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.8, 0.7, 0.2, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "王國國王，為了守護國家不惜犧牲名聲的孤獨統治者。",
+&"display_name": "國王",
+&"mirror": false,
+&"nicknames": ["陛下", "父王"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/king_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

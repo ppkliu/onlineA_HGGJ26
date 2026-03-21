@@ -1,0 +1,36 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.6, 0.6, 0.5, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "下城區的老婦人，熟知城中每個角落與暗巷。",
+&"display_name": "老婦人",
+&"mirror": false,
+&"nicknames": ["婆婆"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/old_woman_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"wary": {
+"export_overrides": {
+"image": "res://art/characters/old_woman_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

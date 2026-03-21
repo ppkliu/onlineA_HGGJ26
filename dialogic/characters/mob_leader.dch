@@ -1,0 +1,92 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.6, 0.3, 0.2, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": ""
+},
+&"default_portrait": "default",
+&"description": "下城區鐵匠，妻子因徵兵導致藥物短缺而難產身亡。憤怒與絕望交織的受害者。",
+&"display_name": "布魯諾",
+&"mirror": false,
+&"nicknames": ["鐵匠", "布魯諾"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"angry": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"suspicious": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"grieving": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"hesitant": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"conflicted": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"broken": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"hopeful": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"shocked": {
+"export_overrides": {
+"image": "res://art/characters/mob_leader_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
