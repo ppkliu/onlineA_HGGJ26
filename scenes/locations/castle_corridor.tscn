@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://corridor001"]
+[gd_scene format=3 uid="uid://corridor001"]
 
-[ext_resource type="Script" path="res://scenes/locations/castle_corridor.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://art/backgrounds/hallway2.png" id="2_bg"]
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="3_player"]
+[ext_resource type="Script" uid="uid://icywrastxogp" path="res://scenes/locations/castle_corridor.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ci3ody7gjqmh2" path="res://art/backgrounds/hallway.png" id="2_bg"]
+[ext_resource type="Script" uid="uid://b1ibe31pjmhbs" path="res://scripts/player/player.gd" id="3_player"]
 [ext_resource type="SpriteFrames" path="res://art/characters/princess_walk.tres" id="4_frames"]
 [ext_resource type="SpriteFrames" path="res://art/characters/knight_npc.tres" id="5_npc_frames"]
-[ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
+[ext_resource type="Script" uid="uid://d3ovavndoh10" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialog_context_menu.tscn" id="7_ctx_menu"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(50, 24)
@@ -76,7 +77,7 @@ shape = SubResource("RectangleShape2D_npc_body")
 
 [node name="InteractionArea" type="Area2D" parent="KnightNPC"]
 script = ExtResource("6_npc")
-timeline_path = "res://dialogic/timelines/loop_1/evidence.dtl"
+timeline_path = "res://dialogic/timelines/01_loop_1/03_evidence.dtl"
 npc_name = "騎士"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KnightNPC/InteractionArea"]

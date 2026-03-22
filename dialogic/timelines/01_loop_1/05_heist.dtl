@@ -2,22 +2,6 @@
 
 # === Day 4 早晨・公主寢房 ===
 
-[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
-
-join princess left
-
-princess: （昨天下城區的畫面一直在腦裡轉。那個母親的眼睛、牆上的炭筆字、莉娜說她哥哥被帶走的那條街……）
-
-princess: （我在這裡什麼都做不了。但宰相說過，他有辦法。）
-
-princess (determined): （我要去找他。）
-
-leave princess
-
-[wait time="0.6"]
-
-# === Day 4 下午・花園露台 ===
-
 [background arg="res://art/backgrounds/chancellor_study_night.png" fade="0.8"]
 [music path="res://audio/bgm/tension_stealth.ogg" fade="2.0" volume="0.56"]
 

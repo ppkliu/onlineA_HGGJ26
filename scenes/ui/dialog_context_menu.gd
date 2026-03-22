@@ -3,11 +3,9 @@ extends CanvasLayer
 ## ESC 選單 + 右鍵加速對話
 ## 功能：字型大小、對話速度、對話框透明度、加速倍率、儲存紀錄、回到首頁
 
-const SAVE_DIR := "user://manual_saves/"
-const MAX_SAVES := 3
+const SAVE_PATH := "user://manual_save.json"
 
 var _is_open := false
-var _save_count := 0
 var _is_fast_forwarding := false
 ## Dialogic text_speed 是乘數: 1.0=正常, 0.5=2倍快, 數字越小越快
 var _normal_text_speed := 1.0
@@ -25,7 +23,6 @@ var _ff_advance_timer: Timer
 @onready var fast_forward_slider: HSlider = %FastForwardSlider
 @onready var fast_forward_label: Label = %FastForwardValue
 @onready var save_button: Button = %SaveButton
-@onready var save_count_label: Label = %SaveCountLabel
 @onready var resizable_check: CheckButton = %ResizableCheck
 @onready var resume_button: Button = %ResumeButton
 @onready var menu_button: Button = %MenuButton
@@ -36,9 +33,6 @@ func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
-	_ensure_save_dir()
-	_count_existing_saves()
-
 	font_size_slider.value = _get_current_font_size()
 	font_size_label.text = str(int(font_size_slider.value))
 	_normal_text_speed = _get_current_speed()
@@ -49,7 +43,6 @@ func _ready() -> void:
 	fast_forward_slider.value = _fast_forward_multiplier
 	fast_forward_label.text = "%.1fx" % _fast_forward_multiplier
 	resizable_check.button_pressed = _is_window_resizable()
-	_update_save_button()
 
 	# 右鍵自動推進計時器
 	_ff_advance_timer = Timer.new()
@@ -93,6 +86,14 @@ func _input(event: InputEvent) -> void:
 			_stop_fast_forward()
 		get_viewport().set_input_as_handled()
 
+	# H 鍵按住 = ESC 選單加速倍率 ×2
+	if event is InputEventKey and event.keycode == KEY_H:
+		if event.pressed and not event.is_echo() and not _is_open:
+			_start_fast_forward(_fast_forward_multiplier * 2.0)
+		elif not event.pressed and _is_fast_forwarding:
+			_stop_fast_forward()
+		get_viewport().set_input_as_handled()
+
 
 func open_menu() -> void:
 	if _is_open:
@@ -114,10 +115,11 @@ func close_menu() -> void:
 
 ## ── 右鍵加速 ─────────────────────────────────────
 
-func _start_fast_forward() -> void:
+func _start_fast_forward(multiplier_override := 0.0) -> void:
 	_is_fast_forwarding = true
 	# 加速文字顯示
-	var fast_speed := _normal_text_speed / _fast_forward_multiplier
+	var multiplier := multiplier_override if multiplier_override > 0.0 else _fast_forward_multiplier
+	var fast_speed := _normal_text_speed / multiplier
 	_apply_text_speed(fast_speed)
 	# 啟用 auto_skip 讓 wait 事件也加速（不跳過，縮短等待時間）
 	if Dialogic and Dialogic.has_subsystem("Inputs"):
@@ -199,7 +201,7 @@ func _on_fast_forward_changed(value: float) -> void:
 ## ── 對話框透明度 ──────────────────────────────────
 
 func _get_current_opacity() -> float:
-	return DialogicCustomizer.BOX_OPACITY if DialogicCustomizer else 0.5
+	return DialogicCustomizer.get_current_box_opacity() if DialogicCustomizer else 0.5
 
 
 func _on_opacity_changed(value: float) -> void:
@@ -221,10 +223,6 @@ func _on_resizable_toggled(enabled: bool) -> void:
 ## ── 儲存紀錄 ──────────────────────────────────────
 
 func _on_save_pressed() -> void:
-	if _save_count >= MAX_SAVES:
-		return
-
-	_save_count += 1
 	var save_data := {
 		"current_loop": IntelSystem.current_loop,
 		"acquired_intels": IntelSystem.acquired_intels.duplicate(),
@@ -232,19 +230,14 @@ func _on_save_pressed() -> void:
 		"timestamp": Time.get_datetime_string_from_system(),
 	}
 
-	var path := SAVE_DIR + "save_%d.json" % _save_count
-	var file := FileAccess.open(path, FileAccess.WRITE)
+	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string(JSON.stringify(save_data, "\t"))
 		file.close()
-		FlowLogger.log_event("save", "Manual save created", {"slot": _save_count})
-
-	_update_save_button()
-
-
-func _update_save_button() -> void:
-	save_count_label.text = "(%d/%d)" % [_save_count, MAX_SAVES]
-	save_button.disabled = _save_count >= MAX_SAVES
+		FlowLogger.log_event("save", "Manual save created (overwrite)")
+		save_button.text = "已儲存 ✓"
+		await get_tree().create_timer(1.5).timeout
+		save_button.text = "儲存紀錄"
 
 
 ## ── 回到首頁 ──────────────────────────────────────
@@ -258,25 +251,5 @@ func _on_menu_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	GameManager.quit_game()
-
-
-## ── 輔助 ─────────────────────────────────────────
-
-func _ensure_save_dir() -> void:
-	if not DirAccess.dir_exists_absolute(SAVE_DIR):
-		DirAccess.make_dir_recursive_absolute(SAVE_DIR)
-
-
-func _count_existing_saves() -> void:
-	_save_count = 0
-	var dir := DirAccess.open(SAVE_DIR)
-	if dir:
-		dir.list_dir_begin()
-		var file_name := dir.get_next()
-		while file_name != "":
-			if file_name.begins_with("save_") and file_name.ends_with(".json"):
-				_save_count += 1
-			file_name = dir.get_next()
-		dir.list_dir_end()
 
 

@@ -46,17 +46,32 @@ func start_new_game() -> void:
 		TransitionConstants.TransitionType.FADE_BLACK)
 
 
-## 繼續遊戲
+## 繼續遊戲（讀取手動存檔，讀取後刪除）
 func continue_game() -> void:
-	FlowLogger.log_event("game", "Continue game", {"current_loop": IntelSystem.current_loop})
+	var save_path := "user://manual_save.json"
+	if not FileAccess.file_exists(save_path):
+		return
+
+	var file := FileAccess.open(save_path, FileAccess.READ)
+	var save_data: Variant = JSON.parse_string(file.get_as_text())
+	file.close()
+
+	if save_data is Dictionary:
+		IntelSystem.reset_all()
+		IntelSystem.current_loop = int(save_data.get("current_loop", 0))
+		IntelSystem.tutorial_seen = save_data.get("tutorial_seen", false)
+		for intel_id in save_data.get("acquired_intels", []):
+			IntelSystem.acquire_intel(str(intel_id))
+
+	# 讀取完畢，刪除存檔
+	DirAccess.remove_absolute(save_path)
+	FlowLogger.log_event("game", "Continue game from manual save", {"current_loop": IntelSystem.current_loop})
+
 	change_state(GameState.PLAYING)
-	# IntelSystem 在 _ready 中已自動載入存檔
 	if IntelSystem.current_loop == 0:
-		# 沒有存檔，從序章開始
 		SceneTransition.transition_to("res://scenes/game/game_scene.tscn",
 			TransitionConstants.TransitionType.FADE_BLACK)
 	else:
-		# 有存檔，從輪迴起點開始
 		SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
 			TransitionConstants.TransitionType.FADE_BLACK)
 
@@ -64,6 +79,8 @@ func continue_game() -> void:
 ## 返回主選單
 func return_to_menu() -> void:
 	change_state(GameState.MAIN_MENU)
+	if Dialogic.current_timeline:
+		Dialogic.end_timeline(true)
 	AudioManager.stop_all()
 	FlowLogger.log_event("game", "Return to menu")
 	SceneTransition.transition_to("res://scenes/main_menu/main_menu.tscn",
@@ -75,9 +92,9 @@ func quit_game() -> void:
 	get_tree().quit()
 
 
-## 檢查是否有存檔
+## 檢查是否有手動存檔
 func has_save_data() -> bool:
-	return FileAccess.file_exists("user://break_the_loop_save.json")
+	return FileAccess.file_exists("user://manual_save.json")
 
 
 func _on_dialogic_signal_event(argument: Variant) -> void:
