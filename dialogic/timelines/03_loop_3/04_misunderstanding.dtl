@@ -1,25 +1,59 @@
 # 第 3 輪迴：錯誤的結論 — Day 60-90
 
+# === Day 60・回到達爾的破屋 ===
+
 [background arg="res://art/backgrounds/dal_house_dim.png" fade="0.6"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.0"]
 
 join princess left
 join dal right
 
-princess (cold): 弄瞎你的人，是國王嗎？
+princess (cold): 達爾。我再問你一次。弄瞎你的那個人——你確定不認識他的聲音嗎？
 
-dal (quiet): 我看不見臉。只記得聲音——輕、慢，像唸詩。
+dal (quiet): 我看不見臉。只記得聲音——輕、慢，像在唸詩。
 
-princess (cold): （父王不會這樣說話。但如果他故意……）
+princess (cold): ……父王從來不那樣說話。
 
-princess (cold): （徵兵、加稅、鎖糧、弄瞎工匠……他是一個冷血的實用主義者。為了「保住王國」，可以犧牲任何人。）
+dal (quiet): 我只知道他們是從城堡裡來的。有城堡的鑰匙。
+
+princess: （從城堡裡來的，有鑰匙，工程完工第二天就動手……說明他知道工程什麼時候完工。不是外人，是內部的人。）
+
+princess: （但那個聲音不是父王。那會是誰？）
+
+princess: （……我想不出來。我從小到大見過的人太少了。父王、莉娜、宰相、賽拉斯——就這些。其他人都隔著門、隔著牆、隔著「殿下不需要知道」擋在外面。）
 
 [wait time="1.0"]
 
-princess (cold): （既然如此，我就用他的方式。保內城和防線。下城區……讓他們自生自滅。）
-
-princess (cold): （我封鎖通道，忽略哭喊。用同樣的冷血邏輯——犧牲少數，保多數。）
-
 leave dal
+
+princess: （地下防線、糧倉上的財政署鎖、魔法陣的腐蝕痕跡……拼不完整。每一條線索都指向「有人在父王背後動手」——但我沒有證據證明是誰。）
+
+princess: （而父王……徵兵、加稅、用自己的名聲當擋箭牌、弄瞎知情者——不管動手的人是不是他，這些決定都是冷血的。為了「保住王國」，他可以犧牲任何人。）
+
+[wait time="0.8"]
+
+princess (cold): （……也許這就是保護的代價。你想保住所有人，就得先讓一部分人受苦。）
+
+princess (cold): （既然如此……我就用同樣的方式。保住內城和防線。下城區的饑荒……我解決不了。）
+
+leave princess
+
+# === Day 70-90 蒙太奇 ===
+
+[background arg="res://art/backgrounds/underground_defense_dim.png" fade="0.8"]
+
+join princess left
+
+princess: （我開始獨自行動。白天勘查防線的每一個機關，記住每一道閘門的位置。晚上偷偷回到自己房間，假裝什麼都沒發生。）
+
+princess: （經過下城區的通道時，我聽到了哭聲。很遠，像風一樣。我沒有停下來。）
+
+[wait time="0.8"]
+
+princess (cold): （第一輪，我聽了宰相的話去看苦難。第二輪，我親自住在苦難裡。兩次都失敗了。這一次，我不能讓感情拖住我的腳步。）
+
+princess (cold): （犧牲少數，保多數。這就是父王的選擇。也是我的選擇。）
+
 leave princess
 
 jump 05_chancellor_strike/

@@ -1,4 +1,32 @@
-# 最終輪迴：真結局 — 破曉（Day 180 清晨，城牆上）
+# 最終輪迴：真結局 — 破曉
+
+# === 蒙太奇：接下來的日子 ===
+
+[background arg="res://art/backgrounds/throne_room.png" fade="1.0"]
+
+join princess left
+
+princess: （莫里昂被拿下之後，一切才剛開始。）
+
+[wait time="0.6"]
+
+princess: （第一個月。糧倉打開了。賽拉斯帶人把糧食一車車運往下城區。布魯諾站在路邊看了很久。阿爾跑過來問「這次是真的麵包嗎？」我說是。他笑著跑走了。）
+
+[wait time="0.8"]
+
+princess: （第二個月。父王開始重建防線。達爾雖然看不見，但他記得每一道齒輪的位置。他坐在工地邊上，用手指在空氣中比劃，工匠們照著做。）
+
+princess: （第三個月。前線的徵兵開始分批撤回。莉娜的哥哥回來了——只剩一條半手臂，但活著。莉娜撲上去的時候，我轉過頭擦了一下眼睛。）
+
+[wait time="0.8"]
+
+princess: （第五個月。敵軍試探性進攻了一次。地下防線啟動，三道鐵閘同時落下。齒輪轉動的聲音在地底迴響，像整座城堡在呼吸。他們撤了。）
+
+princess: （第六個月——）
+
+leave princess
+
+# === Day 180 清晨・城牆上 ===
 
 [background arg="res://art/backgrounds/city_wall_dawn.png" fade="1.8"]
 [music path="res://audio/bgm/final_truth.ogg" fade="4.0" volume="0.8"]
@@ -6,21 +34,25 @@
 join princess left
 join loyal_retainer right
 
-loyal_retainer (relieved): 殿下，敵軍已經開始撤退。城門守住了。
+loyal_retainer (relieved): 殿下。敵軍主力開始撤退了。城門守住了。
+
+princess: ……
 
 princess (sad): 父王呢？
 
-loyal_retainer (relieved): 陛下讓臣轉告——「朕欠你一個道歉。但朕不後悔保護你。只後悔……低估了你。」
+loyal_retainer (relieved): 陛下在南門指揮。他讓臣轉告——
+
+loyal_retainer (relieved): 「朕欠你一個道歉。但朕不後悔保護你。只後悔……低估了你。」
 
 [wait time="2.0"]
 
-princess: （城下。布魯諾的兒子騎在他肩上，手裡抓著熱騰騰的白麵包。莉娜衝上去，抱住歸來的哥哥，哭得像個孩子。遠處，有人幫達爾修房子，老人坐在門口，第一次露出笑。）
+princess: （城下。布魯諾的兒子騎在他肩上，手裡抓著熱騰騰的白麵包——真的白麵包，不是泥巴。莉娜衝上去，抱住歸來的哥哥，哭得像個孩子。遠處，有人在幫達爾修房子。老人坐在門口，摸著新刷的門框，第一次露出了笑。）
 
 princess (sad): 賽拉斯。那道密令……你現在可以撕掉了。
 
 [wait time="1.2"]
 
-loyal_retainer: （他從盔甲內襯取出那張汗水浸透、邊角起毛的紙條。手指顫抖著，卻沒有猶豫。）
+loyal_retainer: （他從盔甲內襯裡取出一張紙條。汗水浸透了，邊角起毛，摺痕深得像刀痕。他看了它一眼——然後撕了。碎片在晨風中飄散，像白色的蝴蝶。）
 
 loyal_retainer (tearful): 臣守護了您十七年。這是第一次……臣不需要用劍來守護您了。
 
@@ -30,7 +62,7 @@ princess (default): 太陽出來了。
 
 [wait time="2.5"]
 
-princess: （這就是我死了那麼多次想要到達的地方。不是打敗了誰。只是讓所有人……都不需要再痛苦了。）
+princess: （這就是我死了那麼多次，想要到達的地方。不是打敗了誰，也不是成為了什麼英雄。只是……讓所有人都不需要再痛苦了。）
 
 leave princess
 leave loyal_retainer
