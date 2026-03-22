@@ -63,8 +63,8 @@ func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
 	_emit_progression_updated()
-	get_tree().root.ready.connect(sync_to_dialogic, CONNECT_ONE_SHOT)
 
+	call_deferred("_sync_to_dialogic_when_ready")
 
 ## 載入情報資料庫定義
 func _load_intel_database() -> void:
@@ -210,6 +210,13 @@ func sync_to_dialogic() -> bool:
 	for id in acquired_intels.keys():
 		Dialogic.VAR.set(id, true)
 	return true
+
+func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
+	if sync_to_dialogic():
+		return
+	if attempts_left <= 0 or get_tree() == null:
+		return
+	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
 
 func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
 	if sync_to_dialogic():
