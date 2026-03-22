@@ -165,6 +165,58 @@ custom_minimum_size = Vector2(60, 0)
 text = "50%"
 horizontal_alignment = 2
 
+[node name="BGMRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BGMLabel" type="Label" parent="Panel/VBox/BGMRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "音樂"
+size_flags_horizontal = 0
+
+[node name="BGMSlider" type="HSlider" parent="Panel/VBox/BGMRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="BGMValue" type="Label" parent="Panel/VBox/BGMRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(60, 0)
+text = "100%"
+horizontal_alignment = 2
+
+[node name="SFXRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="Panel/VBox/SFXRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "音效"
+size_flags_horizontal = 0
+
+[node name="SFXSlider" type="HSlider" parent="Panel/VBox/SFXRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXValue" type="Label" parent="Panel/VBox/SFXRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+custom_minimum_size = Vector2(60, 0)
+text = "100%"
+horizontal_alignment = 2
+
 [node name="ResizableRow" type="HBoxContainer" parent="Panel/VBox"]
 layout_mode = 2
 

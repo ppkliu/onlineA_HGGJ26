@@ -195,29 +195,28 @@ const TIMELINE_FLAGS: Array[String] = [
 
 
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
-
 func sync_to_dialogic() -> bool:
 	if not is_inside_tree():
 		return false
 	var dialogic_node := get_node_or_null("/root/Dialogic")
 	if dialogic_node == null:
 		return false
-	if not dialogic_node.has_method("has_subsystem") or not dialogic_node.has_subsystem("VAR"):
+	if not Dialogic.has_subsystem("VAR"):
 		return false
-	if not dialogic_node.current_state_info.has("variables") or not dialogic_node.current_state_info["variables"] is Dictionary:
-		dialogic_node.current_state_info["variables"] = {}
-
-	var dialogic_variables: Dictionary = dialogic_node.current_state_info["variables"]
 	for id in _intel_database.keys():
-		dialogic_variables[id] = acquired_intels.has(id)
-
-	var dialogic_var: Object = dialogic_node.get_subsystem("VAR")
-	if dialogic_var != null:
-		for id in _intel_database.keys():
-			dialogic_var.set(id, dialogic_variables[id])
-
+		Dialogic.VAR.set(id, false)
+	for id in TIMELINE_FLAGS:
+		Dialogic.VAR.set(id, false)
+	for id in acquired_intels.keys():
+		Dialogic.VAR.set(id, true)
 	return true
 
+func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
+	if sync_to_dialogic():
+		return
+	if attempts_left <= 0 or get_tree() == null:
+		return
+	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
 
 func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
 	if sync_to_dialogic():
