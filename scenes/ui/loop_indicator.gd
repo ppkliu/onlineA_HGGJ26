@@ -2,6 +2,8 @@ extends Control
 
 ## 輪迴次數指示器 — 畫面右上角顯示當前輪迴次數
 
+const BRANCH_LABEL_FONT_SIZE := 18
+
 @onready var loop_label: Label = %LoopLabel
 @onready var branch_summary_label: Label = %BranchSummaryLabel
 @onready var branch_list: VBoxContainer = %BranchList
@@ -34,6 +36,7 @@ func _rebuild_branch_list() -> void:
 
 	for branch in IntelSystem.get_branch_statuses():
 		var label := Label.new()
+		label.add_theme_font_size_override(&"font_size", BRANCH_LABEL_FONT_SIZE)
 		label.text = "%s %s" % [_status_prefix(branch["status"]), branch["title"]]
 		match branch["status"]:
 			"completed":

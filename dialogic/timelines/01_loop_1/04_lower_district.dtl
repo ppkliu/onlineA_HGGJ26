@@ -1,7 +1,7 @@
 # 第 1 輪迴：下城區見聞（Day 3）
 
 [background arg="res://art/backgrounds/lower_district.png" fade="0.8"]
-[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.56"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.31"]
 
 join princess left
 

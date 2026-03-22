@@ -1,7 +1,7 @@
 # 第 3 輪迴：尋找達爾 — Day 1-30
 
 [background arg="res://art/backgrounds/lower_district_dark_alley.png" fade="0.9"]
-[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5" volume="0.56"]
 
 join princess left
 
