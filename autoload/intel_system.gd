@@ -63,12 +63,8 @@ func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
 	_emit_progression_updated()
-<<<<<<< HEAD
-	get_tree().root.ready.connect(sync_to_dialogic, CONNECT_ONE_SHOT)
-=======
-	call_deferred("_sync_to_dialogic_when_ready")
->>>>>>> upstream/story2.0
 
+	call_deferred("_sync_to_dialogic_when_ready")
 
 ## 載入情報資料庫定義
 func _load_intel_database() -> void:
