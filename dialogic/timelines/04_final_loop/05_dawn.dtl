@@ -2,7 +2,7 @@
 
 # === 蒙太奇：接下來的日子 ===
 
-[background arg="res://art/backgrounds/throne_room.png" fade="1.0"]
+[background arg="res://art/backgrounds/throne_room_gj.png" fade="1.0"]
 
 join princess left
 

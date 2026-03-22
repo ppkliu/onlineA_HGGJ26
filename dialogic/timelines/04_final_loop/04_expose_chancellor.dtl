@@ -23,7 +23,7 @@ leave princess
 
 # === 王座廳 ===
 
-[background arg="res://art/backgrounds/throne_room.png" fade="1.0"]
+[background arg="res://art/backgrounds/throne_room_gj.png" fade="1.0"]
 [music path="res://audio/bgm/final_truth.ogg" fade="2.5" volume="0.56"]
 
 join princess left
