@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dialog_ctx_menu"]
+[gd_scene load_steps=4 format=3 uid="uid://dialog_ctx_menu"]
 
 [ext_resource type="Script" path="res://scenes/ui/dialog_context_menu.gd" id="1"]
+[ext_resource type="Theme" path="res://art/fonts/ui_theme.tres" id="2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.08, 0.06, 0.12, 0.92)
@@ -38,6 +39,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+theme = ExtResource("2")
 offset_left = -240.0
 offset_top = -260.0
 offset_right = 240.0
@@ -162,6 +164,20 @@ theme_override_font_sizes/font_size = 20
 custom_minimum_size = Vector2(60, 0)
 text = "50%"
 horizontal_alignment = 2
+
+[node name="ResizableRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ResizableLabel" type="Label" parent="Panel/VBox/ResizableRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "視窗縮放"
+size_flags_horizontal = 3
+
+[node name="ResizableCheck" type="CheckButton" parent="Panel/VBox/ResizableRow"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
 
 [node name="HSep2" type="HSeparator" parent="Panel/VBox"]
 layout_mode = 2

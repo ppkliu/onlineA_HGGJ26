@@ -29,7 +29,7 @@ leave princess
 # === Day 180 清晨・城牆上 ===
 
 [background arg="res://art/backgrounds/city_wall_dawn.png" fade="1.8"]
-[music path="res://audio/bgm/final_truth.ogg" fade="4.0" volume="0.8"]
+[music path="res://audio/bgm/final_truth.ogg" fade="4.0" volume="0.45"]
 
 join princess left
 join loyal_retainer right

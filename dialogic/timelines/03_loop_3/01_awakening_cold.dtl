@@ -1,7 +1,7 @@
 # 第 3 輪迴：心死之後醒來 — 公主寢房（Day 1 早晨）
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.3"]
-[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.5" volume="0.55"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.5" volume="0.31"]
 
 [wait time="2.0"]
 

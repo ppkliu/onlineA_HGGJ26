@@ -15,7 +15,7 @@ princess: （上次是為了接近平民。這次，我不需要任何人。）
 leave princess
 
 [background arg="res://art/backgrounds/lower_district_dark_alley.png" fade="0.9"]
-[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5" volume="0.56"]
 
 join princess left
 

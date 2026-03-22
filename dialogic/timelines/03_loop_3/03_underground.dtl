@@ -19,7 +19,7 @@ leave princess
 # === 地下防線 ===
 
 [background arg="res://art/backgrounds/underground_defense_dim.png" fade="1.0"]
-[music path="res://audio/bgm/underground.ogg" fade="2.0" volume="0.6"]
+[music path="res://audio/bgm/underground.ogg" fade="2.0" volume="0.34"]
 
 join princess left
 

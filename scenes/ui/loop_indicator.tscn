@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://loopindicator001"]
+[gd_scene load_steps=3 format=3 uid="uid://loopindicator001"]
 
 [ext_resource type="Script" path="res://scenes/ui/loop_indicator.gd" id="1"]
+[ext_resource type="Theme" path="res://art/fonts/ui_theme.tres" id="2"]
 
 [node name="LoopIndicator" type="Control"]
 anchors_preset = 1
@@ -12,6 +13,7 @@ offset_right = -16.0
 offset_bottom = 180.0
 grow_horizontal = 0
 script = ExtResource("1")
+theme = ExtResource("2")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -39,6 +41,7 @@ layout_mode = 2
 [node name="LoopLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Loop 1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -46,6 +49,7 @@ vertical_alignment = 1
 [node name="BranchSummaryLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "Completed Branches 0/2"
 horizontal_alignment = 1
 

@@ -1,7 +1,7 @@
 # 最終輪迴：收服騎士長 — Day 1 夜晚（公主寢房）
 
 [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.9"]
-[music path="res://audio/bgm/final_truth.ogg" fade="3.0" volume="0.7"]
+[music path="res://audio/bgm/final_truth.ogg" fade="3.0" volume="0.39"]
 
 join princess left
 

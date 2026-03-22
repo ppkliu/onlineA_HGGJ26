@@ -1,7 +1,7 @@
 # 第 3 輪迴：宰相的反撲 — Day 90 深夜（公主寢房）
 
 [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.7"]
-[music path="res://audio/bgm/tension_rising.ogg" fade="2.5" volume="0.56"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.5" volume="0.31"]
 
 join princess left
 

@@ -18,8 +18,8 @@ leave princess
 
 # === Day 4 下午・花園露台 ===
 
-[background arg="res://art/backgrounds/garden_terrace.png" fade="0.9"]
-[music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/chancellor_study_night.png" fade="0.8"]
+[music path="res://audio/bgm/tension_stealth.ogg" fade="2.0" volume="0.56"]
 
 join princess left
 join chancellor right

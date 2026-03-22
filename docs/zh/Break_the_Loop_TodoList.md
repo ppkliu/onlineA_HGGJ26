@@ -187,9 +187,7 @@
 - [x] `sword_stab_short.ogg` — 由 `sword_stab.ogg` 對齊供 Dialogic 使用
 - [x] `loop_restart_echo.ogg` — 由 `loop_restart.ogg` 對齊供 Dialogic 使用
 
-### 5.2 目前仍缺的音效
-
-### 5.2 目前仍缺的 BGM
+### 5.2 已補齊的額外 BGM
 
 - [x] `garden_afternoon.ogg` — 庭園 / 日間場景 BGM
 - [x] `tension_low.ogg` — 低壓懸疑 BGM
@@ -200,7 +198,7 @@
 - [x] `lower_district.ogg` — 下城區場景 BGM
 - [x] `tension_rising.ogg` — 緊張升高 BGM
 
-### 5.3 目前仍缺的 SFX
+### 5.3 已補齊的額外 SFX
 
 - [x] `distant_horn_three.ogg` — 遠方號角音效
 - [x] `gate_open_heavy_three.ogg` — 沉重城門開啟音效（版本 three）

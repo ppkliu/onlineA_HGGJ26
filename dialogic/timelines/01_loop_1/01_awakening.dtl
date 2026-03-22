@@ -1,7 +1,7 @@
 # 第 1 輪迴：醒來 — 公主寢房（Day 1 早晨）
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
-[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.65"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.37"]
 
 [wait time="1.8"]
 
