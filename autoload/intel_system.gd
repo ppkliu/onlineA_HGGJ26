@@ -21,6 +21,7 @@ var visited_choices: Dictionary = {}
 var current_loop: int = 0
 var tutorial_seen: bool = false
 var save_path := "user://break_the_loop_save.json"
+const DIALOGIC_SYNC_RETRY_LIMIT := 8
 
 # 情報資料庫（從 Resource 載入）
 var _intel_database: Dictionary = {}
@@ -209,6 +210,12 @@ func sync_to_dialogic() -> void:
 	for id in acquired_intels.keys():
 		Dialogic.VAR.set(id, true)
 
+func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
+	if sync_to_dialogic():
+		return
+	if attempts_left <= 0 or get_tree() == null:
+		return
+	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
 
 ## 完全重置（新遊戲）
 func reset_all() -> void:
