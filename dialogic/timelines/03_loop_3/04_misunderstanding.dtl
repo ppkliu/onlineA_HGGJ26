@@ -1,6 +1,6 @@
 # 第 3 輪迴：錯誤的結論 — Day 60-90
 
-[background arg="res://art/backgrounds/dal_house_dim.png" fade="0.6"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
 
 join princess left
 join dal right

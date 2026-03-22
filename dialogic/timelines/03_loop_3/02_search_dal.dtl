@@ -22,7 +22,7 @@ leave old_woman
 [wait time="1.2"]
 
 # 轉場：達爾的破屋
-[background arg="res://art/backgrounds/dal_house_dim.png" fade="0.7"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.7"]
 
 join dal right
 
