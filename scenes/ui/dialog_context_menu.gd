@@ -28,6 +28,7 @@ var _ff_advance_timer: Timer
 @onready var save_count_label: Label = %SaveCountLabel
 @onready var resume_button: Button = %ResumeButton
 @onready var menu_button: Button = %MenuButton
+@onready var quit_button: Button = %QuitButton
 
 
 func _ready() -> void:
@@ -63,6 +64,7 @@ func _ready() -> void:
 	save_button.pressed.connect(_on_save_pressed)
 	resume_button.pressed.connect(close_menu)
 	menu_button.pressed.connect(_on_menu_pressed)
+	quit_button.pressed.connect(_on_quit_pressed)
 
 
 func _exit_tree() -> void:
@@ -237,6 +239,12 @@ func _update_save_button() -> void:
 func _on_menu_pressed() -> void:
 	close_menu()
 	GameManager.return_to_menu()
+
+
+## ── 離開遊戲 ──────────────────────────────────────
+
+func _on_quit_pressed() -> void:
+	GameManager.quit_game()
 
 
 ## ── 輔助 ─────────────────────────────────────────
