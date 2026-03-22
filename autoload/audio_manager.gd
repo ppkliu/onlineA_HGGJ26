@@ -7,8 +7,8 @@ var sfx_player: AudioStreamPlayer
 var ambience_player: AudioStreamPlayer
 
 ## 用戶音量設定（線性值 0.0~1.0）
-var bgm_volume: float = 1.0
-var sfx_volume: float = 1.0
+var bgm_volume: float = 0.45
+var sfx_volume: float = 0.2
 
 var _bgm_tween: Tween
 
@@ -28,6 +28,9 @@ func _ready() -> void:
 	ambience_player.name = "AmbiencePlayer"
 	ambience_player.bus = "BGM"
 	add_child(ambience_player)
+
+	set_bgm_volume(bgm_volume)
+	set_sfx_volume(sfx_volume)
 
 
 ## 設定 BGM bus 音量（同時影響 Dialogic 的 [music] 和環境音）
