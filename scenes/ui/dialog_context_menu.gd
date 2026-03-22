@@ -46,9 +46,9 @@ func _ready() -> void:
 	opacity_label.text = "%d%%" % int(opacity_slider.value * 100)
 	fast_forward_slider.value = _fast_forward_multiplier
 	fast_forward_label.text = "%.1fx" % _fast_forward_multiplier
-	bgm_slider.value = _get_volume_percent(AudioManager.bgm_player)
+	bgm_slider.value = AudioManager.bgm_volume
 	bgm_label.text = "%d%%" % int(bgm_slider.value * 100)
-	sfx_slider.value = _get_volume_percent(AudioManager.sfx_player)
+	sfx_slider.value = AudioManager.sfx_volume
 	sfx_label.text = "%d%%" % int(sfx_slider.value * 100)
 	resizable_check.button_pressed = _is_window_resizable()
 
@@ -222,19 +222,14 @@ func _on_opacity_changed(value: float) -> void:
 
 ## ── 音量控制 ──────────────────────────────────────
 
-func _get_volume_percent(player: AudioStreamPlayer) -> float:
-	return db_to_linear(player.volume_db)
-
-
 func _on_bgm_changed(value: float) -> void:
 	bgm_label.text = "%d%%" % int(value * 100)
-	AudioManager.bgm_player.volume_db = linear_to_db(value)
-	AudioManager.ambience_player.volume_db = linear_to_db(value)
+	AudioManager.set_bgm_volume(value)
 
 
 func _on_sfx_changed(value: float) -> void:
 	sfx_label.text = "%d%%" % int(value * 100)
-	AudioManager.sfx_player.volume_db = linear_to_db(value)
+	AudioManager.set_sfx_volume(value)
 
 
 ## ── 視窗縮放 ──────────────────────────────────────

@@ -195,20 +195,21 @@ const TIMELINE_FLAGS: Array[String] = [
 
 
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
-func sync_to_dialogic() -> void:
+func sync_to_dialogic() -> bool:
 	if not is_inside_tree():
-		return
+		return false
 	var dialogic_node := get_node_or_null("/root/Dialogic")
 	if dialogic_node == null:
-		return
+		return false
 	if not Dialogic.has_subsystem("VAR"):
-		return
+		return false
 	for id in _intel_database.keys():
 		Dialogic.VAR.set(id, false)
 	for id in TIMELINE_FLAGS:
 		Dialogic.VAR.set(id, false)
 	for id in acquired_intels.keys():
 		Dialogic.VAR.set(id, true)
+	return true
 
 func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
 	if sync_to_dialogic():

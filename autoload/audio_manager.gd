@@ -6,6 +6,10 @@ var bgm_player: AudioStreamPlayer
 var sfx_player: AudioStreamPlayer
 var ambience_player: AudioStreamPlayer
 
+## 用戶音量設定（線性值 0.0~1.0）
+var bgm_volume: float = 1.0
+var sfx_volume: float = 1.0
+
 var _bgm_tween: Tween
 
 
@@ -22,8 +26,24 @@ func _ready() -> void:
 
 	ambience_player = AudioStreamPlayer.new()
 	ambience_player.name = "AmbiencePlayer"
-	ambience_player.bus = "Ambience"
+	ambience_player.bus = "BGM"
 	add_child(ambience_player)
+
+
+## 設定 BGM bus 音量（同時影響 Dialogic 的 [music] 和環境音）
+func set_bgm_volume(value: float) -> void:
+	bgm_volume = value
+	var bus_idx := AudioServer.get_bus_index("BGM")
+	if bus_idx >= 0:
+		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(value))
+
+
+## 設定 SFX bus 音量（同時影響 Dialogic 的 [sound] 音效）
+func set_sfx_volume(value: float) -> void:
+	sfx_volume = value
+	var bus_idx := AudioServer.get_bus_index("SFX")
+	if bus_idx >= 0:
+		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(value))
 
 
 ## 序章：史詩交響樂 + 大火音效

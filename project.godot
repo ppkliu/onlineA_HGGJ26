@@ -89,6 +89,20 @@ layout/style_directory={
 }
 layout/default_style="res://dialogic/styles/custom_vn_style.tres"
 layout/style_list=["res://dialogic/styles/custom_vn_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"]
+audio/channel_defaults={
+"": {
+"audio_bus": "SFX",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "BGM",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 
