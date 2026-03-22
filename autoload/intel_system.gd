@@ -24,21 +24,27 @@ var _intel_database: Dictionary = {}
 
 const BRANCH_DEFINITIONS := [
 	{
-		"id": "branch_a",
-		"title": "王座調查",
+		"id": "loop_1",
+		"title": "第一輪迴：被操弄的正義",
 		"required_intels": [],
-		"completed_intels": ["intel_retainer_motive", "intel_conspiracy_evidence"],
+		"completed_intels": ["intel_chancellor_betrayal", "intel_fake_ledgers", "intel_chancellor_poison"],
 	},
 	{
-		"id": "branch_b",
-		"title": "庭園調查",
-		"required_intels": ["intel_faction_a"],
-		"completed_intels": ["intel_retainer_past", "intel_dungeon_key"],
+		"id": "loop_2",
+		"title": "第二輪迴：民心之刃",
+		"required_intels": ["intel_chancellor_betrayal"],
+		"completed_intels": ["intel_mob_manipulation", "intel_starvation_real", "intel_bruno_wife_death"],
 	},
 	{
-		"id": "final_branch",
-		"title": "最終對質",
-		"required_intels": ["intel_retainer_motive", "intel_conspiracy_evidence"],
+		"id": "loop_3",
+		"title": "第三輪迴：棋差一步",
+		"required_intels": ["intel_mob_manipulation"],
+		"completed_intels": ["intel_chancellor_treason", "intel_king_defense_line", "intel_dal_blinded_by_chancellor"],
+	},
+	{
+		"id": "final_loop",
+		"title": "最終輪迴：破曉",
+		"required_intels": ["intel_chancellor_treason", "intel_king_defense_line"],
 		"completed_intels": [],
 	},
 ]
