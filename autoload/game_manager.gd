@@ -64,6 +64,8 @@ func continue_game() -> void:
 ## 返回主選單
 func return_to_menu() -> void:
 	change_state(GameState.MAIN_MENU)
+	if Dialogic.current_timeline:
+		Dialogic.end_timeline(true)
 	AudioManager.stop_all()
 	FlowLogger.log_event("game", "Return to menu")
 	SceneTransition.transition_to("res://scenes/main_menu/main_menu.tscn",
