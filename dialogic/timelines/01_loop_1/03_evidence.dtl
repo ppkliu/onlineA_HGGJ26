@@ -2,7 +2,7 @@
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.8"]
 [wait time="1.0"]
-princess: （翻來覆去一整夜。一閉眼就看到那把劍，還有賽拉斯沾血的臉。）
+princess: （一夜沒睡。天花板上的裂痕看了幾百遍，每一條都像那把劍的形狀。）
 - ——翌日——
 	[wait time="0.3"]
 
@@ -87,7 +87,7 @@ princess (determined): ……我要親眼確認。
 	leave princess
 	jump 03b_ask_king/
 - 先去問父王，這些是不是真的 | [if {intel_king_anger} == true]
-	princess: （不……我想起來了。上次我直接跑去找父王，他暴怒說「誰給你看的！」然後把我禁足了。城破的時候我困在房間裡，什麼都做不了。）
+	princess: （不……我想起來了。上次我直接跑去找父王，他嚇壞了——對著空氣咆哮，然後把我藏進寢宮。城破的時候我困在房間裡，什麼都做不了。）
 	princess: （一個什麼都不知道的公主說的話，他不會聽。我得先親眼看到真相，才有資格開口。）
 	leave chancellor
 	leave princess
