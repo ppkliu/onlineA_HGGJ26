@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://deathscreen001"]
+[gd_scene load_steps=3 format=3 uid="uid://deathscreen001"]
 
 [ext_resource type="Script" path="res://scenes/ui/death_screen.gd" id="1"]
+[ext_resource type="Theme" path="res://art/fonts/ui_theme.tres" id="2"]
 
 [node name="DeathScreen" type="CanvasLayer"]
 layer = 50
@@ -26,6 +27,7 @@ offset_right = 300.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2")
 
 [node name="DeathMessage" type="Label" parent="VBoxContainer"]
 layout_mode = 2
