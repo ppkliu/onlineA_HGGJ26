@@ -5,7 +5,7 @@
 join princess left
 join mob_leader right
 
-princess: （他來了。但身後跟著兩個人。他的表情……跟上次宰相接過令印時一樣，是一個已經做了決定的人的臉。）
+princess: （他來了。但身後跟著兩個人。他的表情……是一個已經做了決定的人的臉。）
 
 mob_leader (grieving): ……對不起。
 
@@ -17,11 +17,7 @@ princess (hollow): ……我懂了。
 
 [wait time="1.0"]
 
-princess: （他不敢看我的眼睛。就像他給我半塊黑麵包那天，也不敢看我——只是說了一句「妳太瘦了，幹不了活」。）
-
-princess: （那半塊麵包。那是他一天的口糧。我以為那是信任的開始。）
-
-princess: （但他也記得他老婆在他懷裡斷氣的那個晚上。三十天的麵包，抵不過三年的恨。阿爾三天沒吃東西的肚子，比什麼道理都重。）
+princess: （他不敢看我的眼睛。就像他給我半塊黑麵包那天，也不敢看我。三十天的麵包，抵不過三年的恨。阿爾三天沒吃東西的肚子，比什麼道理都重。）
 
 [wait time="0.8"]
 
@@ -46,10 +42,6 @@ mob_leader (shocked): ……什麼？
 
 princess: （他回頭看了我一眼。那個眼神裡有恐懼——不是怕我，是怕自己做的選擇。）
 
-princess (hollow): （上一輪，莫里昂騙我的時候也是這種感覺嗎？「我以為我在做對的事」——然後發現自己只是別人棋盤上的棋子？）
-
-princess (hollow): （飢餓面前，誠意一文不值。仇恨面前，真相來得太遲，就和謊言一樣。）
-
 [signal arg="cut_to_silence"]
 
 [wait time="1.0"]
@@ -58,30 +50,24 @@ leave --All--
 
 [background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
-[wait time="3.5"]
+[wait time="3.0"]
 
 princess: 「真相說得太遲，就和謊言沒有區別。」
 
-[wait time="1.5"]
+[wait time="3.0"]
 
-princess: （第一次，我信了微笑的人，被毒殺在花園裡。）
-
-princess: （第二次，我信了受苦的人，被賣在城門外。）
-
-princess: （每一次，我都以為我找到了可以信任的對象。每一次，我都錯了。）
-
-[wait time="2.0"]
-
-princess: （下一次……我不能再只靠「人民」。也不能只靠「忠臣」。）
-
-princess: （也許……我得先搞清楚一件事：父王到底是什麼樣的人。所有人都在替他說話或罵他——但沒有人問過他本人。）
+princess: （死亡之書——）
+princess: （第一頁。賽拉斯的劍。他哭了，我不懂。）
+princess: （第二頁。莫里昂的茶。他笑了，我信了。）
+princess: （第三頁。布魯諾的沉默。他給過我麵包，也把我推出了城門。）
 
 [wait time="1.8"]
 
 [sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
 
+# === 獲得情報 ===
 [signal arg="intel:intel_mob_manipulation"]
 [signal arg="intel:intel_starvation_real"]
 [signal arg="intel:intel_bruno_wife_death"]
-[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。\\n\\n「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation', 'intel_starvation_real', 'intel_bruno_wife_death'], 'killer': 'mob'}"]
+[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation', 'intel_starvation_real', 'intel_bruno_wife_death'], 'killer': 'mob'}"]
 [signal arg="trigger_death"]

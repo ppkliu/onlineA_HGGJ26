@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 # 第 1 輪迴：撕下偽裝（Day 5 下午）
 
 [background arg="res://art/backgrounds/garden_terrace.png" fade="0.9"]
 [music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0"]
-=======
-# 第 1 輪迴：撕下偽裝（Day 6 深夜）
-
-[background arg="res://art/backgrounds/castle_wall_night.png" fade="0.8"]
-[music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
->>>>>>> upstream/HEAD
 
 join princess left
 join chancellor right
 
-<<<<<<< HEAD
 princess: 宰相大人……城防令印，我拿到了。
 
 [wait time="0.6"]
@@ -58,33 +50,12 @@ princess (shocked): 你……在茶裡……？
 
 [wait time="0.6"]
 
-=======
-princess: 宰相大人，城防令印我拿到了。
-
-chancellor (default): 殿下做了最正確的選擇。
-
-[wait time="0.8"]
-
-chancellor (default): （他接過令印，指尖緩緩摩挲紋章，嘴角緩緩揚起）
-
-chancellor (cold): 這個國家……終於要迎來新的主人了。
-
-princess (shocked): 什麼？我們不是說好要和平——
-
-chancellor (cold): 和平？
-
-[wait time="0.6"]
-
-[sound path="res://audio/sfx/distant_horn_three.ogg"]
-
->>>>>>> upstream/HEAD
 chancellor (cold): 殿下，臣教您人生最後一課。
 
 chancellor (cold): 您的父王從來不是暴君。那些帳簿，是臣親手偽造的。邊防密報，是臣改的。徵兵、加稅……都是為了備戰。陛下從未享樂。
 
 princess (shocked): ……！！
 
-<<<<<<< HEAD
 chancellor (cold): 他唯一的錯，就是把您養成了一隻什麼都不知道的金絲雀。而臣唯一做的事——就是把籠門打開，看看小鳥會往哪裡飛。
 
 chancellor (cold): 結果呢？您飛向了臣。乖乖把城防令印叼過來了。
@@ -93,15 +64,11 @@ princess (shocked): 你從一開始……就在……
 
 chancellor (cold): 騙？不。臣從來沒說過一句謊。「殿下還小」「殿下不需要擔心」「臣幫殿下處理」——每一個人都是這麼對您的吧？臣只不過換了一句：「臣告訴殿下真相。」您就迫不及待地把心掏出來了。
 
-[wait time="1.0"]
-
-princess: （我的視線越來越模糊。花園的光……好刺眼。他的臉變成一團影子。）
+[wait time="0.8"]
 
 princess (shocked): 那下城區的……那些人……那個母親……
 
 chancellor (cold): 苦難是真的。臣只是帶殿下去看了一眼而已。是殿下自己決定要當英雄的。
-
-[wait time="0.8"]
 
 chancellor (cold): 別太自責。殿下還小嘛，不懂這些很正常。
 
@@ -109,37 +76,11 @@ chancellor (cold): 來，好好睡吧。不要怕。夢都是反的喔。
 
 [wait time="0.6"]
 
-princess: （他在……笑。用跟以前一模一樣的、溫柔的語氣。）
-
-princess: （好冷……跟那個夢裡一樣冷。花園明明有太陽……為什麼這麼冷……）
+princess: （他在……笑。用跟以前一模一樣的、溫柔的語氣。花園的光越來越刺眼，他的臉變成一團模糊的影子。）
 
 [signal arg="cut_to_silence"]
 
 leave chancellor
-=======
-chancellor (cold): 他唯一的錯，就是把您養成了一隻什麼都不知道的金絲雀。一隻比空城還容易攻破的金絲雀。
-
-princess (shocked): 你……你從一開始就在騙我？
-
-chancellor (cold): 不。臣從未說過一句謊。臣只是告訴了您「想聽的話」，然後輕輕推了您一把。
-
-[sound path="res://audio/sfx/gate_open_heavy_three.ogg"]
-
-princess: （三道城門同時敞開的巨響。火把如血河般湧入。敵國黑鷹旗在夜風中狂舞。）
-
-princess (shocked): 不……不……是我……是我親手把城防令印交給你的……
-
-princess: （是我以為自己在救國……結果我親手殺了所有人。）
-
-chancellor (cold): 別太自責，殿下。就算沒有您，這座城也撐不過半年。您只是讓它死得……體面一點。
-
-chancellor (cold): 感謝您贈送的「寶石」——哦不，是城防令印。再見了，公主殿下。
-
-leave chancellor
-
-princess (sad): ……
-
->>>>>>> upstream/HEAD
 leave princess
 
 jump 07_bad_end_a/
