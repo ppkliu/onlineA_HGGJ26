@@ -1,5 +1,13 @@
 # 第 3 輪迴：錯誤的結論 — Day 60-90
 
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+
+[wait time="1.0"]
+
+princess: （又過了許多天。我反覆走在防線和達爾的破屋之間，拼湊每一條線索。夜裡翻來覆去，腦子裡全是齒輪、鎖、和那個「像唸詩」的聲音。）
+
+[wait time="1.5"]
+
 # === Day 60・回到達爾的破屋 ===
 
 [background arg="res://art/backgrounds/hallway.png" fade="0.6"]

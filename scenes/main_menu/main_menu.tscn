@@ -39,14 +39,14 @@ grow_vertical = 2
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1839307542]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
-text = "Break the Loop"
+text = "無知的死刑"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Subtitle" type="Label" parent="VBoxContainer" unique_id=1179970025]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "完美公主的無知，造就了亡國的迴圈"
+text = "完美公主的無知，造就了亡國的迴圈。"
 horizontal_alignment = 1
 
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=640098592]

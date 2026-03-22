@@ -1,12 +1,20 @@
 # 第 3 輪迴：發現地下防線 — Day 45-60
 
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+
+[wait time="1.0"]
+
+princess: （從達爾那裡回來之後，我花了半個月的時間在城堡裡搜索。白天假裝散步，晚上偷偷去沒人的角落敲石壁。莉娜問我為什麼手指上全是灰，我說在學畫畫。）
+
+[wait time="1.8"]
+
 # === 尋找入口 ===
 
 [background arg="res://art/backgrounds/castle_side_gate.png" fade="0.8"]
 
 join princess left
 
-princess: （達爾描述的位置——城堡西側地下室盡頭，一面看似普通的石牆。我花了三天在城堡裡摸索，假裝散步，避開侍衛，終於找到了那道暗門。）
+princess: （達爾描述的位置——城堡西側地下室盡頭，一面看似普通的石牆。終於找到了那道暗門。）
 
 princess: （石牆上有一道幾乎看不見的縫。用力推……沉重的石板緩緩滑開。裡面是一條向下的階梯，黑得什麼都看不見。）
 
