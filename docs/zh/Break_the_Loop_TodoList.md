@@ -162,14 +162,49 @@
 
 ## Phase 5：音效資源
 
-- [ ] `prologue_epic.ogg` — 序章史詩交響樂 BGM
-- [ ] `music_box_uneasy.ogg` — 輪迴重啟音樂盒旋律
-- [ ] `investigation.ogg` — 調查場景通用 BGM
-- [ ] `final_truth.ogg` — 最終真相揭露 BGM（選配）
-- [ ] `fire_burning.ogg` — 大火燃燒環境音效
-- [ ] `sword_stab.ogg` — 刺殺音效
-- [ ] `loop_restart.ogg` — 輪迴重啟過渡音效
-- [ ] `intel_acquired.ogg` — 獲得情報提示音
+- [x] `prologue_epic.ogg` — 序章史詩交響樂 BGM
+- [x] `music_box_uneasy.ogg` — 輪迴重啟音樂盒旋律
+- [x] `investigation.ogg` — 調查場景通用 BGM
+- [x] `final_truth.ogg` — 最終真相揭露 BGM（選配）
+- [x] `fire_burning.ogg` — 大火燃燒環境音效
+- [x] `sword_stab.ogg` — 刺殺音效
+- [x] `loop_restart.ogg` — 輪迴重啟過渡音效
+- [x] `intel_acquired.ogg` — 獲得情報提示音
+- [x] `corridor_crash.ogg` — 走廊重物倒地 / 拖行聲
+- [x] `door_knock.ogg` — 敲門音效（基底版本）
+- [x] `running_screams.ogg` — 遠處奔跑與尖叫（基底版本）
+- [x] `armor_approach.ogg` — 盔甲腳步接近（基底版本）
+- [x] `lock_break.ogg` — 門鎖破壞（基底版本）
+- [x] `door_close.ogg` — 關門音效（基底版本）
+
+### 5.1 已對齊的強化檔名別名
+
+- [x] `door_knock_hard.ogg` — 由 `door_knock.ogg` 對齊供 Dialogic 使用
+- [x] `running_screams_distant.ogg` — 由 `running_screams.ogg` 對齊供 Dialogic 使用
+- [x] `armor_approach_heavy.ogg` — 由 `armor_approach.ogg` 對齊供 Dialogic 使用
+- [x] `lock_break_forceful.ogg` — 由 `lock_break.ogg` 對齊供 Dialogic 使用
+- [x] `door_close_slow.ogg` — 由 `door_close.ogg` 對齊供 Dialogic 使用
+- [x] `sword_stab_short.ogg` — 由 `sword_stab.ogg` 對齊供 Dialogic 使用
+- [x] `loop_restart_echo.ogg` — 由 `loop_restart.ogg` 對齊供 Dialogic 使用
+
+### 5.2 目前仍缺的音效
+
+### 5.2 目前仍缺的 BGM
+
+- [x] `garden_afternoon.ogg` — 庭園 / 日間場景 BGM
+- [x] `tension_low.ogg` — 低壓懸疑 BGM
+- [x] `investigation_cold.ogg` — 冷調查場景 BGM
+- [x] `underground.ogg` — 地下場景 BGM
+- [x] `tension_stealth.ogg` — 潛行 / 偷行動段落 BGM
+- [x] `tension_low_dark.ogg` — 更陰暗的低壓 BGM
+- [x] `lower_district.ogg` — 下城區場景 BGM
+- [x] `tension_rising.ogg` — 緊張升高 BGM
+
+### 5.3 目前仍缺的 SFX
+
+- [x] `distant_horn_three.ogg` — 遠方號角音效
+- [x] `gate_open_heavy_three.ogg` — 沉重城門開啟音效（版本 three）
+- [x] `gate_open_heavy.ogg` — 沉重城門開啟音效
 
 ---
 
@@ -255,4 +290,4 @@
 
 ---
 
-*最後更新：2026-03-21*
+*最後更新：2026-03-22*
