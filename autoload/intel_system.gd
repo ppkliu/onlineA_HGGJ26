@@ -57,6 +57,7 @@ func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
 	_emit_progression_updated()
+	call_deferred("sync_to_dialogic")
 
 
 ## 載入情報資料庫定義
@@ -154,6 +155,8 @@ func _load_persistent_data() -> void:
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
 func sync_to_dialogic() -> void:
 	if Engine.has_singleton("Dialogic") or ClassDB.class_exists(&"Dialogic"):
+		for id in _intel_database.keys():
+			Dialogic.VAR.set(id, false)
 		for id in acquired_intels.keys():
 			Dialogic.VAR.set(id, true)
 

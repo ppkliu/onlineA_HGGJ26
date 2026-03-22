@@ -79,8 +79,14 @@ princess: （布魯諾答應了。接下來……要怎麼處理宰相？）
 	leave princess
 	leave mob_leader
 	jump 04_expose_chancellor/
-- 趁宰相還不知道，現在直接去抓他
+- 趁宰相還不知道，現在直接去抓他 | [if {intel_chancellor_escape_plan} == false]
 	princess (determined): （他還不知道布魯諾倒向了我。趁他反應過來之前——直接動手！）
 	leave princess
 	leave mob_leader
 	jump 03b_rush_arrest/
+- 趁宰相還不知道，現在直接去抓他 | [if {intel_chancellor_escape_plan} == true]
+	princess: （不。上次我帶賽拉斯直接去抓他——書房已經空了。他早就準備好了退路，城門也被他提前打開。賽拉斯差點死在城門前，我被箭射中。）
+	princess (determined): （最後一步不能急。必須在所有人面前公開定罪——讓他連逃的機會都沒有。）
+	leave princess
+	leave mob_leader
+	jump 04_expose_chancellor/
