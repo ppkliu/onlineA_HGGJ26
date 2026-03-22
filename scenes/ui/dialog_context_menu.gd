@@ -192,7 +192,7 @@ func _on_fast_forward_changed(value: float) -> void:
 ## ── 對話框透明度 ──────────────────────────────────
 
 func _get_current_opacity() -> float:
-	return DialogicCustomizer.BOX_OPACITY if DialogicCustomizer else 0.5
+	return DialogicCustomizer.get_current_box_opacity() if DialogicCustomizer else 0.5
 
 
 func _on_opacity_changed(value: float) -> void:
