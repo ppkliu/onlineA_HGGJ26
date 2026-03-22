@@ -86,6 +86,14 @@ func _input(event: InputEvent) -> void:
 			_stop_fast_forward()
 		get_viewport().set_input_as_handled()
 
+	# H 鍵按住 = ESC 選單加速倍率 ×2
+	if event is InputEventKey and event.keycode == KEY_H:
+		if event.pressed and not event.is_echo() and not _is_open:
+			_start_fast_forward(_fast_forward_multiplier * 2.0)
+		elif not event.pressed and _is_fast_forwarding:
+			_stop_fast_forward()
+		get_viewport().set_input_as_handled()
+
 
 func open_menu() -> void:
 	if _is_open:
@@ -107,10 +115,11 @@ func close_menu() -> void:
 
 ## ── 右鍵加速 ─────────────────────────────────────
 
-func _start_fast_forward() -> void:
+func _start_fast_forward(multiplier_override := 0.0) -> void:
 	_is_fast_forwarding = true
 	# 加速文字顯示
-	var fast_speed := _normal_text_speed / _fast_forward_multiplier
+	var multiplier := multiplier_override if multiplier_override > 0.0 else _fast_forward_multiplier
+	var fast_speed := _normal_text_speed / multiplier
 	_apply_text_speed(fast_speed)
 	# 啟用 auto_skip 讓 wait 事件也加速（不跳過，縮短等待時間）
 	if Dialogic and Dialogic.has_subsystem("Inputs"):
@@ -192,7 +201,7 @@ func _on_fast_forward_changed(value: float) -> void:
 ## ── 對話框透明度 ──────────────────────────────────
 
 func _get_current_opacity() -> float:
-	return DialogicCustomizer.BOX_OPACITY if DialogicCustomizer else 0.5
+	return DialogicCustomizer.get_current_box_opacity() if DialogicCustomizer else 0.5
 
 
 func _on_opacity_changed(value: float) -> void:
