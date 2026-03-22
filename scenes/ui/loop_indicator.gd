@@ -2,6 +2,9 @@ extends Control
 
 ## 輪迴次數指示器 — 畫面右上角顯示當前輪迴次數
 
+const BRANCH_LABEL_FONT_SIZE := 18
+const BRANCH_LABEL_MIN_HEIGHT := 28
+
 @onready var loop_label: Label = %LoopLabel
 @onready var branch_summary_label: Label = %BranchSummaryLabel
 @onready var branch_list: VBoxContainer = %BranchList
@@ -23,8 +26,8 @@ func _update_display() -> void:
 		visible = false
 	else:
 		visible = true
-		loop_label.text = "Loop %d" % loop_num
-		branch_summary_label.text = "Completed Branches %d/2" % IntelSystem.get_completed_side_branch_count()
+		loop_label.text = "LOOP %d" % loop_num
+		branch_summary_label.text = "已完成支線 %d/2" % IntelSystem.get_completed_side_branch_count()
 		_rebuild_branch_list()
 
 
@@ -34,6 +37,10 @@ func _rebuild_branch_list() -> void:
 
 	for branch in IntelSystem.get_branch_statuses():
 		var label := Label.new()
+		label.add_theme_font_size_override(&"font_size", BRANCH_LABEL_FONT_SIZE)
+		label.custom_minimum_size = Vector2(0, BRANCH_LABEL_MIN_HEIGHT)
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		label.text = "%s %s" % [_status_prefix(branch["status"]), branch["title"]]
 		match branch["status"]:
 			"completed":
@@ -48,8 +55,8 @@ func _rebuild_branch_list() -> void:
 func _status_prefix(status: String) -> String:
 	match status:
 		"completed":
-			return "[Done]"
+			return "[完成]"
 		"available":
-			return "[Open]"
+			return "[可用]"
 		_:
-			return "[Locked]"
+			return "[鎖定]"

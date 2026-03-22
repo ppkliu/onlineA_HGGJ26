@@ -18,6 +18,25 @@ const CATEGORIES = {
 var _is_open: bool = false
 
 
+func _make_card_style() -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color(0.14, 0.14, 0.18, 0.92)
+	style.border_width_left = 1
+	style.border_width_top = 1
+	style.border_width_right = 1
+	style.border_width_bottom = 1
+	style.border_color = Color(0.95, 0.88, 0.68, 0.45)
+	style.corner_radius_top_left = 8
+	style.corner_radius_top_right = 8
+	style.corner_radius_bottom_right = 8
+	style.corner_radius_bottom_left = 8
+	style.content_margin_left = 14
+	style.content_margin_top = 12
+	style.content_margin_right = 14
+	style.content_margin_bottom = 12
+	return style
+
+
 func _ready() -> void:
 	visible = false
 	close_button.pressed.connect(_close)
@@ -56,9 +75,11 @@ func _refresh() -> void:
 	for category_key in CATEGORIES:
 		var scroll = ScrollContainer.new()
 		scroll.name = CATEGORIES[category_key]
+		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 		tab_container.add_child(scroll)
 
 		var vbox = VBoxContainer.new()
+		vbox.add_theme_constant_override(&"separation", 10)
 		vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		scroll.add_child(vbox)
 
@@ -72,16 +93,22 @@ func _refresh() -> void:
 
 func _create_card(intel: IntelItem) -> PanelContainer:
 	var panel = PanelContainer.new()
+	panel.custom_minimum_size = Vector2(0, 110)
+	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	panel.add_theme_stylebox_override(&"panel", _make_card_style())
 
 	var vbox = VBoxContainer.new()
+	vbox.add_theme_constant_override(&"separation", 6)
 	panel.add_child(vbox)
 
 	var title = Label.new()
 	title.text = intel.title
+	title.add_theme_font_size_override(&"font_size", 24)
 	vbox.add_child(title)
 
 	var desc = Label.new()
 	desc.text = intel.description
+	desc.add_theme_font_size_override(&"font_size", 20)
 	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	vbox.add_child(desc)
 

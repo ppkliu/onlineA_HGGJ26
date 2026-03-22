@@ -26,6 +26,7 @@ FlowLogger="*res://autoload/flow_logger.gd"
 SceneTransition="*res://autoload/scene_transition.tscn"
 Dialogic="*uid://ds2q0uclmolvu"
 DialogicCustomizer="*res://autoload/dialogic_customizer.gd"
+DialogicAudioHotfix="*res://autoload/dialogic_audio_hotfix.gd"
 
 [dialogic]
 
@@ -86,7 +87,6 @@ layout/style_list=["res://dialogic/styles/custom_vn_style.tres", "res://addons/d
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"

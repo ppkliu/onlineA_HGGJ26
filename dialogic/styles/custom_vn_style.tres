@@ -13,6 +13,10 @@
 
 [sub_resource type="Resource" id="Resource_base"]
 script = ExtResource("2_layer")
+overrides = {
+"font": "res://art/fonts/SourceHanSansTC-VF.otf",
+"font_size": "28"
+}
 
 [sub_resource type="Resource" id="Resource_bg"]
 script = ExtResource("2_layer")

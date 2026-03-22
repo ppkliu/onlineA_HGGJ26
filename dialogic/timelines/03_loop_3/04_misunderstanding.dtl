@@ -1,9 +1,6 @@
 # 第 3 輪迴：錯誤的結論 — Day 60-90
 
-# === Day 60・回到達爾的破屋 ===
-
-[background arg="res://art/backgrounds/dal_house_dim.png" fade="0.6"]
-[music path="res://audio/bgm/investigation_cold.ogg" fade="2.0"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
 
 join princess left
 join dal right

@@ -64,7 +64,7 @@
 
 - [x] 設定 `default_style.tres` — 一般對話框樣式（暗色系底框、白色文字）
 - [x] 設定 `flashback_style.tres` — 回憶 / 死亡場景樣式（帶昏黃濾鏡的對話框）
-- [ ] 調整字體（建議支援中文的 Noto Sans TC 或類似字體）
+- [x] 調整字體（已接入 `SourceHanSansTC-VF.otf` 到主要 UI 與 Dialogic）
 
 ### 2.3 時間線撰寫
 
@@ -187,9 +187,7 @@
 - [x] `sword_stab_short.ogg` — 由 `sword_stab.ogg` 對齊供 Dialogic 使用
 - [x] `loop_restart_echo.ogg` — 由 `loop_restart.ogg` 對齊供 Dialogic 使用
 
-### 5.2 目前仍缺的音效
-
-### 5.2 目前仍缺的 BGM
+### 5.2 已補齊的額外 BGM
 
 - [x] `garden_afternoon.ogg` — 庭園 / 日間場景 BGM
 - [x] `tension_low.ogg` — 低壓懸疑 BGM
@@ -200,7 +198,7 @@
 - [x] `lower_district.ogg` — 下城區場景 BGM
 - [x] `tension_rising.ogg` — 緊張升高 BGM
 
-### 5.3 目前仍缺的 SFX
+### 5.3 已補齊的額外 SFX
 
 - [x] `distant_horn_three.ogg` — 遠方號角音效
 - [x] `gate_open_heavy_three.ogg` — 沉重城門開啟音效（版本 three）
@@ -233,7 +231,7 @@
 
 ## Phase 8：打磨與提交
 
-- [ ] 遊戲開頭加入遊戲名稱標題畫面
+- [x] 遊戲開頭加入遊戲名稱標題畫面
 - [ ] 調整對話節奏與文字速度
 - [ ] 調整音量平衡（BGM / SFX / Ambience）
 - [x] 加入簡易操作提示（首次遊玩引導）
