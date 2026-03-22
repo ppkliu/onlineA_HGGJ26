@@ -165,6 +165,20 @@ custom_minimum_size = Vector2(60, 0)
 text = "50%"
 horizontal_alignment = 2
 
+[node name="ResizableRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ResizableLabel" type="Label" parent="Panel/VBox/ResizableRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "視窗縮放"
+size_flags_horizontal = 3
+
+[node name="ResizableCheck" type="CheckButton" parent="Panel/VBox/ResizableRow"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+
 [node name="HSep2" type="HSeparator" parent="Panel/VBox"]
 layout_mode = 2
 

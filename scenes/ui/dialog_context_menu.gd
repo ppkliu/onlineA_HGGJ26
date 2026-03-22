@@ -26,6 +26,7 @@ var _ff_advance_timer: Timer
 @onready var fast_forward_label: Label = %FastForwardValue
 @onready var save_button: Button = %SaveButton
 @onready var save_count_label: Label = %SaveCountLabel
+@onready var resizable_check: CheckButton = %ResizableCheck
 @onready var resume_button: Button = %ResumeButton
 @onready var menu_button: Button = %MenuButton
 @onready var quit_button: Button = %QuitButton
@@ -47,6 +48,7 @@ func _ready() -> void:
 	opacity_label.text = "%d%%" % int(opacity_slider.value * 100)
 	fast_forward_slider.value = _fast_forward_multiplier
 	fast_forward_label.text = "%.1fx" % _fast_forward_multiplier
+	resizable_check.button_pressed = _is_window_resizable()
 	_update_save_button()
 
 	# 右鍵自動推進計時器
@@ -61,6 +63,7 @@ func _ready() -> void:
 	speed_slider.value_changed.connect(_on_speed_changed)
 	opacity_slider.value_changed.connect(_on_opacity_changed)
 	fast_forward_slider.value_changed.connect(_on_fast_forward_changed)
+	resizable_check.toggled.connect(_on_resizable_toggled)
 	save_button.pressed.connect(_on_save_pressed)
 	resume_button.pressed.connect(close_menu)
 	menu_button.pressed.connect(_on_menu_pressed)
@@ -203,6 +206,16 @@ func _on_opacity_changed(value: float) -> void:
 	opacity_label.text = "%d%%" % int(value * 100)
 	if DialogicCustomizer:
 		DialogicCustomizer.set_box_opacity(value)
+
+
+## ── 視窗縮放 ──────────────────────────────────────
+
+func _is_window_resizable() -> bool:
+	return not get_window().unresizable
+
+
+func _on_resizable_toggled(enabled: bool) -> void:
+	get_window().unresizable = not enabled
 
 
 ## ── 儲存紀錄 ──────────────────────────────────────
