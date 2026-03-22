@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=32 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=39 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -273,6 +273,69 @@ category = &"truth"
 source_loop = 5
 unlocks_branches = []
 
+[sub_resource type="Resource" id="intel_king_anger"]
+script = ExtResource("2")
+id = "intel_king_anger"
+title = "國王的震怒"
+description = "毫無準備地直接去質問國王，只會讓自己被視為動搖人心的危險人物。"
+category = &"character"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_eyes"]
+script = ExtResource("2")
+id = "intel_chancellor_eyes"
+title = "宰相的眼線"
+description = "城堡內外佈滿宰相的眼線。只要一回頭，他就可能比你更早知道你的行動。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_granary_needs_key"]
+script = ExtResource("2")
+id = "intel_granary_needs_key"
+title = "糧倉需要鑰匙"
+description = "地下糧倉不是知道位置就能打開，鎖與通道都顯示背後還有更完整的封鎖安排。"
+category = &"truth"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_dismisses_testimony"]
+script = ExtResource("2")
+id = "intel_chancellor_dismisses_testimony"
+title = "口述無法定罪宰相"
+description = "光靠達爾的口述去質問宰相，只會暴露證人，卻不足以真正把他逼入死角。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_king_will_listen"]
+script = ExtResource("2")
+id = "intel_king_will_listen"
+title = "國王願意聽證據"
+description = "只要證據夠完整、時機正確，國王並非完全拒絕真相。"
+category = &"character"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_defense_needs_three"]
+script = ExtResource("2")
+id = "intel_defense_needs_three"
+title = "防線需要三人同步"
+description = "地下防線的三道機關必須同時維持施力，單靠一個人根本不可能完成。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_escape_plan"]
+script = ExtResource("2")
+id = "intel_chancellor_escape_plan"
+title = "宰相的逃跑路線"
+description = "若在沒有公開定罪的情況下直接動手，宰相會立刻逃走並反手打開城門。"
+category = &"conspiracy"
+source_loop = 4
+unlocks_branches = []
+
 [resource]
 script = ExtResource("1")
 items = [
@@ -305,5 +368,12 @@ items = [
 	SubResource("intel_conspiracy_evidence"),
 	SubResource("intel_dungeon_key"),
 	SubResource("intel_retainer_past"),
-	SubResource("intel_true_traitor")
+	SubResource("intel_true_traitor"),
+	SubResource("intel_king_anger"),
+	SubResource("intel_chancellor_eyes"),
+	SubResource("intel_granary_needs_key"),
+	SubResource("intel_chancellor_dismisses_testimony"),
+	SubResource("intel_king_will_listen"),
+	SubResource("intel_defense_needs_three"),
+	SubResource("intel_chancellor_escape_plan")
 ]
