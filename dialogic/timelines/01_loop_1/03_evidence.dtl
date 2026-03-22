@@ -1,7 +1,7 @@
 # 第 1 輪迴：宰相的「證據」 — 書房（Day 2）
 
 [background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
-[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.56"]
 
 join princess left
 join chancellor right

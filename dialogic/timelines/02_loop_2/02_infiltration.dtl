@@ -1,7 +1,7 @@
 # 第 2 輪迴：潛入下城區 — Day 1-5
 
 [background arg="res://art/backgrounds/lower_district.png" fade="0.9"]
-[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.56"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.31"]
 
 join princess left
 

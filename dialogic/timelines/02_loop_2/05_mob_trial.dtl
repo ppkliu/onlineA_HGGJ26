@@ -1,7 +1,7 @@
 # 第 2 輪迴：暴民的審判 — Day 33-35（地下酒窖）
 
 [background arg="res://art/backgrounds/cellar_dark.png" fade="0.8"]
-[music path="res://audio/bgm/tension_low_dark.ogg" fade="2.0"]
+[music path="res://audio/bgm/tension_low_dark.ogg" fade="2.0" volume="0.56"]
 
 join mob_leader center
 
