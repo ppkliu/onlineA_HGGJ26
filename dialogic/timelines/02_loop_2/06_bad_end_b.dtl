@@ -56,13 +56,6 @@ princess: 「真相說得太遲，就和謊言沒有區別。」
 
 [wait time="3.0"]
 
-princess: （死亡之書——）
-princess: （第一頁。賽拉斯的劍。他哭了，我不懂。）
-princess: （第二頁。莫里昂的茶。他笑了，我信了。）
-princess: （第三頁。布魯諾的沉默。他給過我麵包，也把我推出了城門。）
-
-[wait time="1.8"]
-
 [sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
 
 # === 獲得情報 ===
