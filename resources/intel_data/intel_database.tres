@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=31 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=32 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -89,6 +89,15 @@ script = ExtResource("2")
 id = "intel_gate_open_signal"
 title = "開門的信號"
 description = "城門被打開不是混亂造成的巧合，而是有人預先安排好的內應行動。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_poison"]
+script = ExtResource("2")
+id = "intel_chancellor_poison"
+title = "花茶裡的毒"
+description = "宰相在最後用一杯溫熱的花茶結束了公主的生命。那份溫柔本身就是謀殺的一部分。"
 category = &"conspiracy"
 source_loop = 1
 unlocks_branches = []
@@ -277,6 +286,7 @@ items = [
 	SubResource("intel_chancellor_betrayal"),
 	SubResource("intel_fake_ledgers"),
 	SubResource("intel_gate_open_signal"),
+	SubResource("intel_chancellor_poison"),
 	SubResource("intel_war_conscription"),
 	SubResource("intel_retainer_duty"),
 	SubResource("intel_mob_manipulation"),

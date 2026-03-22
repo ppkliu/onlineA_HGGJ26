@@ -1,29 +1,49 @@
-# 第 3 輪迴：宰相的反撲 — Day 90-120（深夜寢房）
+# 第 3 輪迴：宰相的反撲 — Day 90 深夜（公主寢房）
 
 [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.7"]
 [music path="res://audio/bgm/tension_rising.ogg" fade="2.5" volume="0.31"]
 
 join princess left
 
-princess: （門突然被推開。）
+princess: （又是一個從地下通道回來的深夜。腳上沾著石灰和泥，鞋子濕透了。我把偽裝塞進衣櫃最深處，換上睡衣——）
 
 [wait time="0.6"]
 
+[sound path="res://audio/sfx/door_knock_hard.ogg" bus="SFX"]
+
+princess: （……這個時間，誰？）
+
+[wait time="0.5"]
+
+princess: （門被推開了。不是敲門——是直接推開。）
+
 join chancellor right
 
-chancellor (cold): 殿下，您在地下留了腳印，在達爾屋裡留了玫瑰油味，在暗道觸發了臣的警報。
+chancellor (cold): 晚安，殿下。
 
-chancellor (cold): 您知道得太多了。
+princess: ……！
 
-princess (angry): 莫里昂——
+chancellor (cold): 殿下最近很忙呢。每天傍晚出門，深夜才回來。衣角上的石灰味，走廊裡殘留的玫瑰油香，還有……地下暗道上，臣設置的警報。
 
-chancellor (cold): 但您犯了最大錯誤：您一個人來。
+[wait time="0.8"]
 
-princess (angry): 賽拉斯呢——
+chancellor (cold): 您找到達爾了。也找到了地下防線。甚至看到了糧倉上的鎖。殿下比臣想的聰明多了。
 
-chancellor (cold): 今晚被臣派去北境巡視。趕不回來。
+princess (angry): 莫里昂，你——
 
-chancellor (cold): 帶走她。關進最高塔樓。對外說公主染上惡疾，任何人不得探視。
+chancellor (cold): 但您犯了最大的錯誤。
+
+chancellor (cold): 您一個人來。
+
+princess (angry): 賽拉斯——
+
+chancellor (cold): 今晚被臣以陛下的名義派去北境巡視了。最快三天才能回來。殿下猜猜，三天足夠臣做多少事？
+
+[wait time="0.6"]
+
+chancellor (cold): 帶走她。關進最高塔樓。對外宣布公主染上惡疾，任何人不得探視。
+
+princess: （兩個黑衣人從門外進來。我想喊，但一塊布堵住了嘴。走廊上沒有侍衛——他連侍衛都提前調走了。）
 
 leave princess
 leave chancellor
