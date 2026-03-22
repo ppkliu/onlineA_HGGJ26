@@ -30,7 +30,7 @@ func _ready() -> void:
 func play_prologue_epic() -> void:
 	var bgm_stream = _safe_load("res://audio/bgm/prologue_epic.ogg")
 	if bgm_stream:
-		_crossfade_bgm(bgm_stream)
+		_crossfade_bgm(bgm_stream, 1.0, -7.0)
 	var fire_stream = _safe_load("res://audio/sfx/fire_burning.ogg")
 	if fire_stream:
 		ambience_player.stream = fire_stream
@@ -50,7 +50,7 @@ func cut_to_silence() -> void:
 	var stab_stream = _safe_load("res://audio/sfx/sword_stab.ogg")
 	if stab_stream:
 		sfx_player.stream = stab_stream
-		sfx_player.volume_db = -10.0
+		sfx_player.volume_db = 7.0
 		sfx_player.play()
 
 
@@ -59,14 +59,14 @@ func play_loop_restart() -> void:
 	await get_tree().create_timer(1.5).timeout  # 保持靜默片刻
 	var music_box = _safe_load("res://audio/bgm/music_box_uneasy.ogg")
 	if music_box:
-		_crossfade_bgm(music_box, 3.0)
+		_crossfade_bgm(music_box, 3.0, -6.0)
 
 
 ## 調查場景 BGM
 func play_investigation() -> void:
 	var stream = _safe_load("res://audio/bgm/investigation.ogg")
 	if stream:
-		_crossfade_bgm(stream, 2.0)
+		_crossfade_bgm(stream, 2.0, -6.0)
 
 
 ## 播放音效
@@ -93,7 +93,7 @@ func _safe_load(path: String) -> Resource:
 	return null
 
 
-func _crossfade_bgm(stream: AudioStream, duration: float = 1.0) -> void:
+func _crossfade_bgm(stream: AudioStream, duration: float = 1.0, target_volume_db: float = 0.0) -> void:
 	if _bgm_tween:
 		_bgm_tween.kill()
 	if bgm_player.playing:
@@ -104,4 +104,4 @@ func _crossfade_bgm(stream: AudioStream, duration: float = 1.0) -> void:
 	bgm_player.volume_db = -40.0
 	bgm_player.play()
 	_bgm_tween = create_tween()
-	_bgm_tween.tween_property(bgm_player, "volume_db", 0.0, duration * 0.5)
+	_bgm_tween.tween_property(bgm_player, "volume_db", target_volume_db, duration * 0.5)
