@@ -22,6 +22,10 @@ var _ff_advance_timer: Timer
 @onready var opacity_label: Label = %OpacityValue
 @onready var fast_forward_slider: HSlider = %FastForwardSlider
 @onready var fast_forward_label: Label = %FastForwardValue
+@onready var bgm_slider: HSlider = %BGMSlider
+@onready var bgm_label: Label = %BGMValue
+@onready var sfx_slider: HSlider = %SFXSlider
+@onready var sfx_label: Label = %SFXValue
 @onready var save_button: Button = %SaveButton
 @onready var resizable_check: CheckButton = %ResizableCheck
 @onready var resume_button: Button = %ResumeButton
@@ -42,6 +46,10 @@ func _ready() -> void:
 	opacity_label.text = "%d%%" % int(opacity_slider.value * 100)
 	fast_forward_slider.value = _fast_forward_multiplier
 	fast_forward_label.text = "%.1fx" % _fast_forward_multiplier
+	bgm_slider.value = _get_volume_percent(AudioManager.bgm_player)
+	bgm_label.text = "%d%%" % int(bgm_slider.value * 100)
+	sfx_slider.value = _get_volume_percent(AudioManager.sfx_player)
+	sfx_label.text = "%d%%" % int(sfx_slider.value * 100)
 	resizable_check.button_pressed = _is_window_resizable()
 
 	# 右鍵自動推進計時器
@@ -56,6 +64,8 @@ func _ready() -> void:
 	speed_slider.value_changed.connect(_on_speed_changed)
 	opacity_slider.value_changed.connect(_on_opacity_changed)
 	fast_forward_slider.value_changed.connect(_on_fast_forward_changed)
+	bgm_slider.value_changed.connect(_on_bgm_changed)
+	sfx_slider.value_changed.connect(_on_sfx_changed)
 	resizable_check.toggled.connect(_on_resizable_toggled)
 	save_button.pressed.connect(_on_save_pressed)
 	resume_button.pressed.connect(close_menu)
@@ -208,6 +218,23 @@ func _on_opacity_changed(value: float) -> void:
 	opacity_label.text = "%d%%" % int(value * 100)
 	if DialogicCustomizer:
 		DialogicCustomizer.set_box_opacity(value)
+
+
+## ── 音量控制 ──────────────────────────────────────
+
+func _get_volume_percent(player: AudioStreamPlayer) -> float:
+	return db_to_linear(player.volume_db)
+
+
+func _on_bgm_changed(value: float) -> void:
+	bgm_label.text = "%d%%" % int(value * 100)
+	AudioManager.bgm_player.volume_db = linear_to_db(value)
+	AudioManager.ambience_player.volume_db = linear_to_db(value)
+
+
+func _on_sfx_changed(value: float) -> void:
+	sfx_label.text = "%d%%" % int(value * 100)
+	AudioManager.sfx_player.volume_db = linear_to_db(value)
 
 
 ## ── 視窗縮放 ──────────────────────────────────────
