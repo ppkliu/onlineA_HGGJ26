@@ -1,22 +1,17 @@
 # 最終輪迴：揭露宰相 — Day 7（王座廳）
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
-
 [wait time="1.0"]
-
 princess: （又過了四天。賽拉斯帶人從地下通道取出了腐蝕過的魔法陣元件、通敵密函的副本、糧倉鎖的拓印。布魯諾派人在下城區散佈消息——「公主會開糧倉」。我把達爾的證詞整理成書面記錄，修改了五遍。）
-
 princess: （第七天早上。所有準備就緒。）
-
-[wait time="1.5"]
+- ——四天後——
+	[wait time="0.3"]
 
 # === 前往王座廳 ===
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
 
 join princess left
-
-princess: （今天早上，我向父王請求了一次正式覲見。）
 
 princess: （所有東西用布包好，放在賽拉斯的盔甲裡。今天早上，我向父王請求了一次正式覲見。）
 
@@ -28,7 +23,7 @@ leave princess
 
 # === 王座廳 ===
 
-[background arg="res://art/backgrounds/throne_room.png" fade="1.0"]
+[background arg="res://art/backgrounds/throne_room_gj.png" fade="1.0"]
 [music path="res://audio/bgm/final_truth.ogg" fade="2.5" volume="0.56"]
 
 join princess left

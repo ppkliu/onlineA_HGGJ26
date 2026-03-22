@@ -14,10 +14,14 @@ signal progression_updated()
 # 已獲得的情報集合 { intel_id: IntelItem }
 var acquired_intels: Dictionary = {}
 
+# 已造訪的選項 { choice_text: true }
+var visited_choices: Dictionary = {}
+
 # 當前輪迴次數
 var current_loop: int = 0
 var tutorial_seen: bool = false
 var save_path := "user://break_the_loop_save.json"
+const DIALOGIC_SYNC_RETRY_LIMIT := 8
 
 # 情報資料庫（從 Resource 載入）
 var _intel_database: Dictionary = {}
@@ -58,8 +62,8 @@ const BRANCH_DEFINITIONS := [
 func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
-	sync_to_dialogic()
 	_emit_progression_updated()
+	call_deferred("_sync_to_dialogic_when_ready")
 
 
 ## 載入情報資料庫定義
@@ -135,12 +139,25 @@ func trigger_loop_reset() -> void:
 	# 情報不重置！只重置場景相關狀態
 
 
+## 記錄造訪過的選項
+func mark_choice_visited(choice_text: String) -> void:
+	if not visited_choices.has(choice_text):
+		visited_choices[choice_text] = true
+		_save_persistent_data()
+
+
+## 檢查選項是否造訪過
+func is_choice_visited(choice_text: String) -> bool:
+	return visited_choices.has(choice_text)
+
+
 ## 持久化存檔（自動存檔，非手動 S/L）
 func _save_persistent_data() -> void:
 	var save_data = {
 		"current_loop": current_loop,
 		"acquired_intels": acquired_intels.keys(),
 		"tutorial_seen": tutorial_seen,
+		"visited_choices": visited_choices.keys(),
 	}
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	if file:
@@ -160,19 +177,46 @@ func _load_persistent_data() -> void:
 			for id in data.get("acquired_intels", []):
 				if _intel_database.has(id):
 					acquired_intels[id] = _intel_database[id]
+			for choice_text in data.get("visited_choices", []):
+				visited_choices[choice_text] = true
 	_emit_progression_updated()
 
 
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
-func sync_to_dialogic() -> void:
-	if Engine.has_singleton("Dialogic") or ClassDB.class_exists(&"Dialogic"):
-		for id in acquired_intels.keys():
-			Dialogic.VAR.set(id, true)
+func sync_to_dialogic() -> bool:
+	if not is_inside_tree():
+		return false
+	var dialogic_node := get_node_or_null("/root/Dialogic")
+	if dialogic_node == null:
+		return false
+	if not dialogic_node.has_method("has_subsystem") or not dialogic_node.has_subsystem("VAR"):
+		return false
+	if not dialogic_node.current_state_info.has("variables") or not dialogic_node.current_state_info["variables"] is Dictionary:
+		dialogic_node.current_state_info["variables"] = {}
 
+	var dialogic_variables: Dictionary = dialogic_node.current_state_info["variables"]
+	for id in _intel_database.keys():
+		dialogic_variables[id] = acquired_intels.has(id)
+
+	var dialogic_var: Object = dialogic_node.get_subsystem("VAR")
+	if dialogic_var != null:
+		for id in _intel_database.keys():
+			dialogic_var.set(id, dialogic_variables[id])
+
+	return true
+
+
+func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
+	if sync_to_dialogic():
+		return
+	if attempts_left <= 0 or get_tree() == null:
+		return
+	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
 
 ## 完全重置（新遊戲）
 func reset_all() -> void:
 	acquired_intels.clear()
+	visited_choices.clear()
 	current_loop = 0
 	tutorial_seen = false
 	_save_persistent_data()
