@@ -1,7 +1,7 @@
 # 第 1 輪迴：撕下偽裝（Day 6 深夜）
 
 [background arg="res://art/backgrounds/castle_wall_night.png" fade="0.8"]
-[music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0" volume="0.56"]
 
 join princess left
 join chancellor right
@@ -36,7 +36,7 @@ princess (shocked): 你……你從一開始就在騙我？
 
 chancellor (cold): 不。臣從未說過一句謊。臣只是告訴了您「想聽的話」，然後輕輕推了您一把。
 
-[sound path="res://audio/sfx/gate_open_heavy_three.ogg"]
+[sound path="res://audio/sfx/gate_open_heavy_three.ogg" volume="1.0"]
 
 princess: （三道城門同時敞開的巨響。火把如血河般湧入。敵國黑鷹旗在夜風中狂舞。）
 

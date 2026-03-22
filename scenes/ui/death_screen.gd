@@ -18,7 +18,7 @@ func setup(context: Dictionary) -> void:
 
 	# 設定死因摘要
 	var death_text = context.get("death_message", "你死了。")
-	death_message.text = death_text
+	death_message.text = _normalize_display_text(death_text)
 
 	# 顯示獲得的情報
 	var rewards: Array = []
@@ -81,3 +81,8 @@ func _play_sequence() -> void:
 	await get_tree().create_timer(2.5).timeout
 
 	animation_completed.emit()
+
+
+func _normalize_display_text(value: Variant) -> String:
+	var text := str(value)
+	return text.replace("\\n", "\n")

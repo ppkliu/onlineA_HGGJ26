@@ -22,7 +22,7 @@ princess (shocked): （弄瞎達爾的不是父王，是宰相！鎖糧倉的財
 
 [wait time="0.8"]
 
-[sound path="res://audio/sfx/gate_open_heavy.ogg"]
+[sound path="res://audio/sfx/gate_open_heavy.ogg" volume="0.45"]
 [signal arg="camera_shake"]
 
 princess (shocked): 不……只差一步……只差最後一步，就能拼出完整真相——

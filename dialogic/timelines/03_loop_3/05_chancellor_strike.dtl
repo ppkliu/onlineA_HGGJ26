@@ -1,7 +1,7 @@
 # 第 3 輪迴：宰相的反撲 — Day 90-120（深夜寢房）
 
 [background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.7"]
-[music path="res://audio/bgm/tension_rising.ogg" fade="2.5"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.5" volume="0.56"]
 
 join princess left
 

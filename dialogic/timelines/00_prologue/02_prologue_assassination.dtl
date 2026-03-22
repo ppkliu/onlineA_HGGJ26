@@ -109,7 +109,7 @@ loyal_retainer (tearful): 對不起。
 
 [wait time="0.4"]
 
-[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX"]
+[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX" volume="7.08"]
 
 princess (hollow): 啊——
 
