@@ -65,6 +65,11 @@ func _ready() -> void:
 	menu_button.pressed.connect(_on_menu_pressed)
 
 
+func _exit_tree() -> void:
+	if _is_fast_forwarding:
+		_stop_fast_forward()
+
+
 func _input(event: InputEvent) -> void:
 	# ESC 開關選單
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
