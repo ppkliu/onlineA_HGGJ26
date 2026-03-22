@@ -1,12 +1,18 @@
 # 第 1 輪迴：公主的決心 + 偷取城防令印（Day 4-5）
 
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="1.0"]
+princess: （那個母親的空洞眼神，牆上的炭筆字，莉娜哥哥被帶走的那條街……一整夜揮之不去。）
+- ——翌日——
+	[wait time="0.3"]
+
 # === Day 4 早晨・公主寢房 ===
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
 
 join princess left
 
-princess: （昨天下城區的畫面一直在腦裡轉。那個母親的眼睛、牆上的炭筆字、莉娜說她哥哥被帶走的那條街……）
+princess: （昨天下城區的畫面一直在腦裡轉。）
 
 princess: （我在這裡什麼都做不了。但宰相說過，他有辦法。）
 

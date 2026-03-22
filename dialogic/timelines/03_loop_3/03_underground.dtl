@@ -1,12 +1,10 @@
 # 第 3 輪迴：發現地下防線 — Day 45-60
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
-
 [wait time="1.0"]
-
 princess: （從達爾那裡回來之後，我花了半個月的時間在城堡裡搜索。白天假裝散步，晚上偷偷去沒人的角落敲石壁。莉娜問我為什麼手指上全是灰，我說在學畫畫。）
-
-[wait time="1.8"]
+- ——半個月後——
+	[wait time="0.3"]
 
 # === 尋找入口 ===
 
@@ -60,8 +58,13 @@ princess (cold): （父王建防線、儲糧。但糧倉被人換了鎖，魔法
 
 princess (cold): （這到底是父王的手筆，還是有人在他背後動了手腳？）
 
-princess: （……我現在還不能確定。我需要更多線索。）
+princess: （糧倉的鎖、魔法陣的腐蝕……我需要讓人知道。但告訴誰？）
 
-leave princess
-
-jump 04_misunderstanding/
+- 繼續調查，收集更多證據
+	princess (cold): （……不夠。還不夠。我需要確鑿的證據才能定論。）
+	leave princess
+	jump 04_misunderstanding/
+- 立刻去告訴父王
+	princess (cold): （這些線索已經夠清楚了。財政署的鎖、腐蝕痕跡——父王看了一定會明白。）
+	leave princess
+	jump 03b_tell_king/

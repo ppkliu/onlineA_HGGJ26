@@ -1,0 +1,138 @@
+# 第 3 輪迴・分支：帶線索去找國王
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+[wait time="1.0"]
+princess: （糧倉上的財政署鎖、管線上的腐蝕痕——這些是實物。不是口述，不是帳簿。父王會聽的。）
+- ——翌日——
+	[wait time="0.3"]
+
+# === 王座廳 ===
+
+[background arg="res://art/backgrounds/throne_room_gj.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+
+join princess left
+join king center
+join chancellor right
+
+princess: 父王，女兒有急事稟報。
+
+king: ……吾兒？有什麼事？
+
+princess (determined): 女兒發現了地下防線。達爾的設計——機械齒輪、鐵閘、落石槽，全部都在。
+
+[wait time="0.8"]
+
+king: ……！你怎麼知道的？
+
+princess (determined): 女兒也發現糧倉上的鎖被換了。不是王家紋章——是財政署的印記。還有魔法陣的管線上有人為腐蝕的痕跡。
+
+king: 財政署的……？
+
+[wait time="1.0"]
+
+chancellor (concerned): 殿下，這些……臣以為殿下這些天一直在寢宮休息。沒想到殿下私自進入了地下通道——那裡很危險的。
+
+princess (cold): 我沒有跟任何人說我去了地下。宰相大人怎麼知道那裡「很危險」？
+
+[wait time="0.8"]
+
+chancellor (concerned): ……因為臣也知道那條通道的存在。臣作為財政大臣，自然清楚城堡的每一處設施。
+
+king: 莫里昂……鎖上的印記是財政署的？
+
+chancellor (sad): 陛下，臣可以解釋。那批糧食是臣奉旨調度的戰備物資——
+
+king: 朕什麼時候下過這個旨？
+
+[wait time="1.2"]
+
+princess: （父王的眼神變了。他在認真看宰相——也許是第一次用懷疑的眼光。）
+
+chancellor (serious): 陛下……恕臣直言，公主一個人在地下看到了什麼，就急著來告狀。臣在朝中服務三十年——這些線索需要時間調查，不能憑一面之詞——
+
+king: 夠了。朕會親自去查。莫里昂，你今天不要離開書房。
+
+chancellor: ……遵旨。
+
+[wait time="1.0"]
+
+leave king
+
+princess: （父王願意聽了。和第一輪不同——這次我有東西可以指給他看。）
+
+princess: （但宰相的臉……他離開的時候，嘴角有一瞬間很微妙的弧度。不是害怕。是……算計。）
+
+leave chancellor
+leave princess
+
+# === 當夜・公主寢房 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="1.0"]
+princess: （父王答應去查了。但那個眼神……宰相不像是被嚇到的人。）
+- ——當晚——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.6"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
+
+join princess left
+
+princess: （半夜。走廊上傳來急促的腳步聲和低語。不對勁——）
+
+[sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX"]
+[signal arg="camera_shake" intensity="medium"]
+
+princess (shocked): 什麼聲音？！
+
+[wait time="0.8"]
+
+join maid right
+
+maid (tearful): 殿下！殿下快藏起來！
+
+princess: 莉娜？發生什麼事？
+
+maid (tearful): 陛下……陛下他……侍衛說是晚膳裡的毒……宰相大人已經帶兵控制了王座廳——
+
+princess (shocked): 父王被毒殺了？！
+
+maid (tearful): 他們說是您做的……說您今天在朝堂上和陛下吵架——
+
+princess (shocked): 我沒有！是我去告訴父王宰相——
+
+[wait time="1.0"]
+
+princess: （來不及了。宰相比我快。我下午告訴父王的時候，他就已經在準備了。）
+
+princess (hollow): （父王願意聽我的話。但我沒有先處理掉宰相——我讓他有了反應的時間。）
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+maid (tearful): 他們來了！殿下——
+
+princess (hollow): ……不用躲了，莉娜。躲不了的。
+
+leave maid
+
+princess: （門被撞開。穿著宰相家紋的士兵衝進來。外面的天空——又紅了。）
+
+[signal arg="cut_to_silence"]
+
+leave princess
+
+# === 死亡結算 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[wait time="3.0"]
+
+princess: 「父王願意聽了。但我忘了——告訴父王之前，要先讓宰相無法動手。」
+
+[wait time="2.5"]
+
+[signal arg="death_fade"]
+
+[signal arg="intel:intel_king_will_listen"]
+[signal arg="death_context:{'death_message': '你把證據帶給國王，他認真聽了。但宰相在場——當晚他毒殺國王並嫁禍於你。', 'intel_reward': ['intel_king_will_listen'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="trigger_death"]

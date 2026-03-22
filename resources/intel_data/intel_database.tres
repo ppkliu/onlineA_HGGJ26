@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=18 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=25 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -147,6 +147,69 @@ category = &"truth"
 source_loop = 3
 unlocks_branches = []
 
+[sub_resource type="Resource" id="intel_king_anger"]
+script = ExtResource("2")
+id = "intel_king_anger"
+title = "國王的憤怒"
+description = "國王得知有人給公主看帳簿後勃然大怒，將公主禁足。他知道有人在暗中操弄——但他不信任一個什麼都不知道的公主。"
+category = &"character"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_eyes"]
+script = ExtResource("2")
+id = "intel_chancellor_eyes"
+title = "宰相的眼線"
+description = "宰相在城堡裡布滿了眼線，公主的一舉一動都被監視。想從城堡內部偷帶物資——不可能。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_granary_needs_key"]
+script = ExtResource("2")
+id = "intel_granary_needs_key"
+title = "打不開的糧倉"
+description = "地下糧倉的鎖不是王家紋章——是財政署的印記。需要財政署印章才能打開。光有承諾打不開任何一把鎖。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_dismisses_testimony"]
+script = ExtResource("2")
+id = "intel_chancellor_dismisses_testimony"
+title = "口述不是證據"
+description = "拿一個瞎子的口述去質問嫌犯，只會暴露自己的線索。宰相輕鬆化解了指控，並在當晚處理掉了達爾。"
+category = &"conspiracy"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_king_will_listen"]
+script = ExtResource("2")
+id = "intel_king_will_listen"
+title = "父王願意聽"
+description = "國王願意聽有具體觀察的公主的話——但不能讓宰相在場。告訴父王是可行的，前提是先中立化宰相的影響力。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_defense_needs_three"]
+script = ExtResource("2")
+id = "intel_defense_needs_three"
+title = "三人才能啟動"
+description = "地下防線的三道機關必須三人同時施力。這不是速度問題——是物理限制。一個人永遠不夠。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_escape_plan"]
+script = ExtResource("2")
+id = "intel_chancellor_escape_plan"
+title = "宰相的後路"
+description = "宰相早就準備好了逃跑計劃。直接去抓他只會讓他提前動手——必須在所有人面前公開定罪，才能堵死每一條退路。"
+category = &"conspiracy"
+source_loop = 4
+unlocks_branches = []
+
 [resource]
 script = ExtResource("1")
-items = [SubResource("intel_city_fall"), SubResource("intel_assassination"), SubResource("intel_magic_core_sabotage"), SubResource("intel_chancellor_betrayal"), SubResource("intel_fake_ledgers"), SubResource("intel_chancellor_poison"), SubResource("intel_mob_manipulation"), SubResource("intel_starvation_real"), SubResource("intel_bruno_wife_death"), SubResource("intel_king_truth"), SubResource("intel_dal_blinded_voice"), SubResource("intel_magic_sabotage"), SubResource("intel_granary_lock_finance"), SubResource("intel_chancellor_treason"), SubResource("intel_king_defense_line"), SubResource("intel_dal_blinded_by_chancellor")]
+items = [SubResource("intel_city_fall"), SubResource("intel_assassination"), SubResource("intel_magic_core_sabotage"), SubResource("intel_chancellor_betrayal"), SubResource("intel_fake_ledgers"), SubResource("intel_chancellor_poison"), SubResource("intel_mob_manipulation"), SubResource("intel_starvation_real"), SubResource("intel_bruno_wife_death"), SubResource("intel_king_truth"), SubResource("intel_dal_blinded_voice"), SubResource("intel_magic_sabotage"), SubResource("intel_granary_lock_finance"), SubResource("intel_chancellor_treason"), SubResource("intel_king_defense_line"), SubResource("intel_dal_blinded_by_chancellor"), SubResource("intel_king_anger"), SubResource("intel_chancellor_eyes"), SubResource("intel_granary_needs_key"), SubResource("intel_chancellor_dismisses_testimony"), SubResource("intel_king_will_listen"), SubResource("intel_defense_needs_three"), SubResource("intel_chancellor_escape_plan")]

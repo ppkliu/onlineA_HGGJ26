@@ -1,0 +1,118 @@
+# 第 1 輪迴・分支：去問父王（Day 2 傍晚）
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="1.0"]
+princess: （宰相說的話太可怕了。我不相信。我要直接去問父王——他一定會告訴我真相的。）
+- ——當日傍晚——
+	[wait time="0.3"]
+
+# === 王座廳 ===
+
+[background arg="res://art/backgrounds/throne_room_gj.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+
+join princess left
+join king right
+
+princess: 父王！女兒有事想請教。
+
+king: 哦？吾兒今日怎麼來了？是不是又想要新的寶石？
+
+princess: 不是……父王，有人跟我說邊境的軍隊已經有十萬人了。還說您加了很重的稅……百姓過得很苦。
+
+[wait time="1.0"]
+
+king: ……誰告訴你的？
+
+princess: 我……我不能說。但父王，那些帳簿——
+
+[wait time="0.8"]
+
+king: 帳簿？！誰給你看帳簿的？！
+
+[signal arg="camera_shake" intensity="light"]
+
+princess (shocked): 父、父王……
+
+king: 你從哪裡弄到的？說！
+
+[wait time="1.2"]
+
+princess (sad): 我只是……想知道真相……
+
+king: 真相？你想知道真相？
+
+king: 真相是這個國家隨時可能被攻破。真相是朕每天都在拼命守住這座城。而你——你是朕最需要保護的人！
+
+king: 誰在你耳邊說這些？朕要知道是誰——
+
+princess (sad): 我不能說……
+
+king: 來人！從今日起，公主不得離開寢宮半步。所有訪客需經朕親自許可。
+
+[wait time="1.5"]
+
+princess (shocked): 父王！？
+
+king: 朕不是在懲罰你。朕是在保護你。有人在利用你——而你什麼都不知道。
+
+princess: （他的手在發抖。不是憤怒……是恐懼。他在害怕。）
+
+[wait time="1.0"]
+
+leave king
+
+princess (sad): （父王把我關起來了。我什麼都沒問到，反而暴露了有人在接觸我。）
+
+princess: （宰相……如果父王去查，會查到他嗎？還是宰相比父王更快？）
+
+leave princess
+
+# === 禁足・數日後 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="1.0"]
+princess: （被關了五天。莉娜每天送飯進來，什麼都不肯說。她的眼睛越來越紅。）
+- ——五天後——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+
+join princess left
+
+princess: （第五天深夜。遠處傳來號角聲。我趴在窗邊——城牆外有火光。很多很多火光。）
+
+[wait time="1.0"]
+
+[sound path="res://audio/sfx/distant_horn_three.ogg"]
+[signal arg="camera_shake" intensity="medium"]
+
+princess (shocked): 不……城牆外面……
+
+princess: （三道城門同時被打開的巨響。我被關在房間裡，什麼都做不了。只能看著窗外的火越燒越近。）
+
+[wait time="1.5"]
+
+princess (hollow): （父王說他在保護我。可他不知道敵人就在他身邊。而我——連告訴他的能力都沒有。）
+
+princess (hollow): （一個什麼都不知道的公主，說的話沒有人會聽。）
+
+[signal arg="cut_to_silence"]
+[wait time="0.5"]
+
+leave princess
+
+# === 死亡結算 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[wait time="3.0"]
+
+princess: 「無知的人說出的真相，聽起來和胡言亂語沒有區別。」
+
+[wait time="2.5"]
+
+[signal arg="death_fade"]
+
+[signal arg="intel:intel_king_anger"]
+[signal arg="death_context:{'death_message': '你直接去找國王求證，卻因為毫無準備而被禁足。城破時你被困在房間裡，什麼都做不了。', 'intel_reward': ['intel_king_anger'], 'killer': 'war', 'advance_loop': false}"]
+[signal arg="trigger_death"]
