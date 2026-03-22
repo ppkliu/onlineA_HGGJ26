@@ -70,18 +70,13 @@ func _update_phase() -> void:
 		current_phase = LoopPhase.PROLOGUE
 	elif loop <= 2:
 		current_phase = LoopPhase.EARLY
-	elif _has_final_loop_requirements():
+	elif IntelSystem.has_final_loop_requirements():
 		current_phase = LoopPhase.FINAL
 	else:
 		current_phase = LoopPhase.MID
 
 	if current_phase != old_phase:
 		loop_phase_changed.emit(StringName(LoopPhase.keys()[current_phase]))
-
-
-func _has_final_loop_requirements() -> bool:
-	return IntelSystem.has_intel("intel_chancellor_treason") and IntelSystem.has_intel("intel_king_defense_line")
-
 
 func _show_death_screen(context: Dictionary) -> void:
 	var death_screen = load("res://scenes/ui/death_screen.tscn").instantiate()
