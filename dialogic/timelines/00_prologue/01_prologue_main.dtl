@@ -13,8 +13,6 @@ princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎
 [sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX" volume="0.71"]
 [signal arg="camera_shake"]
 
-[wait time="0.4"]
-
 princess (shocked): 哇！什麼東西倒下來了？！……莉娜？！你在外面嗎？莉娜——！
 
 [wait time="1.0"]
@@ -31,7 +29,7 @@ princess (default): 嗯？敲門聲……是莉娜嗎？進來呀～
 
 [sound path="res://audio/sfx/running_screams_distant.ogg" bus="SFX" volume="0.56"]
 
-princess (default): 外面好多人跑喔……是在玩什麼遊戲嗎？聽起來好慌張……
+princess (default): 外面好多人跑動喔……是在玩什麼遊戲嗎？聽起來好慌張……
 
 [wait time="1.8"]
 

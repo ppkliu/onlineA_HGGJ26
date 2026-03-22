@@ -1,27 +1,43 @@
-# 第 2 輪迴：坦白身份 — Day 30 深夜（鐵匠鋪）
+# 第 2 輪迴：坦白身份 — Day 30 傍晚（鐵匠鋪）
 
 [background arg="res://art/backgrounds/blacksmith_night.png" fade="0.6"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
 
 join princess left
+
+princess: （三十天了。我搬過鐵料、洗過碗、幫老婦人帶過孩子。手上的繭比指彩厚。）
+
+princess: （每天晚上布魯諾收工之後，會在門口坐一會兒。看天，不說話。今天，我決定在那個時間點找他。）
+
+[wait time="0.8"]
+
 join mob_leader right
 
-princess (determined): 布魯諾。我不是家僕。我是艾蓮娜公主。
+princess: 布魯諾，我有話跟你說。
+
+mob_leader (suspicious): 什麼事？
+
+princess (determined): ……我不是家僕。我是艾蓮娜公主。
+
+[wait time="1.5"]
+
+mob_leader: ……
+
+mob_leader (angry): （他站起來。手不自覺地握緊了身旁的鐵鉗。）
+
+princess (determined): 在你動手之前，聽我說完。我在這裡住了三十天，不是為了好玩。
+
+princess (determined): 宰相莫里昂是叛徒。他和敵國有密約。你們的饑荒，一部分是備戰的代價，但更大一部分是他暗中破壞糧道、截留物資造成的。
+
+princess (determined): 我知道王家糧倉的位置。我可以打開它。先讓大家吃飽，再一起對付真正的敵人——不是父王，是莫里昂。
 
 [wait time="1.2"]
 
-mob_leader (angry): ……妳說什麼？
-
-princess (determined): 在你動手之前，聽我說完。
-
-princess (determined): 宰相莫里昂是叛徒。他和敵國有密約。你們的饑荒，一部分是備戰代價，但更大的部分是他暗中破壞糧道、囤積物資。
-
-princess (determined): 我知道王家糧倉的位置和鑰匙。我可以打開它。先讓大家吃飽，再一起對付真正的敵人——不是父王，是莫里昂。
-
-[wait time="1.3"]
-
-mob_leader (grieving): 妳知道我老婆怎麼死的？
+mob_leader (angry): ……妳在這裡待了三十天就覺得自己懂我們了？
 
 princess: ……
+
+mob_leader (grieving): 妳知道我老婆怎麼死的？
 
 mob_leader (grieving): 難產。需要一種從南方進口的止血草。但所有草藥都被徵為軍需了。我跪在稅務司門口三天三夜，求他們放行一小包。
 
@@ -29,13 +45,17 @@ mob_leader (grieving): 他們說：「軍需優先。」我老婆就在我懷裡
 
 [wait time="1.8"]
 
-princess (sad): ……對不起。
+princess: ……
 
-princess (sad): （「軍需優先」。他老婆在他懷裡斷氣的時候，我在做什麼？大概在花園裡讀詩集，或是讓莉娜幫我挑下午茶要配什麼糕點。我甚至不知道有人因為我父王的命令而死。）
+princess (sad): （他老婆在他懷裡斷氣的時候……我在做什麼？大概在花園裡讀詩集，或是讓莉娜幫我挑下午茶的糕點。我連那個女人的名字都不會知道。）
 
-princess (sad): 我知道這句話沒用。但如果我什麼都不做，以後還會有更多妻子、更多孩子死在同樣的理由下。
+princess (sad): 對不起。這句話我知道沒用。你的妻子不會因為我說對不起就回來。
+
+princess (sad): 但如果我什麼都不做，阿爾以後也會被帶走。就像莉娜的哥哥一樣。
 
 [wait time="1.0"]
+
+mob_leader: （他聽到「阿爾」這個名字的時候，手上的鐵鉗晃了一下。）
 
 mob_leader (hesitant): ……給我三天。我得跟兄弟們談。
 

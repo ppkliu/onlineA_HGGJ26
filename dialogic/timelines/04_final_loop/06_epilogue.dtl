@@ -6,9 +6,53 @@
 
 join princess center
 
-princess (hollow): 「打破迴圈的方式，不是改變過去。而是在每一次重複裡，選擇成為一個不同的人。」
+princess: （死亡之書——）
 
-princess (determined): 「她不再是那個等人來救的籠中鳥。她成為了……拯救所有人的人。」
+[wait time="1.5"]
+
+princess: （第一頁。賽拉斯的劍。他哭了，我不懂。）
+
+[wait time="1.0"]
+
+princess: （第二頁。莫里昂的茶。他笑了，我信了。）
+
+[wait time="1.0"]
+
+princess: （第三頁。布魯諾的沉默。他給過我麵包，也把我推出了城門。）
+
+[wait time="1.0"]
+
+princess: （第四頁。塔樓的鐵窗。我什麼都知道了，卻什麼都做不了。）
+
+[wait time="1.5"]
+
+princess: （第五頁。空白的。）
+
+[wait time="1.0"]
+
+princess: （因為這一次，沒有人死。）
+
+[wait time="3.0"]
+
+princess: 「第一次醒來的時候，我連粗布衣摸起來是什麼感覺都不知道。」
+
+[wait time="1.2"]
+
+princess: 「第二次醒來的時候，我學會了在下城區走路時低著頭。」
+
+[wait time="1.2"]
+
+princess: 「第三次醒來的時候，我學會了一個人在黑暗的地道裡點蠟燭。」
+
+[wait time="1.2"]
+
+princess: 「第四次醒來的時候……我終於學會了開口說：我需要你。」
+
+[wait time="2.5"]
+
+princess (determined): 「打破迴圈的方式，不是改變過去。而是在每一次重複裡，選擇成為一個不同的人。」
+
+[wait time="2.5"]
 
 princess (default): 「謝謝你陪我走到這裡。」
 

@@ -22,7 +22,7 @@ loyal_retainer (exhausted): 殿下……城破了。
 
 [wait time="1.6"]
 
-princess (shocked): 城破？是城牆壞掉了嗎？那工人很快就會修好的呀？
+princess (shocked): 城破？是城牆壞掉了嗎？那工人很快就會修好的呀？就像上次——
 
 [wait time="1.0"]
 
@@ -30,7 +30,7 @@ loyal_retainer (tearful): 三天前……魔法陣的能源核心被人從內部
 
 [wait time="1.3"]
 
-princess (shocked): 可是……父王明明說過，它會保護我們一輩子……
+princess (shocked): 可是……父王明明說過，它會保護我們一輩子……他還摸著我的頭說「永遠不會有事的」……
 
 [wait time="1.0"]
 
@@ -38,7 +38,7 @@ loyal_retainer (tearful): 陛下……戰死在南門前。南門、西門……
 
 [wait time="2.2"]
 
-princess (sad): 戰死……？你在開玩笑對不對？父王是最強的，他怎麼可能……
+princess (sad): 戰死……？你在開玩笑對不對？父王是最強的，他怎麼可能輸……
 
 [wait time="1.4"]
 
@@ -79,15 +79,15 @@ princess (sad): 所以……你要殺我？就像殺壞人一樣？
 
 [wait time="1.4"]
 
-loyal_retainer (tearful): 臣從您五歲開始教您騎小馬……從您八歲開始陪您看星星……從您十二歲開始，每天都在心裡默念同一句話——
+loyal_retainer (tearful): 臣從您五歲開始教您騎小馬……從您八歲開始陪您看星星……從您十五歲開始，每天都在心裡默念同一句話——
 
-[wait time="2.0"]
+[wait time="1.0"]
 
-loyal_retainer (tearful): 「但願永遠不需要執行這道命令。」
+loyal_retainer (tearful): 「但願……永遠不需要執行這道命令。」
 
 [wait time="1.6"]
 
-princess (hollow): ……原來你一直都知道。
+princess (hollow): ……賽拉斯？你怎麼哭了？
 
 [wait time="1.2"]
 
@@ -95,29 +95,27 @@ loyal_retainer (tearful): 請原諒臣，殿下。
 
 [wait time="1.0"]
 
-[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.4"]
-
 loyal_retainer (tearful): 如果有來世……臣只求能生在一個沒有王冠、沒有密令的世界，繼續守護您……就只是，普通的賽拉斯。
 
 [wait time="0.8"]
 
-princess (hollow): ……賽拉斯，你在哭喔。
+[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX"]
 
-[wait time="0.6"]
+[background arg="res://art/backgrounds/prologue_death_retainer.png" fade="0.4"]
+
+[signal arg="cut_to_silence"]
 
 loyal_retainer (tearful): 對不起。
 
 [wait time="0.4"]
 
-[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX" volume="7.08"]
+[background arg="res://art/backgrounds/darkness.png" fade="0.4"]
 
 princess (hollow): 啊——
 
-[signal arg="cut_to_silence"]
-
 [wait time="0.15"]
 
-（……不痛。）
+（……不痛?）
 
 [wait time="1.2"]
 
@@ -129,7 +127,7 @@ princess (hollow): 啊——
 
 [wait time="2.2"]
 
-（……為什麼所有人都知道，只有我不知道？）
+（……為什麼所有人都知道，只有我不知道？為什麼……連兇手都在哭，這就是死後的世界嗎？）
 
 [wait time="3.0"]
 

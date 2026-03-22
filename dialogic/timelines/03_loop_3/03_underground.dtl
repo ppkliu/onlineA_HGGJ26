@@ -1,30 +1,58 @@
 # 第 3 輪迴：發現地下防線 — Day 45-60
 
+# === 尋找入口 ===
+
+[background arg="res://art/backgrounds/castle_side_gate.png" fade="0.8"]
+
+join princess left
+
+princess: （達爾描述的位置——城堡西側地下室盡頭，一面看似普通的石牆。我花了三天在城堡裡摸索，假裝散步，避開侍衛，終於找到了那道暗門。）
+
+princess: （石牆上有一道幾乎看不見的縫。用力推……沉重的石板緩緩滑開。裡面是一條向下的階梯，黑得什麼都看不見。）
+
+princess: （我點了一支從廚房偷來的蠟燭。火焰在潮濕的空氣裡搖搖晃晃。走吧。）
+
+[wait time="0.8"]
+
+leave princess
+
+# === 地下防線 ===
+
 [background arg="res://art/backgrounds/underground_defense_dim.png" fade="1.0"]
 [music path="res://audio/bgm/underground.ogg" fade="2.0" volume="0.34"]
 
 join princess left
 
-princess (awed): （城堡深處。隱秘入口後是長長的石廊。牆上刻滿精密齒輪圖紋，鐵閘、落石槽、箭孔……一套完整的機械防禦。）
+princess (awed): （石階走了很久。空氣越來越冷，越來越潮。然後，蠟燭照到了牆面——精密的齒輪圖紋，一排排鐵閘、落石槽、箭孔……一套完整的機械防禦系統。）
 
-princess (awed): ……這就是父王用兩年、用民脂民膏建的東西。為了在魔法陣失效時，還能守住王城。
+princess (awed): ……這就是父王用兩年建的東西。不靠魔法，只靠齒輪和鐵。為了在魔法陣失效時，還能守住最後一道防線。
 
-[wait time="1.2"]
+princess: （下城區的人在挨餓的時候，父王在這裡……蓋這個。）
 
-princess: （一側厚鐵門。透過柵欄看進去——成堆糧袋，高到頂。夠下城區吃半年。）
+[wait time="1.0"]
 
-princess (angry): 下城區的孩子在水腫餓死……而糧食被鎖在這裡。
+princess: （繼續往前走。左邊出現一扇厚鐵門，門上有柵欄。我把蠟燭湊近——）
 
-princess: （鎖上有財政署印記。製造日期比防線完工晚三個月。財政署……宰相直管。）
+princess: （……糧袋。成堆成堆的糧袋，從地板堆到天花板。散發著乾燥穀物的味道。夠下城區吃半年。）
+
+princess (angry): 阿爾用泥巴假裝吃麵包的時候……糧食就鎖在這裡？
+
+princess: （等等。鎖。這把鎖上有印記——我湊近看。不是王家雙頭獅紋章。是財政署的印記。製造日期……比達爾說的防線完工日期晚了三個月。）
+
+princess: （財政署……宰相直管。）
 
 [wait time="0.9"]
 
-princess: （能源管線上有腐蝕痕。定期注入東西……魔法陣被內部破壞的證據。）
+princess: （繼續往深處走。牆上的管線——達爾說防線不靠魔法，但城牆本身的魔法陣需要維護。這些管線上有腐蝕的痕跡，不是自然老化，是被人定期注入了什麼東西。）
 
 [signal arg="intel:intel_magic_sabotage"]
 [signal arg="intel:intel_granary_lock_finance"]
 
-princess (cold): （父王把糧食鎖起來，讓百姓挨餓。他為了大局，犧牲了所有人。）
+princess (cold): （父王建防線、儲糧。但糧倉被人換了鎖，魔法陣被人從內部腐蝕。）
+
+princess (cold): （這到底是父王的手筆，還是有人在他背後動了手腳？）
+
+princess: （……我現在還不能確定。我需要更多線索。）
 
 leave princess
 
