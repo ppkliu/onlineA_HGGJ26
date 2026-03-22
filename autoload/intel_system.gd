@@ -14,6 +14,9 @@ signal progression_updated()
 # 已獲得的情報集合 { intel_id: IntelItem }
 var acquired_intels: Dictionary = {}
 
+# 已造訪的選項 { choice_text: true }
+var visited_choices: Dictionary = {}
+
 # 當前輪迴次數
 var current_loop: int = 0
 var tutorial_seen: bool = false
@@ -60,6 +63,7 @@ func _ready() -> void:
 	_load_persistent_data()
 	sync_to_dialogic()
 	_emit_progression_updated()
+	call_deferred("sync_to_dialogic")
 
 
 ## 載入情報資料庫定義
@@ -135,12 +139,25 @@ func trigger_loop_reset() -> void:
 	# 情報不重置！只重置場景相關狀態
 
 
+## 記錄造訪過的選項
+func mark_choice_visited(choice_text: String) -> void:
+	if not visited_choices.has(choice_text):
+		visited_choices[choice_text] = true
+		_save_persistent_data()
+
+
+## 檢查選項是否造訪過
+func is_choice_visited(choice_text: String) -> bool:
+	return visited_choices.has(choice_text)
+
+
 ## 持久化存檔（自動存檔，非手動 S/L）
 func _save_persistent_data() -> void:
 	var save_data = {
 		"current_loop": current_loop,
 		"acquired_intels": acquired_intels.keys(),
 		"tutorial_seen": tutorial_seen,
+		"visited_choices": visited_choices.keys(),
 	}
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	if file:
@@ -160,19 +177,28 @@ func _load_persistent_data() -> void:
 			for id in data.get("acquired_intels", []):
 				if _intel_database.has(id):
 					acquired_intels[id] = _intel_database[id]
+			for choice_text in data.get("visited_choices", []):
+				visited_choices[choice_text] = true
 	_emit_progression_updated()
 
 
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
 func sync_to_dialogic() -> void:
-	if Engine.has_singleton("Dialogic") or ClassDB.class_exists(&"Dialogic"):
-		for id in acquired_intels.keys():
-			Dialogic.VAR.set(id, true)
+	if not is_inside_tree():
+		return
+	var dialogic_node := get_node_or_null("/root/Dialogic")
+	if dialogic_node == null:
+		return
+	for id in _intel_database.keys():
+		Dialogic.VAR.set(id, false)
+	for id in acquired_intels.keys():
+		Dialogic.VAR.set(id, true)
 
 
 ## 完全重置（新遊戲）
 func reset_all() -> void:
 	acquired_intels.clear()
+	visited_choices.clear()
 	current_loop = 0
 	tutorial_seen = false
 	_save_persistent_data()

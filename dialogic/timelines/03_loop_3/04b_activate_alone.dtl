@@ -1,0 +1,91 @@
+# 第 3 輪迴・分支：嘗試一個人啟動防線
+
+# === 深夜・地下防線 ===
+
+[background arg="res://art/backgrounds/underground_defense_dim.png" fade="0.8"]
+[music path="res://audio/bgm/underground.ogg" fade="2.0" volume="0.5"]
+
+join princess left
+
+princess: （深夜。我帶著達爾畫的機關位置圖，第三次鑽進地下通道。）
+
+princess: （三個機關。達爾說需要三個人同時轉動。但「同時」是多同時？如果有幾秒的容許範圍——也許我跑得夠快的話……）
+
+[wait time="0.8"]
+
+princess: （第一個機關在通道西端。一個巨大的鐵輪，需要用全身的力氣才能轉動。）
+
+princess: （……轉了。咔嚓一聲，齒輪開始運轉。）
+
+[wait time="0.6"]
+
+princess: （快！第二個機關在五十步外的岔路口。跑！）
+
+princess: （石板路不平。蠟燭的光搖搖晃晃。數——一、二、三、四……二十步……三十步……）
+
+[wait time="0.8"]
+
+princess: （到了！第二個機關——同樣的鐵輪。轉！）
+
+princess: （轉不動。不是卡住了——是設計上需要持續施力。我一放手跑去第三個，第二個就會停。）
+
+[wait time="1.0"]
+
+princess (angry): ……達爾說得沒錯。三個人不是效率問題——是物理限制。每個機關需要一個人持續按住。
+
+princess: （可是我只有一個人。）
+
+[wait time="0.6"]
+
+princess: （我站在第二個機關前，雙手壓在鐵輪上，看著遠處第三個機關的輪廓。十五步之遙。可能也是十五年之遙。）
+
+princess: （找東西卡住？沒有合適的。用石頭？不夠重。用我自己的身體？只有一個。）
+
+[wait time="1.0"]
+
+princess (hollow): （我試了兩個小時。跑回第一個、再跑回第二個、嘗試各種角度——每次都在第三個機關前失敗。體力在流失，指甲磨出了血。）
+
+princess: （最後一次嘗試。我從第一個機關全力衝刺。第二個——用肩膀頂住——伸手去夠第三個——）
+
+[wait time="0.8"]
+
+princess: （……差了半步。手指碰到了鐵輪的邊緣，但使不上力。）
+
+princess (hollow): （我癱坐在地上。地下通道冰冷的石板吸走了最後一點體溫。蠟燭快燒完了。）
+
+[wait time="1.2"]
+
+princess: （不知道過了多久。可能是幾個小時，也可能是一整夜。我沒有力氣站起來了。）
+
+# === 被發現 ===
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+princess: （火把的光從通道盡頭照過來。是巡邏的衛兵——不，是宰相的人。他們每晚都會來查看通道。）
+
+princess (hollow): （我就這樣被發現了。滿手是血，躺在一台轉不動的機關旁邊。）
+
+princess: （他們問我是誰、怎麼進來的。我什麼都沒說。也沒什麼好說的。）
+
+[wait time="1.0"]
+
+princess (hollow): （一個人不夠。不管是知道真相，還是啟動防線——一個人永遠不夠。）
+
+[signal arg="cut_to_silence"]
+
+leave princess
+
+# === 死亡結算 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[wait time="3.0"]
+
+princess: 「三個機關，三個人。這不是能力的問題——是一個人的極限。」
+
+[wait time="2.5"]
+
+[signal arg="death_fade"]
+
+[signal arg="intel:intel_defense_needs_three"]
+[signal arg="death_context:{'death_message': '你嘗試獨自啟動三道機關。物理上不可能——每一個都需要持續施力。你在筋疲力盡時被宰相的巡邏隊發現。', 'intel_reward': ['intel_defense_needs_three'], 'killer': 'guards', 'advance_loop': false}"]
+[signal arg="trigger_death"]

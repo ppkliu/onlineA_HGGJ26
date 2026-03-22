@@ -42,24 +42,26 @@ func trigger_death(context: Dictionary = {}) -> void:
 	# 2. 顯示死亡畫面 + 情報獲得動畫（由 UI 層處理）
 	await _show_death_screen(context)
 
-	# 3. 執行輪迴重置
-	_reset_loop()
+	# 3. 執行輪迴重置（advance_loop: false 代表錯誤死法，不推進迴圈）
+	var should_advance: bool = context.get("advance_loop", true)
+	_reset_loop(should_advance)
 
 
 ## 輪迴重置
-func _reset_loop() -> void:
-	IntelSystem.trigger_loop_reset()
+func _reset_loop(should_advance: bool = true) -> void:
+	if should_advance:
+		IntelSystem.trigger_loop_reset()
 	scene_states.clear()
 	_update_phase()
 	loop_started.emit(IntelSystem.current_loop)
-	FlowLogger.log_event("loop", "Reset loop scene state", {"loop": IntelSystem.current_loop, "phase": LoopPhase.keys()[current_phase]})
+	FlowLogger.log_event("loop", "Reset loop scene state", {"loop": IntelSystem.current_loop, "phase": LoopPhase.keys()[current_phase], "advanced": should_advance})
 
 	# 轉場到公主寢宮（輪迴起點）
 	SceneTransition.transition_to("res://scenes/locations/royal_chamber.tscn",
 		SceneTransition.TransitionType.LOOP_RESTART)
 
 
-## 根據輪迴次數與情報量更新階段
+## 根據輪迴次數與關鍵情報更新階段
 func _update_phase() -> void:
 	var loop = IntelSystem.current_loop
 

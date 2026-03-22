@@ -1,0 +1,122 @@
+# 最終輪迴・分支：直接去抓宰相
+
+# === 前往宰相書房 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+[wait time="1.0"]
+princess: （不能等了。等越久，他的準備越充分。趁他還不知道布魯諾站到我這邊——直接去。）
+- ——即刻——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
+
+join princess left
+join loyal_retainer right
+
+princess: 賽拉斯，帶人去宰相書房。現在。
+
+loyal_retainer (serious): 殿下，不經過陛下的命令直接拿人——
+
+princess: 來不及了。如果他知道布魯諾不配合了，他今晚就會動手。
+
+loyal_retainer (serious): ……遵命。
+
+[wait time="0.8"]
+
+# === 宰相書房——空無一人 ===
+
+princess: （門開了。書房裡整整齊齊——太整齊了。桌上的文件都被清走了。墨水瓶是空的。）
+
+princess (shocked): ……他不在。
+
+loyal_retainer: 抽屜也是空的。他提前離開了。
+
+princess: （他什麼時候知道的？我跟布魯諾談話的時候？還是更早？）
+
+[wait time="1.0"]
+
+princess (cold): 城門。他一定往城門去了。
+
+leave princess
+leave loyal_retainer
+
+# === 城門 ===
+
+[background arg="res://art/backgrounds/city_gate_night.png" fade="0.6"]
+[sound path="res://audio/sfx/gate_open_heavy.ogg"]
+[signal arg="camera_shake" intensity="medium"]
+
+join princess left
+join loyal_retainer right
+
+princess (shocked): ……已經開了。
+
+loyal_retainer: 南門的守軍被調走了——用的是偽造的調令。他早就做好了逃跑的準備。
+
+[wait time="0.8"]
+
+princess: （城門外，火光一片。敵軍的前鋒已經在三里之內了。宰相的馬車正沿著官道向北疾馳。）
+
+princess (angry): 他跑了……
+
+loyal_retainer (serious): 殿下！敵軍——！
+
+[wait time="0.6"]
+
+# === 戰鬥 ===
+
+loyal_retainer: 所有人撤到內城！防線——殿下，防線能啟動嗎？
+
+princess: 需要三個人！但只有你和我——
+
+loyal_retainer: 臣去守城門。殿下去防線——
+
+princess: 一個人啟動不了！需要三——
+
+[sound path="res://audio/sfx/arrow_volley.ogg" bus="SFX"]
+[signal arg="camera_shake" intensity="strong"]
+
+princess: ——！
+
+[wait time="0.8"]
+
+princess: （箭雨。從城門外傾瀉而下。賽拉斯把我推到牆後——他的盔甲上插著三支箭，但還站著。）
+
+loyal_retainer (tearful): 殿下……快走……
+
+princess: 我不走！
+
+loyal_retainer: 殿下必須走！
+
+[wait time="1.0"]
+
+princess: （又一輪箭雨。這次賽拉斯沒能完全擋住——我的肩膀上突然一陣灼痛。低頭看——箭桿。）
+
+princess (hollow): ……啊。
+
+princess: （血從肩膀上流下來。不多，但很燙。視線開始模糊。）
+
+princess: （最後一步不能急。我知道的。三輪的教訓都告訴我「慢下來」——可我還是急了。）
+
+princess (hollow): （宰相有逃跑計劃。他比我更了解這座城。如果不在所有人面前公開定罪——他永遠有後路。）
+
+[signal arg="cut_to_silence"]
+
+leave princess
+leave loyal_retainer
+
+# === 死亡結算 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[wait time="3.0"]
+
+princess: 「最後一步，不能急。要在所有人面前公開——堵死他每一條退路。」
+
+[wait time="2.5"]
+
+[signal arg="death_fade"]
+
+[signal arg="intel:intel_chancellor_escape_plan"]
+[signal arg="death_context:{'death_message': '你帶賽拉斯直接去抓宰相——他早已逃走，並打開了城門。最後一步不能急：必須在所有人面前公開定罪，才能堵死他的退路。', 'intel_reward': ['intel_chancellor_escape_plan'], 'killer': 'war', 'advance_loop': false}"]
+[signal arg="trigger_death"]
