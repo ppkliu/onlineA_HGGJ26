@@ -27,19 +27,30 @@ const BRANCH_DEFINITIONS := [
 		"id": "branch_a",
 		"title": "王座調查",
 		"required_intels": [],
-		"completed_intels": ["intel_retainer_motive", "intel_conspiracy_evidence"],
+		"completed_any_intels": ["intel_chancellor_betrayal", "intel_retainer_duty", "intel_fake_ledgers", "intel_gate_open_signal"],
 	},
 	{
 		"id": "branch_b",
 		"title": "庭園調查",
-		"required_intels": ["intel_faction_a"],
-		"completed_intels": ["intel_retainer_past", "intel_dungeon_key"],
+		"required_any_intels": ["intel_food_change", "intel_maid_tears"],
+		"completed_any_intels": ["intel_mob_manipulation", "intel_king_truth", "intel_starvation_real", "intel_bruno_wife_death"],
 	},
 	{
 		"id": "final_branch",
 		"title": "最終對質",
-		"required_intels": ["intel_retainer_motive", "intel_conspiracy_evidence"],
-		"completed_intels": [],
+		"required_intels": [
+			"intel_city_fall",
+			"intel_assassination",
+			"intel_chancellor_betrayal",
+			"intel_mob_manipulation",
+			"intel_king_truth",
+			"intel_magic_sabotage",
+			"intel_chancellor_treason",
+		],
+		"required_any_groups": [
+			["intel_maid_tears", "intel_food_change"],
+		],
+		"completed_any_intels": [],
 	},
 ]
 
@@ -47,6 +58,7 @@ const BRANCH_DEFINITIONS := [
 func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
+	sync_to_dialogic()
 	_emit_progression_updated()
 
 
@@ -88,6 +100,30 @@ func check_branch_condition(required_intels: Array[String]) -> bool:
 		if not has_intel(id):
 			return false
 	return true
+
+
+func check_any_intel_condition(candidate_intels: Array[String]) -> bool:
+	for id in candidate_intels:
+		if has_intel(id):
+			return true
+	return candidate_intels.is_empty()
+
+
+func check_intel_group_conditions(groups: Array) -> bool:
+	for group in groups:
+		var group_ids: Array[String] = []
+		for intel_id: String in group:
+			group_ids.append(intel_id)
+		if not check_any_intel_condition(group_ids):
+			return false
+	return true
+
+
+func has_final_loop_requirements() -> bool:
+	for branch in BRANCH_DEFINITIONS:
+		if branch.get("id", "") == "final_branch":
+			return _is_branch_unlocked(branch)
+	return false
 
 
 ## 輪迴重置 — 保留情報、重置場景狀態
@@ -160,17 +196,18 @@ func get_branch_statuses() -> Array:
 		for intel_id: String in branch.get("required_intels", []):
 			required_intels.append(intel_id)
 
-		var completed_intels: Array[String] = []
-		for intel_id: String in branch.get("completed_intels", []):
-			completed_intels.append(intel_id)
+		var required_any_intels: Array[String] = []
+		for intel_id: String in branch.get("required_any_intels", []):
+			required_any_intels.append(intel_id)
 
-		var is_completed := false
-		for intel_id in completed_intels:
-			if has_intel(intel_id):
-				is_completed = true
-				break
+		var required_any_groups: Array = branch.get("required_any_groups", [])
 
-		var is_unlocked := required_intels.is_empty() or check_branch_condition(required_intels)
+		var completed_any_intels: Array[String] = []
+		for intel_id: String in branch.get("completed_any_intels", []):
+			completed_any_intels.append(intel_id)
+
+		var is_completed := not completed_any_intels.is_empty() and check_any_intel_condition(completed_any_intels)
+		var is_unlocked := _is_branch_unlocked(branch, required_intels, required_any_intels, required_any_groups)
 		var status := "locked"
 		if is_completed:
 			status = "completed"
@@ -184,6 +221,28 @@ func get_branch_statuses() -> Array:
 			"required_intels": required_intels,
 		})
 	return statuses
+
+
+func _is_branch_unlocked(branch: Dictionary, required_intels: Array[String] = [], required_any_intels: Array[String] = [], required_any_groups: Array = []) -> bool:
+	var all_required := required_intels
+	if all_required.is_empty():
+		for intel_id: String in branch.get("required_intels", []):
+			all_required.append(intel_id)
+
+	var any_required := required_any_intels
+	if any_required.is_empty():
+		for intel_id: String in branch.get("required_any_intels", []):
+			any_required.append(intel_id)
+
+	var grouped_required := required_any_groups
+	if grouped_required.is_empty():
+		grouped_required = branch.get("required_any_groups", [])
+
+	return (
+		check_branch_condition(all_required)
+		and check_any_intel_condition(any_required)
+		and check_intel_group_conditions(grouped_required)
+	)
 
 
 func get_completed_side_branch_count() -> int:

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=11 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=31 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -16,74 +16,284 @@ unlocks_branches = []
 script = ExtResource("2")
 id = "intel_assassination"
 title = "騎士長的刀"
-description = "騎士長賽拉斯含淚刺殺了公主——他說這是國王最後的密令：「絕不能讓公主落入敵人手中。」這把刀背後，究竟藏著什麼樣的真相？"
+description = "賽拉斯含淚刺殺了公主。那不是單純的背叛，而是一道被迫執行的最後命令。"
 category = &"character"
 source_loop = 0
-unlocks_branches = ["branch_retainer_special"]
+unlocks_branches = ["branch_a"]
+
+[sub_resource type="Resource" id="intel_magic_core_sabotage"]
+script = ExtResource("2")
+id = "intel_magic_core_sabotage"
+title = "失效的魔法核心"
+description = "亡國之夜以前，王城的核心防禦早已被動過手腳。城破不是單一失誤，而是預謀已久的崩壞。"
+category = &"truth"
+source_loop = 0
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_food_change"]
+script = ExtResource("2")
+id = "intel_food_change"
+title = "消失的鮮食"
+description = "餐桌上的鮮肉與新鮮食材不見了，取而代之的是耐放卻單調的戰備糧食。"
+category = &"general"
+source_loop = 1
+unlocks_branches = ["branch_b"]
+
+[sub_resource type="Resource" id="intel_maid_tears"]
+script = ExtResource("2")
+id = "intel_maid_tears"
+title = "侍女的眼淚"
+description = "莉娜強顏歡笑，眼睛卻紅得發腫。城堡的平靜表面下，有人在為家人和生計默默流淚。"
+category = &"character"
+source_loop = 1
+unlocks_branches = ["branch_b"]
+
+[sub_resource type="Resource" id="intel_chancellor_wealth"]
+script = ExtResource("2")
+id = "intel_chancellor_wealth"
+title = "宰相的錢從哪來"
+description = "在人人都勒緊褲帶的時候，宰相的莊園和珠寶卻越來越奢華。這筆財富顯然有問題。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_retainer_warning"]
+script = ExtResource("2")
+id = "intel_retainer_warning"
+title = "騎士長的警告"
+description = "賽拉斯沒有解釋真相，只留下一句警告：不要信任任何主動靠近的人。"
+category = &"character"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_betrayal"]
+script = ExtResource("2")
+id = "intel_chancellor_betrayal"
+title = "宰相的背叛"
+description = "莫里昂親手打開了通往滅亡的城門。這不是猜測，而是公主親眼見證的背叛。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = ["final_branch"]
+
+[sub_resource type="Resource" id="intel_fake_ledgers"]
+script = ExtResource("2")
+id = "intel_fake_ledgers"
+title = "偽造帳簿"
+description = "用來證明國王奢侈與暴虐的帳簿是偽造的。有人精心設計了一整套說得通的謊言。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_gate_open_signal"]
+script = ExtResource("2")
+id = "intel_gate_open_signal"
+title = "開門的信號"
+description = "城門被打開不是混亂造成的巧合，而是有人預先安排好的內應行動。"
+category = &"conspiracy"
+source_loop = 1
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_war_conscription"]
+script = ExtResource("2")
+id = "intel_war_conscription"
+title = "徵兵與重稅"
+description = "王國在大量徵兵、加重稅負，表面上像壓榨人民，實際上更像為戰爭做最後準備。"
+category = &"general"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_retainer_duty"]
+script = ExtResource("2")
+id = "intel_retainer_duty"
+title = "忠臣的枷鎖"
+description = "賽拉斯不是單純的劊子手，他被某個比生命更重的責任牢牢綁住。"
+category = &"character"
+source_loop = 1
+unlocks_branches = ["branch_a"]
+
+[sub_resource type="Resource" id="intel_mob_manipulation"]
+script = ExtResource("2")
+id = "intel_mob_manipulation"
+title = "被操弄的絕望"
+description = "暴民的怒火不是自然生成的。有人利用飢餓、恐懼和失去親人的悲痛，將他們推向失控。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = ["final_branch"]
+
+[sub_resource type="Resource" id="intel_starvation_real"]
+script = ExtResource("2")
+id = "intel_starvation_real"
+title = "飢餓的真相"
+description = "下城區的飢餓不是抽象的社會問題，而是每天都在逼死人命的現實。"
+category = &"general"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_bruno_wife_death"]
+script = ExtResource("2")
+id = "intel_bruno_wife_death"
+title = "布魯諾妻子的死"
+description = "布魯諾不是天生的暴民領袖。他的憤怒來自失去摯愛後，再也無法相信任何承諾。"
+category = &"character"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_king_truth"]
+script = ExtResource("2")
+id = "intel_king_truth"
+title = "國王的犧牲"
+description = "國王不是在揮霍人民，而是在孤身背負罵名，為整個王城爭取最後一線生機。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = ["final_branch"]
+
+[sub_resource type="Resource" id="intel_magic_sabotage"]
+script = ExtResource("2")
+id = "intel_magic_sabotage"
+title = "魔法陣的破壞者"
+description = "地下防線附近的能源管線有非自然腐蝕痕跡。有人長期、刻意地破壞王城的防禦。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = ["final_branch"]
+
+[sub_resource type="Resource" id="intel_granary_lock_finance"]
+script = ExtResource("2")
+id = "intel_granary_lock_finance"
+title = "糧倉上的財政署印記"
+description = "鎖住救命糧倉的不是王家命令，而是財政署的權力。這條線索直接指向宰相的系統性干預。"
+category = &"conspiracy"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_chancellor_treason"]
+script = ExtResource("2")
+id = "intel_chancellor_treason"
+title = "宰相的叛國鐵證"
+description = "所有零散的異常終於指向同一個答案：真正把王國送上斷頭台的人，就是宰相莫里昂。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = ["final_branch"]
+
+[sub_resource type="Resource" id="intel_king_defense_line"]
+script = ExtResource("2")
+id = "intel_king_defense_line"
+title = "國王的防線全貌"
+description = "國王的每一步備戰、徵兵與城防調度，原來都在為同一條最後防線服務。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_dal_blinded_by_chancellor"]
+script = ExtResource("2")
+id = "intel_dal_blinded_by_chancellor"
+title = "達爾失明的真兇"
+description = "弄瞎達爾的人不是國王，而是為了滅口的宰相。這一刀切斷了王國最後的工程證人。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_dal_blinded_voice"]
+script = ExtResource("2")
+id = "intel_dal_blinded_voice"
+title = "唸詩般的聲音"
+description = "達爾記得兇手說話又輕又慢，像在唸詩。這個聲音特徵成了辨認真兇的關鍵。"
+category = &"character"
+source_loop = 3
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_retainer_motive"]
 script = ExtResource("2")
 id = "intel_retainer_motive"
 title = "忠臣的理由"
-description = "忠臣含淚刺殺公主——他說這是為了保護她免受更殘酷的命運。但這真的是全部的理由嗎？"
+description = "忠臣含淚刺殺公主。他說這是為了保護她免受更殘酷的命運。"
 category = &"character"
 source_loop = 1
-unlocks_branches = ["branch_b"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_faction_a"]
 script = ExtResource("2")
 id = "intel_faction_a"
 title = "勢力 A 的線索"
-description = "王國內部存在一股暗流——某些貴族似乎早已知道戰爭將至，卻選擇了沉默。"
+description = "王國內部存在一股暗流，某些貴族似乎早已知道戰爭將至，卻選擇了沉默。"
 category = &"conspiracy"
 source_loop = 1
-unlocks_branches = ["branch_c"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_faction_b"]
 script = ExtResource("2")
 id = "intel_faction_b"
 title = "勢力 B 的線索"
-description = "邊境的將軍們收到了矛盾的命令——有人在刻意削弱王國的防線。"
+description = "邊境的將軍們收到了矛盾的命令，有人在刻意削弱王國的防線。"
 category = &"conspiracy"
 source_loop = 2
-unlocks_branches = ["branch_d"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_conspiracy_evidence"]
 script = ExtResource("2")
 id = "intel_conspiracy_evidence"
 title = "陰謀的證據"
-description = "一封被燒毀大半的密信殘片，上面的印章指向了王國最不可能的方向。"
+description = "一封被燒毀大半的密信殘片，上面的印章指向王國最不願承認的方向。"
 category = &"conspiracy"
 source_loop = 2
-unlocks_branches = ["branch_confrontation"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_dungeon_key"]
 script = ExtResource("2")
 id = "intel_dungeon_key"
 title = "地下牢的秘密"
-description = "城堡地下牢中關押著一個不應該存在的囚犯——他知道一切的真相。"
+description = "城堡地下深處關著不該存在的囚犯，而那裡藏著另一條真相線索。"
 category = &"truth"
 source_loop = 3
-unlocks_branches = ["branch_dungeon"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_retainer_past"]
 script = ExtResource("2")
 id = "intel_retainer_past"
 title = "忠臣的過去"
-description = "忠臣並非天生的守護者——他曾經是另一個陣營的人。他的轉變背後藏著無法言說的秘密。"
+description = "賽拉斯不是天生就站在王室這一邊。他過去的選擇，塑造了如今的沉默與執著。"
 category = &"character"
 source_loop = 4
-unlocks_branches = ["branch_truth"]
+unlocks_branches = []
 
 [sub_resource type="Resource" id="intel_true_traitor"]
 script = ExtResource("2")
 id = "intel_true_traitor"
 title = "真正的內鬼"
-description = "所有的線索最終指向了一個令人心碎的事實——背叛王國的人，竟是公主最信任的人之一。"
+description = "所有殘片最終都指向同一個答案：背叛王國的人，就在最靠近權力核心的地方。"
 category = &"truth"
 source_loop = 5
-unlocks_branches = ["final_branch"]
+unlocks_branches = []
 
 [resource]
 script = ExtResource("1")
-items = [SubResource("intel_city_fall"), SubResource("intel_assassination"), SubResource("intel_retainer_motive"), SubResource("intel_faction_a"), SubResource("intel_faction_b"), SubResource("intel_conspiracy_evidence"), SubResource("intel_dungeon_key"), SubResource("intel_retainer_past"), SubResource("intel_true_traitor")]
+items = [
+	SubResource("intel_city_fall"),
+	SubResource("intel_assassination"),
+	SubResource("intel_magic_core_sabotage"),
+	SubResource("intel_food_change"),
+	SubResource("intel_maid_tears"),
+	SubResource("intel_chancellor_wealth"),
+	SubResource("intel_retainer_warning"),
+	SubResource("intel_chancellor_betrayal"),
+	SubResource("intel_fake_ledgers"),
+	SubResource("intel_gate_open_signal"),
+	SubResource("intel_war_conscription"),
+	SubResource("intel_retainer_duty"),
+	SubResource("intel_mob_manipulation"),
+	SubResource("intel_starvation_real"),
+	SubResource("intel_bruno_wife_death"),
+	SubResource("intel_king_truth"),
+	SubResource("intel_magic_sabotage"),
+	SubResource("intel_granary_lock_finance"),
+	SubResource("intel_chancellor_treason"),
+	SubResource("intel_king_defense_line"),
+	SubResource("intel_dal_blinded_by_chancellor"),
+	SubResource("intel_dal_blinded_voice"),
+	SubResource("intel_retainer_motive"),
+	SubResource("intel_faction_a"),
+	SubResource("intel_faction_b"),
+	SubResource("intel_conspiracy_evidence"),
+	SubResource("intel_dungeon_key"),
+	SubResource("intel_retainer_past"),
+	SubResource("intel_true_traitor")
+]

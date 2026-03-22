@@ -62,26 +62,19 @@ func _reset_loop() -> void:
 ## 根據輪迴次數與情報量更新階段
 func _update_phase() -> void:
 	var loop = IntelSystem.current_loop
-	var intel_count = IntelSystem.acquired_intels.size()
 
 	var old_phase = current_phase
 	if loop == 0:
 		current_phase = LoopPhase.PROLOGUE
 	elif loop <= 2:
 		current_phase = LoopPhase.EARLY
-	elif intel_count >= _get_final_threshold():
+	elif IntelSystem.has_final_loop_requirements():
 		current_phase = LoopPhase.FINAL
 	else:
 		current_phase = LoopPhase.MID
 
 	if current_phase != old_phase:
 		loop_phase_changed.emit(StringName(LoopPhase.keys()[current_phase]))
-
-
-func _get_final_threshold() -> int:
-	# 需要收集到的情報數量才能進入最終輪迴
-	return 8  # 根據實際情報數量調整
-
 
 func _show_death_screen(context: Dictionary) -> void:
 	var death_screen = load("res://scenes/ui/death_screen.tscn").instantiate()
