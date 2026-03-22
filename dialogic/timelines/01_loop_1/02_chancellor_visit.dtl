@@ -6,39 +6,71 @@
 join princess left
 join chancellor right
 
-chancellor (concerned): 殿下，聽說您今早精神不太好？莉娜很擔心您呢。
+chancellor (concerned): 哎呀，殿下！莉娜跟臣說您今早臉色不太好，嚇了臣一跳。怎麼了？是不是吃壞肚子啦？要不要臣叫御醫來看看？
 
 princess: （宰相莫里昂。從小到大，他是除了父王和莉娜之外，對我最溫柔的人。每次送我寶石、陪我下棋，他總是笑瞇瞇的。這樣的人……應該可以信任吧？）
 
-princess: 宰相大人……我做了一個很可怕的夢。
+princess: 不是身體的問題。宰相大人……我做了一個很可怕的夢。
 
-chancellor (concerned): 臣洗耳恭聽。殿下的任何煩惱，都是臣的責任。
+chancellor (concerned): 夢呀？殿下不要怕，夢都是假的嘛。不如臣跟您說說那顆寶石的故事——
 
-princess: 我夢見……城破了。父王戰死。賽拉斯拿劍……殺了我。
+princess: 我夢見城破了。父王戰死在城門前。然後賽拉斯拿劍……殺了我。
 
 [wait time="1.2"]
 
 chancellor (concerned): ……
 
-chancellor (serious): 殿下，請原諒臣接下來要說的話。這些話本不該由臣來說……但既然殿下已經「看見」了什麼，臣不能再袖手。
+princess: （他的笑容不見了。他好像……嚇到了？）
 
-princess: （……他的反應好快。不是震驚，是早就準備好了。普通人聽到公主說「我夢到被殺了」，不會這麼冷靜才對。）
+chancellor (concerned): 殿下……這只是噩夢。您太累了，臣讓莉娜幫您泡杯安神茶——
 
-princess: （不……也許他只是見過大場面的人吧。畢竟是宰相。我想太多了。）
+princess: 可是那個夢好真好真……我到現在還在發抖。宰相大人，你是不是知道什麼？你剛才的表情好奇怪……
 
-princess (shocked): 您……知道些什麼？
+[wait time="0.8"]
 
-chancellor (serious): 臣知道陛下一直把殿下保護得太好。邊境的「小毛賊」——其實已經集結成十萬大軍。戰爭，確實迫在眉睫。
+chancellor: ……
 
-chancellor (sad): 但真正讓臣痛心的是……陛下為了這場戰爭所做的事。
+chancellor (serious): 殿下……請原諒臣。這些話本不該由臣來說。臣一直以為，只要不讓殿下知道，殿下就能繼續快快樂樂的……
+
+chancellor (serious): 但既然殿下已經「看見」了什麼……臣不能再裝作若無其事了。
+
+princess: （……他願意告訴我。從小到大，所有人都把真相藏起來。只有他，在我問了之後，真的願意回答我。）
+
+princess: （也許……宰相大人跟其他人不一樣。）
+
+princess (shocked): 宰相大人，拜託您。我不想再什麼都不知道了。
+
+chancellor (serious): 臣知道陛下一直把殿下保護得太好。您聽到的「邊境小毛賊」——其實已經集結成十萬大軍了。戰爭，確實迫在眉睫。
+
+chancellor (sad): 但真正讓臣痛心的不是戰爭……是陛下為了這場戰爭，所做的那些事。
 
 princess (shocked): 父王……做了什麼？
 
-chancellor (sad): 殿下，明天臣帶您看證據。今天先好好休息。有些真相，需要殿下有足夠的勇氣才能面對。
+chancellor (sad): 殿下今天先好好休息。明天，臣帶您親眼看證據。有些真相……需要殿下有足夠的勇氣才能面對。臣不想嚇著殿下。
 
 [wait time="0.7"]
 
 leave chancellor
+
+princess: （……勇氣。我有勇氣嗎？）
+
+princess: （我連城堡外面長什麼樣子都不知道。但如果那個夢是真的……我不能再什麼都不做了。）
+
+[wait time="1.0"]
+
+# === 回到寢房・Day 1 夜晚 ===
+
+[background arg="res://art/backgrounds/royal_chamber_night.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.0" volume="0.4"]
+
+princess: （翻來覆去睡不著。一閉眼就看到那把劍，還有賽拉斯沾血的臉。）
+
+princess: （明天……宰相大人要給我看什麼？）
+
+princess: （不管是什麼，我都要看。）
+
+[wait time="1.5"]
+
 leave princess
 
 jump 03_evidence/

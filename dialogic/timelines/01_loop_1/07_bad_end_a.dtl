@@ -1,29 +1,38 @@
 # 第 1 輪迴：Bad End A — 被操弄的正義
 
-[background arg="res://art/backgrounds/castle_wall_burning.png" fade="0.6"]
-[signal arg="cut_to_silence"]
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.0"]
+
+princess: （……又是這種感覺。冷冷的，慢慢沉下去。）
 
 [wait time="1.2"]
 
-join princess center
+princess: （上一次是劍。這一次是茶。）
 
-princess: （我跪在城牆上，看著自己的王國在火海中哀號。遠處似乎有賽拉斯在喊我的名字……但我聽不清。）
-
-princess (sad): （宰相從沒騙我。他只是把我最渴望的「真相」擺在我面前。）
-
-princess (sad): （是我自己選擇相信的。是我自己把城防令印交出去的。）
-
-princess (hollow): （原來……我以為我醒了，其實還在更深的夢裡。）
+princess: （上一次我什麼都不知道。這一次我以為我知道了。）
 
 [wait time="1.5"]
 
-princess (hollow): 如果還有下一次……我絕不再相信任何一個對我微笑的人。
+princess (sad): （宰相從沒騙我。他只是做了所有人一直在做的事——決定什麼該讓我知道、什麼不該讓我知道。）
+
+princess (sad): （唯一的差別是……他讓我「知道」的，正好是他需要我相信的。而我像個聽話的小孩一樣，乖乖照做了。偷了令印，還跟他說謝謝。然後喝了他遞過來的茶。）
+
+princess (hollow): （我以為我終於不再被哄了。其實只是被換了一種方式哄。連殺我的方式……都跟哄我一樣溫柔。）
+
+[wait time="2.0"]
+
+princess (hollow): （「不會痛的。只是會慢慢睡著而已。」）
+
+princess (hollow): （……他說的沒錯。真的不痛。但是好冷。跟夢裡一樣冷。）
+
+[wait time="1.5"]
+
+princess (hollow): 如果還有下一次……我絕不再喝任何人遞過來的茶。也絕不再相信任何一個對我微笑的人。
 
 [wait time="1.8"]
 
 [signal arg="death_fade"]
-
-[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
 [wait time="3.5"]
 
@@ -35,6 +44,8 @@ princess: （這一次……我不會再讓任何人牽著我的手走。）
 
 princess: （我要用自己的眼睛去看，用自己的耳朵去聽，用自己的腳去踩碎所有陷阱。）
 
+princess: （不會再有人替我倒茶了。）
+
 [wait time="1.8"]
 
 [sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
@@ -44,6 +55,6 @@ leave --All--
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_betrayal"]
 [signal arg="intel:intel_fake_ledgers"]
-[signal arg="intel:intel_gate_open_signal"]
-[signal arg="death_context:{'death_message': '你被宰相精心設計的半真半假操弄，親手交出城防令印導致王城陷落。\\n\\n「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal', 'intel_fake_ledgers', 'intel_gate_open_signal'], 'killer': 'chancellor'}"]
+[signal arg="intel:intel_chancellor_poison"]
+[signal arg="death_context:{'death_message': '你被宰相精心設計的半真半假操弄，親手交出城防令印。然後他用一杯花茶結束了你的生命。\\n\\n「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal', 'intel_fake_ledgers', 'intel_chancellor_poison'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]

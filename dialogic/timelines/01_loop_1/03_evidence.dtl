@@ -1,34 +1,75 @@
 # 第 1 輪迴：宰相的「證據」 — 書房（Day 2）
 
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+[wait time="1.0"]
+
+join princess left
+
+princess: （一夜沒睡好。天剛亮，莉娜還沒來叫我，我就已經穿好衣服了。）
+
+[wait time="0.6"]
+
+join maid right
+maid (default): 哇！殿下今天好早呀～是太期待寶石了嗎？莉娜幫您梳頭髮——
+
+princess: 不用了。我跟宰相大人約好了，現在就去。
+
+maid (default): 欸？這麼早？那……那莉娜幫您帶件披肩，早上走廊風大——
+
+princess: 莉娜。我自己去就好。
+
+maid (forced_smile): ……好的殿下。早點回來喔，莉娜泡好茶等您！
+
+leave maid
+leave princess
+
+[wait time="0.8"]
+
+# === 宰相書房 ===
+
 [background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
 [music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
 
 join princess left
 join chancellor right
 
-chancellor (serious): 殿下，請過目。
+chancellor (serious): 殿下，這些東西……本來臣不想讓您看的。但既然殿下問了，臣不敢隱瞞。
 
-chancellor (serious): 這是過去兩年的財政帳簿。陛下以「戰備」為名，徵收了三倍稅金。但實際用於軍備的……確實不到三成。
+chancellor (serious): 這是過去兩年的財政帳簿。殿下不需要看懂每一個數字——臣幫您圈出重點就好。看這裡，陛下以「戰備」為名，徵收了三倍稅金。但實際花在軍備上的……不到三成。
 
-princess: （帳簿上密密麻麻的數字……說實話，我從來沒學過怎麼看財務報表。但宰相指的那些欄位——支出與收入之間的差距，確實大得離譜。至少……他說的看起來是對的。）
+princess: （帳簿上密密麻麻的數字……說實話，我從來沒學過怎麼看財務報表。宰相圈出來的那些地方，確實有很大的差距。但我真的看得懂嗎？還是我只是在相信他的手指指向的地方？）
 
-chancellor (serious): 這是邊防將領的密報。陛下在一年前確實曾派使者前往敵國邊境——他主動激化了衝突，這是事實。
+princess: （……先聽他說完吧。）
 
-chancellor (sad): 臣在朝中多次苦勸，但陛下已聽不進任何人的話。他甚至開始清除反對加稅的官員……上個月，兩位忠臣以「通敵」罪名入獄。
+chancellor (serious): 這是邊防將領的密報。殿下大概沒聽過這些——陛下在一年前曾派使者前往敵國邊境，主動激化了衝突。
 
-chancellor (determined): 殿下。如果連您都不知道真相，這個國家……真的沒救了。
+chancellor (sad): 臣在朝中苦勸了很多次。但陛下已經聽不進任何人的話了。他甚至開始清除反對加稅的官員……上個月，兩位大臣以「通敵」的罪名入了獄。臣本來不想告訴殿下這些……
+
+chancellor (determined): 但殿下問了。如果連您都不知道真相，這個國家……真的沒有人能救了。
 
 princess (sad): 父王他……為什麼要這麼做？
 
-chancellor (sad): 權力使人瘋狂。年老的國王最怕的，就是失去一切。臣說不好。但證據，就擺在眼前。
+chancellor (sad): 權力使人瘋狂。年老的國王最怕的，就是失去一切。殿下還小，有些事……臣說不好。但證據，就擺在眼前。
+
+princess: （「殿下還小」……又是這句話。從小到大，每個人都用這句話把我擋在門外。父王、莉娜、賽拉斯……現在連宰相也是。）
 
 [wait time="1.0"]
 
-princess: （我從出生到現在，從來沒走出過內城的城牆。從我房間的窗戶看出去，下城區只是地平線上一片灰撲撲的屋頂。我從來不知道那些屋頂下面住著什麼樣的人。）
+princess: （我從出生到現在，從來沒走出過內城的城牆。從我房間的窗戶看出去，下城區只是地平線上一片灰撲撲的屋頂。我從來不知道那些屋頂下面住著什麼樣的人。也從來沒有人覺得我需要知道。）
 
-princess (determined): ……我需要親眼去看。下城區的百姓……真的過得這麼苦嗎？
+princess (determined): ……我要親眼去看。下城區的百姓……真的過得這麼苦嗎？
 
-chancellor (concerned): 殿下想去？臣可以安排。但請務必低調。若被陛下知道，他會非常……不高興。
+chancellor (concerned): 殿下要去？那種地方……很髒、很亂的。殿下從來沒去過那種地方，確定嗎？
+
+princess (determined): 我確定。
+
+chancellor (concerned): 好吧。那臣安排一下。不能穿禮服，得換身粗布衣裳才行。而且絕對不能讓人知道殿下是公主——那裡的人……對王室沒什麼好感。
+
+chancellor (concerned): 殿下可不要說是臣帶您去的喔。若被陛下知道了，他一定會非常不高興的。
+
+princess: （換粗布衣裳……我連粗布摸起來是什麼感覺都不知道。）
+
+[wait time="0.7"]
 
 leave chancellor
 leave princess
