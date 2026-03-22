@@ -61,9 +61,8 @@ const BRANCH_DEFINITIONS := [
 func _ready() -> void:
 	_load_intel_database()
 	_load_persistent_data()
-	sync_to_dialogic()
 	_emit_progression_updated()
-	call_deferred("sync_to_dialogic")
+	get_tree().root.ready.connect(sync_to_dialogic, CONNECT_ONE_SHOT)
 
 
 ## 載入情報資料庫定義
@@ -182,6 +181,18 @@ func _load_persistent_data() -> void:
 	_emit_progression_updated()
 
 
+## Timeline 中使用但不在 intel_database 裡的條件旗標
+const TIMELINE_FLAGS: Array[String] = [
+	"intel_king_anger",
+	"intel_king_will_listen",
+	"intel_chancellor_dismisses_testimony",
+	"intel_chancellor_escape_plan",
+	"intel_chancellor_eyes",
+	"intel_defense_needs_three",
+	"intel_granary_needs_key",
+]
+
+
 ## 將情報狀態同步到 Dialogic 變數（供 Dialogic 條件分支使用）
 func sync_to_dialogic() -> void:
 	if not is_inside_tree():
@@ -189,7 +200,11 @@ func sync_to_dialogic() -> void:
 	var dialogic_node := get_node_or_null("/root/Dialogic")
 	if dialogic_node == null:
 		return
+	if not Dialogic.has_subsystem("VAR"):
+		return
 	for id in _intel_database.keys():
+		Dialogic.VAR.set(id, false)
+	for id in TIMELINE_FLAGS:
 		Dialogic.VAR.set(id, false)
 	for id in acquired_intels.keys():
 		Dialogic.VAR.set(id, true)
