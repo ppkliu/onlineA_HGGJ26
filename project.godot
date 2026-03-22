@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Break the Loop"
-config/description="懸疑文字冒險 × 解謎推理 × 情報繼承 — 完美公主的無知，造就了亡國的迴圈。"
+config/name="無知的死刑"
+config/description="懸疑文字冒險 × 解謎推理 × 情報繼承 — 完美公主的無知，造就了亡國的迴圈。每一次死亡都是一堂課，每一次醒來都是一次機會。"
 run/main_scene="res://scenes/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
@@ -94,7 +94,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Break the Loop"
+project/assembly_name="無知的死刑"
 
 [editor_plugins]
 

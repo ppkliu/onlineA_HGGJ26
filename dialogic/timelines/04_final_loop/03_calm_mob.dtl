@@ -1,5 +1,15 @@
 # 最終輪迴：安撫暴民 — Day 3（下城區）
 
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+
+[wait time="1.0"]
+
+princess: （接下來的兩天，我和賽拉斯一直在準備。他整理證物，我把三輪累積的情報全部寫成文字。晚上我們隔著一張桌子核對細節，說到天亮。）
+
+princess: （第三天早上。該出發了。）
+
+[wait time="1.5"]
+
 # === 前往下城區 ===
 
 [background arg="res://art/backgrounds/city_wall_passage.png" fade="0.8"]
