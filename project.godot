@@ -26,6 +26,7 @@ SceneTransition="*res://autoload/scene_transition.tscn"
 Dialogic="*uid://ds2q0uclmolvu"
 FlowLogger="*res://autoload/flow_logger.gd"
 DialogicCustomizer="*res://autoload/dialogic_customizer.gd"
+DialogicAudioHotfix="*res://autoload/dialogic_audio_hotfix.gd"
 
 [dialogic]
 
