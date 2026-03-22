@@ -109,7 +109,11 @@ loyal_retainer (tearful): 對不起。
 
 [wait time="0.4"]
 
+<<<<<<< HEAD
 [background arg="res://art/backgrounds/darkness.png" fade="0.4"]
+=======
+[sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX" volume="7.08"]
+>>>>>>> upstream/main
 
 princess (hollow): 啊——
 

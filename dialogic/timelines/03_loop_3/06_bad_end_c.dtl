@@ -28,7 +28,8 @@ princess (shocked): （弄瞎達爾的不是父王——是宰相！所有線索
 
 [wait time="1.0"]
 
-[sound path="res://audio/sfx/gate_open_heavy.ogg"]
+[sound path="res://audio/sfx/gate_open_heavy.ogg" volume="0.45"]
+
 [signal arg="camera_shake"]
 
 princess: （遠處傳來巨響。塔樓在搖。從鐵條窗看出去——城門的方向，火光沖天。）

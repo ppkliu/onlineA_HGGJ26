@@ -19,7 +19,7 @@ leave princess
 # === 下城區入口 ===
 
 [background arg="res://art/backgrounds/lower_district.png" fade="0.9"]
-[music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.56"]
 
 join princess left
 
