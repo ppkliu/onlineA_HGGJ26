@@ -12,7 +12,7 @@
 &"description": "公主最信任的忠臣，沉穩可靠。表面盡忠職守，眼神深處卻藏著難以言說的重擔。",
 &"display_name": "賽拉斯",
 &"mirror": false,
-&"nicknames": ["忠臣", "賽拉斯"],
+&"nicknames": ["騎士長", "忠臣", "賽拉斯"],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "default": {
