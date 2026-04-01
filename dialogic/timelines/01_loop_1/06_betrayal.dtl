@@ -1,6 +1,6 @@
 # 第 1 輪迴：撕下偽裝（Day 5 下午）
 
-[background arg="res://art/backgrounds/castle_wall_night.png" fade="0.8"]
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
 [music path="res://audio/bgm/tension_rising.ogg" fade="2.0" volume="0.31"]
 
 join princess left

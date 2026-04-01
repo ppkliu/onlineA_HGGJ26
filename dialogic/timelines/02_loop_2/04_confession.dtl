@@ -1,6 +1,6 @@
 # 第 2 輪迴：坦白身份 — Day 30 傍晚（鐵匠鋪）
 
-[background arg="res://art/backgrounds/blacksmith_night.png" fade="0.6"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
 [music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
 
 join princess left
@@ -61,6 +61,9 @@ mob_leader (hesitant): ……給我三天。我得跟兄弟們談。
 
 princess: （三天……這三天裡他會做什麼決定？）
 
+if {intel_granary_needs_key}:
+	princess: （糧倉……我試過了。那把鎖是財政署的印記，不是王家的鑰匙能開的。上次我帶布魯諾去，警報響了，他死在我面前。光有糧食的位置，打不開那扇門。）
+
 - 我等你。
 	princess (determined): 我等你。布魯諾。
 	leave princess
@@ -73,10 +76,3 @@ princess: （三天……這三天裡他會做什麼決定？）
 	leave princess
 	leave mob_leader
 	jump 04b_rush_granary/
-- 不，現在就帶你去看證據——糧倉就在地下。 | [if {intel_granary_needs_key} == true]
-	princess: （不……上次我帶他去了地下通道。糧倉的鎖是財政署的印記——我根本打不開。然後警報響了，布魯諾被打死在我面前。）
-	princess: （光有承諾打不開那把鎖。我得先讓他的兄弟們相信我，再想辦法解決鎖的問題。）
-	princess (determined): ……我等你。布魯諾。
-	leave princess
-	leave mob_leader
-	jump 05_mob_trial/

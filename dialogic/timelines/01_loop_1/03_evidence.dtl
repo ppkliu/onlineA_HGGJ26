@@ -33,7 +33,7 @@ leave princess
 
 # === 宰相書房 ===
 
-[background arg="res://art/backgrounds/chancellor_study.png" fade="0.8"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
 [music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.56"]
 
 join princess left
@@ -82,13 +82,14 @@ princess (determined): ……我要親眼確認。
 	leave chancellor
 	leave princess
 	jump 04_lower_district/
+if {intel_king_anger}:
+	princess: （上次我直接跑去找父王，他把我藏進寢宮。一個什麼都不知道的公主說的話，他不會聽——我得先親眼看到真相，才有資格開口。）
+
+- 去下城區看看百姓的生活
+	leave chancellor
+	leave princess
+	jump 04_lower_district/
 - 先去問父王，這些是不是真的 | [if {intel_king_anger} == false]
 	leave chancellor
 	leave princess
 	jump 03b_ask_king/
-- 先去問父王，這些是不是真的 | [if {intel_king_anger} == true]
-	princess: （不……我想起來了。上次我直接跑去找父王，他嚇壞了——對著空氣咆哮，然後把我藏進寢宮。城破的時候我困在房間裡，什麼都做不了。）
-	princess: （一個什麼都不知道的公主說的話，他不會聽。我得先親眼看到真相，才有資格開口。）
-	leave chancellor
-	leave princess
-	jump 04_lower_district/

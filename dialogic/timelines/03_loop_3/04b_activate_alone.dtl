@@ -2,7 +2,7 @@
 
 # === 深夜・地下防線 ===
 
-[background arg="res://art/backgrounds/underground_defense_dim.png" fade="0.8"]
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
 [music path="res://audio/bgm/underground.ogg" fade="2.0" volume="0.5"]
 
 join princess left
