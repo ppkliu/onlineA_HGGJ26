@@ -4,9 +4,13 @@
 &"_translation_id": "",
 &"color": Color(0.5, 0.5, 0.4, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_mood_happy": "",
-"sound_mood_sad": ""
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "default",
 &"description": "曾為國王設計地下防線的總工匠，因知道太多而被弄瞎。隱居在下城區廢井旁。",
@@ -20,10 +24,11 @@
 "image": "res://art/characters/dal_default.png"
 },
 "mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 },
-"wary": {
+"quiet": {
 "export_overrides": {
 "image": "res://art/characters/dal_default.png"
 },
@@ -31,7 +36,7 @@
 "scale": 1.0,
 "scene": ""
 },
-"quiet": {
+"wary": {
 "export_overrides": {
 "image": "res://art/characters/dal_default.png"
 },

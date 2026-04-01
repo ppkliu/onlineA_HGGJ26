@@ -40,10 +40,7 @@ directories/dch_directory={
 "mob_npc_b": "res://dialogic/characters/mob_npc_b.dch",
 "mob_npc_c": "res://dialogic/characters/mob_npc_c.dch",
 "old_woman": "res://dialogic/characters/old_woman.dch",
-"princess": "res://dialogic/characters/princess.dch",
-"suspect_a": "res://dialogic/characters/suspect_a.dch",
-"suspect_b": "res://dialogic/characters/suspect_b.dch",
-"suspect_c": "res://dialogic/characters/suspect_c.dch"
+"princess": "res://dialogic/characters/princess.dch"
 }
 directories/dtl_directory={
 "01_awakening": "res://dialogic/timelines/01_loop_1/01_awakening.dtl",

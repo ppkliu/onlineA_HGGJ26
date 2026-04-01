@@ -4,9 +4,13 @@
 &"_translation_id": "",
 &"color": Color(0.6, 0.6, 0.5, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_mood_happy": "",
-"sound_mood_sad": ""
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "default",
 &"description": "下城區的老婦人，熟知城中每個角落與暗巷。",
@@ -20,6 +24,7 @@
 "image": "res://art/characters/old_woman_default.png"
 },
 "mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 },
