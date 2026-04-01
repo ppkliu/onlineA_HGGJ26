@@ -87,7 +87,7 @@ loyal_retainer (tearful): 「但願……永遠不需要執行這道命令。」
 
 [wait time="1.6"]
 
-princess (hollow): ……賽拉斯？你怎麼哭了？
+princess (sad): ……賽拉斯？你怎麼哭了？
 
 [wait time="1.2"]
 
@@ -111,23 +111,23 @@ loyal_retainer (tearful): 對不起。
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.4"]
 
-princess (hollow): 啊——
+princess (sad): 啊——
 
 [wait time="0.15"]
 
-princess (hollow): （……不痛?）
+princess (sad): （……不痛?）
 
 [wait time="1.2"]
 
-princess (hollow): （只是很冷。像冬天第一次打開窗戶的時候。）
+princess (sad): （只是很冷。像冬天第一次打開窗戶的時候。）
 
 [wait time="1.8"]
 
-princess (hollow): （賽拉斯的臉好模糊……他在哭。為什麼呢？明明是他動的手。）
+princess (sad): （賽拉斯的臉好模糊……他在哭。為什麼呢？明明是他動的手。）
 
 [wait time="2.2"]
 
-princess (hollow): （……為什麼所有人都知道，只有我不知道？為什麼……連兇手都在哭，這就是死後的世界嗎？）
+princess (sad): （……為什麼所有人都知道，只有我不知道？為什麼……連兇手都在哭，這就是死後的世界嗎？）
 
 [wait time="3.0"]
 
