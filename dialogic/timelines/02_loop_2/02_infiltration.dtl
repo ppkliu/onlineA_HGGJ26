@@ -2,7 +2,7 @@
 
 # === Day 1 下午・城牆通道 ===
 
-[background arg="res://art/backgrounds/city_wall_passage.png" fade="0.8"]
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
 
 join princess left
 
@@ -18,7 +18,7 @@ leave princess
 
 # === 下城區入口 ===
 
-[background arg="res://art/backgrounds/lower_district.png" fade="0.9"]
+[background arg="res://art/backgrounds/restaurant.png" fade="0.9"]
 [music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.31"]
 
 join princess left

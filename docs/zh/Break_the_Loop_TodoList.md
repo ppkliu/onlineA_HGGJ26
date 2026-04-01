@@ -133,10 +133,11 @@
 
 ### 4.1 背景圖（最低需求）
 
-- [ ] 序章 — 王城陷落（火海背景）
-- [ ] 公主寢宮（輪迴起點場景）
-- [ ] 王座大廳（調查場景）
-- [ ] 庭園 或 城堡走廊（第二調查場景）（選配）
+- [x] 序章 — 王城陷落（fire_room.png / prologue 系列）
+- [x] 公主寢宮（royal_chamber.png）
+- [x] 王座大廳（throne_room_gj.png）
+- [x] 走廊 / 通道（hallway.png / hallway2.png 佔位）
+- [ ] 高品質補圖（city_wall_passage、lower_district、chancellor_study、royal_chamber_night、city_wall_dawn 等 — 目前以現有素材暫代）
 
 ### 4.2 角色立繪
 

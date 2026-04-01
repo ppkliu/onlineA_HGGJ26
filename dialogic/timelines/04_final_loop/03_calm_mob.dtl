@@ -9,7 +9,7 @@ princess: （第三天早上。該出發了。）
 
 # === 前往下城區 ===
 
-[background arg="res://art/backgrounds/city_wall_passage.png" fade="0.8"]
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
 
 join princess left
 
@@ -21,7 +21,7 @@ leave princess
 
 # === 下城區 ===
 
-[background arg="res://art/backgrounds/lower_district.png" fade="0.9"]
+[background arg="res://art/backgrounds/restaurant.png" fade="0.9"]
 [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
 
 join princess left
@@ -78,6 +78,9 @@ princess (determined): 如果我在騙你，你可以親手打開那道城門。
 
 princess: （布魯諾答應了。接下來……要怎麼處理宰相？）
 
+if {intel_chancellor_escape_plan}:
+	princess: （上次我帶賽拉斯直接去抓他，書房已經空了。他的逃跑路線早就備好，城門也被提前打開——最後一步不能急。必須當著所有人的面定罪，才能堵死他每一條退路。）
+
 - 正式在朝堂上揭露宰相（需要時間準備證據）
 	princess (determined): （我要在所有人面前揭露他。讓他無路可退。這需要時間準備——但這次，我不是一個人。）
 	leave princess
@@ -88,9 +91,3 @@ princess: （布魯諾答應了。接下來……要怎麼處理宰相？）
 	leave princess
 	leave mob_leader
 	jump 03b_rush_arrest/
-- 趁宰相還不知道，現在直接去抓他 | [if {intel_chancellor_escape_plan} == true]
-	princess: （不。上次我帶賽拉斯直接去抓他——書房已經空了。他早就準備好了退路，城門也被他提前打開。賽拉斯差點死在城門前，我被箭射中。）
-	princess (determined): （最後一步不能急。必須在所有人面前公開定罪——讓他連逃的機會都沒有。）
-	leave princess
-	leave mob_leader
-	jump 04_expose_chancellor/

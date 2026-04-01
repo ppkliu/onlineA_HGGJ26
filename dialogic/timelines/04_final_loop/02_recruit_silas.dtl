@@ -1,6 +1,6 @@
 # 最終輪迴：收服騎士長 — Day 1 夜晚（公主寢房）
 
-[background arg="res://art/backgrounds/royal_chamber_night.png" fade="0.9"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.9"]
 [music path="res://audio/bgm/final_truth.ogg" fade="3.0" volume="0.39"]
 
 join princess left
@@ -29,7 +29,7 @@ loyal_retainer (exhausted): ……殿下不可能知道這件事。
 
 princess (determined): 你每天都在祈禱不需要執行它。
 
-princess: （他的手在發抖。跟序章那個夢裡拔劍時一模一樣的抖法。）
+princess: （他的手在發抖。跟城破那一夜拔劍時一模一樣的抖法。）
 
 princess (determined): 你每天都在為了不執行那道命令而拼命。我不知道你做了什麼——但你盔甲上的灰、你眼下的黑眼圈、你每天深夜才回來的腳步聲……我在地下通道裡都聽到了。莫里昂也知道。所以他抓我的時候，第一件事就是把你調去北境。因為你礙他的事。
 
