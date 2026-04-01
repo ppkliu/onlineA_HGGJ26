@@ -4,9 +4,13 @@
 &"_translation_id": "",
 &"color": Color(0.5, 0.2, 0.4, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_mood_happy": "",
-"sound_mood_sad": ""
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "default",
 &"description": "宰相，永遠溫和有禮的假面紳士。真正的幕後黑手，精心操弄一切的陰謀家。",
@@ -15,11 +19,12 @@
 &"nicknames": ["宰相", "莫里昂"],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"default": {
+"cold": {
 "export_overrides": {
-"image": "res://art/characters/chancellor_default.png"
+"image": "res://art/characters/chancellor_cold.png"
 },
 "mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 },
@@ -31,19 +36,12 @@
 "scale": 1.0,
 "scene": ""
 },
-"serious": {
+"default": {
 "export_overrides": {
 "image": "res://art/characters/chancellor_default.png"
 },
 "mirror": false,
-"scale": 1.0,
-"scene": ""
-},
-"sad": {
-"export_overrides": {
-"image": "res://art/characters/chancellor_default.png"
-},
-"mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 },
@@ -63,9 +61,17 @@
 "scale": 1.0,
 "scene": ""
 },
-"cold": {
+"sad": {
 "export_overrides": {
-"image": "res://art/characters/chancellor_cold.png"
+"image": "res://art/characters/chancellor_default.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"serious": {
+"export_overrides": {
+"image": "res://art/characters/chancellor_default.png"
 },
 "mirror": false,
 "scale": 1.0,

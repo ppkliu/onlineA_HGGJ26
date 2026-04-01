@@ -4,9 +4,13 @@
 &"_translation_id": "",
 &"color": Color(0.8, 0.7, 0.2, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_mood_happy": "",
-"sound_mood_sad": ""
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "default",
 &"description": "王國國王，為了守護國家不惜犧牲名聲的孤獨統治者。",
@@ -20,6 +24,7 @@
 "image": "res://art/characters/king_default.png"
 },
 "mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 }

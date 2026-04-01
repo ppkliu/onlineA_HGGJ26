@@ -4,25 +4,21 @@
 &"_translation_id": "",
 &"color": Color(0.5, 0.3, 0.3, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_mood_happy": "",
-"sound_mood_sad": ""
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "default",
 &"description": "下城區暴民之一，苦難使他變得冷酷。",
 &"display_name": "暴民乙",
 &"mirror": false,
-&"nicknames": [],
+&"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"default": {
-"export_overrides": {
-"image": "res://art/characters/mob_npc_default.png"
-},
-"mirror": false,
-"scale": 1.0,
-"scene": ""
-},
 "bitter": {
 "export_overrides": {
 "image": "res://art/characters/mob_npc_default.png"
@@ -36,6 +32,15 @@
 "image": "res://art/characters/mob_npc_default.png"
 },
 "mirror": false,
+"scale": 1.0,
+"scene": ""
+},
+"default": {
+"export_overrides": {
+"image": "res://art/characters/mob_npc_default.png"
+},
+"mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 }
