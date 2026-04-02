@@ -1,4 +1,4 @@
-# 情境 A — V2：第三次醒來（公主寢房・清晨）
+# 情境 A — V2：第三次醒來（公主寢房・清晨）— 孤注一擲與絕對的絕望
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.37"]
@@ -20,6 +20,8 @@ princess: （我已經不需要花時間確認這些了。）
 princess (cold): （這一次賽拉斯說了「是宰相」，說了「我們都被他騙了」。他說宰相可能是幫兇，不是主謀，說只有父王才知道更多細節。）
 
 princess: （我需要的答案在父王那裡。這一次，我只剩下父王這條路了。）
+
+princess (cold): （這是孤注一擲。）
 
 [wait time="0.6"]
 
