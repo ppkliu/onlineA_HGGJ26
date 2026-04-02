@@ -83,20 +83,21 @@
 
 | 變體 ID | 進入條件 | 公主視角 | 關鍵分歧點 | 結局 | 獲得情報 |
 |---|---|---|---|---|---|
-| B-V0 | 無相關情報 | 天真建立信任，以為誠意能換到一切 | 布魯諾在饑餓與仇恨壓力下出賣 | Bad End B：出賣給敵軍 | `mob_manipulation` + `starvation_real` + `bruno_wife_death` |
-| B-V1 | 持有 `intel_starvation_real`，未持有 `intel_bruno_wife_death` | 知道饑荒是真的，帶來食物與藥品直接解決需求 | 物質需求被滿足，但布魯諾妻子死亡的仇恨未被觸碰，仍在臨界點 | Bad End B'：信任短暫建立後崩潰，不同形式的出賣（非金錢，是絕望） | `intel_bruno_wife_death` |
-| B-V2 | 持有 `intel_bruno_wife_death`，未持有 `intel_mob_manipulation` | 直面布魯諾的個人悲劇，以妻子之死為切入點 | 布魯諾個人動搖，但宰相的群體操弄從旁施壓，鄰居/夥伴代為出賣 | Bad End B''：布魯諾本人未出賣，卻被旁人脅迫/舉報 | `intel_mob_manipulation` |
-| B-V3 | 持有 `intel_mob_manipulation` ＋ `intel_bruno_wife_death` | 同時應對群體操弄與個人創傷，最接近成功的一次 | 幾乎贏得布魯諾，但糧倉無鑰匙/宰相眼線提前介入 | Bad End B'''：公主逃脫，布魯諾受牽連，關係破裂 | — （觸發耗盡鎖定，情境關閉）|
+| B-V0 | 無相關情報 | 天真建立信任，以為誠意能換到一切 | 布魯諾在壓力下出賣，未說出妻子的故事 | Bad End B：出賣給敵軍 | `intel_starvation_real` |
+| B-V1 | 持有 `intel_starvation_real`，未持有 `intel_bruno_wife_death` | 知道饑荒是真的，攜帶物資先建立信任 | 物資贏得短暫好感，布魯諾在公主追問下說出妻子故事，但根本壓力仍超出物資能解決的範圍 | Bad End B'：布魯諾本人無法阻擋群體決定 | `intel_bruno_wife_death` |
+| B-V2 | 持有 `intel_bruno_wife_death`，未持有 `intel_mob_manipulation` | 知道布魯諾最深的傷口，直接點名妻子之死 | 布魯諾被擊中，票數三比一仍輸——外部協調者的存在讓公主理解到群體被系統性操弄 | Bad End B''：布魯諾投反對票但被推翻，公主在移交時聽見「那個煽動者也找到了嗎」 | `intel_mob_manipulation` |
+| B-V3 | 持有 `intel_bruno_wife_death` ＋ `intel_mob_manipulation` | 同時回應個人創傷與群體操弄，同步分化外部協調者 | 宰相的情報網比公主快——她進入下城區第幾天就已被發現；布魯諾把公主推出去自己留下 | Bad End B'''：公主逃脫，布魯諾被帶走 | — （觸發耗盡鎖定，情境關閉）|
 
-> B-V3 是此情境的認知終點。公主窮盡下城區所有可能後，得出結論：問題必須從上層解決。B-V1 與 B-V2 的布魯諾對白台詞在情感層面完全不同，即使場景相同。
+> **變體遞進邏輯：** B-V0 → B-V1 → B-V2 → B-V3 → LOCK。每次失敗都讓公主更深地理解問題的結構——從「苦難是真的」到「傷口是個人的」到「操弄是系統性的」到「根源在上層」。
 
 ### 分支選項（各變體內）
 
-- `03b_steal_supplies.dtl`（B-V0 可觸發）：偷偷回城堡取食物藥品
+- `03b_steal_supplies.dtl`（**僅 B-V0** 可觸發）：偷偷回城堡取食物藥品
   - 進入條件：未持有 `intel_chancellor_eyes`
-  - B-V1 內此選項不可用（公主已帶了補給）
-- `04b_rush_granary.dtl`（B-V0 / B-V2 可觸發）：立刻帶布魯諾去找地下糧倉
+  - B-V1 以上公主已帶補給或改變策略，此選項不出現
+- `04b_rush_granary.dtl`（**B-V0 / B-V1 / B-V2** 坦白場景內可觸發）：立刻帶布魯諾去找地下糧倉
   - 進入條件：未持有 `intel_granary_needs_key`
+  - 三個變體均以此鎖定「糧倉需要宰相鑰匙」這一知識點；一旦取得 `intel_granary_needs_key` 即自動消失
 
 ---
 
@@ -164,12 +165,12 @@
 | `intel_city_fall` | 序章 | 後續違和感追問選項 |
 | `intel_assassination` | 序章 | 賽拉斯特殊對話；最終輪迴解鎖條件之一 |
 | `intel_magic_core_sabotage` | 序章 | 魔法陣情報基礎 |
-| `intel_chancellor_betrayal` | A-V0 Bad End A | 確認宰相是叛徒；解鎖 A-V1、A-V3、C-V1 |
-| `intel_fake_ledgers` | A-V0 Bad End A | 帳簿偽造；解鎖 A-V2、A-V3 |
-| `intel_chancellor_poison` | A-V0 / A-V1 / A-V3 | 宰相使毒手段；觸發情境 A 主動鎖定 |
-| `intel_mob_manipulation` | B-V0 / B-V2 | 暴民被操弄；解鎖 B-V3 |
-| `intel_starvation_real` | B-V0 | 下城區饑荒是真的；解鎖 B-V1 |
-| `intel_bruno_wife_death` | B-V0 / B-V1 | 布魯諾妻子死因；解鎖 B-V2、B-V3 |
+| `intel_chancellor_betrayal` | A-V0 Bad End A | 確認宰相是叛徒；解鎖 A-V1、A-V2、C-V1 |
+| `intel_fake_ledgers` | A-V1 Bad End A' | 帳簿偽造具體位置；解鎖 A-V2 |
+| `intel_chancellor_poison` | A-V2 Bad End A'' | 宰相的消滅手段不只毒茶，因人而異；觸發情境 A 主動鎖定 |
+| `intel_starvation_real` | B-V0 Bad End B | 下城區饑荒是真的；解鎖 B-V1 |
+| `intel_bruno_wife_death` | B-V1 Bad End B' | 布魯諾妻子死因；解鎖 B-V2、B-V3 |
+| `intel_mob_manipulation` | B-V2 Bad End B'' | 群體仇恨被系統性操弄；解鎖 B-V3；最終輪迴安撫場景加深 |
 | `intel_chancellor_treason` | C-V0 / C-V2 / C-V3 | 宰相完整罪行；最終輪迴解鎖條件之一 |
 | `intel_king_defense_line` | C-V0 / C-V1 | 地下防線真相；最終輪迴解鎖條件之一 |
 | `intel_dal_blinded_by_chancellor` | C-V0 / C-V1 | 達爾被宰相弄瞎；解鎖 C-V3 |
@@ -178,12 +179,12 @@
 
 ## 公主角色弧線（知識積累視角）
 
-| 階段 | 知識狀態 | 核心偏見 | 被什麼打破 |
+| 階段 | 累積知識 | 核心偏見 | 被什麼打破 |
 |---|---|---|---|
-| 序章後 | 剛知道自己死了 | 無，但開始有違和感 | — |
-| 情境 A 後 | 知道宰相是叛徒與毒手段 | 慈父 = 暴君（帳簿是假的）| 宰相的「真相」也是精心篩選的謊言 |
-| 情境 B 後 | 知道暴民結構與布魯諾動機 | 受害者 = 暴民 | 布魯諾不是壞人，是被逼到絕路的普通人 |
-| 情境 C 後 | 知道宰相完整罪行與防線真相 | 父王是個怪物？ | 冷酷帝王 = 溫柔的獻祭者 |
+| 序章後 | `city_fall` / `assassination` / `magic_core_sabotage` | 無，但開始有違和感 | — |
+| 情境 A 完整走完（V0→V1→V2）| `betrayal` → `fake_ledgers` → `poison` | 慈父 = 暴君 | 宰相的「真相」是精心篩選的謊言；他的手段因對象而異 |
+| 情境 B 完整走完（V0→V1→V2→V3）| `starvation_real` → `bruno_wife_death` → `mob_manipulation` | 受害者 = 暴民 | 布魯諾不是壞人，是被系統逼到絕路的普通人 |
+| 情境 C 完整走完 | `chancellor_treason` / `king_defense_line` / `dal_blinded_by_chancellor` | 父王是個怪物？ | 冷酷帝王 = 溫柔的獻祭者 |
 | 最終輪迴 | 所有濾鏡剝落 | 無 | — |
 
 ---
