@@ -33,33 +33,25 @@ princess (determined): 我還不知道他到底做了多少壞事，但我知道
 
 [wait time="1.2"]
 
-mob_leader (angry): ……妳在這裡待了三十天就覺得自己懂我們了？
-
-princess: ……
-
-mob_leader (grieving): 妳知道我老婆怎麼死的？
-
-mob_leader (grieving): 難產。需要一種從南方進口的止血草。但所有草藥都被徵為軍需了。我跪在稅務司門口三天三夜，求他們放行一小包。
-
-mob_leader (grieving): 他們說：「軍需優先。」我老婆就在我懷裡斷氣。血流了一地，連孩子都沒保住。
-
-[wait time="1.8"]
-
-princess: ……
-
-princess (sad): （他老婆在他懷裡斷氣的時候……我在做什麼？大概在花園裡讀詩集，或是讓莉娜幫我挑下午茶的糕點。我連那個女人的名字都不會知道。）
-
-princess (sad): 對不起。這句話我知道沒用。你的妻子不會因為我說對不起就回來。
-
-princess (sad): 但如果我什麼都不做，阿爾以後也會被帶走。就像莉娜的哥哥一樣。
+mob_leader (angry): ……妳在這裡待了三十天就覺得自己懂我們了？妳許的承諾，我聽過太多了。
 
 [wait time="1.0"]
 
-mob_leader: （他聽到「阿爾」這個名字的時候，手上的鐵鉗晃了一下。）
+princess: ……
 
-mob_leader (hesitant): ……給我三天。我得跟兄弟們談。
+princess: （他站著。沒有走。手上的鐵鉗放下了，但他的背還是緊繃的。）
 
-princess: （三天……這三天裡他會做什麼決定？）
+princess (determined): 我不是來許承諾的。我是來告訴你這場仗打錯方向了。你們的恨沒有錯——但有人把刀口對準了你們自己的人。
+
+mob_leader (angry): 說得好聽。糧食呢？藥呢？你的父王把我們的孩子送去死，你一句「打錯方向」就想把帳勾掉？
+
+princess: ……
+
+mob_leader (conflicted): （他沉默了片刻。沒有離開，但也沒有靠近。）
+
+mob_leader (conflicted): ……給我三天。我得跟兄弟們談。
+
+princess: （三天……這三天裡他會做什麼決定？他眼神裡的那點猶豫……那是裂縫，還是僅僅是疲憊？）
 
 if {intel_granary_needs_key}:
 	princess: （糧倉……我試過了。那把鎖是財政署的印記，不是王家的鑰匙能開的。上次我帶布魯諾去，警報響了，他死在我面前。光有糧食的位置，打不開那扇門。）

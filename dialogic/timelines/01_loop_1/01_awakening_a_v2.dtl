@@ -1,0 +1,77 @@
+# 第 1 輪迴：帶著真相醒來（A-V2）— 公主寢房（Day 1 早晨）
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.37"]
+
+[wait time="1.8"]
+
+join princess left
+
+princess (hollow): ……又回來了。
+
+[wait time="0.8"]
+
+princess: （手指上的玫瑰色指彩。窗格的光影。早餐桌上的鹹魚乾和硬餅乾。）
+
+princess: （我已經不需要花時間確認這些了。）
+
+[wait time="0.6"]
+
+princess (cold): （帳簿。第七頁，左欄，第三行。那個被刮除再補寫的數字——深了半個色階的墨跡，像一個補好的傷口，如果不仔細找根本看不出來。但它在那裡。我記得它。）
+
+princess: （那些帳簿是他親手偽造的。不是叫人做的——是他自己做的，因為他信不過任何人知道這件事。他很仔細。但仔細到某個程度，留下的是另一種痕跡。）
+
+[wait time="0.8"]
+
+princess: （我已經試過了兩種方式：信任他，然後死。懷疑他，然後還是死——只是他這次連話都懶得多說了，因為他看出我知道了什麼，所以更快解決掉我。）
+
+princess (determined): （這次，我不再需要偽裝什麼都不知道。我要直接去見他。把帳簿的事說出來，看他怎麼反應。）
+
+princess: （這可能是最壞的選擇。他可以立刻叫人把我關起來。他可以讓我在任何地方消失，方法比那杯茶多得多。我知道這個結局大概率不會比之前更好。）
+
+princess: （但我想看他沒有面具的臉。他到底想要什麼？不是「他做了什麼」——是「為什麼」。帳簿、令印、整個計畫……他最後要的是什麼？）
+
+princess (cold): （如果我要死在這裡，我至少想在死之前，真的看見他一次。）
+
+[wait time="1.2"]
+
+join maid right
+
+maid (default): 殿下～早安呀！今天天氣超好的喔～對了對了，宰相大人昨天送來了一顆好～漂亮的寶石，說是南國進貢的呢！殿下等等一定要看看！
+
+[wait time="1.0"]
+
+princess: （南國的寶石。莉娜的眼睛有點紅腫，她用同樣的笑容掩蓋著它。）
+
+princess: （她不知道我知道了什麼。她只是一個習慣了保護我的人。）
+
+princess (shocked): 莉娜……你眼睛怎麼紅紅的？
+
+maid (forced_smile): 欸？才沒有呢！就是昨晚小說太好看了嘛，看到太晚而已～殿下不用擔心莉娜啦，莉娜可精神了！
+
+princess: （我沒辦法告訴她現在發生了什麼。沒有辦法。）
+
+[signal arg="intel:intel_maid_tears"]
+
+[wait time="0.5"]
+
+princess (determined): 莉娜，幫我更衣。我要立刻去見宰相大人。
+
+maid (default): 咦？殿下今天要見宰相大人呀？那可得好好打扮一下呢！莉娜幫您挑那件粉色的禮服——
+
+princess (determined): 不用了。今天的衣服不重要。
+
+[wait time="0.4"]
+
+maid (forced_smile): ……好的殿下。
+
+princess: （她替我整理衣領的時候，我看見她的手。她的手很穩，但眼睛還是紅的。）
+
+princess: （莉娜。對不起。我沒辦法告訴你我去做什麼。）
+
+[signal arg="day_counter:180"]
+
+leave princess
+leave maid
+
+jump 02_chancellor_visit_a_v2/

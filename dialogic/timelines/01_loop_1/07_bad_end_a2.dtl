@@ -1,0 +1,42 @@
+# 第 1 輪迴：Bad End A''— 認識敵人的面目，還不夠
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.0"]
+
+princess (hollow): （東翼客房。窗子釘死的。門外有腳步聲輪換。）
+
+[wait time="1.2"]
+
+princess: （他沒有用茶。這是因為我太警覺了——他知道，如果他遞茶，我不會喝。所以他換了方式。牆壁。守衛。讓我在一個沒有出口的房間裡等待他認為合適的時機。）
+
+princess (hollow): （上次是茶。這次是牆。方法不一樣，結果是一樣的：我消失了，沒有人知道為什麼。他沒有任何破綻。）
+
+[wait time="1.5"]
+
+princess: （他說「差得遠」。我問他的目的，他沒有正面回答——他反問我那個局面對誰有利。那是一個問題，不是一個答案。他承認了帳簿的事，但只說「大部分是對的」。哪一部分不對？）
+
+princess (sad): （他的武器不只是茶。茶只是其中一種，是在有機會的時候用的。沒有機會，他有牆，有守衛，有所有他能調動的東西。方法永遠在變，但結果永遠一樣——知道太多的人，在這裡活不下去。）
+
+[wait time="1.5"]
+
+princess (hollow): （我見到了他沒有面具的臉。那張臉是冷的，不殘忍，只是冷。他做的每一件事都是計算，包括讓我活到今天——他只是在評估代價。）
+
+[wait time="2.0"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「認識敵人的面目，還不夠。必須認識他的所有手段。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_chancellor_poison"]
+[signal arg="death_context:{'death_message': '你當面揭穿了他，他也讓你看見了真實的自己。然後他用牆壁代替茶，乾淨地讓你消失。「認識敵人的面目，還不夠。必須認識他的所有手段。」', 'intel_reward': ['intel_chancellor_poison'], 'killer': 'chancellor'}"]
+[signal arg="trigger_death"]

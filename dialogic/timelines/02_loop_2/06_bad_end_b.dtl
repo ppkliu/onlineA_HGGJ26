@@ -52,15 +52,13 @@ leave --All--
 
 [wait time="3.0"]
 
-princess: 「真相說得太遲，就和謊言沒有區別。」
+princess: 「她來得太晚，帶得太少，說的話也不夠多。」
 
 [wait time="3.0"]
 
 [sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
 
 # === 獲得情報 ===
-[signal arg="intel:intel_mob_manipulation"]
 [signal arg="intel:intel_starvation_real"]
-[signal arg="intel:intel_bruno_wife_death"]
-[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。「真相說得太遲，就和謊言沒有區別。」', 'intel_reward': ['intel_mob_manipulation', 'intel_starvation_real', 'intel_bruno_wife_death'], 'killer': 'mob'}"]
+[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。「她來得太晚，帶得太少，說的話也不夠多。」', 'intel_reward': ['intel_starvation_real'], 'killer': 'mob'}"]
 [signal arg="trigger_death"]

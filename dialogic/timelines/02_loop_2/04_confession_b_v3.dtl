@@ -1,0 +1,85 @@
+# 第 2 輪迴：坦白身份（B-V3）— Day 30 傍晚（鐵匠鋪）
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+
+join princess left
+
+princess: （三十天了。這一次，我在這裡的每一天都多了一層目的。）
+
+princess: （布魯諾我已經更了解了。但那個外部的人……我花了幾天觀察。mob_npc_c，在某些對話裡說話的方式，像是在重複別人教給他的語言，不是自己想出來的。他不壞——他只是在一個更大的機器裡，有人告訴他什麼，他就說了。）
+
+[wait time="0.8"]
+
+join mob_leader right
+
+princess: 布魯諾，我有話跟你說。
+
+mob_leader (suspicious): 什麼事？
+
+princess (determined): ……我不是家僕。我是艾蓮娜公主。
+
+[wait time="1.5"]
+
+mob_leader: ……
+
+mob_leader (angry): （他站起來。）
+
+mob_leader (grieving): 妳知道我老婆怎麼死的？
+
+princess: 難產。你需要止血草。所有草藥被徵為軍需了。你在稅務司跪了三天。
+
+[wait time="1.8"]
+
+mob_leader: ……
+
+[wait time="1.2"]
+
+mob_leader (shocked): 妳……怎麼知道的？
+
+princess: 我學來的。我沒辦法解釋，但我知道了。而且我還知道另一件事：那不是非得發生的意外。是有人讓它發生的。
+
+[wait time="0.8"]
+
+mob_leader (grieving): 妳是說……莫里昂？
+
+princess (determined): 莫里昂，加上他在外面的人。
+
+[wait time="0.6"]
+
+mob_leader (conflicted): ……外面的人？
+
+princess (determined): 宰相一個人沒有辦法讓整個下城區持續憤怒。他需要在你們裡面有人——把消息帶進來，把仇恨餵給更多人，讓那個火不熄。這個人不一定是壞人，他可能只是被壓迫了，被嚇到了，被給了一個活下去的條件。
+
+mob_leader (conflicted): 妳說……我們裡面有人？
+
+princess (determined): 我覺得是mob_npc_c。但我不確定。他說話的方式……有些地方不是他自己想的。
+
+[wait time="0.8"]
+
+mob_leader: ……
+
+mob_leader (hesitant): 他兒子兩年前被帶走當兵，沒有回來。他之後就……變了。
+
+princess: （他也有傷。那個火，是從他的傷裡燒出來的，然後有人撿起來用。）
+
+princess (sad): 他不是壞人。他只是在一個不給他別的選擇的地方，有人給了他一個選擇。
+
+mob_leader (conflicted): ……那我們能怎麼辦？
+
+princess (determined): 先讓他看到糧食。城堡地下有糧倉，我帶你去。如果他親眼看到希望是真的，他有機會停下來——不是因為我們說服了他，是因為他有了別的東西可以選。
+
+princess (determined): 今天集會，你要讓他先看到。讓他先站在那個事實前面。
+
+[wait time="1.0"]
+
+mob_leader (hesitant): ……妳說你能開那個鎖？
+
+princess (determined): 我知道位置，我知道門在哪。鎖……我會想辦法。
+
+mob_leader (hesitant): ……好。今晚。
+
+leave mob_leader
+leave princess
+
+jump 05_mob_trial_b_v3/

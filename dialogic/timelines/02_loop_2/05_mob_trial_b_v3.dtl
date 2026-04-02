@@ -1,0 +1,83 @@
+# 第 2 輪迴：幾乎成功（B-V3）— 糧倉前（Day 30 深夜）
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
+[music path="res://audio/bgm/tension_stealth.ogg" fade="2.0" volume="0.5"]
+
+join princess left
+join mob_leader right
+
+princess: （他帶了五個人來。mob_npc_c也在——布魯諾說「讓他來，讓他看見」，沒有給我更多解釋。）
+
+princess: （糧倉的門就在前面了。石板路，火把，地下的空氣又涼又悶。）
+
+mob_npc_c (suspicious): 這裡就是……？
+
+mob_leader (default): 妳說的糧倉，在哪？
+
+princess (determined): 就在前面那道門後面。
+
+[wait time="0.8"]
+
+princess: （她伸手去摸鎖。金屬的，沉甸甸的——比王家的鑰匙孔形狀不一樣。）
+
+princess: （……財政署的印記。）
+
+[wait time="0.6"]
+
+princess (shocked): ……這把鎖不是王家的。
+
+mob_leader (conflicted): 什麼？
+
+princess: （我沒有這把鑰匙。我以為進得去，但這個鎖不對——這是財政署的鑰匙，是宰相管的。）
+
+mob_npc_c (suspicious): 說能進去，打不開……
+
+mob_leader (conflicted): 等等，讓她想想辦法——
+
+[wait time="0.8"]
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+princess (shocked): ——聽到了嗎？
+
+mob_leader (shocked): 鎧甲聲。
+
+[wait time="0.6"]
+
+join mob_npc_b right
+
+mob_npc_c (shocked): ……是我。對不起——我先發了消息。我不知道他們動作這麼快……
+
+mob_leader (angry): 你——！
+
+mob_npc_c (broken): 我的兒子……他們說能幫我找我兒子……我不知道他們今晚就來！
+
+[wait time="1.0"]
+
+princess: （他的兒子。兩年前被帶走當兵，沒有回來。他只是想找他的兒子。）
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+mob_leader (determined): 妳先走。
+
+princess (shocked): 布魯諾——
+
+mob_leader (determined): 妳能走，我不行。妳出去了還能做點什麼。我出去了什麼都做不了。走！
+
+princess (shocked): 我不能——
+
+mob_leader (determined): 阿爾還在家裡。有人會看著他。但妳不走，什麼都完了。
+
+[wait time="1.0"]
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+princess: （他把我推向另一條通道的方向。他的手很大，很有力，跟他搬了一輩子鐵的手。）
+
+princess: （我走了。）
+
+[signal arg="cut_to_silence"]
+
+leave --All--
+
+jump 06_bad_end_b3/

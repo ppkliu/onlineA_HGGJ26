@@ -1,5 +1,10 @@
 # 第 1 輪迴：醒來 — 公主寢房（Day 1 早晨）
 
+if {intel_chancellor_betrayal}:
+    if {intel_fake_ledgers}:
+        jump 01_awakening_a_v2/
+    jump 01_awakening_a_v1/
+
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.37"]
 

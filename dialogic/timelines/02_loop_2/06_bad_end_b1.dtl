@@ -1,0 +1,92 @@
+# 第 2 輪迴：Bad End B'— 你給了他們魚
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
+
+join princess left
+
+princess: （三天後，布魯諾沒有一個人來。他身後跟著兩個人——不是他主動帶的，是他們跟著他。他們走在他後面，不在他前面。）
+
+princess: （他沒有說話。他的臉是一個已經知道自己輸了的人的臉。）
+
+[wait time="1.0"]
+
+princess: （身後那兩個人走上來了。）
+
+mob_npc_b (cold): 走吧，公主。外面的人在等。
+
+[wait time="0.8"]
+
+princess: （布魯諾沒有動。他站在原地，眼睛看著別處。他的手握緊了又鬆開，然後沒有再動。）
+
+princess (hollow): ……布魯諾。
+
+mob_leader: ……
+
+princess: （他不回答。不是因為他不想——是因為他沒有辦法了。我們說了那麼多，我給了他們藥草，給了阿爾藥，說了莫里昂的事，說了糧倉的事——但今晚要做決定的不只有他一個人。）
+
+princess: （今晚的決定是很多個人的決定，他擋不住那麼多人。）
+
+[wait time="1.0"]
+
+# 轉場：城門外
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.7"]
+
+leave mob_leader
+
+princess: （城門邊。夜風很冷。門外站著人影，火把照出陌生的臉。）
+
+mob_npc_c: 帶過來。
+
+[wait time="0.6"]
+
+join mob_leader right
+
+mob_leader (hesitant): 等等……你們答應的糧食呢？
+
+mob_npc_c (cold): 打下王城之後再說。
+
+mob_leader (shocked): ……
+
+[wait time="1.0"]
+
+princess: （他回頭看了我一眼。那個眼神裡有阿爾的臉。）
+
+princess: （他來了。他來到城門邊，沒有阻止，但也沒有說「走吧」。他就是來了，站在這裡，讓這件事發生。）
+
+join mob_leader right
+
+mob_leader (grieving): （他的眼神落在我身上，然後移開了。阿爾抓著他的手。）
+
+[signal arg="cut_to_silence"]
+
+[wait time="1.0"]
+
+leave --All--
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.5"]
+
+princess: （我帶了魚，但我沒有問他們為什麼不再打魚了。）
+
+princess: （他告訴我了他老婆的事，我說了對不起，我說了莫里昂的名字——但那個傷在他身體裡已經住了很久，久到它成了他做所有事情的根。我碰到了它，但沒有進去過。）
+
+[wait time="2.0"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「你給了他們魚，但沒有問清楚他們為什麼不再打魚了。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_bruno_wife_death"]
+[signal arg="death_context:{'death_message': '你帶了物資，說了真相，但沒有觸及那道最深的傷。布魯諾來了，但他擋不住。「你給了他們魚，但沒有問清楚他們為什麼不再打魚了。」', 'intel_reward': ['intel_bruno_wife_death'], 'killer': 'mob'}"]
+[signal arg="trigger_death"]
