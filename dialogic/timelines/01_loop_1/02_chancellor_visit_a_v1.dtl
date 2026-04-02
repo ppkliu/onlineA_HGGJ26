@@ -1,80 +1,300 @@
-# 第 1 輪迴：宰相的來訪（A-V1）— 花園露台（Day 1 下午）
+# 情境 A — V1：賽拉斯、軟禁、與最後的道別（Day 1 → 城破之夜）
 
-[background arg="res://art/backgrounds/window.png" fade="0.9"]
-[music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0" volume="0.56"]
+# ================================================================
+# 場景一：質問賽拉斯（Day 1 上午）
+# ================================================================
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.9"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.45"]
 
 join princess left
-join chancellor right
 
-chancellor (concerned): 哎呀，殿下！莉娜跟臣說您今早臉色不太好，嚇了臣一跳。怎麼了？是不是吃壞肚子啦？要不要臣叫御醫來看看？
-
-princess: （他的關心聲調和上次分毫不差。他說這句話的時候，是不是根本不需要思考？像是一個習慣性的動作，手握慣了就不用看著做。）
-
-princess: （上次這句話讓我感到安慰。這次我記住它的位置——這是他讓我放鬆的第一個動作。）
-
-princess (shocked): 不是……不是身體的問題。宰相大人……我做了一個很可怕的夢。
-
-chancellor (concerned): 夢呀？殿下不要怕，夢都是假的嘛。不如臣跟您說說那顆寶石的故事——
-
-princess (shocked): 我夢見城破了。父王戰死在城門前。然後賽拉斯拿劍……殺了我。
-
-[wait time="1.2"]
-
-chancellor (concerned): ……
-
-princess: （他的笑容消失了。上次我以為這是真正的擔憂。這次——我看見的是他在校準。他在調整接下來要說什麼。）
-
-chancellor (concerned): 殿下……這只是噩夢。您太累了，臣讓莉娜幫您泡杯安神茶——
-
-princess (shocked): 可是那個夢好真好真……我到現在還在發抖。宰相大人，你是不是知道什麼？你剛才的表情好奇怪……
+princess: （快中午了，賽拉斯才出現在走廊。他在巡視，步伐很穩，甲冑的聲音每一步都很規律。）
 
 [wait time="0.8"]
 
-chancellor: ……
+join cyras right
 
-chancellor (serious): 殿下……這些話，本不該由臣來說的。但既然您已經「看見」了什麼……臣就不能再裝作什麼都不知道了呢。
+cyras (default): ……殿下。
 
-princess: （「不能再裝作不知道了」——他用了這個框架。好像他一直在為我隱忍，終於被我的信任逼得不得不說真話。上次這句話讓我覺得他在犧牲什麼。這次我聽見的是它的結構。）
+[wait time="0.3"]
 
-princess: （他是個很好的演員。或者說——他根本不把這叫做演戲。他只是在管理資訊。）
+princess (determined): 賽拉斯。父王有沒有給過你一道密令——關於在不得已的時候，殺了我。
 
-princess (shocked): 您……知道些什麼？
+[wait time="1.2"]
 
-chancellor (serious): 邊境的「小毛賊」……其實已經有十萬人了。戰爭，真的快來了喔。
+cyras: ——
 
-chancellor (sad): 但真正讓臣心痛的，不是戰爭……是陛下為了戰爭，做的一些事呢。
+cyras (default): 殿下說的是……什麼？我不太明白。
 
-princess (shocked): 父王……做了什麼？
+princess: （他的表情在那個瞬間有什麼東西，像是什麼被人猝不及防地碰了一下。然後立刻就回去了，重新變成那張正常的、平靜的臉。）
 
-chancellor (sad): 殿下今天先好好休息。明天，臣帶您親眼看證據。有些真相……需要殿下有足夠的勇氣才能面對。臣不想嚇著殿下。
+princess (determined): 你明白的。
 
-[wait time="0.7"]
+cyras (default): 我怎麼可能有什麼事情瞞著殿下。
 
-leave chancellor
+princess: （聲音很平，但語速比平時快了一點點。他說完這句話之後，說有巡邏任務要繼續，抱拳，轉身，快步離開了。）
 
-princess: （他走了。那個句式——「需要勇氣」——上次讓我覺得自己被看見、被尊重了。他沒說「殿下還小」，他說「需要勇氣」，把我放在一個可以成長的位置上。）
+princess: （我站在走廊裡，看著他的背影消失在轉角。）
 
-princess: （很聰明。他給我的不是命令，是一個讓我自己走過去的斜面。）
+leave cyras
+leave princess
 
-princess (cold): （明天。帳簿。）
+# ================================================================
+# 場景二：詢問女僕（Day 1 下午）
+# ================================================================
 
-princess: （我要記住第七頁左欄的數字。財政署每季結算的日期我大概知道——父王生辰前一個月和年末。如果帳簿上的日期不對，那就是破綻。我要記住每一個數字，即使他不讓我拿走。）
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+
+join princess left
+join maid right
+
+princess: 莉娜，賽拉斯剛才……他在撒謊嗎？
+
+maid (forced_smile): 怎麼會呢？騎士長一向耿直，殿下是想太多了。而且他保護殿下那麼多年，怎麼可能——
+
+[wait time="0.8"]
+
+princess: （我沒有回答。只是靜靜地看著她。）
+
+maid: ……
+
+princess: （莉娜繼續替我整理書桌，話題轉到了下午要吃什麼點心。她說話的速度比平時稍微快一點點，像是在填滿什麼。）
+
+maid (forced_smile): 殿下下午想喝什麼茶？莉娜去準備——哎，殿下你怎麼……
 
 [wait time="1.0"]
 
-# === 回到寢房・Day 1 夜晚 ===
+princess: （她終於感覺到了。我一直在看她，看她說話、看她微笑、看她手上的動作。）
 
-[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
-[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.0" volume="0.4"]
+maid (forced_smile): ……殿下，怎麼了嗎？
 
-princess: （翻來覆去睡不著。但這次不是因為害怕——是因為在準備。）
+[wait time="1.2"]
 
-princess: （財政帳簿通常用哪種格式記帳？我小時候偷看過父王書房的幾本，印象中右邊是支出，左邊是收入。如果有人要偽造「三倍稅金只花了三成在軍備」……需要動哪裡？）
+princess: （我低下頭。）
 
-princess (determined): （明天，我要像第一次看一樣地看，但記住的要比第一次多得多。）
+princess: （我看見了什麼。那個笑容有一點用力，嘴角的弧度稍微繃著。她說「騎士長一向耿直」的時候，眼睛往斜下方移了一下。）
 
-[wait time="1.5"]
+princess: （我以前怎麼從來沒注意到這些？）
+
+[signal arg="skill_unlocked:observe_expression"]
+
+[wait time="0.5"]
+
+leave maid
+
+# ================================================================
+# 三選項探索完、出門散心
+# ================================================================
+
+[wait time="0.8"]
+
+princess: （三條路都沒有答案。宰相不能找，父王說不清楚，賽拉斯什麼都不肯說。）
+
+- 出門走走
+	leave princess
+	[wait time="0.3"]
+
+# ================================================================
+# 場景三：遇見宰相（Day 1 傍晚・庭院）
+# ================================================================
+
+[background arg="res://art/backgrounds/window.png" fade="0.9"]
+[music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0" volume="0.4"]
+
+join princess left
+
+princess: （庭院裡沒有什麼風，陽光還算溫暖。我走著，沒有目的地，只是走。）
+
+[wait time="0.8"]
+
+join chancellor right
+
+chancellor (concerned): 哎呀，殿下！今天一個人出來走動啊？怎麼沒看到莉娜跟著——
+
+[wait time="0.3"]
+
+chancellor (concerned): ……咦，殿下今天的項鍊？
+
+princess: 沒戴。不太喜歡，就沒帶。
+
+[wait time="0.5"]
+
+chancellor (concerned): 哦？那也沒關係，殿下不喜歡了臣換一條——
+
+princess: 沒有不喜歡，只是今天心情不好。
+
+[wait time="0.6"]
+
+princess: （他看著我，繼續維持著那個溫和的表情。但我感覺到他在看我哪裡——不是臉，是整個人的樣子。他在觀察什麼。）
+
+chancellor (concerned): 殿下今天氣色不太好，要不要讓御醫看看？
+
+princess: 沒事，謝謝宰相大人關心。
+
+[wait time="0.5"]
+
+chancellor (concerned): ……那好，殿下好好休息。宮裡最近事情多，殿下盡量不要到處走動。
+
+[wait time="0.3"]
+
+leave chancellor
+
+princess: （他說「盡量不要到處走動」。我看著他的背影，說不清楚那句話是叮囑還是警告。）
+
+[wait time="0.5"]
 
 leave princess
 
-jump 03_evidence_a_v1/
+# ================================================================
+# 場景四：軟禁開始（Day 2 起）
+# ================================================================
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="0.8"]
+
+princess: （次日，莉娜來告別了。）
+- ——翌日——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+
+join princess left
+join maid right
+
+maid (sad): 殿下……家裡突然有急事，莉娜可能要先回去一段時間。對不起，這麼突然……
+
+princess (shocked): 什麼事？嚴不嚴重？
+
+maid (forced_smile): 沒事沒事！家裡老人而已，莉娜處理一下就好～殿下不用擔心。
+
+[wait time="0.8"]
+
+princess: （她說話的時候沒有看我的眼睛。那個慣性的微笑也比平時快了幾拍——她在練習這個笑很多次了。）
+
+princess: （「家裡突然有急事」。）
+
+princess: （為什麼我覺得不只是這樣。）
+
+[wait time="0.5"]
+
+maid (sad): 那……莉娜先走了，殿下保重。
+
+[sound path="res://audio/sfx/door_open_soft.ogg" bus="SFX"]
+
+leave maid
+
+[wait time="1.5"]
+
+princess: （幾天後，我問起賽拉斯在哪裡。新來的士兵說「騎士長調任了」，不知道調去了哪裡，也不知道什麼時候回來。）
+
+princess (hollow): （宮裡的臉孔換了一批。新的侍從不認識我，新的士兵不和我說話。我的活動範圍不知不覺變小了——某天我才發現，我已經很多天沒有走出城堡的這一小塊範圍了。）
+
+princess: （有人在管控我能去哪裡、能看見誰。我知道，但我沒有辦法。）
+
+leave princess
+
+# ================================================================
+# 場景五：城破提前（夜・寢房）
+# ================================================================
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.8"]
+[wait time="0.8"]
+
+princess: （那一天來了，比我預期的早了整整兩個月。）
+- ——某夜——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.0" volume="0.6"]
+
+join princess left
+
+princess: （我在寢房裡聽見聲音——不是遠處模糊的號角，是很近、很清楚的金屬碰撞聲。不止城外。是宮裡。）
+
+[sound path="res://audio/sfx/sword_clash_distant.ogg" bus="SFX"]
+[wait time="0.8"]
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+[signal arg="camera_shake" intensity="light"]
+
+princess (shocked): （廝殺聲。從走廊那邊傳來。我想出去，但門口的士兵攔住了我——他的眼神不像護衛，更像監視。）
+
+princess (hollow): （我在房間裡等著。等了很長時間。外面的聲音越來越近，又慢慢遠去，又再靠近。）
+
+[wait time="2.0"]
+
+# ================================================================
+# 場景六：賽拉斯回來了（城破之夜・寢房）
+# ================================================================
+
+[sound path="res://audio/sfx/door_open_heavy.ogg" bus="SFX"]
+
+[wait time="0.5"]
+
+join cyras right
+
+princess: （門開了。）
+
+[wait time="0.8"]
+
+princess: （賽拉斯走進來。或者說——他撐著牆走進來。甲冑破損，左肩到右腰有一道深可見骨的傷口，包紮是粗略的，血仍在滲。他站在門口，站著，我不知道他靠什麼撐著。）
+
+[wait time="1.0"]
+
+cyras (broken): 對不起。
+
+[wait time="1.2"]
+
+cyras (broken): 我們失敗了。
+
+[wait time="0.8"]
+
+cyras (broken): 我知道聰明的殿下似乎察覺了什麼。但……對不起。我欺騙了你。
+
+[wait time="1.0"]
+
+princess: （我沒有後退。我走上前，把手放在他的肩膀上，感覺到甲冑上滲出來的溫度。）
+
+princess: 謝謝你。
+
+[wait time="0.6"]
+
+princess: 在我死之前……可以告訴我，發生什麼事了嗎？
+
+[wait time="1.2"]
+
+cyras: ……
+
+princess: （他的手動了一下，像是要推開我，但停了。）
+
+cyras (broken): 是宰相。我們都被他騙了。
+
+[wait time="0.8"]
+
+cyras (broken): 他可能不是主謀——是幫兇。我們不知道什麼時候開始被滲透的，到哪個程度……我也不清楚。只有王才會知道更多。
+
+[wait time="0.8"]
+
+princess: （我後退半步，讓我們能夠對視。）
+
+princess: 我知道了。謝謝你，賽拉斯。
+
+[wait time="0.5"]
+
+princess: 你是一位溫柔又勇敢的騎士。
+
+[wait time="1.5"]
+
+princess: （我閉上眼睛，轉過身，背對著他，站在原地。）
+
+[wait time="2.0"]
+
+cyras (broken): ……對不起。
+
+[signal arg="cut_to_silence"]
+
+leave cyras
+leave princess
+
+jump 07_bad_end_a1/

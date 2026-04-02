@@ -1,40 +1,52 @@
-# 第 1 輪迴：撕下偽裝（Day 5 下午）
+# 情境 A — V0：歸還（宰相書房・入夜）
 
-[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
-[music path="res://audio/bgm/tension_rising.ogg" fade="2.0" volume="0.31"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0" volume="0.35"]
 
 join princess left
 join chancellor right
 
-princess: 宰相大人……城防令印，我拿到了。
+[wait time="0.5"]
 
-[wait time="0.6"]
+princess: 宰相大人……那份密令，我拿到了。
+
+[wait time="0.8"]
 
 chancellor (default): ……殿下。您真的做到了。
 
-chancellor (default): （他接過令印，指尖緩緩摩挲紋章。然後把它收進懷裡，動作很輕，像收一封等了很久的信。）
+princess: （他接過文件，指尖輕輕撫過封蠟的紋章，然後收進懷裡。動作很輕，像是收一封等了很久的信——從容得讓人說不出哪裡不對勁，但就是說不出哪裡對勁。）
 
-chancellor (concerned): 殿下辛苦了。昨晚一定嚇壞了吧？來，坐下來。臣特地準備了殿下最喜歡的花茶——蜂蜜玫瑰的，暖暖身子。
+[wait time="0.7"]
 
-princess: （……他好溫柔。就像以前陪我下棋時一樣。拿到令印之後，他的第一個念頭居然是心疼我。）
+chancellor (concerned): 殿下今天受苦了。書房裡有沒有遇到什麼人？
+
+princess (shocked): 沒有，一切很順利。
+
+chancellor (concerned): 那就好。來，坐下。臣特地備了花茶——蜂蜜玫瑰的，暖暖身子。殿下今天緊繃了一整天，好好喝一杯。
+
+[wait time="0.6"]
+
+princess: （花茶的香氣從茶杯裡升起來，蜂蜜和玫瑰，還有一點說不清楚的苦。）
 
 princess: 謝謝宰相大人。
 
 [wait time="0.8"]
 
-princess: （花茶好香。跟莉娜平時泡的不太一樣，多了一點苦味……大概是不同的花吧。）
+princess: （我喝了一口。）
+
+princess: （味道比我平時喝的花茶多了一點苦，大概是不同的配方吧。）
 
 chancellor (concerned): 好喝嗎？
 
-princess: 嗯。有一點點苦，但是很香。
+princess: 嗯……有一點點苦，但是很香。
 
-chancellor (concerned): 苦的是安神草，幫助殿下放鬆的。殿下最近壓力太大了，好好休息一下。
+chancellor (concerned): 苦的是安神草，幫助放鬆。殿下最近壓力太大了，好好休息一下。
 
 [wait time="1.2"]
 
-princess: （……咦。手指尖好麻。）
+princess: （……咦。手指尖怎麼麻了？）
 
-princess: （腿……怎麼突然沒力氣了？）
+princess: （腿……突然沒力氣了。茶杯感覺比剛才重了好幾倍。）
 
 princess (shocked): 宰相大人……我、我好像……
 
@@ -42,43 +54,39 @@ chancellor: ……
 
 [wait time="0.8"]
 
-princess: （茶杯從手裡滑落，摔碎在石地上。我想站起來，但膝蓋像棉花一樣軟下去。花園的光線開始模糊。）
+princess: （茶杯從手裡滑落，摔碎在地板上。我想站起來，膝蓋卻軟成棉花。書房的燭光開始模糊，像隔著一層水在看。）
 
-chancellor (cold): 殿下不用害怕。不會痛的。只是會慢慢睡著而已。
+chancellor (cold): 殿下不用怕。不會痛的。只是會慢慢睡著而已。
 
 princess (shocked): 你……在茶裡……？
 
 [wait time="0.6"]
 
-chancellor (cold): 殿下，臣教您人生最後一課。
+chancellor (cold): ……
 
-chancellor (cold): 您的父王從來不是暴君。那些帳簿，是臣親手偽造的。邊防密報，是臣改的。徵兵、加稅……都是為了備戰。陛下從未享樂。
+chancellor (cold): 臣也是身不由己。
 
-princess (shocked): ……！！
+[wait time="1.0"]
 
-chancellor (cold): 他唯一的錯，就是把您養成了一隻什麼都不知道的金絲雀。而臣唯一做的事——就是把籠門打開，看看小鳥會往哪裡飛。
+princess: （他的聲音很輕，輕到我差點沒聽清楚。）
 
-chancellor (cold): 結果呢？您飛向了臣。乖乖把城防令印叼過來了。
-
-princess (shocked): 你從一開始……就在……
-
-chancellor (cold): 騙？不。臣從來沒說過一句謊。「殿下還小」「殿下不需要擔心」「臣幫殿下處理」——每一個人都是這麼對您的吧？臣只不過換了一句：「臣告訴殿下真相。」您就迫不及待地把心掏出來了。
-
-[sound path="res://audio/sfx/gate_open_heavy_three.ogg" volume="1.0"]
+chancellor (cold): 殿下從小就很好。臣看著您長大……說句實話，在臣心裡，您一直是臣當女兒對待的孩子。
 
 [wait time="0.8"]
 
-princess (shocked): 那下城區的……那些人……那個母親……
+chancellor (cold): 所以殿下不要怪臣。
 
-chancellor (cold): 苦難是真的。臣只是帶殿下去看了一眼而已。是殿下自己決定要當英雄的。
+[wait time="1.0"]
 
-chancellor (cold): 別太自責。殿下還小嘛，不懂這些很正常。
+princess: （……）
 
-chancellor (cold): 來，好好睡吧。不要怕。夢都是反的喔。
+princess (hollow): （他的臉越來越模糊。「身不由己」……「不要怪我」……他在向我道歉嗎？還是在向自己解釋？）
 
-[wait time="0.6"]
+princess (hollow): （他說的那些話，帳本、那個男人、苦難……是真的嗎？還是——）
 
-princess: （他在……笑。用跟以前一模一樣的、溫柔的語氣。花園的光越來越刺眼，他的臉變成一團模糊的影子。）
+princess (hollow): （他跟這件事有關嗎？還是他也是被人逼的……？）
+
+princess (hollow): （我不知道。我現在什麼都想不清楚了。）
 
 [signal arg="cut_to_silence"]
 

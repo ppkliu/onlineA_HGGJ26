@@ -1,4 +1,4 @@
-# 第 1 輪迴：醒來 — 公主寢房（Day 1 早晨）
+# 情境 A — V0：醒來（公主寢房・清晨）
 
 if {intel_chancellor_betrayal}:
 	if {intel_fake_ledgers}:
@@ -8,28 +8,19 @@ if {intel_chancellor_betrayal}:
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.37"]
 
-[wait time="1.8"]
+[wait time="2.0"]
 
 join princess left
 
 princess (shocked): ——！
 
+[wait time="1.0"]
+
+princess: （心臟在沒有預警的情況下跳到喉嚨。胸口還殘留著那道寒意——劍的形狀，金屬貼著皮膚的溫度。我記得那個瞬間，記得非常清楚。但手指上的玫瑰色指彩還在，床單的刺繡壓著臉頰，窗外的鳥叫聲和每天早晨一模一樣。）
+
 [wait time="0.6"]
 
-princess: （心臟像要炸開。我記得那把劍、賽拉斯的眼淚、胸口冰冷的觸感……可我還活著。手指上還有玫瑰色的指彩。）
-
-princess: （賽拉斯為什麼要殺我……？父王在哪裡……？）
-
-[wait time="0.8"]
-
-princess: （那個一直對我最溫柔的宰相……他應該會幫我的。）
-
-if {intel_king_anger}:
-	princess: （……不止這些。我還記得另一次。我跑去找父王，把宰相給我看的帳簿告訴他。他臉色慘白，對著空氣咆哮——像在跟一個看不見的敵人說話。然後他把我藏起來了。城門被攻破的時候，我被困在房間裡，什麼都做不了。）
-	princess: （直接去找父王沒用。那次我什麼都沒做對。至少宰相願意正面告訴我外面發生了什麼——他是那些人裡，唯一肯對我說真話的人。）
-	princess: （還是那個一直對我最溫柔的人。這次，我要跟著他走，把事情做完。）
-
-princess (shocked): 這……真的是夢嗎……？
+princess (shocked): （那不是夢。夢不會讓人記得那麼清楚——那把劍的重量，那個瞬間的冷，賽拉斯的眼睛。但我現在坐著，手在抖，一切都太正常了，正常得讓我不知道該害怕什麼。）
 
 [wait time="1.2"]
 
@@ -37,63 +28,68 @@ join maid right
 
 maid (default): 殿下～早安呀！今天天氣超好的喔～對了對了，宰相大人昨天送來了一顆好～漂亮的寶石，說是南國進貢的呢！殿下等等一定要看看！
 
-[wait time="1.0"]
+[wait time="0.5"]
 
-princess (shocked): ……莉娜？
+princess: （……莉娜的眼睛，有一點點紅嗎？還是早晨的光讓我看錯了。說不清楚。）
 
 maid (default): 嗯？殿下怎麼啦？臉色好差喔……是不是又做惡夢啦？來，莉娜幫您把被子掖好，要不要再躺一下？
 
-princess (shocked): 不是……你剛才說……南國的寶石？
+princess (shocked): 不是……莉娜，今天是幾月幾號？
 
-maid (default): 對呀！殿下您問這個呀～那顆寶石可大了呢！宰相大人特地挑了他說最襯殿下膚色的那一顆喔！殿下一定會喜歡的～
+maid (default): 今天呀？三月十二日，殿下怎麼連日子都忘啦～哈哈，夢都是反的！殿下不用想那麼多～
 
-[wait time="1.3"]
+[wait time="1.2"]
 
-princess: （南國的寶石……我記得。那天我開心得不得了，捧著那顆藍寶石轉了三圈，還硬要莉娜陪我試戴到晚餐。那是六個月前的事。）
+princess: （三月十二日。三個月後是城破的那個夜晚。我還有三個月。）
 
-princess: （可是現在莉娜說的每一個字、每一個語氣……都跟我記憶裡一模一樣。就連她說「最襯您膚色」的時候歪頭的角度都沒變。）
+princess: （但我不知道該做什麼。我什麼都不知道——父王、賽拉斯、宰相、城牆外的戰事……宮裡的大人從來不告訴我任何事。我在城堡裡長大，除了這座宮殿，我哪裡都沒去過。我不懂政治，不懂軍事，什麼都不懂。）
 
-princess: （如果這不是夢……那我真的回到了那一天？）
-
-princess (shocked): 莉娜，今天是什麼日子？
-
-maid (default): 今天呀？星期三喔！殿下怎麼連日子都忘啦～哈哈，一定是做了什麼奇怪的夢吧？沒事沒事，夢都是反的！殿下不用想那麼多～
-
-[wait time="1.5"]
-
-princess: （星期三……跟夢裡完全一樣。）
-
-princess: （等等。莉娜的眼睛……好像有點紅腫？以前的我一定會直接相信她隨便找的藉口。但現在……經歷過那些事之後，我好像突然看得見以前看不見的東西了。）
-
-princess: 莉娜……你眼睛怎麼紅紅的？
-
-maid (forced_smile): 欸？才沒有呢！就是昨晚小說太好看了嘛，看到太晚而已～殿下不用擔心莉娜啦，莉娜可精神了！來來來，我們來想想今天穿什麼好不好？
-
-princess: （……她在說謊。那個笑容好用力，嘴角在抖。以前我怎麼從來沒注意到？是因為那時候的我，根本不知道什麼叫「被騙」。）
-
-[signal arg="intel:intel_maid_tears"]
+maid (default): 殿下，宰相大人的寶石要不要戴上呀？他特地交代了，說今天一定要配著那件藍色禮服——最襯膚色了！
 
 [wait time="0.5"]
 
-princess: （莉娜說要幫我想今天穿什麼。我側過頭，目光落在早餐桌上——）
+princess: （宰相……他從我小時候就對我好，送過很多次東西，每次都記得我喜歡什麼顏色。那種人……應該是能信任的吧？）
 
-princess: （鹹魚乾、硬餅乾、風乾肉。平時是鮮肉、時蔬、剛烤出爐的白麵包。什麼時候換的？我居然完全沒注意過。）
+princess: 嗯……幫我戴上吧。
 
-princess: （……耐放的糧食。史書裡寫過：大戰前夕，宮廷會悄悄調整伙食，為長期戒備做準備。父王說「邊境最近有點不太平」——那是什麼時候說的事了？）
+maid (default): 好耶～殿下最漂亮了！來，坐好，莉娜幫您梳頭髮！
 
-[signal arg="intel:intel_food_change"]
+[wait time="1.5"]
+
+princess: （莉娜替我把項鍊扣好，又替我整理了頭髮。她的動作很輕，說話聲音軟軟的，和平時完全一樣。）
+
+princess: （我坐在梳妝台前，看著鏡子裡藍寶石項鍊的光澤，感覺很遠。）
+
+# ================================================================
+# 三個選項 — 玩家需全部探索後，「決定去找宰相」才會出現
+# [MECHANIC: track option_explored:a_v0_cyras/king/chancellor]
+# ================================================================
 
 [wait time="0.8"]
 
-princess: （宰相大人……他是唯一願意正面告訴我答案的人。如果外面的局勢真的那麼危險……他一定會幫我的。）
+princess: （現在我應該怎麼辦？）
 
-princess: 莉娜，幫我更衣。我要立刻去見宰相大人。
+- 找賽拉斯
+	[wait time="0.5"]
+	princess: （賽拉斯……他拿著劍站在我面前。那個畫面一浮上來，我的手就不自覺地握緊了被單。）
+	princess: （不管那是不是夢，不管他的理由是什麼——我現在還沒辦法看見他的臉。）
+	[signal arg="option_explored:a_v0_cyras"]
 
-maid (default): 咦？殿下今天要見宰相大人呀？那可得好好打扮一下呢！莉娜幫您挑那件粉色的禮服好不好？配上寶石一定超級漂亮的！
+- 問父王
+	[wait time="0.5"]
+	princess: （父王……就算我去了，我要說什麼？說我做了一個很真實的夢？他會相信嗎？）
+	princess: （宮裡的大臣說話都在遮遮掩掩，連莉娜問都問不出來。我說不清楚我知道什麼，也說不清楚我害怕什麼。現在還沒想清楚。）
+	[signal arg="option_explored:a_v0_king"]
 
-[signal arg="day_counter:180"]
+- 找宰相
+	[wait time="0.5"]
+	princess: （宰相懂很多事，也一直對我很好。送過那麼多東西，還記得我喜歡什麼顏色。如果有誰能告訴我現在該怎麼辦，應該是他。）
+	[signal arg="option_explored:a_v0_chancellor"]
 
-leave princess
-leave maid
-
-jump 02_chancellor_visit/
+- 【決定去找宰相】 | [if {option_explored:a_v0_cyras} and {option_explored:a_v0_king} and {option_explored:a_v0_chancellor}]
+	[wait time="0.6"]
+	princess: （賽拉斯讓我害怕，父王那裡說不清楚……但宰相，他一直是那個讓我覺得安心的大人。就去找他吧。他一定會幫我的。）
+	leave maid
+	leave princess
+	[signal arg="day_counter:180"]
+	jump 02_chancellor_visit/

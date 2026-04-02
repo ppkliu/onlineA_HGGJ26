@@ -1,28 +1,26 @@
-# 第 1 輪迴：Bad End A'— 知道敵人的臉，還不夠
+# 情境 A — V1：Bad End A' — 他告訴了我，在最後
 
 [background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
 [wait time="2.0"]
 
-princess (sad): （第七頁，左欄，第三行。那個刮除再補寫的數字。我記得它。）
+princess (sad): （是宰相。）
 
-princess (hollow): （我記得它，但它現在有什麼用？我把它帶進了黑暗裡，帶不出去。）
+princess (hollow): （賽拉斯說這三個字的時候，聲音比之前所有的對話都更輕、更確定。他在臨死之前終於不需要再迴避了——或者說，他已經沒有什麼可以保護的了，只剩下這個真相可以還給我。）
 
 [wait time="1.5"]
 
-princess: （我知道他是敵人。我知道帳簿是假的，知道那個刮痕是線索。但知道，和能夠證明，差了一整個世界——而從知道到證明這段距離，就是他殺我的那段距離。）
+princess: （他說的那些帳本，那個被帶進書房的男人，那些指控父王的故事——都是宰相製造的。苦難是真的，但他選擇了它、展示了它、然後指了一個方向讓我走進去。）
 
-princess (hollow): （那杯茶……我不知道它具體是什麼。南方的藥草？還是進口的毒物？他說「安神草」，但安神草不會讓人的手指麻。我喝的時候已經認出了那個苦味，但我以為只要不表現出來就能撐過去……）
+princess (hollow): （我一直以為我這次比上次聰明——上次我什麼都不知道，這次至少我不再信任他了。但不信任他，和知道他在做什麼，還差了很遠。）
 
-princess: （我高估了自己能撐多久。）
-
-[wait time="2.5"]
+[wait time="2.0"]
 
 [signal arg="death_fade"]
 
 [wait time="3.0"]
 
-「知道敵人是誰，但還不知道他的武器在哪裡。」
+「有時候，知道了一個人不可信，並不足以讓你走出他佈好的局。」
 
 [wait time="3.0"]
 
@@ -32,5 +30,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_fake_ledgers"]
-[signal arg="death_context:{'death_message': '你知道了他是敵人，你看見了帳簿的破綻，但你還不知道那杯茶是武器。你把所有記憶帶進了黑暗。「知道敵人是誰，但還不知道他的武器在哪裡。」', 'intel_reward': ['intel_fake_ledgers'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你在最後一刻知道了：是宰相，他們都被他騙了。帳本是假的，苦難是真的，但「是誰的錯」這個答案是宰相幫你選好的。賽拉斯用盡了力氣告訴你這些，然後執行了密令。', 'intel_reward': ['intel_fake_ledgers'], 'killer': 'cyras'}"]
 [signal arg="trigger_death"]
