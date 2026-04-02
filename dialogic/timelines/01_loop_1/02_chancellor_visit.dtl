@@ -1,74 +1,186 @@
-# 第 1 輪迴：宰相的來訪 — 花園露台（Day 1 下午）
+# 情境 A — V0：宰相書房（Day 1 上午 → Day 1 下午）
 
-[background arg="res://art/backgrounds/window.png" fade="0.9"]
-[music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0" volume="0.56"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.9"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.45"]
 
 join princess left
-join chancellor right
 
-chancellor (concerned): 哎呀，殿下！莉娜跟臣說您今早臉色不太好，嚇了臣一跳。怎麼了？是不是吃壞肚子啦？要不要臣叫御醫來看看？
-
-princess: （宰相莫里昂。從小到大，他是除了父王和莉娜之外，對我最溫柔的人。每次送我寶石、陪我下棋，他總是笑瞇瞇的。這樣的人……應該可以信任吧？）
-
-princess: 不是身體的問題。宰相大人……我做了一個很可怕的夢。
-
-chancellor (concerned): 夢呀？殿下不要怕，夢都是假的嘛。不如臣跟您說說那顆寶石的故事——
-
-princess: 我夢見城破了。父王戰死在城門前。然後賽拉斯拿劍……殺了我。
-
-[wait time="1.2"]
-
-chancellor (concerned): ……
-
-princess: （他的笑容不見了。他好像……嚇到了？）
-
-chancellor (concerned): 殿下……這只是噩夢。您太累了，臣讓莉娜幫您泡杯安神茶——
-
-princess: 可是那個夢好真好真……我到現在還在發抖。宰相大人，你是不是知道什麼？你剛才的表情好奇怪……
+princess: （宰相的書房在城堡的西翼，離寢宮有一段距離。走廊比平時更安靜，我的腳步聲聽起來格外大聲。）
 
 [wait time="0.8"]
 
-chancellor: ……
+# === 宰相書房 ===
 
-chancellor (serious): 殿下……這些話，本不該由臣來說的。但既然您已經「看見」了什麼……臣就不能再裝作什麼都不知道了呢。
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
 
-princess: （……他願意告訴我。從小到大，所有人都把真相藏起來。只有他，在我問了之後，真的願意回答我。）
+join chancellor right
 
-princess: （也許……宰相大人跟其他人不一樣。）
+chancellor (concerned): 哎呀，殿下！這麼早就過來了，是有什麼事嗎？讓臣猜猜——是不是昨晚睡得不太好呀？殿下的臉色……
 
-princess (shocked): 您……知道些什麼？
+princess (shocked): 宰相大人。我有事想問您。
 
-chancellor (serious): 邊境的「小毛賊」……其實已經有十萬人了。戰爭，真的快來了喔。
+[wait time="0.5"]
 
-chancellor (sad): 但真正讓臣心痛的，不是戰爭……是陛下為了戰爭，做的一些事呢。
+chancellor (concerned): 哦？殿下請坐，臣馬上讓人倒茶——
 
-princess (shocked): 父王……做了什麼？
-
-chancellor (sad): 殿下今天先好好休息。明天，臣帶您親眼看證據。有些真相……需要殿下有足夠的勇氣才能面對。臣不想嚇著殿下。
-
-[wait time="0.7"]
-
-leave chancellor
-
-princess: （……勇氣。我有勇氣嗎？）
-
-princess: （我連城堡外面長什麼樣子都不知道。但如果那個夢是真的……我不能再什麼都不做了。）
+princess (shocked): 宰相大人，外面現在到底是什麼情況？邊境、戰事……您知道多少？
 
 [wait time="1.0"]
 
-# === 回到寢房・Day 1 夜晚 ===
+chancellor: ……
 
-[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
-[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.0" volume="0.4"]
+princess: （他沉默了一下。沒有立刻說「哎呀殿下不用擔心」，也沒有立刻把話題轉開。他先停了一下，像是在衡量什麼。）
 
-princess: （翻來覆去睡不著。一閉眼就看到那把劍，還有賽拉斯沾血的臉。）
+chancellor (serious): 殿下……為什麼突然問起這個？
 
-princess: （明天……宰相大人要給我看什麼？）
+princess (shocked): 我做了一個很可怕的夢。城破了，賽拉斯……拿著劍。我知道聽起來很荒唐，但那個夢太真了。宰相大人，您是不是知道什麼？
 
-princess: （不管是什麼，我都要看。）
+[wait time="1.2"]
+
+chancellor (serious): ……
+
+chancellor (concerned): 殿下，這些話，本不該由臣來說的。但既然您問了……臣不能裝作什麼都不知道。
+
+princess: （他願意回答我。從小到大，每個人都替我決定什麼該知道、什麼不該知道。只有他，在我問了之後，真的願意開口。）
+
+[wait time="0.7"]
+
+# ================================================================
+# 節拍一：帳本
+# ================================================================
+
+chancellor (serious): 殿下，您看過財政帳目嗎？
+
+princess (shocked): 沒有……我從來沒——
+
+chancellor (serious): 這是過去兩年的軍需帳簿。
+
+[wait time="0.5"]
+
+princess: （他從書架取出一本厚實的冊子，翻到標記好的那頁，推到我面前。）
+
+chancellor (serious): 您看這裡。以「戰備」為名徵收的稅金——這個數字。再看這裡，實際撥入軍備的——這個數字。相差了幾倍，殿下算得出來嗎？
+
+princess: （帳目上的字密密麻麻，我從來沒學過怎麼看財務報表。但宰相一一指出那些圈起來的數字，差距大得連我這個從沒接觸過帳本的人都能感覺到。）
+
+princess (sad): 那剩下的……去了哪裡？
+
+chancellor (sad): 臣不知道。臣在朝中問過，沒有人敢答。只知道兩位反對加稅的大臣，上個月以「通敵」的罪名入了獄。
+
+princess (shocked): ……！
+
+[wait time="0.8"]
+
+# ================================================================
+# 節拍二：人證
+# ================================================================
+
+chancellor: 殿下，臣還有一個人想請您見一見。
+
+[wait time="0.5"]
+
+chancellor (serious): 進來。
+
+[sound path="res://audio/sfx/door_open_soft.ogg" bus="SFX"]
+
+[wait time="0.8"]
+
+princess: （門開了。一個中年男子被帶進來，衣衫破舊，像是連走廊的華麗都讓他不安，進門時先低了頭，然後才抬眼看了我一下——立刻又低下去了。）
+
+chancellor (concerned): 您不用緊張。殿下只是想聽您說說話。
+
+[wait time="0.5"]
+
+npc (default): ……我妻子……她兩年前病了。只要有草藥就能治好的那種病。但是軍需徵用把附近的藥商全清空了，說是戰備需要。補償的承諾說了一年，一次都沒兌現。
+
+[wait time="1.0"]
+
+npc (default): 她就那樣走了。我沒辦法。
 
 [wait time="1.5"]
 
+princess: （他說完，沉默著。沒有哭，沒有憤怒，像是這件事在他心裡已經磨了太久，連邊緣都磨平了，剩下的只是一個坑。）
+
+[wait time="0.5"]
+
+chancellor: 好了，謝謝您。
+
+[sound path="res://audio/sfx/door_open_soft.ogg" bus="SFX"]
+
+[wait time="0.8"]
+
+princess: （門關上了。書房裡又剩下我和宰相兩個人。）
+
+princess (sad): （那個男人聲音很低，但聽起來不像是說謊。他的眼睛……那種空洞不是裝出來的。）
+
+princess (sad): 這是真的嗎……
+
+chancellor (sad): 臣不敢欺騙殿下。這樣的人，在城牆外面……不只他一個。
+
+[wait time="1.0"]
+
+# ================================================================
+# 節拍三：請公主幫忙
+# ================================================================
+
+[wait time="0.8"]
+
+chancellor (serious): 殿下，臣有一件事想請您幫忙。
+
+princess (shocked): 什麼事？
+
+chancellor (serious): 在陛下的書房裡，有一份密令。那份文件記錄了一些……不便公開的軍事部署。臣需要把它帶出來，交給幾位可信的大臣查閱，在下次朝議前找到對策。
+
+chancellor (concerned): 但是臣若出面，動靜太大，反而讓事情更麻煩。只有殿下——殿下本來就可以自由進出王上的書房，不會有人多問。
+
+princess: ……
+
+princess: （我需要偷父王的東西。）
+
+princess: （但那個男人的眼睛……那個空洞……）
+
+princess (shocked): 父王的書房……他那個時間通常在哪裡？
+
+chancellor (concerned): 今天黃昏，陛下會去花園見外臣，書房空著。殿下不用緊張——只需要取出那份文件，帶到臣這裡來就好。其他的，由臣來處理。
+
+[wait time="0.7"]
+
+princess (determined): ……好。我去。
+
+chancellor (concerned): 殿下放心，臣不會讓任何人受到傷害的。
+
+leave chancellor
+
+princess: （他說不會讓任何人受到傷害。我站在他的書房門口，感覺這句話壓在胸口，沉甸甸的，不知道是讓人安心還是不安。）
+
 leave princess
 
-jump 03_evidence/
+# ================================================================
+# 黃昏・王上書房
+# ================================================================
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.7"]
+[music path="res://audio/bgm/tension_stealth.ogg" fade="2.0" volume="0.5"]
+
+[wait time="1.2"]
+
+join princess left
+
+princess: （父王的書房。門沒有鎖——他從來不鎖門，因為他說「公主隨時想來找父王都可以」。）
+
+princess: （書桌上擺著今天還沒批完的奏摺。窗邊掛著那面盾牌，兩頭獅子的紋章，父王曾經把我抱在膝蓋上，告訴我：「一頭守護人民，一頭守護家人。」）
+
+[wait time="0.8"]
+
+princess: （抽屜的鑰匙在書架後面的暗格裡，宰相告訴我的。我找到了，很快，手卻一直在抖。）
+
+[wait time="0.6"]
+
+princess (determined): （那個男人的妻子。走廊外還沒燒起來的戰事。我沒有別的辦法。）
+
+- （取出密令）
+	princess: （文件是封好的，我不知道裡面寫了什麼，只知道它是重要的。我把它夾在外套裡面，用手臂壓著，快步離開。）
+	princess: （父王說書房的門隨時為我開著。）
+	princess: （對不起，父王。）
+	leave princess
+	jump 06_betrayal/

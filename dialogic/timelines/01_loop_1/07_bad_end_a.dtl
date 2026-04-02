@@ -1,20 +1,24 @@
-# 第 1 輪迴：Bad End A — 被操弄的正義
+# 情境 A — V0：Bad End A — 溫柔的道別
 
 [background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
 [wait time="2.0"]
 
-princess (sad): （宰相從沒騙我。他只是做了所有人一直在做的事——決定什麼該讓我知道、什麼不該讓我知道。唯一的差別是，他讓我「知道」的，正好是他需要我相信的。）
+princess (sad): （他說「身不由己」。他說「不要怪我」。）
 
-princess (hollow): （我以為我終於不再被哄了。其實只是被換了一種方式哄。連殺我的方式……都跟哄我一樣溫柔。）
+princess (hollow): （我不知道那是什麼意思。我不知道他是主謀還是幫兇，不知道那份密令究竟是什麼，不知道那杯茶是他的決定還是別人的命令。）
 
-[wait time="2.5"]
+[wait time="1.5"]
+
+princess (hollow): （只知道那個特別的苦味……是他親手遞給我的。）
+
+[wait time="2.0"]
 
 [signal arg="death_fade"]
 
 [wait time="3.0"]
 
-「最溫柔的謊言，造成最致命的背叛。」
+「有些事，比『不知道』更難開口——是『我以為我知道』。」
 
 [wait time="3.0"]
 
@@ -24,5 +28,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_betrayal"]
-[signal arg="death_context:{'death_message': '你被宰相精心設計的半真半假操弄，親手交出城防令印。然後他用一杯花茶結束了你的生命。「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你把密令交給了宰相。他在臨別前說了「身不由己」和「不要怪我」。那杯茶的味道有點苦，苦得不太對。你帶著一個還沒有答案的疑問，消散在他書房的燭光裡。', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]
