@@ -1,0 +1,36 @@
+# 第 1 輪迴：Bad End A'— 知道敵人的臉，還不夠
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.0"]
+
+princess (sad): （第七頁，左欄，第三行。那個刮除再補寫的數字。我記得它。）
+
+princess (hollow): （我記得它，但它現在有什麼用？我把它帶進了黑暗裡，帶不出去。）
+
+[wait time="1.5"]
+
+princess: （我知道他是敵人。我知道帳簿是假的，知道那個刮痕是線索。但知道，和能夠證明，差了一整個世界——而從知道到證明這段距離，就是他殺我的那段距離。）
+
+princess (hollow): （那杯茶……我不知道它具體是什麼。南方的藥草？還是進口的毒物？他說「安神草」，但安神草不會讓人的手指麻。我喝的時候已經認出了那個苦味，但我以為只要不表現出來就能撐過去……）
+
+princess: （我高估了自己能撐多久。）
+
+[wait time="2.5"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「知道敵人是誰，但還不知道他的武器在哪裡。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_fake_ledgers"]
+[signal arg="death_context:{'death_message': '你知道了他是敵人，你看見了帳簿的破綻，但你還不知道那杯茶是武器。你把所有記憶帶進了黑暗。「知道敵人是誰，但還不知道他的武器在哪裡。」', 'intel_reward': ['intel_fake_ledgers'], 'killer': 'chancellor'}"]
+[signal arg="trigger_death"]

@@ -1,0 +1,80 @@
+# 第 1 輪迴：宰相的來訪（A-V1）— 花園露台（Day 1 下午）
+
+[background arg="res://art/backgrounds/window.png" fade="0.9"]
+[music path="res://audio/bgm/garden_afternoon.ogg" fade="2.0" volume="0.56"]
+
+join princess left
+join chancellor right
+
+chancellor (concerned): 哎呀，殿下！莉娜跟臣說您今早臉色不太好，嚇了臣一跳。怎麼了？是不是吃壞肚子啦？要不要臣叫御醫來看看？
+
+princess: （他的關心聲調和上次分毫不差。他說這句話的時候，是不是根本不需要思考？像是一個習慣性的動作，手握慣了就不用看著做。）
+
+princess: （上次這句話讓我感到安慰。這次我記住它的位置——這是他讓我放鬆的第一個動作。）
+
+princess (shocked): 不是……不是身體的問題。宰相大人……我做了一個很可怕的夢。
+
+chancellor (concerned): 夢呀？殿下不要怕，夢都是假的嘛。不如臣跟您說說那顆寶石的故事——
+
+princess (shocked): 我夢見城破了。父王戰死在城門前。然後賽拉斯拿劍……殺了我。
+
+[wait time="1.2"]
+
+chancellor (concerned): ……
+
+princess: （他的笑容消失了。上次我以為這是真正的擔憂。這次——我看見的是他在校準。他在調整接下來要說什麼。）
+
+chancellor (concerned): 殿下……這只是噩夢。您太累了，臣讓莉娜幫您泡杯安神茶——
+
+princess (shocked): 可是那個夢好真好真……我到現在還在發抖。宰相大人，你是不是知道什麼？你剛才的表情好奇怪……
+
+[wait time="0.8"]
+
+chancellor: ……
+
+chancellor (serious): 殿下……這些話，本不該由臣來說的。但既然您已經「看見」了什麼……臣就不能再裝作什麼都不知道了呢。
+
+princess: （「不能再裝作不知道了」——他用了這個框架。好像他一直在為我隱忍，終於被我的信任逼得不得不說真話。上次這句話讓我覺得他在犧牲什麼。這次我聽見的是它的結構。）
+
+princess: （他是個很好的演員。或者說——他根本不把這叫做演戲。他只是在管理資訊。）
+
+princess (shocked): 您……知道些什麼？
+
+chancellor (serious): 邊境的「小毛賊」……其實已經有十萬人了。戰爭，真的快來了喔。
+
+chancellor (sad): 但真正讓臣心痛的，不是戰爭……是陛下為了戰爭，做的一些事呢。
+
+princess (shocked): 父王……做了什麼？
+
+chancellor (sad): 殿下今天先好好休息。明天，臣帶您親眼看證據。有些真相……需要殿下有足夠的勇氣才能面對。臣不想嚇著殿下。
+
+[wait time="0.7"]
+
+leave chancellor
+
+princess: （他走了。那個句式——「需要勇氣」——上次讓我覺得自己被看見、被尊重了。他沒說「殿下還小」，他說「需要勇氣」，把我放在一個可以成長的位置上。）
+
+princess: （很聰明。他給我的不是命令，是一個讓我自己走過去的斜面。）
+
+princess (cold): （明天。帳簿。）
+
+princess: （我要記住第七頁左欄的數字。財政署每季結算的日期我大概知道——父王生辰前一個月和年末。如果帳簿上的日期不對，那就是破綻。我要記住每一個數字，即使他不讓我拿走。）
+
+[wait time="1.0"]
+
+# === 回到寢房・Day 1 夜晚 ===
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.0" volume="0.4"]
+
+princess: （翻來覆去睡不著。但這次不是因為害怕——是因為在準備。）
+
+princess: （財政帳簿通常用哪種格式記帳？我小時候偷看過父王書房的幾本，印象中右邊是支出，左邊是收入。如果有人要偽造「三倍稅金只花了三成在軍備」……需要動哪裡？）
+
+princess (determined): （明天，我要像第一次看一樣地看，但記住的要比第一次多得多。）
+
+[wait time="1.5"]
+
+leave princess
+
+jump 03_evidence_a_v1/

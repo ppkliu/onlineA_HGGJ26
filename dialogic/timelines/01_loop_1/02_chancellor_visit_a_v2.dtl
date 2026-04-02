@@ -1,0 +1,90 @@
+# 第 1 輪迴：正面對決（A-V2）— 宰相書房（Day 2）
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.56"]
+
+join princess left
+join chancellor right
+
+chancellor (concerned): 哎呀，殿下今天怎麼這麼早～臣還沒準備好呢。昨晚睡得好嗎？要不要先坐下來喝杯熱茶？
+
+princess (determined): 不用了，謝謝宰相大人。
+
+[wait time="0.6"]
+
+chancellor (concerned): 那……殿下今天特地來找臣，是有什麼事嗎？
+
+princess: （他沒有拿出帳簿。他在等我開口，在觀察我來的姿態。）
+
+princess (determined): 宰相大人，我今天不是來聽故事的。
+
+[wait time="0.5"]
+
+chancellor (concerned): 殿下說的「故事」是……？
+
+princess (determined): 那本帳簿。第七頁，左欄，第三行的數字——那個刮除再補寫的地方。財政署每季結算的日期，不可能落在那個月份。父王生辰前四十天是鎖帳期，任何人都不能改動帳目。但那個數字就在那個日期後面。
+
+[wait time="1.5"]
+
+chancellor: ……
+
+princess: （他沒有立刻說話。這是第一次——第一次我看見他真正停頓下來，不是在計算接下來要說什麼，而是在重新評估眼前的人。）
+
+[wait time="1.0"]
+
+chancellor (cold): ……殿下，是誰告訴妳這些？
+
+princess (determined): 沒有人。我看出來的。
+
+[wait time="0.8"]
+
+chancellor: （他收起了那個笑容。不是慢慢褪去——是像一塊布被人抽走。他站在那裡，臉上的表情是我從來沒見過的那一種：純粹的、重新打量人的眼神。）
+
+chancellor (cold): ……殿下妳知道的比臣以為的多。
+
+princess (determined): 帳簿是你偽造的。你把父王包裝成暴君，讓我替你拿城防令印。下城區的苦難是真的，但你選擇了它、展示了它、然後指了一個方向給我。
+
+[wait time="1.2"]
+
+chancellor (cold): （短暫的沉默。）
+
+chancellor (cold): 殿下說的……大部分是對的。
+
+princess (shocked): （他承認了。沒有繼續偽裝，沒有反問，沒有叫我「殿下還小」——他直接說：大部分是對的。）
+
+princess (determined): 你的目的是什麼？
+
+chancellor (cold): 殿下問的是臣的目的？
+
+chancellor (cold): 這個國家有一位年邁的國王，他疲憊、固執，被身邊的人說成是暴君。他的女兒在宮裡長大，什麼都不知道，什麼都不需要知道。這個局面，殿下覺得……最後對誰有利？
+
+princess (determined): 你在回答問題嗎？還是在繼續管理我知道什麼？
+
+[wait time="0.8"]
+
+chancellor (cold): ……
+
+chancellor (cold): 殿下，妳知道的，還差得遠。
+
+[wait time="1.0"]
+
+chancellor (cold): 來人。
+
+[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
+
+princess (shocked): ——
+
+chancellor (cold): 把殿下請去東翼客房。好好照顧。不要讓人知道。
+
+[wait time="0.6"]
+
+princess: （東翼客房。不是地牢——他不想製造痕跡。他不用茶，因為這次我太清醒了，茶會太明顯。他選擇的是牆壁。）
+
+princess (hollow): （這個方法乾淨多了。）
+
+[signal arg="cut_to_silence"]
+
+leave chancellor
+leave princess
+
+jump 07_bad_end_a2/

@@ -24,7 +24,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_betrayal"]
-[signal arg="intel:intel_fake_ledgers"]
-[signal arg="intel:intel_chancellor_poison"]
-[signal arg="death_context:{'death_message': '你被宰相精心設計的半真半假操弄，親手交出城防令印。然後他用一杯花茶結束了你的生命。「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal', 'intel_fake_ledgers', 'intel_chancellor_poison'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你被宰相精心設計的半真半假操弄，親手交出城防令印。然後他用一杯花茶結束了你的生命。「最溫柔的謊言，造成最致命的背叛。」', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]

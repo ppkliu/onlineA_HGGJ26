@@ -1,0 +1,104 @@
+# 第 2 輪迴：坦白身份（B-V2）— Day 30 傍晚（鐵匠鋪）
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0"]
+
+join princess left
+
+princess: （三十天了。手上的繭。這條街的氣味。阿爾追著流浪貓跑的樣子。）
+
+princess: （今天晚上，布魯諾在門口坐著看天，像往常一樣。我在旁邊坐下去。）
+
+[wait time="0.8"]
+
+join mob_leader right
+
+princess: 布魯諾，我有話跟你說。
+
+mob_leader (suspicious): 什麼事？
+
+princess (determined): ……我不是家僕。我是艾蓮娜公主。
+
+[wait time="1.5"]
+
+mob_leader: ……
+
+mob_leader (angry): （他站起來。手握緊了鐵鉗。）
+
+[wait time="0.6"]
+
+mob_leader (angry): 妳——
+
+mob_leader (grieving): 妳知道我老婆怎麼死的？
+
+[wait time="0.8"]
+
+princess: 難產。你需要止血草。所有草藥被徵為軍需了。你在稅務司跪了三天。
+
+[wait time="1.8"]
+
+mob_leader: ……
+
+[wait time="1.2"]
+
+mob_leader (shocked): （他站在那裡，沒有動。鐵鉗沒有松開，但也沒有抬起來。）
+
+mob_leader (angry): 妳是怎麼知道的？
+
+princess: 我……學來的。我沒辦法解釋清楚，但我知道了。
+
+mob_leader (angry): 誰告訴妳的？！
+
+princess: 沒有人告訴我。我自己知道了。
+
+[wait time="1.5"]
+
+mob_leader: ……
+
+mob_leader (grieving): （他的手慢慢放下去了。鐵鉗落回桌上，發出一聲響。）
+
+mob_leader (grieving): ……妳知道，然後呢？妳還來。
+
+princess: （他說這句話的時候，聲音很輕。他原來準備說出那件事作為指控——作為「看，你們的王室讓我的妻子死了」——但我已經在那個事實裡了，他的指控沒有地方落腳。）
+
+princess (sad): 因為你的妻子的死不是非得發生的。是有人讓它發生的。
+
+mob_leader (grieving): ……什麼意思？
+
+princess (determined): 宰相莫里昂。他把草藥列進軍需，不是因為真的需要——是因為那樣可以讓更多人失去他們需要的東西，讓更多人把憤怒對準王室，而不是對準他。你的妻子，是他計畫的一部分。
+
+[wait time="1.5"]
+
+mob_leader (grieving): ……
+
+mob_leader (angry): 妳憑什麼讓我信這個？
+
+princess (determined): 我不要你信我。我要你跟我一起去看糧倉。糧食在那裡。如果它是真的，那麼其他的事也更有可能是真的。
+
+[wait time="0.8"]
+
+mob_leader (hesitant): ……
+
+mob_leader (hesitant): 那還是有個問題。妳說妳是公主，妳說宰相是壞人，妳說糧倉在那裡……就算全部是真的，我那些兄弟們，他們不是光聽到這些就能動的人。
+
+princess (determined): 我知道。讓他們先看到糧食。
+
+mob_leader (hesitant): ……給我三天。讓我跟他們談。
+
+princess: （三天。布魯諾自己沒有問題了——他的眼神已經變了，那個憤怒還在，但它底下多了別的東西。問題是他那邊的其他人。）
+
+if {intel_granary_needs_key}:
+    princess: （糧倉……那把鎖是財政署的印記。沒有鑰匙我打不開。即使布魯諾說服了大家，我也給不了他們糧食。要先有鑰匙。）
+
+- 我等你。
+    princess (determined): 我等你，布魯諾。
+    leave princess
+    leave mob_leader
+    jump 05_mob_trial_b_v2/
+- 不，現在就去看——糧倉就在地下。 | [if {intel_granary_needs_key} == false]
+    princess (determined): 不能等三天。今晚就帶你去看。糧食在那裡，他們看到了，比什麼話都有力量。
+    mob_leader (hesitant): ……妳確定打得開？
+    princess (determined): 確定。走吧。
+    leave princess
+    leave mob_leader
+    jump 04b_rush_granary/
