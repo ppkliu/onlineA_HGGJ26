@@ -200,17 +200,21 @@ princess: （喝了一口。）
 
 [wait time="1.5"]
 
-princess (shocked): （——）
+princess (shocked): （——！）
 
-princess: （這個氣味。）
+princess: （這個氣味。我認得這個氣味。）
 
-princess (hollow): （蜂蜜和玫瑰，還有一點說不清楚的苦……這是那一次在宰相書房裡喝的那個味道。）
+princess (hollow): （蜂蜜和玫瑰，還有一點說不清楚的苦……這是 A-V0 在宰相書房裡喝的那杯茶。那一次，我帶著茫然死去，只記住了「不要怪我」和這個氣味。）
 
-princess (hollow): （……他早就知道我今天會被關在這裡。那杯茶不是侍從放的，是他安排的。他不需要在場，不需要親手遞給我——他只需要讓茶出現在正確的桌上。）
+princess (hollow): （現在我明白了。兩次死亡，兩個不同的地點，同一個氣味——是他。）
 
 [wait time="0.8"]
 
-princess (hollow): （他比我快。他一直都比我快。）
+princess (hollow): （他早就知道我今天會被關在這裡。那杯茶不是侍從放的，是他安排的。他不需要在場，不需要親手遞給我——他只需要讓茶出現在正確的桌上。）
+
+[wait time="0.8"]
+
+princess (hollow): （原本我還不敢相信。但這一次，我知道了——是他。）
 
 [signal arg="cut_to_silence"]
 
