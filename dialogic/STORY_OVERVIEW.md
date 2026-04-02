@@ -23,6 +23,14 @@
 | **知識狀態** | 公主目前持有的情報集合，決定可進入哪些變體、對白如何展開 |
 | **鎖定（Locked）** | 該變體或情境不再可進入 |
 
+### 公主視角原則
+
+本遊戲採用嚴格的公主第一視角：
+
+- **玩家只知道公主知道的事情**：公主未曾目睹的事件、尚未獲得的情報，玩家同樣不得知
+- **死亡必然是可見的**：每個 Bad End 中公主都清楚感受到自己的命運——「死因不明」只對外界成立，從不對公主本人成立；玩家跟著公主感受到最後一刻
+- **情報驅動認知**：公主每次帶著不同的知識狀態重新進入情境，玩家的「已知」完全等於公主的「已知」，不多也不少
+
 ### 無重複保證
 
 系統在每次進入情境時記錄當下的知識狀態快照。若欲進入某情境時的知識狀態與先前某次進入完全相同，該情境自動封鎖——公主不會重蹈覆轍。
@@ -59,7 +67,7 @@
 |---|---|---|---|---|---|
 | A-V0 | 無相關情報 | 完全相信宰相的善意，是唯一對她好的人 | 主動交出城防令印 | Bad End A：毒茶刺殺 | `intel_chancellor_betrayal` |
 | A-V1 | 持有 `intel_chancellor_betrayal`，未持有 `intel_fake_ledgers` / `intel_chancellor_poison` | 知道他是叛徒，假裝配合，暗中逐字核查帳簿細節 | 帳簿第七頁的刮改痕跡被記下；宰相察覺她過於平靜，提前下手 | Bad End A'：毒茶（宰相更謹慎，話更少） | `intel_fake_ledgers` |
-| A-V2 | 持有 `intel_chancellor_betrayal` ＋ `intel_fake_ledgers`，未持有 `intel_chancellor_poison` | 掌握帳簿偽造的具體位置，決定正面攤牌 | 公主指出第七頁刮改；宰相首次摘下面具，以幽禁代替毒茶 | Bad End A''：被關押於東翼，死因不明 | `intel_chancellor_poison` → 觸發鎖定 |
+| A-V2 | 持有 `intel_chancellor_betrayal` ＋ `intel_fake_ledgers`，未持有 `intel_chancellor_poison` | 掌握帳簿偽造的具體位置，決定正面攤牌 | 公主指出第七頁刮改；宰相首次摘下面具，以幽禁代替毒茶 | Bad End A''：被關押於東翼；數日後宰相以「安神」為由命侍從薰染牢房——公主在意識逐漸鬆散中清楚感受到：這不是茶，這是他為她量身定做的一種死法（對外死因為「突發急症」） | `intel_chancellor_poison` → 觸發鎖定 |
 
 > **變體遞進邏輯：** A-V0 → A-V1 → A-V2 → LOCK。A-V0 只讓公主知道「敵人是誰」，A-V1 讓她知道「偽造的具體方式」，A-V2 讓她認識「敵人有多少種手段」。持有 `intel_chancellor_poison` 後此情境主動鎖定。
 
@@ -83,8 +91,8 @@
 
 | 變體 ID | 進入條件 | 公主視角 | 關鍵分歧點 | 結局 | 獲得情報 |
 |---|---|---|---|---|---|
-| B-V0 | 無相關情報 | 天真建立信任，以為誠意能換到一切 | 布魯諾在壓力下出賣，未說出妻子的故事 | Bad End B：出賣給敵軍 | `intel_starvation_real` |
-| B-V1 | 持有 `intel_starvation_real`，未持有 `intel_bruno_wife_death` | 知道饑荒是真的，攜帶物資先建立信任 | 物資贏得短暫好感，布魯諾在公主追問下說出妻子故事，但根本壓力仍超出物資能解決的範圍 | Bad End B'：布魯諾本人無法阻擋群體決定 | `intel_bruno_wife_death` |
+| B-V0 | 無相關情報 | 天真建立信任，以為誠意能換到一切 | 布魯諾在壓力下出賣，未說出妻子的故事 | Bad End B：布魯諾出賣公主；公主被押至敵軍手中，對方以「流亡人員」名義處置——公主在被帶走的路上才明白，誠意無法對抗飢餓，信任無法對抗恐懼 | `intel_starvation_real` |
+| B-V1 | 持有 `intel_starvation_real`，未持有 `intel_bruno_wife_death` | 知道饑荒是真的，攜帶物資先建立信任 | 物資贏得短暫好感，布魯諾在公主追問下說出妻子故事，但根本壓力仍超出物資能解決的範圍 | Bad End B'：布魯諾舉手投了反對票，卻敵不過多數；公主在移交途中看到他別開目光——她知道他不是在背叛，他是無路可走；移交後公主被以「流亡人員」處置 | `intel_bruno_wife_death` |
 | B-V2 | 持有 `intel_bruno_wife_death`，未持有 `intel_mob_manipulation` | 知道布魯諾最深的傷口，直接點名妻子之死 | 布魯諾被擊中，票數三比一仍輸——外部協調者的存在讓公主理解到群體被系統性操弄 | Bad End B''：布魯諾投反對票但被推翻，公主在移交時聽見「那個煽動者也找到了嗎」 | `intel_mob_manipulation` |
 | B-V3 | 持有 `intel_bruno_wife_death` ＋ `intel_mob_manipulation` | 同時回應個人創傷與群體操弄，同步分化外部協調者 | 宰相的情報網比公主快——她進入下城區第幾天就已被發現；布魯諾把公主推出去自己留下 | Bad End B'''：公主逃脫，布魯諾被帶走 | — （觸發耗盡鎖定，情境關閉）|
 
@@ -112,9 +120,9 @@
 | 變體 ID | 進入條件 | 公主視角 | 關鍵分歧點 | 結局 | 獲得情報 |
 |---|---|---|---|---|---|
 | C-V0 | 無相關情報 | 不信任任何人，靠直覺摸索 | 找到達爾，但「唸詩聲音」無法與宰相連結；轉而接受「冷血帝王」邏輯 | Bad End C：幽禁，塔樓自盡 | `chancellor_treason` + `king_defense_line` + `dal_blinded_by_chancellor` |
-| C-V1 | 持有 `intel_chancellor_betrayal`，未持有 `intel_dal_blinded_by_chancellor` | 明確鎖定宰相為目標，有意識地尋找反制證據 | 聽到達爾描述「唸詩聲音」立即連結宰相，但缺乏傳遞情報的渠道 | Bad End C'：幽禁，情報送出一半被截 | `intel_dal_blinded_by_chancellor` |
-| C-V2 | 持有 `intel_king_defense_line`，未持有 `intel_chancellor_treason` | 知道防線被破壞，試圖從技術面修復 | 技術面幾乎能成功，但宰相從政治面介入，公主被誣陷叛國 | Bad End C''：被誣陷，幽禁（與 C-V0 不同牢房，對話不同） | `intel_chancellor_treason` |
-| C-V3 | 持有 `intel_dal_blinded_by_chancellor` ＋ `intel_king_defense_line`，未持有 `intel_chancellor_treason` | 有人證有物證，試圖在被幽禁前傳遞給父王 | 宰相已在父王身邊佈局，傳遞路線全被封死 | Bad End C'''：人證被轉移，公主再次幽禁，但情報已部分外洩 | `intel_chancellor_treason` |
+| C-V1 | 持有 `intel_chancellor_betrayal`，未持有 `intel_dal_blinded_by_chancellor` | 明確鎖定宰相為目標，有意識地尋找反制證據 | 聽到達爾描述「唸詩聲音」立即連結宰相，但缺乏傳遞情報的渠道 | Bad End C'：幽禁；公主知道情報在出城前就被截走——牢門關上的那刻，她清楚地知道宰相不需要殺她，只需要讓她的聲音消失，而這兩件事最終沒有區別 | `intel_dal_blinded_by_chancellor` |
+| C-V2 | 持有 `intel_king_defense_line`，未持有 `intel_chancellor_treason` | 知道防線被破壞，試圖從技術面修復 | 技術面幾乎能成功，但宰相從政治面介入，公主被誣陷叛國 | Bad End C''：以「干預軍事防線」誣陷，押至地下牢房（與 C-V0 不同牢房）；公主清楚地知道這個指控的邏輯——她試圖修復防線的每一個動作都被宰相翻轉成破壞的證據，連父王都選擇相信那個版本 | `intel_chancellor_treason` |
+| C-V3 | 持有 `intel_dal_blinded_by_chancellor` ＋ `intel_king_defense_line`，未持有 `intel_chancellor_treason` | 有人證有物證，試圖在被幽禁前傳遞給父王 | 宰相已在父王身邊佈局，傳遞路線全被封死 | Bad End C'''：宰相比公主快一步，達爾被秘密轉移；公主再次被押入幽禁，但她知道消息已部分流出——牢門關上時她清楚地知道，這次的死換到了一點什麼 | `intel_chancellor_treason` |
 
 > C-V0 的達爾場景：公主聽到「唸詩」一頭霧水，繼續走冤枉路。C-V1 的達爾場景：公主聽到「唸詩」臉色驟變，台詞完全不同。C-V2 完全跳過達爾，直奔魔法陣，這是本情境中唯一不以達爾為核心的路線。
 
