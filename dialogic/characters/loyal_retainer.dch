@@ -59,6 +59,14 @@
 "mirror": false,
 "scale": 1.0,
 "scene": ""
+},
+"guarded": {
+"export_overrides": {
+"image": "res://art/characters/retainer_serious.png"
+},
+"mirror": false,
+"scale": 1.0,
+"scene": ""
 }
 },
 &"scale": 1.0

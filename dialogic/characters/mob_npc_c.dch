@@ -17,7 +17,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/mob_npc_default.png"
+"image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -25,7 +25,7 @@
 },
 "angry": {
 "export_overrides": {
-"image": "res://art/characters/mob_npc_default.png"
+"image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -33,7 +33,7 @@
 },
 "sneering": {
 "export_overrides": {
-"image": "res://art/characters/mob_npc_default.png"
+"image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -41,7 +41,7 @@
 },
 "cold": {
 "export_overrides": {
-"image": "res://art/characters/mob_npc_default.png"
+"image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
 "scale": 1.0,
