@@ -21,7 +21,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/old_woman_default.png"
+"image": "res://art/characters/minister_npc.png"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -30,7 +30,7 @@
 },
 "wary": {
 "export_overrides": {
-"image": "res://art/characters/old_woman_default.png"
+"image": "res://art/characters/minister_npc.png"
 },
 "mirror": false,
 "scale": 1.0,

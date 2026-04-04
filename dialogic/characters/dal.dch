@@ -21,7 +21,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "res://art/characters/dal_default.png"
+"image": "res://art/characters/suspect_a_default.png"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -30,7 +30,7 @@
 },
 "quiet": {
 "export_overrides": {
-"image": "res://art/characters/dal_default.png"
+"image": "res://art/characters/suspect_a_default.png"
 },
 "mirror": false,
 "scale": 1.0,
@@ -38,7 +38,7 @@
 },
 "wary": {
 "export_overrides": {
-"image": "res://art/characters/dal_default.png"
+"image": "res://art/characters/suspect_a_default.png"
 },
 "mirror": false,
 "scale": 1.0,
