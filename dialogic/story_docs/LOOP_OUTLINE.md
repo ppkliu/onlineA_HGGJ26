@@ -335,9 +335,12 @@
 | `intel_chancellor_betrayal` | A-0 Bad End | 解鎖 A-1、A-2、C-1 |
 | `intel_fake_ledgers` | A-1 Bad End | 解鎖 A-2 |
 | `intel_chancellor_poison` | A-2 Bad End | 觸發調查線 A 主動鎖定 |
-| `intel_starvation_real` | B-0 Bad End | 解鎖 B-1 |
-| `intel_bruno_wife_death` | B-1 Bad End | 間接獲得；最終輪迴安撫布魯諾場景的情感槓桿 |
-| `intel_mob_manipulation` | B-1 Bad End | 解鎖 B-2；最終輪迴安撫場景加深 |
+| `intel_chancellor_surveillance` | B-0 | 宰相全天候監視，拒絕項鍊即觸發即時反應；解鎖 B-1 |
+| `intel_necklace_compliance` | B-0 | 項鍊是服從度測試；解鎖 B-1 |
+| `intel_mob_manipulation` | B-1 | 下城區敘事被操控；解鎖 B-2；最終輪迴安撫場景加深 |
+| `intel_lower_city_route` | B-1 | 記住部分異常路線；解鎖 B-2 |
+| `intel_bruno_wife_death` | B-1 | 間接獲得；最終輪迴安撫布魯諾場景的情感槓桿 |
+| `intel_secret_passage` | B-2 | 城牆密道確認，物理城防被架空；觸發調查線 B 耗盡鎖定 |
 | `intel_chancellor_treason` | C-0 / C-2 / C-3 | 最終輪迴解鎖條件之一 |
 | `intel_king_defense_line` | C-0 / C-1 | 最終輪迴解鎖條件之一 |
 | `intel_dal_blinded_by_chancellor` | C-0 / C-1 | 解鎖 C-3 |
