@@ -60,5 +60,5 @@ princess: 「她來得太晚，帶得太少，說的話也不夠多。」
 
 # === 獲得情報 ===
 [signal arg="intel:intel_starvation_real"]
-[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。「她來得太晚，帶得太少，說的話也不夠多。」', 'intel_reward': ['intel_starvation_real'], 'killer': 'mob'}"]
+[signal arg="death_context:{'death_message': '你被你想拯救的平民出賣給敵軍，只因飢餓與仇恨壓倒了一切。「她來得太晚，帶得太少，說的話也不夠多。」', 'intel_reward': ['intel_starvation_real'], 'killer': 'mob', 'advance_loop': false}"]
 [signal arg="trigger_death"]

@@ -88,5 +88,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_bruno_wife_death"]
-[signal arg="death_context:{'death_message': '你帶了物資，說了真相，但沒有觸及那道最深的傷。布魯諾來了，但他擋不住。「你給了他們魚，但沒有問清楚他們為什麼不再打魚了。」', 'intel_reward': ['intel_bruno_wife_death'], 'killer': 'mob'}"]
+[signal arg="death_context:{'death_message': '你帶了物資，說了真相，但沒有觸及那道最深的傷。布魯諾來了，但他擋不住。「你給了他們魚，但沒有問清楚他們為什麼不再打魚了。」', 'intel_reward': ['intel_bruno_wife_death'], 'killer': 'mob', 'advance_loop': false}"]
 [signal arg="trigger_death"]

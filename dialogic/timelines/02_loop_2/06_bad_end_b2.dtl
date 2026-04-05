@@ -64,5 +64,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_mob_manipulation"]
-[signal arg="death_context:{'death_message': '你讓布魯諾看見了傷口的來源，但有人在更大的結構裡不斷補刀。「個人的傷口可以癒合。但有人在不斷補刀。」', 'intel_reward': ['intel_mob_manipulation'], 'killer': 'mob'}"]
+[signal arg="death_context:{'death_message': '你讓布魯諾看見了傷口的來源，但有人在更大的結構裡不斷補刀。「個人的傷口可以癒合。但有人在不斷補刀。」', 'intel_reward': ['intel_mob_manipulation'], 'killer': 'mob', 'advance_loop': false}"]
 [signal arg="trigger_death"]
