@@ -13,17 +13,17 @@
   - 執行密令，含淚刺殺公主
 - 公主死亡，輪迴啟動
 - **獲得情報**：`intel_city_fall` / `intel_assassination` / `intel_magic_core_sabotage`
-- **→ 進入情境 A（LOOP 1）**
+- **→ 進入調查線 A**
 
 ---
 
-## 情境 A（LOOP 1）— 信任宰相
+## 調查線 A — 信任的絞索（宰相線）
 
 **主動鎖定條件**：持有 `intel_chancellor_poison`
 
 ---
 
-### A-V0（無相關情報）— 無知與死亡的記憶
+### A-0（無相關情報）— 無知與死亡的記憶
 
 **開場**
 - 公主帶著純粹的恐懼與茫然醒來，確認日期（三個月前）
@@ -61,7 +61,7 @@
 
 ---
 
-### A-V1（持有 `intel_chancellor_betrayal`）
+### A-1（持有 `intel_chancellor_betrayal`）
 
 **開場**
 - 公主意外自己又活著，確認是同一時間點
@@ -104,11 +104,11 @@
 - 公主轉身背對，賽拉斯道「對不起」，執行密令
 
 - **→ Bad End A'：賽拉斯含淚執行**
-- **獲得情報**：`intel_fake_ledgers`（A-V0 的帳本與人證均為偽造）
+- **獲得情報**：`intel_fake_ledgers`（A-0 的帳本與人證均為偽造）
 
 ---
 
-### A-V2（持有 `intel_chancellor_betrayal` ＋ `intel_fake_ledgers`）— 孤注一擲與絕對的絕望
+### A-2（持有 `intel_chancellor_betrayal` ＋ `intel_fake_ledgers`）— 孤注一擲與絕對的絕望
 
 **開場**
 - 第三次醒來，無驚訝，一口深呼吸
@@ -143,28 +143,28 @@
 - 無人陪伴，一張桌，桌上有一杯茶
 - 公主憤怒父王不聽她的話
 - 氣憤一段時間後，拿起桌上的茶喝了一口
-- 察覺氣味：蜂蜜、玫瑰、那一點點苦——**正是 A-V0 最後死亡時的那杯茶**
+- 察覺氣味：蜂蜜、玫瑰、那一點點苦——**正是 A-0 最後死亡時的那杯茶**
 
-**關鍵連結**：公主雖然中招，但很聰明地意識到茶水跟 A-V0 最後死亡時是同一個東西，連結到宰相。
+**關鍵連結**：公主雖然中招，但很聰明地意識到茶水跟 A-0 最後死亡時是同一個東西，連結到宰相。
 
 - 意識消散前，公主完成了認知：他不需要在場，只需要讓茶出現在正確的地方
 
 - **→ Bad End A''：意識消散**
-- **獲得情報**：`intel_chancellor_poison`（確認茶與 A-V0 相同，連結到宰相）→ **情境 A 主動鎖定**
+- **獲得情報**：`intel_chancellor_poison`（確認茶與 A-0 相同，連結到宰相）→ **調查線 A 主動鎖定**
 
 ---
 
-## 情境 B（LOOP 2）— 服從度測試與城防漏洞
+## 調查線 B — 傀儡的絞索（服從度測試與城防漏洞線）
 
 **耗盡鎖定條件**：持有 `intel_chancellor_surveillance` ＋ `intel_mob_manipulation` ＋ `intel_secret_passage`
 
 ---
 
-### B-V0（無相關情報）
+### B-0（無相關情報）
 
 **開場**
 - 公主醒來，嘴裡還殘留著玫瑰花茶的苦味記憶
-- 帶著情境 A 三輪積累的確認憤怒——她知道宰相是誰了，這次要正面出擊
+- 帶著調查線 A 三推演積累的確認憤怒——她知道宰相是誰了，這次要正面出擊
 - 本能地拒絕宰相送的項鍊，一個字：「不用了。」
 
 **質問宰相**
@@ -177,12 +177,12 @@
 - 宰相把毒茶推到她面前；不管她喝不喝，幾天內茶都會再度出現在她桌上
 - 死亡前她才明白：**他不需要在場，只需要讓茶出現在正確的地方**
 
-- **→ Bad End B-V0：毒殺**
+- **→ Bad End B-0：毒殺**
 - **獲得情報**：`intel_chancellor_surveillance`（察覺拒絕項鍊的速度——監視無死角）＋ `intel_necklace_compliance`（項鍊是服從度測試）
 
 ---
 
-### B-V1（持有 `intel_chancellor_surveillance` ＋ `intel_necklace_compliance`）
+### B-1（持有 `intel_chancellor_surveillance` ＋ `intel_necklace_compliance`）
 
 **開場**
 - 公主記得上一輪的代價：她拒絕項鍊，宰相立刻出現
@@ -196,7 +196,7 @@
 - 在鐵匠鋪遇到布魯諾——他的憤怒是真實的，但被引導了方向；公主聽見關於他妻子死亡的隻字片語
 
 **回程途中的異常**
-- 公主注意到讓流民噤若寒蟬的窄巷，以及不屬於王城的士兵制服
+- 公主注意到讓流民噤若寒蟬的窄巷——以及那幾個格格不入的人：在一片衣衫襤褸的人群裡，有幾個人走路的姿態完全不同，步伐有節奏、眼神在掃視，是受過軍事訓練的人才有的體態，但她認不出他們是任何一支她見過的隊伍
 - 一個流民低聲說：「不要看那邊，除非你想死。」
 - 公主把這些路線記在心裡
 
@@ -204,12 +204,12 @@
 - 回城後，公主試著向侍衛追問那些士兵和那條窄巷
 - 當晚，宰相親自來送茶
 
-- **→ Bad End B-V1：宰相親自送茶，意識消散前記住了路線方向**
+- **→ Bad End B-1：宰相親自送茶，意識消散前記住了路線方向**
 - **獲得情報**：`intel_mob_manipulation`（敘事被操控）＋ `intel_lower_city_route`（部分異常路線）＋ `intel_bruno_wife_death`（間接獲得）
 
 ---
 
-### B-V2（持有 `intel_mob_manipulation` ＋ `intel_lower_city_route`）
+### B-2（持有 `intel_mob_manipulation` ＋ `intel_lower_city_route`）
 
 **開場**
 - 公主記得那條讓所有流民噤若寒蟬的窄巷
@@ -217,7 +217,7 @@
 - 她要去找答案
 
 **跟循路線**
-- 公主戴著項鍊，自行前往下城區，循著 B-V1 記住的方向走
+- 公主戴著項鍊，自行前往下城區，循著 B-1 記住的方向走
 - 進入那條窄巷，沿著更厚的牆壁往深處走
 - 一個老流民用無聲的眼神指引她——牆上沒有標記，但那面牆比周圍厚得多
 
@@ -232,19 +232,19 @@
 - 沒有審問，沒有廢話，他們的任務是維持保密
 - 公主就地被格殺
 
-- **→ Bad End B-V2：就地格殺，沒有對話，沒有審問**
+- **→ Bad End B-2：就地格殺，沒有對話，沒有審問**
 - **獲得情報**：`intel_secret_passage`（城牆密道確認，物理城防已被架空）
-- **→ 情境 B 耗盡鎖定**：物理防線淪陷，公主必須轉向調查魔法防護陣
+- **→ 調查線 B 耗盡鎖定**：物理防線淪陷，公主必須轉向調查魔法防護陣
 
 ---
 
-## 情境 C（LOOP 3）— 獨自調查
+## 調查線 C — 防線的羅網（真相線）
 
 **耗盡鎖定條件**：持有 `intel_chancellor_treason` ＋ `intel_king_defense_line`
 
 ---
 
-### C-V0（無相關情報）
+### C-0（無相關情報）
 
 - 不信任任何人，靠直覺摸索
 - 找到達爾，但「唸詩聲音」無法與宰相連結
@@ -256,7 +256,7 @@
 
 ---
 
-### C-V1（持有 `intel_chancellor_betrayal`）
+### C-1（持有 `intel_chancellor_betrayal`）
 
 - 明確鎖定宰相為目標，有意識地尋找反制證據
 - 聽到達爾描述「唸詩聲音」立即連結宰相
@@ -268,7 +268,7 @@
 
 ---
 
-### C-V2（持有 `intel_king_defense_line`）
+### C-2（持有 `intel_king_defense_line`）
 
 - 知道防線被破壞，試圖從技術面修復
 - 技術面幾乎能成功，宰相從政治面介入
@@ -280,7 +280,7 @@
 
 ---
 
-### C-V3（持有 `intel_dal_blinded_by_chancellor` ＋ `intel_king_defense_line`）
+### C-3（持有 `intel_dal_blinded_by_chancellor` ＋ `intel_king_defense_line`）
 
 - 有人證有物證，試圖在被幽禁前傳遞給父王
 - 宰相比公主快一步，達爾被秘密轉移
@@ -288,7 +288,7 @@
 
 - **→ Bad End C'''**
 - **獲得情報**：`intel_chancellor_treason`（再確認）
-- **→ 情境 C 耗盡鎖定**
+- **→ 調查線 C 耗盡鎖定**
 
 ---
 
@@ -307,13 +307,13 @@
 
 **第二步：安撫布魯諾**
 - 「我不是在施捨，是在歸還。」
-- 來源：情境 B——暴民被操弄，用真相加實際承諾
+- 來源：調查線 B——敘事被操控，用真相加實際承諾
 - 若持有 `intel_bruno_wife_death`：直接點出妻子，說詞更直接
 - 若持有 `intel_mob_manipulation`：對下城區的承諾更具體
 
 **第三步：朝堂揭露宰相**
 - 出示鐵證，讓他無路可退
-- 來源：情境 A（完整帳本證據鏈） ＋ 情境 C（達爾人證、防線真相）
+- 來源：調查線 A（完整帳本證據鏈） ＋ 調查線 C（達爾人證、防線真相）
 
 **分支選項**
 - `03b_rush_arrest.dtl`：趁宰相不知情直接去抓（進入條件：未持有 `intel_chancellor_escape_plan`）
@@ -332,12 +332,12 @@
 | `intel_city_fall` | 序章 | 後續違和感追問選項 |
 | `intel_assassination` | 序章 | 賽拉斯特殊對話；最終輪迴解鎖條件之一 |
 | `intel_magic_core_sabotage` | 序章 | 魔法陣情報基礎 |
-| `intel_chancellor_betrayal` | A-V0 Bad End | 解鎖 A-V1、A-V2、C-V1 |
-| `intel_fake_ledgers` | A-V1 Bad End | 解鎖 A-V2 |
-| `intel_chancellor_poison` | A-V2 Bad End | 觸發情境 A 主動鎖定 |
-| `intel_starvation_real` | B-V0 Bad End | 解鎖 B-V1 |
-| `intel_bruno_wife_death` | B-V1 Bad End | 解鎖 B-V2、B-V3；最終輪迴安撫場景加深 |
-| `intel_mob_manipulation` | B-V2 Bad End | 解鎖 B-V3；最終輪迴承諾場景加深 |
-| `intel_chancellor_treason` | C-V0 / C-V2 / C-V3 | 最終輪迴解鎖條件之一 |
-| `intel_king_defense_line` | C-V0 / C-V1 | 最終輪迴解鎖條件之一 |
-| `intel_dal_blinded_by_chancellor` | C-V0 / C-V1 | 解鎖 C-V3 |
+| `intel_chancellor_betrayal` | A-0 Bad End | 解鎖 A-1、A-2、C-1 |
+| `intel_fake_ledgers` | A-1 Bad End | 解鎖 A-2 |
+| `intel_chancellor_poison` | A-2 Bad End | 觸發調查線 A 主動鎖定 |
+| `intel_starvation_real` | B-0 Bad End | 解鎖 B-1 |
+| `intel_bruno_wife_death` | B-1 Bad End | 間接獲得；最終輪迴安撫布魯諾場景的情感槓桿 |
+| `intel_mob_manipulation` | B-1 Bad End | 解鎖 B-2；最終輪迴安撫場景加深 |
+| `intel_chancellor_treason` | C-0 / C-2 / C-3 | 最終輪迴解鎖條件之一 |
+| `intel_king_defense_line` | C-0 / C-1 | 最終輪迴解鎖條件之一 |
+| `intel_dal_blinded_by_chancellor` | C-0 / C-1 | 解鎖 C-3 |
