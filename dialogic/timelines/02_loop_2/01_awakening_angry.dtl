@@ -1,8 +1,6 @@
 # 第 2 輪迴：帶著憤怒醒來 — 公主寢房（Day 1 早晨）
 
 if {intel_bruno_wife_death}:
-	if {intel_mob_manipulation}:
-		jump 01_awakening_b_v3/
 	jump 01_awakening_b_v2/
 if {intel_starvation_real}:
 	jump 01_awakening_b_v1/
