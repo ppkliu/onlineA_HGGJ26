@@ -1,0 +1,59 @@
+# 調查線 B — B-1：醒來（假意服從）
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.39"]
+
+[wait time="1.5"]
+
+join princess left
+
+princess (hollow): ……又回來了。
+
+[wait time="0.7"]
+
+princess: （上一輪，我一大早就讓他讀出了我的敵意。我拒絕了項鍊，他就立刻出現了——從轉角，帶著笑容，像一直在等我犯這個錯。）
+
+princess: （他察覺我的速度，比我預期的快得多。我的每一個動作——包括拒絕一條項鍊——都是即時回報到他那裡的。）
+
+[wait time="0.8"]
+
+princess (determined): （我做不到正面對抗。他的監視比我快，他的手段比我廣。上次我連書房都沒走出去就輸了。）
+
+princess (determined): （所以這一輪，我要假裝。假裝什麼都不知道，假裝我還是那個信任他的公主。）
+
+princess: （我要戴上那條項鍊，讓他相信我是傀儡。傀儡能去的地方，我要去看。）
+
+[wait time="1.2"]
+
+join maid right
+
+maid (default): 殿下～早安呀！今天天氣超好的喔～對了對了，宰相大人昨天特別交代了一條項鍊，說請公主今天務必配戴呢！
+
+[wait time="0.5"]
+
+princess: 好漂亮。莉娜，幫我戴上吧。
+
+maid (default): 好耶～殿下今天心情真好！來來來，莉娜幫您扣好～
+
+[wait time="0.6"]
+
+princess: （她的手指在我頸後輕輕扣上鏈扣。金屬貼著皮膚，涼的。這是他的監控工具——但我現在需要用它。）
+
+princess: 莉娜，今天幾號？
+
+maid (default): 三月十二日呀～殿下怎麼啦？
+
+princess: （快速確認。點點頭。立刻在腦子裡演練如何假裝天真。）
+
+[wait time="0.5"]
+
+princess (determined): （我要去找宰相。不是質問——是請求。「學習治理」，「關心民情」。用他聽得懂的語言，提一個他不好意思拒絕的要求。）
+
+princess: （讓我去下城區看看吧。用傀儡的身份。）
+
+[signal arg="day_counter:180"]
+
+leave princess
+leave maid
+
+jump b1_02_guided_tour/

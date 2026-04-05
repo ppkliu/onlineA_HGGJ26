@@ -1,9 +1,9 @@
-# 第 2 輪迴：帶著憤怒醒來 — 公主寢房（Day 1 早晨）
+# 調查線 B — 傀儡的絞索：醒來（B-0 — 本能拒絕）
 
-if {intel_bruno_wife_death}:
-	jump 01_awakening_b_v2/
-if {intel_starvation_real}:
-	jump 01_awakening_b_v1/
+if {intel_mob_manipulation}:
+	jump b2_01_awakening/
+if {intel_chancellor_surveillance}:
+	jump b1_01_awakening/
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.39"]
@@ -16,51 +16,55 @@ princess (hollow): ……又回來了。
 
 [wait time="0.7"]
 
-princess: （嘴裡還殘留著玫瑰花茶的苦味。不是真的殘留——是記憶。手指發麻、膝蓋癱軟、花園的光線一點點模糊……然後是他的聲音：「好好睡吧。夢都是反的喔。」）
+princess: （嘴裡還殘留著玫瑰花茶的苦味記憶。不是真的殘留——是記憶裡的味道，清楚得像昨天。蜂蜜、玫瑰、那一點點苦。然後意識消散，然後醒來。一次又一次。）
 
-princess (angry): （莫里昂。他笑著遞給我帳簿，笑著安排我去下城區，笑著接過城防令印——最後笑著給我倒了一杯毒茶。從頭到尾那張溫柔的臉，沒有一刻是真心的。）
+princess (angry): （莫里昂。帳本是他偽造的。人證是他安排的。密令是他設的陷阱。每一次我都帶著新的理解死去——而每一次他都笑著遞出那杯茶。）
 
-princess: （但下城區的饑荒是真的，莉娜哥哥被徵兵是真的，孩子們肚子上的水腫是真的。那些不是宰相演出來的。宮裡的人會騙我……但那些在街上挨餓的人，他們的痛苦騙不了人。）
+[wait time="0.8"]
 
-if {intel_chancellor_eyes}:
-	princess: （我還記得……有一次我偷偷跑回城堡想帶食物和藥。結果莫里昂的人早就盯著我了。他又遞來花茶——我認出了那個味道，可是已經喝下去了。城堡裡到處都是他的眼線。我不能從裡面帶任何東西出去。）
+princess (angry): （上一次……我在那間小房間裡認出了那杯茶的味道。那一刻我全部想通了。是他。從頭到尾都是他。）
 
-if {intel_granary_needs_key}:
-	princess: （我還記得……我帶布魯諾去地下找糧倉。那些糧食堆得像小山，就在鐵門後面——可是鎖不是王家的，是財政署的印記。我打不開。然後警報響了，布魯諾被打死了。是我害了他。光有承諾打不開那把鎖。）
-
-princess (angry): （這一次，我不找宰相。我要直接去那些人中間。親耳聽他們說話，親眼看他們的生活。）
-
-princess: （至少有一件事沒有人能騙我——下城區那些人的饑餓是真的。苦難不說謊。那裡是唯一我知道不會看到宰相臉的地方。）
+princess (determined): （我知道了他是誰，我知道了他用什麼手段。現在的問題只有一個——然後呢？）
 
 [wait time="1.2"]
 
 join maid right
 
-maid (default): 殿下～早安呀！今天也是好天氣喔～對了，宰相大人送來了南國的寶石呢！好漂亮好漂亮，殿下一定會超喜歡——
+maid (default): 殿下～早安呀！今天天氣超好的喔～對了對了，宰相大人昨天特別交代了一條項鍊，說請公主今天務必配戴呢！
 
-princess: （又是南國的寶石。又是一模一樣的開場白。最初的那天，我開心地捧著它轉了三圈，什麼都不知道。後來……它成了莫里昂把我引進圈套的第一步。）
+[wait time="0.5"]
 
-princess (angry): 莉娜，把寶石退回去。
+princess (angry): 不用了。
 
-maid (default): 欸？可是好漂亮的……殿下不看一眼嗎？
+maid (default): 欸？可是宰相大人特別——
 
-princess (determined): 退回去。然後幫我找一套粗布衣服。最粗的那種，像僕人穿的。
-
-maid (confused): 殿下？粗布衣服？殿下為什麼要那種東西……那不是殿下該穿的呀。
-
-princess (determined): 莉娜。不要問。快去。
+princess (angry): 不用了。
 
 [wait time="0.6"]
 
-maid (forced_smile): ……好的好的，殿下別生氣嘛。莉娜馬上去準備。
+maid (forced_smile): ……好、好的，殿下。
 
-princess: （她的笑容好用力。上次也是這樣。她習慣了用笑容擋住所有讓我不開心的事。）
+princess: （莉娜的笑容凝住了一瞬。她不明白為什麼我語氣這麼硬——她還是那個什麼都不知道的莉娜。）
 
-princess: （但這次……對不起，莉娜。我不能再讓你的笑容保護我了。）
+[wait time="0.5"]
+
+princess: 莉娜，今天幾號？
+
+maid (default): 今天呀？三月十二日～殿下怎麼啦，臉色——
+
+princess: （三月十二日。和每一次一樣。深呼吸。）
+
+[wait time="0.8"]
+
+princess (determined): （我知道他毒了我。我知道他偽造帳本。但只有我記得這些。我說不出任何人會相信的證據——因為在這個時間點，那些事還沒有發生。）
+
+princess (determined): （我唯一能做的，就是去找他。當面質問。讓他知道——我知道了。）
+
+princess: （憤怒比恐懼更清醒。但我還沒學會把憤怒藏起來。）
 
 [signal arg="day_counter:180"]
 
 leave princess
 leave maid
 
-jump 02_infiltration/
+jump b0_02_confrontation/

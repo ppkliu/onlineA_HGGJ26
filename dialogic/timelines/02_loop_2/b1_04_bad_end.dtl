@@ -1,0 +1,96 @@
+# 調查線 B — B-1 Bad End：追問過深（宰相親自送茶）
+
+# === 回到城堡 ===
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.5"]
+
+join princess left
+
+princess: （回到城堡後，我找了個機會和隨行侍衛搭話。）
+
+princess: 今天在下城區，我看見有些士兵制服不太一樣，是什麼部隊？
+
+[wait time="0.5"]
+
+princess: （侍衛的回答速度比平時快了一拍。）
+
+npc: 那是負責下城區秩序的專屬部隊，殿下不用擔心。
+
+princess: （沒有正面回答。）
+
+princess: 那條窄巷……我看到流民繞開了，那邊有什麼？
+
+npc: 那邊在整修，暫時不能走。
+
+[wait time="0.8"]
+
+leave princess
+
+# === 當晚・公主寢房 ===
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.7"]
+
+[wait time="1.0"]
+
+join princess left
+join chancellor right
+
+chancellor (default): 聽說殿下今天問了不少問題。
+
+princess: 我只是好奇。
+
+chancellor (default): 殿下的好奇心，臣很欣賞。
+
+[wait time="0.5"]
+
+chancellor (serious): 但有些地方……不是公主應該去的。
+
+[wait time="0.8"]
+
+princess: （他遞上一杯茶。動作很自然，像是每天都在做的事。）
+
+princess: （他來得這麼快。我只問了幾個問題——他在下城區也有眼線。我說的每一句話，都有人替他記著。）
+
+[wait time="0.6"]
+
+princess: （但至少……我記下了那條路的方向。）
+
+princess: （我接過茶杯，一飲而盡。）
+
+[wait time="1.5"]
+
+leave chancellor
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.0"]
+
+princess (hollow): （那條巷子。那個方向。那些走路像兵的人。下一次我要去那裡。）
+
+[wait time="1.5"]
+
+princess (hollow): （他的展示之旅讓我看見了真實的苦難——也讓我看見了苦難是怎麼被引導成仇恨的。糧食分發點的台詞、傷兵收容所的指控——「誰的錯」這個答案，是他替所有人選好的。）
+
+princess (hollow): （苦難是真的。方向是假的。）
+
+[wait time="2.0"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「她學會了假裝，但深入不夠。苦難是真的，方向是假的。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_mob_manipulation"]
+[signal arg="intel:intel_lower_city_route"]
+[signal arg="intel:intel_bruno_wife_death"]
+[signal arg="death_context:{'death_message': '你學會了假裝，但問得太多。他的展示之旅讓你看見了苦難如何被引導成仇恨——但也暴露了你的好奇心。「她學會了假裝，但深入不夠。苦難是真的，方向是假的。」', 'intel_reward': ['intel_mob_manipulation', 'intel_lower_city_route', 'intel_bruno_wife_death'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="trigger_death"]

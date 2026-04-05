@@ -1,0 +1,87 @@
+# 調查線 B — B-2 Bad End：城牆密道（就地格殺）
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.6"]
+[music path="res://audio/bgm/tension_low.ogg" fade="1.5" volume="0.55"]
+
+join princess left
+
+princess: （我沿著那面厚牆往前，用手摸索著。指尖掠過粗糙的石面——一塊、兩塊、三塊——）
+
+[wait time="0.6"]
+
+princess: （我找到了。）
+
+princess: （一條縫。看起來只是普通的石縫，但石頭的觸感和旁邊不同。邊緣有磨損，是被反覆移動過的痕跡。）
+
+[wait time="0.5"]
+
+princess: （我用力推開。石塊比想像的輕——它被設計成單人就能推開的重量。）
+
+[wait time="0.8"]
+
+princess: （通道打開了。）
+
+princess: （黑暗。寬闊。寬到可以讓幾個人並排通過，或者讓補給車無聲通行。空氣是涼的，帶著地下水道的濕氣和金屬的鏽味。）
+
+[wait time="1.0"]
+
+princess (determined): （這條密道……連接了城牆的內外。在戒嚴的狀態下，這是唯一不受任何正規守衛管控的通道。）
+
+princess (determined): （宰相的軍隊，就這樣一直進進出出。沒有人知道。連國王都不知道。）
+
+princess: （王城的城防……從來就不是安全的。）
+
+[wait time="1.0"]
+
+# === 格殺 ===
+
+princess: （就在這個瞬間——）
+
+[wait time="0.3"]
+
+princess: （腳步聲。從通道深處。不是普通的巡邏節奏。快，直接，有目標。）
+
+[wait time="0.6"]
+
+princess: （三個身著黑色的士兵走出來。他們看見我。）
+
+[wait time="0.5"]
+
+princess: （沒有審問。沒有廢話。沒有猶豫。其中一個士兵抬起手——）
+
+princess (hollow): （他們不需要問我是誰。看見這裡的人，都不能活著走出去。）
+
+[signal arg="cut_to_silence"]
+
+[wait time="1.5"]
+
+leave --All--
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.5"]
+
+princess (hollow): （城牆密道是真實存在的。王城的物理城防已被架空。）
+
+[wait time="1.5"]
+
+princess (hollow): （物理防線已經淪陷了。那麼……保護王國的最後一道底牌——魔法防護陣——還在嗎？）
+
+[wait time="2.0"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「她找到了真相。真相的代價是：看見它的人，都不能活著離開。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_secret_passage"]
+[signal arg="death_context:{'death_message': '你找到了城牆密道——宰相的軍隊無聲穿梭的通道。王城的物理城防已被架空。但看見真相的人不能活著離開。「她找到了真相。真相的代價是：看見它的人，都不能活著離開。」', 'intel_reward': ['intel_secret_passage'], 'killer': 'ghost_soldiers', 'advance_loop': false}"]
+[signal arg="trigger_death"]

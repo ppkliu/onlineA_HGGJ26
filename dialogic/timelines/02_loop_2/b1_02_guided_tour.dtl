@@ -1,0 +1,103 @@
+# 調查線 B — B-1：宰相安排的「下城區之旅」
+
+# === 接近宰相 ===
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.45"]
+
+join princess left
+join chancellor right
+
+princess: （宰相看見我的時候，視線先掃了一下我的頸部——然後他的笑容舒展開了。比上一輪更自然、更放鬆。）
+
+princess: （項鍊在。他高興了。這條項鍊對他來說是確認。）
+
+chancellor (default): 哎呀，殿下！今天精神很好呢。有什麼事嗎？
+
+princess: 宰相大人，我想請您幫我一個忙。
+
+chancellor (default): 殿下請說。
+
+princess: 我聽說下城區的人民生活很苦。我一直待在城堡裡，從來沒有親自去看過……我想去看看真實的情況。
+
+[wait time="0.8"]
+
+princess: （他的眼神掃了我一下。很快，很輕，但我注意到了。）
+
+princess: 我記得宰相大人以前說過，了解民情是治理的根本。我想學習。
+
+[wait time="0.6"]
+
+chancellor (default): 殿下有這份心，臣很感動。臣可以安排。
+
+princess: （他答應了。太快了——快到像是這個選項一直在他清單上，等我自己走過來選。這意味著：我看到的一切，都會是他選好的。）
+
+leave princess
+leave chancellor
+
+# === 翌日清晨・下城區 ===
+
+[background arg="res://art/backgrounds/restaurant.png" fade="0.9"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.31"]
+
+[wait time="1.0"]
+
+join princess left
+
+princess: （不是秘密行動，是展示。我穿著「普通一點」的貴族服飾，有兩名侍衛隨行，走的是正門。下城區的人看見我，紛紛讓開道路，竊竊私語。所有人都知道——公主來視察了。）
+
+[wait time="0.8"]
+
+# --- 第一站：糧食分發點 ---
+
+princess: （第一站。一群人排隊領取糧食。分發人員的聲音很大，確保周圍的人都聽得見——）
+
+npc: 這是宰相大人從自己庫存撥出來的！王上不管我們死活，只有宰相大人……
+
+princess: （這句話說得太流暢了。像是背好的台詞。每個字都踩在正確的重音上。）
+
+[wait time="0.8"]
+
+# --- 第二站：傷兵收容所 ---
+
+princess: （第二站。一個老婦人哭著，聲音嘶啞——）
+
+old_woman: 都是王上要打仗，我兒子才會變成這樣……
+
+princess: （她說的痛苦是真的。眼淚不是演的，嘶啞不是裝的。但「誰的錯」這個答案——是宰相替她選好的。真實的苦難，虛假的方向。）
+
+[wait time="0.8"]
+
+# --- 第三站：鐵匠鋪 ---
+
+princess: （第三站。一間招牌歪歪斜斜的鐵匠鋪。宰相的人帶我到門口，一個中年男人走出來。寬肩厚背，指節粗得像樹瘤，眼裡有種沉重的東西——不完全像表演。）
+
+join mob_leader right
+
+npc: 這位是布魯諾先生，下城區的鐵匠，也是居民中比較有代表性的人物。
+
+mob_leader: 殿下能親自來看看，我們很感激。宰相大人一直很關心我們……
+
+princess: （他說完，眼神迅速瞟了一眼侍衛。——他在確認說這句話是不是安全的。）
+
+[wait time="0.6"]
+
+mob_leader: 如果不是徵糧令，我老婆也不會……
+
+[wait time="0.8"]
+
+mob_leader: ……反正，算了。
+
+princess: （他停下來了。有一件事他不想說，或者不敢說。他老婆。那道傷。旁邊的侍衛輕輕清了清嗓子。）
+
+mob_leader: 殿下辛苦了，這邊風大，請殿下保重。
+
+princess: （他閉上了嘴。但我記住了這個男人——和他沒有說完的那句話。）
+
+leave mob_leader
+
+[wait time="0.8"]
+
+leave princess
+
+jump b1_03_return_anomaly/

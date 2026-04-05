@@ -1,0 +1,56 @@
+# 調查線 B — B-2：跟循路線（城牆的秘密）
+
+[background arg="res://art/backgrounds/restaurant.png" fade="0.9"]
+[music path="res://audio/bgm/lower_district.ogg" fade="2.0" volume="0.25"]
+
+[wait time="0.8"]
+
+join princess left
+
+princess: （我戴著項鍊，出了城門，循著上一輪記住的方向走。沒有通知宰相，沒有安排，只有我和記憶中的路線。）
+
+[wait time="0.6"]
+
+princess: （沿途，流民的目光在我身上掠過，然後迅速移開。沒有人跟我說話。沒有人想和一個穿得乾淨的人對上眼。）
+
+[wait time="0.8"]
+
+princess: （那條窄巷的入口。看起來沒有什麼特別的——破牆、垃圾、一隻瘦得皮包骨的野貓從陰影裡鑽過。但我注意到牆角有一道痕跡——像是什麼重的東西長期靠在這裡留下的磨損。）
+
+princess: （有東西在這裡定期停靠。重的東西。也許是車，也許是成批的人。）
+
+[wait time="0.8"]
+
+princess: （我沿著巷子往深處走。越來越窄，越來越暗。光線被兩側的高牆擠得只剩一線。）
+
+[wait time="0.6"]
+
+# === 士兵的影子 ===
+
+princess: （遠處傳來腳步聲。那個節奏——和上一輪在下城區看見的那些人相同。整齊、有力，不是流民走路的方式。）
+
+[wait time="0.8"]
+
+princess: （角落裡，一個縮著身體的老流民抬起頭。他的嘴唇動了一下，幾乎沒有聲音。）
+
+npc: 不要看他們。不要讓他們看見你在看。
+
+princess: （我沒有動。）
+
+[wait time="0.6"]
+
+princess: （老人的視線在我旁邊的牆上停留了一秒。然後他縮回角落，不再出聲。）
+
+princess: （我順著那個視線的方向看過去。）
+
+princess: （牆上什麼都沒有。但那面牆——比周圍的牆厚得多。明顯地厚。不是加固過的那種厚法，是整體結構就不一樣。）
+
+[wait time="1.0"]
+
+princess (determined): （這不是普通的牆。這是——城牆。這裡是內城牆和外城牆的交界處。）
+
+[wait time="0.8"]
+
+leave princess
+
+jump b2_03_bad_end/
