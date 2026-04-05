@@ -1,0 +1,41 @@
+# 調查線 B — B-0 Bad End：毒殺（掩不住的敵意）
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+
+[wait time="2.0"]
+
+princess (hollow): （他不需要親自動手。他只需要讓茶出現在正確的地方。）
+
+[wait time="1.5"]
+
+princess (hollow): （我一大早就讓他讀出了我的敵意。拒絕項鍊——他立刻出現在走廊上。試著質問——他一個眼神就知道了我知道的一切。）
+
+[wait time="1.0"]
+
+princess (hollow): （他察覺我拒絕項鍊的速度，比我意識到那是一個信號的速度還快。監視沒有死角——我的每一個動作，對他來說都是即時的。）
+
+[wait time="1.5"]
+
+princess: （那條項鍊不只是禮物。它是服從度測試。戴上它，代表「我什麼都不知道」。拒絕它——）
+
+princess (hollow): （等同於發出「我知道了」的信號。）
+
+[wait time="2.0"]
+
+[signal arg="death_fade"]
+
+[wait time="3.0"]
+
+「她拒絕了鎖鏈，然後發現整座牢房都是他的眼睛。」
+
+[wait time="3.0"]
+
+[sound path="res://audio/sfx/loop_restart_echo.ogg" bus="SFX"]
+
+leave --All--
+
+# === 獲得情報 ===
+[signal arg="intel:intel_chancellor_surveillance"]
+[signal arg="intel:intel_necklace_compliance"]
+[signal arg="death_context:{'death_message': '你的憤怒暴露了你。他在你拒絕項鍊的瞬間就知道了——監視沒有死角，每一個動作都是即時的服從度評估。「她拒絕了鎖鏈，然後發現整座牢房都是他的眼睛。」', 'intel_reward': ['intel_chancellor_surveillance', 'intel_necklace_compliance'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="trigger_death"]

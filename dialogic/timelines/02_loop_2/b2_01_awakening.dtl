@@ -1,0 +1,49 @@
+# 調查線 B — B-2：醒來（帶著路線情報）
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.39"]
+
+[wait time="1.5"]
+
+join princess left
+
+princess (hollow): ……又回來了。
+
+[wait time="0.7"]
+
+princess: （那條讓流民噤若寒蟬的窄巷。那些在一片衣衫襤褸的人群裡走路像兵的人。「不要看那邊，除非你想死。」）
+
+[wait time="0.8"]
+
+princess (determined): （在戒嚴死鎖的狀態下，城門全天都有人看守。那些走路方式像兵、卻不屬於任何我見過的隊伍的人——是從哪裡進來的？）
+
+princess (determined): （他們一定有一條路。一條能讓軍隊無聲穿梭的路，不需要通過任何正規守衛。）
+
+[wait time="1.2"]
+
+join maid right
+
+maid (default): 殿下～早安呀！今天天氣超好的喔～對了對了，宰相大人昨天特別交代了一條項鍊，說請公主今天務必配戴呢！
+
+[wait time="0.5"]
+
+princess: ……幫我戴上吧。
+
+maid (default): 好～殿下今天很乖呢！來，莉娜幫您扣好。
+
+[wait time="0.5"]
+
+princess: （語氣平靜，沒有感情。我知道它的用途，我接受這個事實。它不是禮物，它是鎖鏈——但鎖鏈戴著的時候，獄卒會放鬆一些。）
+
+princess: （沒有確認日期的儀式。我已經知道了，也不重要。我有更重要的事要想。）
+
+[wait time="0.5"]
+
+princess (determined): （那個問題還沒有答案：戒嚴之下，那些士兵是怎麼進來的？今天，我要去找那個答案。）
+
+[signal arg="day_counter:180"]
+
+leave princess
+leave maid
+
+jump b2_02_follow_route/

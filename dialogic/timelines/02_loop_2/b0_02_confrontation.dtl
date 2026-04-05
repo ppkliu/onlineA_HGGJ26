@@ -1,0 +1,110 @@
+# 調查線 B — B-0：走廊與書房（掩不住的敵意）
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.45"]
+
+join princess left
+
+princess: （宰相書房在西翼。走廊比平時安靜。我加快腳步——想在他有所準備之前到達。）
+
+[wait time="0.8"]
+
+princess: （還沒走到他書房的門口——）
+
+join chancellor right
+
+chancellor (default): 殿下今天怎麼有空出來走走？
+
+[wait time="0.6"]
+
+princess: （他從轉角出現了。比我預期的快得多——我才剛出門。他怎麼會在這裡？）
+
+princess: （他的視線掃過我的頸部。停了不到一秒——但我看到了。他在看項鍊。項鍊不在。）
+
+chancellor (default): 殿下氣色不太好呢，是昨晚沒休息好嗎？書房正好無人，殿下請。
+
+princess: （他側身，做了個「請進」的手勢。笑容和以前完全一樣——溫和、體貼。）
+
+princess: ……好。我正好有事想問您。
+
+[wait time="0.5"]
+
+leave princess
+leave chancellor
+
+# === 書房 ===
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.6"]
+
+[wait time="0.8"]
+
+join princess left
+join chancellor right
+
+princess: （他泡茶。動作從容，像做過無數次。一邊問我近況，語氣溫和，像以前那樣。）
+
+princess: （但他的眼神從未離開過我。我感覺到一種壓力——他在掃描我，而我不知道哪裡出了破綻。）
+
+chancellor (default): 最近殿下有沒有好好吃飯呀？臣聽莉娜說殿下這幾天——
+
+princess (angry): 宰相大人。
+
+[wait time="0.5"]
+
+chancellor: ……嗯？
+
+princess (angry): 關於父王的那道密令——
+
+[wait time="0.8"]
+
+princess: （他的動作停了一拍。手指在茶壺的蓋子上懸了一瞬，然後放下。）
+
+chancellor (serious): ……殿下知道什麼？
+
+[wait time="0.6"]
+
+princess: （他察覺了。我還沒說完，他就察覺了。不是因為我說了什麼——是因為我的語氣、我的眼神、我拒絕項鍊這件事本身。他讀我的速度比我偽裝的速度快得多。）
+
+princess: 我只是……想問一些事。
+
+chancellor (default): 殿下……
+
+[wait time="0.5"]
+
+chancellor (serious): 有些事情，知道了，比不知道更危險。
+
+[wait time="1.0"]
+
+princess: （他把茶推到我面前。動作不急不緩，像在棋盤上落子。）
+
+chancellor (default): 殿下今天……沒有戴臣送的項鍊呢。
+
+[wait time="1.5"]
+
+princess: （沉默。）
+
+princess: （我低頭看著那杯茶。蒸汽從杯面升起，帶著蜂蜜和玫瑰的氣息——和記憶裡一模一樣。）
+
+princess (hollow): （如果我喝了，我死。如果我不喝，他知道我知道了。）
+
+princess (hollow): （不管哪一條路，我都輸了。）
+
+[wait time="1.2"]
+
+- 喝下茶
+	princess: （我端起茶杯。蜂蜜、玫瑰、那一點點苦。意識開始模糊。）
+	princess (hollow): （他不需要親自動手。他只需要觀察，然後讓茶出現。我的每一步，他都知道。）
+	leave princess
+	leave chancellor
+	jump b0_03_bad_end/
+
+- 推開茶杯
+	princess (determined): （我把茶杯推開。茶水灑了一些在桌面上。）
+	chancellor: ……
+	princess: （他看著我，笑容沒有變。站起來，輕輕整理衣角，像什麼都沒發生。）
+	chancellor (default): 殿下累了。早點休息吧。
+	princess: （他離開了。沒有威脅，沒有追問。）
+	princess (hollow): （幾天後，那杯茶出現在我的寢室桌上。沒有人看見是誰放的。我的每一步，他都知道。）
+	leave princess
+	leave chancellor
+	jump b0_03_bad_end/
