@@ -61,8 +61,6 @@ leave princess
 leave mob_leader
 
 if {intel_bruno_wife_death}:
-	if {intel_mob_manipulation}:
-		jump 04_confession_b_v3/
 	jump 04_confession_b_v2/
 if {intel_starvation_real}:
 	jump 03_daily_life_b_v1/
