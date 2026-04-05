@@ -83,31 +83,28 @@
 
 ---
 
-## 情境 B：深入下城區
+## 情境 B：服從度測試與城防漏洞
 
 **主要文件：** `02_loop_2/`
 
-**耗盡鎖定條件：** 同時持有 `intel_mob_manipulation` ＋ `intel_starvation_real` ＋ `intel_bruno_wife_death`（公主已理解下城區所有結構，知道問題根源在上層而非底層）
+**核心邏輯：** 本能抗拒 ➡️ 假意服從 ➡️ 撞破城防機密
+
+**耗盡鎖定條件：** 同時持有 `intel_chancellor_surveillance` ＋ `intel_mob_manipulation` ＋ `intel_secret_passage`（物理城防已淪陷，公主必須立刻轉向調查魔法防護陣）
 
 ### 變體列表
 
 | 變體 ID | 進入條件 | 公主視角 | 關鍵分歧點 | 結局 | 獲得情報 |
 |---|---|---|---|---|---|
-| B-V0 | 無相關情報 | 天真建立信任，以為誠意能換到一切 | 布魯諾在壓力下出賣，未說出妻子的故事 | Bad End B：布魯諾出賣公主；公主被押至敵軍手中，對方以「流亡人員」名義處置——公主在被帶走的路上才明白，誠意無法對抗飢餓，信任無法對抗恐懼 | `intel_starvation_real` |
-| B-V1 | 持有 `intel_starvation_real`，未持有 `intel_bruno_wife_death` | 知道饑荒是真的，攜帶物資先建立信任 | 物資贏得短暫好感，布魯諾在公主追問下說出妻子故事，但根本壓力仍超出物資能解決的範圍 | Bad End B'：布魯諾舉手投了反對票，卻敵不過多數；公主在移交途中看到他別開目光——她知道他不是在背叛，他是無路可走；移交後公主被以「流亡人員」處置 | `intel_bruno_wife_death` |
-| B-V2 | 持有 `intel_bruno_wife_death`，未持有 `intel_mob_manipulation` | 知道布魯諾最深的傷口，直接點名妻子之死 | 布魯諾被擊中，票數三比一仍輸——外部協調者的存在讓公主理解到群體被系統性操弄 | Bad End B''：布魯諾投反對票但被推翻，公主在移交時聽見「那個煽動者也找到了嗎」 | `intel_mob_manipulation` |
-| B-V3 | 持有 `intel_bruno_wife_death` ＋ `intel_mob_manipulation` | 同時回應個人創傷與群體操弄，同步分化外部協調者 | 宰相的情報網比公主快——她進入下城區第幾天就已被發現；布魯諾把公主推出去自己留下 | Bad End B'''：公主逃脫，布魯諾被帶走 | — （觸發耗盡鎖定，情境關閉）|
+| B-V0 | 無相關情報（持有 A 線全部情報） | 帶著對宰相的確認憤怒醒來，決定正面質問；本能地拒絕項鍊，無法掩飾敵意 | 宰相察覺她拒絕項鍊的速度出奇地快，隨即出現並評估她的狀態；公主無法偽裝，節節失守 | Bad End B：宰相安排的毒茶出現在她的桌上；她在意識消散前才明白，監視不需要在場，只需要讓茶出現在正確的地方 | `intel_chancellor_surveillance` ＋ `intel_necklace_compliance` |
+| B-V1 | 持有 `intel_chancellor_surveillance` ＋ `intel_necklace_compliance` | 學會了偽裝：主動戴上項鍊，假裝是那個信任宰相的公主；藉此換得前往下城區的機會 | 宰相安排的「展示之旅」讓她看見操控的骨架；她觀察到布魯諾與異常路線，記住了讓流民噤若寒蟬的窄巷方向；追問過深，當晚被宰相察覺 | Bad End B'：宰相親自送茶；她在意識消散前記住了那條路的方向 | `intel_mob_manipulation` ＋ `intel_lower_city_route` ＋ `intel_bruno_wife_death` |
+| B-V2 | 持有 `intel_mob_manipulation` ＋ `intel_lower_city_route` | 跟循 B-V1 記住的路線；注意到流民對「莫名出現的士兵」噤若寒蟬；推導出城牆必有密道 | 在內外城牆交界找到密道入口；幽靈士兵為保密當場格殺，沒有審問，沒有廢話 | Bad End B''：就地格殺——死亡帶走的不是對話，而是一個無可置疑的事實 | `intel_secret_passage` → 觸發耗盡鎖定 |
 
-> **變體遞進邏輯：** B-V0 → B-V1 → B-V2 → B-V3 → LOCK。每次失敗都讓公主更深地理解問題的結構——從「苦難是真的」到「傷口是個人的」到「操弄是系統性的」到「根源在上層」。
+> **變體遞進邏輯：** B-V0 → B-V1 → B-V2 → LOCK。每次失敗都讓公主更深地理解宰相的控制結構——從「監視無死角」到「敘事被操控」到「物理城防已淪陷」。
 
 ### 分支選項（各變體內）
 
-- `03b_steal_supplies.dtl`（**僅 B-V0** 可觸發）：偷偷回城堡取食物藥品
-  - 進入條件：未持有 `intel_chancellor_eyes`
-  - B-V1 以上公主已帶補給或改變策略，此選項不出現
-- `04b_rush_granary.dtl`（**B-V0 / B-V1 / B-V2** 坦白場景內可觸發）：立刻帶布魯諾去找地下糧倉
-  - 進入條件：未持有 `intel_granary_needs_key`
-  - 三個變體均以此鎖定「糧倉需要宰相鑰匙」這一知識點；一旦取得 `intel_granary_needs_key` 即自動消失
+- B-V0 書房場景：「喝下茶 / 推開茶杯」——結局相同，差別在公主帶走的認知（主動還是被動確認）
+- B-V1 回城後：追問隨行侍衛（觸發宰相當晚察覺，帶來 Bad End 的直接原因）
 
 ---
 
@@ -178,9 +175,12 @@
 | `intel_chancellor_betrayal` | A-V0 Bad End A | 留下兩個無法解釋的記憶（「不要怪我」與茶的氣味），無法再信任宰相；解鎖 A-V1、C-V1 |
 | `intel_fake_ledgers` | A-V1 Bad End A' | 帳簿偽造具體位置；解鎖 A-V2 |
 | `intel_chancellor_poison` | A-V2 Bad End A'' | 毒茶是宰相的消滅手段；觸發情境 A 主動鎖定 |
-| `intel_starvation_real` | B-V0 Bad End B | 下城區饑荒是真的；解鎖 B-V1 |
-| `intel_bruno_wife_death` | B-V1 Bad End B' | 布魯諾妻子死因；解鎖 B-V2、B-V3 |
-| `intel_mob_manipulation` | B-V2 Bad End B'' | 群體仇恨被系統性操弄；解鎖 B-V3；最終輪迴安撫場景加深 |
+| `intel_chancellor_surveillance` | B-V0 | 宰相全天候監視，拒絕項鍊即觸發即時反應；解鎖 B-V1 |
+| `intel_necklace_compliance` | B-V0 | 項鍊是服從度測試，不戴=異常訊號；解鎖 B-V1 |
+| `intel_mob_manipulation` | B-V1 | 下城區仇恨被系統性引導，苦難是真的但方向是假的；解鎖 B-V2；最終輪迴安撫布魯諾場景加深 |
+| `intel_lower_city_route` | B-V1 | 記住部分異常路線（窄巷方向、士兵出現位置）；解鎖 B-V2 |
+| `intel_bruno_wife_death` | B-V1 | 布魯諾妻子因草藥被徵用而死（間接獲得）；最終輪迴安撫場景的情感槓桿 |
+| `intel_secret_passage` | B-V2 | 城牆密道確認，宰相軍隊可無聲穿梭，物理城防已被架空；觸發情境 B 耗盡鎖定 |
 | `intel_chancellor_treason` | C-V0 / C-V2 / C-V3 | 宰相完整罪行；最終輪迴解鎖條件之一 |
 | `intel_king_defense_line` | C-V0 / C-V1 | 地下防線真相；最終輪迴解鎖條件之一 |
 | `intel_dal_blinded_by_chancellor` | C-V0 / C-V1 | 達爾被宰相弄瞎；解鎖 C-V3 |
@@ -193,7 +193,7 @@
 |---|---|---|---|
 | 序章後 | `city_fall` / `assassination` / `magic_core_sabotage` | 無，但開始有違和感 | — |
 | 情境 A 完整走完（V0→V1→V2）| `betrayal` → `fake_ledgers` → `poison` | 慈父 = 暴君 | 宰相的「真相」是精心篩選的謊言；他的手段因對象而異 |
-| 情境 B 完整走完（V0→V1→V2→V3）| `starvation_real` → `bruno_wife_death` → `mob_manipulation` | 受害者 = 暴民 | 布魯諾不是壞人，是被系統逼到絕路的普通人 |
+| 情境 B 完整走完（V0→V1→V2）| `chancellor_surveillance` → `mob_manipulation` → `secret_passage` | 宰相的監控有範圍限制？ | 從監視到敘事操控到物理城防淪陷——宰相的網沒有死角 |
 | 情境 C 完整走完 | `chancellor_treason` / `king_defense_line` / `dal_blinded_by_chancellor` | 父王是個怪物？ | 冷酷帝王 = 溫柔的獻祭者 |
 | 最終輪迴 | 所有濾鏡剝落 | 無 | — |
 

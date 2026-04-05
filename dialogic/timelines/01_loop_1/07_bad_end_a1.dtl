@@ -30,5 +30,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_fake_ledgers"]
-[signal arg="death_context:{'death_message': '你在最後一刻知道了：是宰相，他們都被他騙了。帳本是假的，苦難是真的，但「是誰的錯」這個答案是宰相幫你選好的。賽拉斯用盡了力氣告訴你這些，然後執行了密令。', 'intel_reward': ['intel_fake_ledgers'], 'killer': 'cyras'}"]
+[signal arg="death_context:{'death_message': '你在最後一刻知道了：是宰相，他們都被他騙了。帳本是假的，苦難是真的，但「是誰的錯」這個答案是宰相幫你選好的。賽拉斯用盡了力氣告訴你這些，然後執行了密令。', 'intel_reward': ['intel_fake_ledgers'], 'killer': 'cyras', 'advance_loop': false}"]
 [signal arg="trigger_death"]

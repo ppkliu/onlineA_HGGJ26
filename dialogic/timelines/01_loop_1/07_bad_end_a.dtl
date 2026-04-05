@@ -38,5 +38,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_betrayal"]
-[signal arg="death_context:{'death_message': '你把密令交給了宰相。你不知道發生了什麼，只帶著茫然死去。但你記住了兩件事：他說的「不要怪我」，和那杯茶獨特的氣味。這兩個微小的記憶，將在未來拯救你。', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你把密令交給了宰相。你不知道發生了什麼，只帶著茫然死去。但你記住了兩件事：他說的「不要怪我」，和那杯茶獨特的氣味。這兩個微小的記憶，將在未來拯救你。', 'intel_reward': ['intel_chancellor_betrayal'], 'killer': 'chancellor', 'advance_loop': false}"]
 [signal arg="trigger_death"]
