@@ -6,13 +6,15 @@ extends DialogicNode_ChoiceButton
 var _visited_color := Color(0.6, 0.6, 0.7, 1.0)
 var _unvisited_color := Color(1.0, 1.0, 1.0, 1.0)
 var _visited_prefix := "✓ "
+var _tracking_key: String = ""
 
 
 func _load_info(choice_info: Dictionary) -> void:
 	super(choice_info)
 
 	var raw_text: String = choice_info.get("text", "")
-	var is_visited: bool = IntelSystem.is_choice_visited(raw_text)
+	_tracking_key = IntelSystem.make_choice_tracking_key(choice_info)
+	var is_visited: bool = IntelSystem.is_choice_visited(_tracking_key)
 
 	if is_visited:
 		set_choice_text(_visited_prefix + raw_text)
@@ -26,7 +28,5 @@ func _load_info(choice_info: Dictionary) -> void:
 
 
 func _pressed() -> void:
-	var displayed_text: String = text if not text_node else text_node.text
-	var raw_text := displayed_text.trim_prefix(_visited_prefix)
-	IntelSystem.mark_choice_visited(raw_text)
+	IntelSystem.mark_choice_visited(_tracking_key)
 	super()

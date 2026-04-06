@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.7, 0.7, 0.7, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_mood_happy": "",
+"sound_mood_sad": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "default",
+&"description": "旁白。用於場景描述、時間跳躍、鏡頭式敘事。不出現角色立繪。",
+&"display_name": "",
+&"mirror": false,
+&"nicknames": [],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
