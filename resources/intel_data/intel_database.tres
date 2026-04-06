@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=39 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=40 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -336,6 +336,42 @@ category = &"conspiracy"
 source_loop = 4
 unlocks_branches = []
 
+[sub_resource type="Resource" id="intel_chancellor_surveillance"]
+script = ExtResource("2")
+id = "intel_chancellor_surveillance"
+title = "侍從身上的監視"
+description = "宰相透過女僕監控並引導公主——他的網延伸到身邊每一個人。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_lower_city_suffering"]
+script = ExtResource("2")
+id = "intel_lower_city_suffering"
+title = "下城區的苦難"
+description = "飢餓與絕望不是紙上數字；你親眼看見、聽見了那份重量。"
+category = &"general"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_poison_not_just_tea"]
+script = ExtResource("2")
+id = "intel_poison_not_just_tea"
+title = "不只茶裡有毒"
+description = "他以為拒絕茶就能活——但毒可以下在任何食物與飲品裡。"
+category = &"conspiracy"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_maid_coerced"]
+script = ExtResource("2")
+id = "intel_maid_coerced"
+title = "被脅迫的善意"
+description = "莉娜三次失手不是笨手笨腳——她在監視之下仍想替你多擋一次。"
+category = &"character"
+source_loop = 2
+unlocks_branches = []
+
 [resource]
 script = ExtResource("1")
 items = [
@@ -375,5 +411,9 @@ items = [
 	SubResource("intel_chancellor_dismisses_testimony"),
 	SubResource("intel_king_will_listen"),
 	SubResource("intel_defense_needs_three"),
-	SubResource("intel_chancellor_escape_plan")
+	SubResource("intel_chancellor_escape_plan"),
+	SubResource("intel_chancellor_surveillance"),
+	SubResource("intel_lower_city_suffering"),
+	SubResource("intel_poison_not_just_tea"),
+	SubResource("intel_maid_coerced")
 ]
