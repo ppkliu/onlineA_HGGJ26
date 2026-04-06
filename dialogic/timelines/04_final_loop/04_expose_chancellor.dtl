@@ -2,8 +2,7 @@
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
 [wait time="1.0"]
-princess: （又過了四天。賽拉斯帶人從地下通道取出了腐蝕過的魔法陣元件、通敵密函的副本、糧倉鎖的拓印。布魯諾派人在下城區散佈消息——「公主會開糧倉」。我把達爾的證詞整理成書面記錄，修改了五遍。）
-princess: （第七天早上。所有準備就緒。）
+princess: （又過了四天。賽拉斯已標定城牆密道的位置；達爾的查核紀錄在他手上；布魯諾那邊已在核對帳目。我向父王正式請求覲見。不是偷偷去，不是被人架著去。是讓宰相與所有大臣都在場的那種。）
 - ——四天後——
 	[wait time="0.3"]
 
@@ -13,9 +12,7 @@ princess: （第七天早上。所有準備就緒。）
 
 join princess left
 
-princess: （所有東西用布包好，放在賽拉斯的盔甲裡。今天早上，我向父王請求了一次正式覲見。）
-
-princess: （莫里昂一定會在場。他不會缺席任何朝會——因為他需要控制父王聽到的每一個字。）
+princess: （A-2，我一個人去，我喊完「是宰相」這三個字，話就被走廊吃掉了。這次不一樣。這次說話之前，所有人都已經各自就位了。）
 
 leave princess
 
@@ -30,62 +27,112 @@ join princess left
 join chancellor right
 join king center
 
-princess (determined): 父王。女兒有話要說。關於這座城市的存亡。
+princess (determined): 父王。女兒有三件事要說，每一件都可以由在場的人親自去確認。
 
-chancellor (default): 陛下，公主最近精神不太穩定，臣建議讓御醫先——
+chancellor (default): 陛下，公主最近——
 
-princess (determined): 宰相大人，我建議您閉嘴。
-
-[wait time="0.6"]
-
-chancellor: ……
-
-princess (determined): 父王。女兒知道地下防線。知道戰備儲糧。知道您這兩年用自己的名聲當擋箭牌，在所有人以為您是暴君的時候，偷偷建了一套純機械的防禦系統。
-
-king: ……
-
-princess (determined): 您不知道叛徒是誰，所以不敢信任任何人。您甚至不敢告訴我——因為您怕我太笨，說漏嘴。但無知不是保護。無知是監獄。
-
-princess (determined): 宰相莫里昂。
+princess (determined): 宰相大人，請等我說完。
 
 [wait time="0.6"]
 
-princess (determined): 兩年前，防線完工的第二天夜裡，您派了三個黑衣人去弄瞎總工匠達爾。因為他記住了您的聲音。他說那個人「說話很輕、很慢，像在唸一首溫柔的詩」。
+# === 第一件：城牆密道 ===
 
-princess (determined): 一年前，您利用財政署的督察權限，每月對魔法陣的能源管線注入腐蝕劑。
+princess (determined): 第一件。城南城牆，有一條密道——出口在下城區背靠河堤的倉儲群後方。賽拉斯已確認它的位置，任何人都可以今天就去確認它是真實存在的。
 
-princess (determined): 半年來，您把父王撥給下城區的救濟糧——用財政署的印章鎖在地下糧倉裡。讓百姓挨餓，讓他們恨父王，讓他們變成您的武器。
-
-chancellor (cold): 這些指控……很有想像力。但沒有證據。
-
-princess (determined): 賽拉斯。
-
-[wait time="0.6"]
-
-princess: （賽拉斯上前一步。從盔甲裡取出布包，打開——腐蝕過的魔法陣元件、通敵密函的副本、財政署印章的鎖具拓印、達爾的親筆證詞。一樣一樣擺在地上。）
-
-princess (determined): 您從不說謊。「陛下確實在備戰」——是的，因為您在從內部破壞防線。「臣只是告訴殿下想聽的話」——是的，您用真相的碎片拼出了謊言。
-
-princess (determined): 省略真相，也是謊言。
-
-[wait time="1.0"]
-
-king: ……
-
-king: 朕等一個證據，等了兩年。朕以為要等到城破那天才會知道答案。
-
-king: 沒想到……是朕的女兒先找到了。
-
-king: 拿下。
+loyal_retainer: （他上前一步，點頭。）
 
 [wait time="0.8"]
 
-chancellor (cold): ……殿下比臣想的聰明多了。
+# === 第二件：維護鏈 ===
 
-chancellor (cold): 不過，臣還是要提醒殿下——外面的軍隊不會因為臣被拿下就撤退。棋已經下了一半了。
+princess (determined): 第二件。財政署的清場令、批准文件的署名、魔法陣管線「定期腐蝕」的週期時間點——這些都有記錄，可對日誌，可複驗。達爾可以說明，哪些「例行維護」在技術上是腐蝕而不是保養。
 
-princess (determined): 我知道。但現在是我們在下棋，不是你。
+join dal left
+
+dal (quiet): （他上前一步。從袖中取出查核紀錄，擺在地上。）
+
+dal (quiet): 東南象限第三節點，連續六個週期，清場令後的衰退曲線與自然老化不符。每一筆署名，都指向同一個財政署的批核路徑。
+
+[wait time="0.8"]
+
+# === 第三件：術式腐蝕節點 ===
+
+princess (determined): 第三件。魔法陣的腐蝕節點，與「例行維護」的批核文件在技術上對不上。達爾的紀錄已可呈交御覽。修復留待今日之後——但問題是否存在，今天即可定性。
+
+[wait time="1.0"]
+
+chancellor (cold): 這些……不過是湊在一起的巧合。
+
+[wait time="0.5"]
+
+princess: （賽拉斯站在那裡，沉默如城牆。布魯諾的名字與帳目查核已在下城區流傳開了——下城區的敘事有了另一個入口。達爾的技術見證，沒有辦法靠「不過是巧合」打發。）
+
+princess: （宰相的敘事，在這個時候，沒有地方落腳。）
+
+[wait time="1.2"]
+
+king: ……
+
+[wait time="2.0"]
+
+king: （他沒有立刻說「我相信你」。他看著我，然後看向賽拉斯。）
+
+loyal_retainer: （賽拉斯點頭。）
+
+[wait time="0.8"]
+
+king: 查。
+
+[wait time="1.5"]
+
+princess: （不是勝利。但「查」這個字，意味著宰相這次沒有辦法在調查開始之前就讓所有出口關閉。）
+
+[wait time="0.8"]
+
+leave dal
+
+# === 宰相末路 ===
+
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0" volume="0.35"]
+
+princess: （王令下達。賽拉斯的人封死了港口、側門、私兵接應點、所有他預備的潛逃路線。他發現自己逃不出去。）
+
+[wait time="1.0"]
+
+chancellor (cold): ……
+
+chancellor (cold): 臣一直以為，殿下是最好看、也最好用的棋子。
+
+[wait time="0.8"]
+
+chancellor (cold): 密道、帳目、術式、下城區的名字——在同一個朝堂上，按順序，被你釘死。
+
+[wait time="0.6"]
+
+chancellor (cold): 原來那些臣以為是少女胡鬧的異常……是你藏得極深的一手。懂節奏，懂人心，懂何時開口、何時沉默。
+
+[wait time="0.8"]
+
+chancellor (cold): ……能把鋒芒藏到這種地步的人，本來就不該被當成擺設。臣輸給的不是天真。是臣看走眼了。
+
+[wait time="1.2"]
+
+[sound path="res://audio/sfx/vial_break.ogg" bus="SFX"]
+
+[wait time="0.8"]
+
+princess: （他倒下去。沒有人來得及阻止。服毒，自裁——不是被人賜死，是他自己知道棋盤已翻，選擇了自我了斷。）
+
+[wait time="1.5"]
 
 leave chancellor
+
+king: ……
+
+[wait time="1.0"]
+
+leave king
+leave princess
+leave loyal_retainer
 
 jump 05_dawn/
