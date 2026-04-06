@@ -1,12 +1,5 @@
 # 調查線 B — 傀儡的絞索：醒來（B-0 — 想親眼確認）
 
-# 已拿過密道 Bad End 情報後勿再自動進 B-2，否則每輪醒來都會重播密道線並無限死亡
-# 已拿 B-1 獎勵（mob）後勿因 surveillance 永真而倒回 b1（與 loop3 冷醒一致）
-if {intel_mob_manipulation} and not {intel_secret_passage}:
-	jump b2_01_awakening/
-if {intel_chancellor_surveillance} and not {intel_mob_manipulation}:
-	jump b1_01_awakening/
-
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.2"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.39"]
 
