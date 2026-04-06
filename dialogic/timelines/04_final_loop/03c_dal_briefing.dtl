@@ -4,7 +4,7 @@
 [wait time="1.0"]
 
 - ——第三天——
-	princess: （賽拉斯以軍務覆核為由，請達爾過來一趟——聲稱有件需要術式負責人親眼看的異常紀錄。地點在賽拉斯轄下的閱兵後庫，不是達爾的工作室。）
+	princess: （賽拉斯把人約到後庫。不在工作室。）
 	[wait time="0.3"]
 
 # === 內廷偏廳 ===
@@ -19,11 +19,9 @@ join loyal_retainer right
 
 join dal right
 
-princess: （他到了才發現我在場。一愣，但仍守禮。）
+princess: （他進門才看見我，腳步一頓。）
 
 dal (wary): ……殿下。
-
-princess: （我沒有從情緒起講。直接用他聽得懂的語言開口。）
 
 princess (determined): 陣核東南象限，第三維護週期。節點亮度黯淡的模式——不是老化，是有人在每一次清場令後，對能源管線注入了什麼。
 
@@ -35,7 +33,7 @@ princess (determined): 我對照過維護日誌與清場時程。哪些「例行
 
 [wait time="1.0"]
 
-princess: （他的反應是驚訝，然後迅速變成嚴肅。我描述的，似乎與他心裡某塊對不起來的感覺高度吻合。）
+princess: （他臉色變了。像終於對上那塊說不清的疙瘩。）
 
 dal (quiet): ……若殿下說的是真的，這不是意外老化。那是——
 
@@ -67,11 +65,11 @@ dal (quiet): ……好。
 
 leave dal
 
-princess: （達爾離開了。賽拉斯沒有說話，只是看著我。）
+princess: （達爾走了。賽拉斯看我一眼，什麼都沒說。）
 
 loyal_retainer: ……所有人都到位了。
 
-princess (determined): 還沒。得讓父王在場，讓宰相沒有退路，才算到位。
+princess (determined): 還沒。要父王在。要他在眾人面前沒路可退。
 
 [wait time="0.8"]
 
@@ -81,11 +79,11 @@ leave loyal_retainer
 # === 最後決策 ===
 
 if {intel_chancellor_escape_plan}:
-	princess (determined): （上次我急著直接去抓他——書房空了，城門開了，賽拉斯拼死守在城門前。最後一步不能急。必須當著所有人的面，堵死他每一條退路。）
+	princess (determined): （上次我衝太快……空房間，開著的門。這次不能重來。）
 
 - 正式請求覲見，在朝堂上揭露宰相
-	princess (determined): （等到朝堂。所有人在場，所有棋子同時落地。）
+	princess (determined): （上朝。一次把話說完。）
 	jump 04_expose_chancellor/
 - 趁宰相還不知道，現在直接去拿他 | [if {intel_chancellor_escape_plan} == false]
-	princess (determined): （他還不知道我這邊的準備。趁他反應過來之前——直接動手！）
+	princess (determined): （賭他還沒收完。）
 	jump 03b_rush_arrest/

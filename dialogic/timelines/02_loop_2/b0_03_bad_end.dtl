@@ -7,29 +7,31 @@
 
 join princess left
 
-princess: （莉娜帶著我原路折返。回到城堡，父王得知我出去了——語氣是憤怒，說的卻是「我是在保護你」。我被關進一間小房間。沒有窗，門從外鎖上。）
+princess: （回城之後，世界一下子變小。）
+
+princess: （父王的吼聲隔著門傳進來，最後只剩一句「我是在保護你」。然後是鎖舌咔噠一聲。）
 
 [wait time="0.8"]
 
-princess: （過了一段時間，桌上多了一杯茶。蜂蜜、玫瑰——我聞出那個氣味了。）
+princess: （桌上多了一杯茶。一聞——又是那個甜裡帶苦的味。）
 
-princess (hollow): （我沒有喝。）
+princess (hollow): （我沒碰。）
 
 [wait time="0.6"]
 
-princess: （侍從來收走茶杯，什麼都沒說。神情有些奇怪。）
+princess: （侍從來收杯子，眼神躲了一下。）
 
 [wait time="0.8"]
 
-princess: （又過了一段時間。到了用餐的時間。食物被端上來了。）
+princess: （飯點到了。盤子擺上來，熱氣裡混著熟悉的東西。）
 
 [wait time="0.5"]
 
-princess: （我聞著那個氣味——和茶不一樣，卻有某種共同的底色。）
+princess: （不是茶……可底味一樣。）
 
 [wait time="0.5"]
 
-princess (hollow): （我以為不喝茶就能活。但不是只有茶。）
+princess (hollow): （原來躲得開杯子，躲不開別的。）
 
 [wait time="1.0"]
 

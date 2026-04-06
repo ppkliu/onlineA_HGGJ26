@@ -7,7 +7,7 @@
 
 join princess left
 
-princess: （課後他收拾文件的幾分鐘——助手不在旁邊的時候。就是現在。）
+princess: （助手不在的幾分鐘。就現在。）
 
 [wait time="0.5"]
 
@@ -35,7 +35,7 @@ dal (quiet): （他看著我，沉默了很長一段時間。）
 
 dal (quiet): ……好。
 
-princess: （他會匯報的。他是那種人。）
+princess: （他會照做的。我看得出來。）
 
 leave princess
 leave dal
@@ -49,9 +49,9 @@ leave dal
 
 join princess left
 
-princess: （隔天，達爾沒有出現。）
+princess: （隔天，達爾沒來。）
 
-princess: （我等到中午，讓女僕隨口問了一句。）
+princess: （我忍到中午，讓人隨口去問。）
 
 [wait time="0.6"]
 
@@ -63,17 +63,15 @@ leave maid
 
 [wait time="1.0"]
 
-princess: （我什麼都沒說。）
+princess: （我把話吞回去。）
 
 [wait time="0.6"]
 
 - 之後過了好幾天……
-	princess: （達爾與他的助手下落不明。）
+	princess: （達爾和助手……像被從宮裡抹掉。）
 	[wait time="0.5"]
 
-princess: （我在房間裡坐了很久。）
-
-princess: （我請他匯報，他匯報了，然後他死了。我以為匿名能保護他。但保護不了的不是名字——是「有人知道了」這件事本身。）
+princess: （我請他往上說。他說了。然後人就沒了。）
 
 [wait time="0.8"]
 

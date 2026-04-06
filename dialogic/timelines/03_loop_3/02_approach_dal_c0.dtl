@@ -7,9 +7,7 @@
 
 join princess left
 
-princess: （書庫和達爾講解室之間有一條走廊。他在課後整理文件的幾分鐘，通常獨自走過。）
-
-princess: （先前假意服從、向他求教的那次，我只問了一個表面問題，他只當我三分鐘熱度。這次我準備了一個不同的問題。）
+princess: （課後這幾分鐘，走廊常只剩他的腳步。上次我問得太像功課。）
 
 [wait time="0.6"]
 
@@ -17,9 +15,9 @@ join dal right
 
 dal (default): 殿下？
 
-princess: （他停下來了。）
+princess: （他停住了。）
 
-princess: （我讓問題開口之前有一點重量。）
+princess: （這次開口要重一點。）
 
 princess: 達爾先生，我讀了陣法沿革的卷宗——防護接縫那一段的描述，和您在課裡說的術式層級對不上。我想知道為什麼。
 
@@ -37,7 +35,7 @@ dal (quiet): ……
 
 dal (quiet): 跟我來。
 
-princess: （他帶我進去了。）
+princess: （他把我帶進去了。）
 
 leave princess
 leave dal
@@ -50,9 +48,9 @@ leave dal
 join princess left
 join dal right
 
-princess: （他帶我走進魔法陣的巡視路線，一邊走一邊講——不是課堂那種介紹，是他真正在工作時說話的方式。節點分層邏輯、導流方向、與城牆術式的接縫位置。哪些欄位在維護紀錄裡真正重要，哪些「正常波動」其實值得注意。）
+princess: （牆角、轉彎、他停頓的地方——這不是課堂，是他在上班。）
 
-princess: （我沒有紙，沒有筆——在這裡帶走任何記錄都會被沒收。我唯一能做的就是記。）
+princess: （不能寫。只能往腦子裡塞。）
 
 [wait time="0.6"]
 
@@ -68,9 +66,7 @@ dal (quiet): （他看了我一眼，像是第一次真正看見我。）
 
 dal (quiet): ……公主是認真的人。
 
-princess: （我把這句話記下來。不是因為它讓我高興——是因為這句話讓他決定繼續說。）
-
-princess: （今天的路線，我開始在腦子裡建圖。）
+princess: （他願意講下去……我腦中的線才開始連。）
 
 [wait time="0.6"]
 

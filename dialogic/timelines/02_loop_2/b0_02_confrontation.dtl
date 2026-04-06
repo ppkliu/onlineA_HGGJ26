@@ -18,19 +18,19 @@ maid (default): 萬一出了什麼事，莉娜可擔待不起呢……
 
 [wait time="0.6"]
 
-princess: （她說完了。）
+princess: （她停住了。）
 
 princess: 我只是想出去看看。你陪我去，不會有事的。
 
 [wait time="0.8"]
 
-princess: （莉娜的眼神變了一下。她猶豫的樣子不像「我在想藉口」，而像是「有什麼東西在她背後推著她」，讓她在某個答案和另一個答案之間卡住。）
+princess: （莉娜眼神一閃——不是「不想去」，是「想去又不敢」那種卡。）
 
 [wait time="0.5"]
 
 maid (default): ……好吧。但不能去太深。
 
-princess: （她答應了。那個頓點，不像是在算路程的風險。）
+princess: （她答應得太勉強。那一下停頓……不像在擔心路。）
 
 leave princess
 leave maid
@@ -44,25 +44,25 @@ leave maid
 
 join princess left
 
-princess: （莉娜帶著我穿過人群，往下城區走去。）
+princess: （人越來越擠，味道也越來越重。莉娜抓著我的袖子，指節發白。）
 
 [wait time="0.8"]
 
 - 看見了什麼……
-	princess: （苦難是真實的——不像帳本那樣冷靜整齊、可以被數字填滿。這裡是活的：破損的布料、骨頭輪廓太清楚的孩子、堆在牆角等待腐爛的東西。一個女人抱著一個沒有聲音的嬰兒，坐在地上，什麼都不說。）
+	princess: （這裡沒有「行距」——只有破布、瘦得見骨的孩子、牆角堆著的東西。有個女人抱著嬰兒坐著，一聲不吭。）
 	jump lower_city_walk
 
 - 這和帳本不一樣……
-	princess (determined): （帳本上的數字是假的。但眼前這些苦難不是假的。這是活生生的人，不是可以被數字抹掉的存在。）
+	princess (determined): （紙上再怎麼寫，也寫不出這種氣味。）
 	jump lower_city_walk
 
 label lower_city_walk
 
 [wait time="0.6"]
 
-princess: （走著走著，莉娜開始催促。「回去吧。」「已經看到了，回去吧。」「求殿下，我們回去吧。」語氣越來越焦急。但走的方向……越來越偏。不是往城堡，而是往一條我們沒有走過的路。）
+princess: （莉娜一直說回去、回去——可腳步卻把我往另一頭帶。）
 
-princess: （催促的聲音和邁步的方向，是兩件不同的事。）
+princess: （嘴上的話，和腳下的路，對不上。）
 
 [wait time="0.6"]
 
