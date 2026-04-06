@@ -13,10 +13,10 @@
 "suffix": ""
 },
 &"default_portrait": "default",
-&"description": "曾為國王設計地下防線的總工匠，因知道太多而被弄瞎。隱居在下城區廢井旁。",
+&"description": "王城魔法防禦陣的技術負責人，嚴謹而直接。公主在 B-1 以學生身分初次接觸他；C 線的他是最靠近腐蝕核心的知情者，也是最先被清除的人。",
 &"display_name": "達爾",
 &"mirror": false,
-&"nicknames": ["工匠", "達爾"],
+&"nicknames": ["術式長", "達爾"],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "default": {
