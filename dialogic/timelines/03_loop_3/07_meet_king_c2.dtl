@@ -1,0 +1,79 @@
+# 調查線 C-2：求見父王與交牌 — Day 1-2
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.9"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.5" volume="0.35"]
+
+[wait time="1.0"]
+
+join princess left
+
+princess: （正式求見。不是偷偷摸摸，不是走廊偶遇——透過正當管道，請求在父王書房單獨面見，沒有宰相在場。）
+
+[wait time="0.6"]
+
+princess: （等了一天。許可下來了。）
+
+princess: （他同意了。也許這本身就說明了一些事。）
+
+leave princess
+
+# === 父王書房 ===
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="1.5" volume="0.30"]
+
+[wait time="0.8"]
+
+join princess left
+join king center
+
+princess: （他在書房裡等我。沒有宰相，沒有侍衛——他聽懂了「單獨面見」的意思。）
+
+[wait time="0.6"]
+
+princess: 父王。女兒有話說，說完為止，請您聽完。
+
+king: ……吾兒。說吧。
+
+# === 交牌 ===
+
+[wait time="0.5"]
+
+princess: （我把所有我知道的事情說了一遍。）
+
+princess: （城牆密道。宰相私兵。財政署清場令的週期性腐蝕。達爾的死——我在場，我親眼看見。助手端茶進來，達爾不知道有問題，喝了，死了，然後鍊金手槍舉起來。）
+
+princess: （我說得很平靜。沒有哭，沒有求饒，沒有質問父王為什麼之前沒有保護我。）
+
+princess: 這是我在三個月裡看見的事。父王比任何人都有辦法查證它。
+
+[wait time="2.0"]
+
+king: ……
+
+[wait time="1.0"]
+
+princess: （父王聽完，沉默了很長一段時間。他的表情不是欣慰，不是感謝——更像是被兩種身分撕開：王座上的那一面，與父親的那一面。）
+
+[wait time="0.8"]
+
+king: ……身為王，我沒辦法照你說的這些，在沒有證據、沒有程序、沒有大臣在場的情況下，就當成真相。
+
+[wait time="0.8"]
+
+king: （他抬眼看著她，眼眶很紅，聲音壓得很低。）
+
+king: 但身為你的父親——我相信你。
+
+[wait time="1.2"]
+
+king: ……原諒我。我不能失去你。
+
+[wait time="1.0"]
+
+princess: （他站起來了。沒有問「你從什麼時候開始查的」，也沒有要求我證明輪迴或死亡——那些此刻都不重要。他喚人進來，語氣是王的語氣，內容卻是把我送走。）
+
+leave princess
+leave king
+
+jump 08_tower_c2/

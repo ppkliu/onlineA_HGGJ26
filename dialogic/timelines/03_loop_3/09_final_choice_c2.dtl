@@ -1,0 +1,125 @@
+# 調查線 C-2：破局的抉擇 — Bad End C-2
+
+[background arg="res://art/backgrounds/window.png" fade="0.8"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="3.0" volume="0.28"]
+
+[wait time="1.2"]
+
+join princess left
+
+# === 茶水再現 ===
+
+princess: （茶水中再現了熟悉的氣味。）
+
+princess: （蜂蜜、玫瑰、那一點苦。我沒有喝。）
+
+[wait time="0.8"]
+
+princess: （我請女僕去聯絡父王，或聯絡賽拉斯——任何一個人。）
+
+[wait time="0.6"]
+
+princess: （女僕一去不返。）
+
+[wait time="1.2"]
+
+# === 城破之聲 ===
+
+[sound path="res://audio/sfx/gate_open_heavy.ogg" volume="0.4"]
+[signal arg="camera_shake" intensity="medium"]
+
+princess: （夜間。喊殺聲從城的方向傳來，低沉而持續——城防與陣線在崩潰。外力救援全斷。）
+
+[wait time="1.2"]
+
+princess: （我站在塔上，窗外的城市正在燃燒。）
+
+[wait time="0.8"]
+
+princess: （此前每一次死亡，都是被人剝奪。這一次——我選擇。）
+
+[wait time="0.6"]
+
+# === 三個選項 ===
+
+- 餐刀
+	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
+
+	princess (hollow): （桌上有一把餐刀。疼痛而決絕的斷路。）
+
+	[wait time="0.8"]
+
+	princess (hollow): （我拿起它。）
+
+	[wait time="1.5"]
+
+	[signal arg="final_choice:knife"]
+	[signal arg="cut_to_silence"]
+
+	leave princess
+
+	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
+	[wait time="3.0"]
+
+	princess: 「父王信她——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。『知道了』和『解決了』之間，仍然有一道無法靠單人行動跨越的距離。」
+
+	[wait time="3.0"]
+
+	[signal arg="intel:intel_chancellor_escape_plan"]
+	[signal arg="intel:intel_king_defense_line"]
+	[signal arg="death_context:{'death_message': '父王信她、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（餐刀）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="trigger_death"]
+
+- 冷掉的茶
+	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
+
+	princess (hollow): （那杯茶還在桌上，放涼了。蜂蜜沉於杯底，沒有攪開——第一口會極苦。）
+
+	princess (hollow): （宰相留下的惡意。我把它咽下去。）
+
+	[wait time="1.5"]
+
+	[signal arg="final_choice:cold_tea"]
+	[signal arg="cut_to_silence"]
+
+	leave princess
+
+	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
+	[wait time="3.0"]
+
+	princess: 「父王信她——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。『知道了』和『解決了』之間，仍然有一道無法靠單人行動跨越的距離。」
+
+	[wait time="3.0"]
+
+	[signal arg="intel:intel_chancellor_escape_plan"]
+	[signal arg="intel:intel_king_defense_line"]
+	[signal arg="death_context:{'death_message': '父王信她、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（冷茶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="trigger_death"]
+
+- 窗戶
+	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
+
+	princess (hollow): （窗戶沒有鎖死。可以推開。外面是正在墜落的城——與國同墜。）
+
+	[wait time="0.8"]
+
+	princess (hollow): （我推開了窗。）
+
+	[wait time="1.5"]
+
+	[signal arg="final_choice:window"]
+	[signal arg="cut_to_silence"]
+
+	leave princess
+
+	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
+	[wait time="3.0"]
+
+	princess: 「父王信她——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。『知道了』和『解決了』之間，仍然有一道無法靠單人行動跨越的距離。」
+
+	[wait time="3.0"]
+
+	[signal arg="intel:intel_chancellor_escape_plan"]
+	[signal arg="intel:intel_king_defense_line"]
+	[signal arg="death_context:{'death_message': '父王信她、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（窗戶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="trigger_death"]

@@ -1,0 +1,93 @@
+# 調查線 C-0：工作室 — Bad End C-0
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.38"]
+
+[wait time="0.6"]
+
+join princess left
+
+princess: （某天，達爾把我帶進他的工作室——不是巡視路線，而是他自己的空間。堆著修繕圖稿和校正工具。）
+
+[wait time="0.5"]
+
+join dal right
+
+dal (quiet): 我需要核對一件事。公主見識廣，幫我看一下。
+
+[wait time="0.8"]
+
+princess: （他把我默背下來的幾個節點位置一一確認。每確認一個，表情就沉一分。）
+
+[wait time="0.6"]
+
+dal (quiet): 這不是正常老化。
+
+[wait time="0.8"]
+
+dal (quiet): ……這是有心人做的。
+
+princess: 日誌上，外聘維護與夜間清場都是財政署核銷——名義上只是定期檢修、追查陣光黯淡——
+
+[wait time="0.4"]
+
+# === 門開了 ===
+
+[sound path="res://audio/sfx/door_open_soft.ogg" bus="SFX"]
+
+[wait time="0.5"]
+
+npc: 達爾先生，公主殿下，喝點茶吧。
+
+princess: （門開了。助手端著茶盤走進來。兩個杯子，笑容自然。）
+
+[wait time="0.8"]
+
+dal (default): 真難得，今天是花茶嗎？
+
+princess: （我聞到氣味的時候，茶盤已經放上桌了。）
+
+princess: （蜂蜜、玫瑰、那一點苦。）
+
+princess: （我想說不要喝——）
+
+[wait time="1.0"]
+
+princess: 達爾——
+
+[wait time="0.6"]
+
+princess: （達爾已經端起杯子。工作室不是我的寢房，他沒有任何理由覺得這杯茶有問題。）
+
+[wait time="0.8"]
+
+princess: （達爾喝下去了。）
+
+[wait time="1.5"]
+
+princess: （助手站在原地，臉上的笑容沒有變。然後他的手伸進袖裡。）
+
+princess (shocked): （鍊金手槍。）
+
+[wait time="0.5"]
+
+[signal arg="cut_to_silence"]
+
+leave dal
+leave princess
+
+# === Bad End C-0 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
+[wait time="3.0"]
+
+princess: 「他死不是因為不夠小心——是因為他根本不知道那杯茶有什麼問題。」
+
+[wait time="3.0"]
+
+[signal arg="intel:intel_magic_array_mnemonic"]
+[signal arg="intel:intel_array_handed_clerk"]
+[signal arg="intel:intel_array_structural_passage"]
+[signal arg="intel:intel_chancellor_treason"]
+[signal arg="death_context:{'death_message': '達爾誤飲毒茶，助手持鍊金手槍就地槍殺公主。現場布置為達爾持槍行兇後中毒身亡——滅口與嫁禍同步完成。', 'intel_reward': ['intel_magic_array_mnemonic', 'intel_array_handed_clerk', 'intel_array_structural_passage', 'intel_chancellor_treason'], 'killer': 'clerk', 'advance_loop': false}"]
+[signal arg="trigger_death"]

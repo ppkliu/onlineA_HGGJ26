@@ -1,0 +1,62 @@
+# 調查線 C-2：高塔與宰相潛逃 — 半年虛假和平
+
+[background arg="res://art/backgrounds/window.png" fade="1.2"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.0" volume="0.22"]
+
+[wait time="1.5"]
+
+join princess left
+
+princess: （護送的終點不是我的寢房，而是高塔。父王親自下的令。）
+
+[wait time="0.6"]
+
+princess: （比寢房寬敞，有窗，可以看見城的輪廓。名義上是保護——讓我待在王城裡最安全、也最聲音傳不出去的地方；實務上，我暫時不能再見大臣，不能再踏入任何一條會讓宰相警覺的線。）
+
+[wait time="0.8"]
+
+princess: （他以王之身不能在當下採信；以父親之身選擇信我——然後用高塔把我留下來。這不是「不信所以懲罰」，是信到不敢再放我走。）
+
+[wait time="1.2"]
+
+# === 宰相潛逃 ===
+
+princess: （兩天後，消息傳來。）
+
+[wait time="0.6"]
+
+npc: 宰相大人東窗事發，潛逃出城了。
+
+[wait time="0.8"]
+
+princess: （他跑了。這意味著父王那邊確實發生了什麼——或許是查證，或許是宰相自己嗅到了危險。）
+
+[wait time="0.6"]
+
+princess: （宰相跑了，但城沒有因此得救。一個人消失不等於他建立的東西崩潰。密道還在，陣核還在腐蝕，他部署的人還在城裡。）
+
+[signal arg="intel:intel_chancellor_escape_plan"]
+
+[wait time="0.8"]
+
+princess: （局勢暫時冷卻了，冷得像什麼都沒有發生過。）
+
+# === 半年和平 ===
+
+[wait time="0.8"]
+
+princess: （高塔的生活平靜而孤立。一天，一週，一個月。從窗口看見的城，依然如常。）
+
+[wait time="0.6"]
+
+princess: （我在這裡等。等一個說不清楚的訊號——讓我知道該發生的事終於發生了。）
+
+[wait time="0.6"]
+
+princess: （半年以上過去了。）
+
+[wait time="1.0"]
+
+leave princess
+
+jump 09_final_choice_c2/

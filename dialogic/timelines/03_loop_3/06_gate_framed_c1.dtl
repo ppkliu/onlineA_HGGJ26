@@ -1,0 +1,102 @@
+# 調查線 C-1：陣區門口止步與軟禁 — Bad End C-1
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.0" volume="0.35"]
+
+[wait time="0.8"]
+
+join princess left
+
+princess: （達爾已經沒了。那個問題還在那裡——魔法陣還是壞的。我不知道怎麼修，但至少想走進去看一眼，或讓裡面還活著的人聽見。）
+
+[wait time="0.6"]
+
+princess: （沒有助手，沒有達爾，沒有任何人陪同——只有腦子裡默背下來的巡視路線與節點座標。我走向陣區的門口。）
+
+[wait time="0.5"]
+
+npc: 公主殿下，陣區目前暫停外部進入，請您——
+
+princess: 我只是想進去看看。
+
+npc: 請殿下配合。
+
+[wait time="0.8"]
+
+princess: （門口有衛兵守著，本來就該如此。不對勁的是「暫停外部進入」這句話——禁令下得很快，像有人早一步把陣區封成只許內部敘事進出的盒子。而我連裡面都沒有踏進一步。）
+
+[wait time="0.6"]
+
+leave princess
+
+# === 敘事翻轉 ===
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.40"]
+
+[wait time="1.0"]
+
+join princess left
+
+princess: （幾個小時後，宰相的說法出現在走廊裡，出現在侍從的表情裡。）
+
+princess: （他不提我是否真進了陣區，只塞一個夠定罪狀的框：）
+
+npc: 公主殿下違反陣區管制——無正當程序接近禁制陣區、意圖干預國防術式——正在調查。
+
+[wait time="0.6"]
+
+princess: （我連裡面都沒進去。「意圖」兩個字夠了——他們不需要我真的踩進去。）
+
+princess: 是有人在系統性腐蝕這個陣。我只是試圖——
+
+[wait time="0.5"]
+
+princess: （對話沒有發生。問題的格式已經設定好了，我的答案只能進入「正在調查」這個框。）
+
+[wait time="0.8"]
+
+# === 父王的「保護」 ===
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+
+join king center
+
+king: ……我把你軟禁。是為了保護你。
+
+[wait time="0.5"]
+
+princess: （他的語氣是真的。）
+
+leave king
+
+[wait time="0.8"]
+
+princess: （軟禁不是保護。是讓我從「目擊者」變成「嫌疑人」，再變成「可以安靜被清除的目標」。）
+
+[wait time="0.6"]
+
+princess: （茶又出現了。這次不是工作室，是寢房，是女僕端來的，氣味一樣。）
+
+princess: （蜂蜜、玫瑰、那一點苦。）
+
+[wait time="1.0"]
+
+[signal arg="cut_to_silence"]
+
+leave princess
+
+# === Bad End C-1 ===
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
+[wait time="3.0"]
+
+princess: 「提早告知不夠——威脅不在名字被揭露，而在『有人知道了』這件事本身。宰相清場的速度不需要理由，只需要那一通匯報作為觸發。」
+
+[wait time="3.0"]
+
+[signal arg="intel:intel_chancellor_treason"]
+[signal arg="intel:intel_narrative_flip"]
+[signal arg="intel:intel_king_defense_line"]
+[signal arg="death_context:{'death_message': '達爾匿名匯報後隔天身亡。宰相以「意圖干預國防」羅織罪狀，父王軟禁公主「保護」她——軟禁後毒茶再現，清除完成。', 'intel_reward': ['intel_chancellor_treason', 'intel_narrative_flip', 'intel_king_defense_line'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="trigger_death"]
