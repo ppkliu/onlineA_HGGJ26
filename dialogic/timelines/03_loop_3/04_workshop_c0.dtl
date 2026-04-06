@@ -81,7 +81,7 @@ leave princess
 [background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 [wait time="3.0"]
 
-princess: 「他死不是因為不夠小心——是因為他根本不知道那杯茶有什麼問題。」
+narrator: 他死不是因為不夠小心——是因為他根本不知道那杯茶有什麼問題。
 
 [wait time="3.0"]
 

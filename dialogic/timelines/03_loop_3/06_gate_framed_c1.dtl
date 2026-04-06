@@ -91,12 +91,12 @@ leave princess
 [background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 [wait time="3.0"]
 
-princess: 「提早告知不夠——威脅不在名字被揭露，而在『有人知道了』這件事本身。宰相清場的速度不需要理由，只需要那一通匯報作為觸發。」
+narrator: 提早告知不夠——威脅不在名字被揭露，而在「有人知道了」這件事本身。宰相清場的速度不需要理由，只需要那一通匯報作為觸發。
 
 [wait time="3.0"]
 
 [signal arg="intel:intel_chancellor_treason"]
 [signal arg="intel:intel_narrative_flip"]
 [signal arg="intel:intel_king_defense_line"]
-[signal arg="death_context:{'death_message': '達爾匿名匯報後隔天身亡。宰相以「意圖干預國防」羅織罪狀，父王軟禁公主「保護」她——軟禁後毒茶再現，清除完成。', 'intel_reward': ['intel_chancellor_treason', 'intel_narrative_flip', 'intel_king_defense_line'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="death_context:{'death_message': '達爾匿名匯報後隔天身亡。宰相以「意圖干預國防」羅織罪狀，父王軟禁艾蓮娜公主加以「保護」——軟禁後毒茶再現，清除完成。', 'intel_reward': ['intel_chancellor_treason', 'intel_narrative_flip', 'intel_king_defense_line'], 'killer': 'chancellor', 'advance_loop': false}"]
 [signal arg="trigger_death"]
