@@ -1,4 +1,4 @@
-# 第 3 輪迴：心死之後醒來 — 公主寢房（Day 1 早晨）
+# 調查線 C：醒來 — 公主寢房
 
 [background arg="res://art/backgrounds/royal_chamber.png" fade="1.3"]
 [music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.5" volume="0.31"]
@@ -7,35 +7,89 @@
 
 join princess left
 
-princess (cold): ……第三次了。
+if {intel_narrative_flip}:
+	# C-2：帶著被軟禁毒殺記憶醒來
+	princess (cold): ……又一次。
+
+	[wait time="1.0"]
+
+	princess: （第一條路——等到找到答案。達爾喝了那杯茶，助手的鍊金手槍舉起來。我知道那是毒茶，晚了一秒。）
+
+	princess: （第二條路——提前告知達爾，請他匿名匯報。他隔天就消失了。「有人知道了」本身就是觸發——不是我的名字，是資訊在流動。然後是陣區門口，意圖兩個字，軟禁，茶又出現在寢房。）
+
+	[wait time="0.8"]
+
+	princess (cold): （每一次我獨自承擔情報，就有一個知情者被清除。宰相的速度永遠比我快一步，因為他只需要等「有人知道了」這個訊號。）
+
+	princess (cold): （這一輪不藏了。密道、腐蝕的鏈條、財政署的清場令、達爾的死、助手的身份——所有底牌，一次攤在父王面前。）
+
+	[wait time="1.0"]
+
+	join maid right
+
+	maid (default): 殿下～早安呀！今天也是好天氣喔——
+
+	princess (cold): 莉娜。今天戴那條鍊子。再幫我備好正式覲見的衣物——我要求見父王。
+
+	maid (confused): ……正式覲見？是，殿下。
+
+	[signal arg="day_counter:180"]
+
+	leave maid
+	leave princess
+
+	jump 07_meet_king_c2/
+
+if {intel_array_handed_clerk}:
+	# C-1：帶著工作室死亡記憶醒來
+	princess (cold): ……茶的氣味。
+
+	[wait time="1.2"]
+
+	princess: （蜂蜜、玫瑰、那一點苦。達爾端起杯子的時候我想說不要喝——）
+
+	princess: （他已經喝下去了。助手站在那裡，臉上的笑容沒有變。然後他的手伸進袖裡。）
+
+	[wait time="0.8"]
+
+	princess: （問題不是達爾不夠小心——是他根本不知道那杯茶有問題。）
+
+	princess (cold): （這一輪，我要在工作室那一幕發生之前，讓達爾先知道助手是什麼人。在那杯茶端進來之前。）
+
+	[wait time="1.0"]
+
+	join maid right
+
+	maid (default): 殿下～早安呀！今天——
+
+	princess (cold): 莉娜。達爾今天有講解課嗎？
+
+	maid (default): 達爾先生？讓莉娜查查……下午好像有時段喔。
+
+	princess (cold): 好。今天戴那條鍊子。幫我查達爾今天的行程——我需要在他獨自一人時找到他。
+
+	maid (confused): ……是，殿下。
+
+	[signal arg="day_counter:180"]
+
+	leave maid
+	leave princess
+
+	jump 05_warn_dal_c1/
+
+# C-0：帶著 B-2 死亡記憶醒來（預設路徑）
+
+princess: ……物理線走完了。
 
 [wait time="1.2"]
 
-princess: （第一次，莫里昂笑著遞給我花茶。「好好睡吧，夢都是反的喔。」我喝了，然後慢慢地、冷冷地死在花園裡。）
+princess: （B-2 確認了——密道在那裡，物理防線的漏洞找到了。但城要破，兩個條件同時成立：密道讓兵進來，魔法陣垮掉讓牆守不住。）
 
-princess: （第二次，布魯諾低著頭說「帶走她」，我看見他的手在發抖。他給過我半塊黑麵包——但他還是做了。）
-
-princess: （貴族騙我。平民出賣我。每一次我把心交出去，就被那個人用我沒想到的方式踩碎。）
+princess: （賽拉斯說過——魔法防禦陣，三天前被從內部破壞。）
 
 [wait time="0.8"]
 
-if {intel_chancellor_dismisses_testimony}:
-	princess: （我還記得……拿著達爾的話去質問宰相。他冷笑：「一個瞎子的話？」然後當晚就派人處理掉了達爾。口述不是證據。把線索交給嫌犯，和自焚沒有區別。）
-
-if {intel_king_will_listen}:
-	princess: （還有一次……我帶著線索去找父王。他願意聽了——和第一次不同，這次他真的認真在看。但宰相就在旁邊。當晚他就毒殺了父王，嫁禍給我。告訴父王是可行的……但必須先讓宰相無法動手。）
-
-if {intel_defense_needs_three}:
-	princess: （有一次我試著一個人啟動地下防線。三道機關，每一個都需要持續施力。我跑了整夜，指甲磨出血——物理上就是不可能的。一個人永遠不夠。）
-
-princess: （但有一件事我一直在逃避——父王。莫里昂的帳簿是假的，平民的仇恨被人操弄。但徵兵、加稅、軍需優先……那些命令是父王下的，宰相偽造不了。他到底是個什麼樣的怪物，才能讓人受這些苦，還說是為了保護？）
-
-princess: （每個人都在替他說話或者罵他。但沒有人讓我自己去看。）
-
-if {intel_defense_needs_three}:
-	princess (cold): （一個人力量不夠，我知道。但信任的代價更大。）
-
-princess (cold): （這一次，我不找盟友。不求任何人幫忙。我一個人，去挖出所有真相。）
+princess: （B-1 向達爾學了術式入門。那些用語我現在拿得出來。這次要用更準確的問題去找他——讓他願意帶我繼續往裡走。）
 
 [wait time="1.0"]
 
@@ -43,25 +97,21 @@ join maid right
 
 maid (default): 殿下～早安呀！今天也是好天氣喔～宰相大人送來了——
 
-princess (cold): 退回去。
+princess: 退回去。
 
 maid (default): 欸？可是殿下都還沒看——
 
-princess (cold): 莉娜。幫我弄一套偽裝。粗布衣、頭巾。不要問我去哪，不要跟任何人說。
+princess: 莉娜。今天不戴那條鍊子。幫我挑一套去書庫的衣服——乾淨，不張揚。
 
-maid (confused): 殿下……偽裝？您要去哪裡？外面很危險的……殿下從來沒出過內城——
-
-princess (cold): 莉娜。
+maid (confused): ……去書庫？是，殿下。
 
 [wait time="0.5"]
 
-maid (forced_smile): ……好。莉娜知道了。殿下小心喔。
-
-princess: （她的笑容越來越勉強了。每一次醒來，她都笑著把壞消息擋在門外。可是我已經不需要被擋了。）
+maid (forced_smile): 好了，殿下。小心喔。
 
 [signal arg="day_counter:180"]
 
-leave princess
 leave maid
+leave princess
 
-jump 02_search_dal/
+jump 02_approach_dal_c0/

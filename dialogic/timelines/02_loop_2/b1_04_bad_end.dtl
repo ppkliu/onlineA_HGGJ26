@@ -1,78 +1,130 @@
-# 調查線 B — B-1 Bad End：追問過深（宰相親自送茶）
+# 調查線 B — B-1 Bad End：偽裝的限度（地圖觸發死局）
 
-# === 回到城堡 ===
+# === 回到城堡，連日偽裝 ===
 
-[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
-[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.5"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+[music path="res://audio/bgm/tension_low.ogg" fade="2.0" volume="0.38"]
 
 join princess left
 
-princess: （回到城堡後，我找了個機會和隨行侍衛搭話。）
+princess (determined): （宰相的監視是連續的，不是「出門一趟回來才開始」。那條窄巷、那些士兵——她記住了，但不能讓他看出來。）
 
-princess: 今天在下城區，我看見有些士兵制服不太一樣，是什麼部隊？
+[wait time="0.6"]
 
-[wait time="0.5"]
+princess: （她回到城堡，讓自己像什麼都沒發生一樣。然後，她開始了。）
 
-princess: （侍衛的回答速度比平時快了一拍。）
+[wait time="0.8"]
 
-npc: 那是負責下城區秩序的專屬部隊，殿下不用擔心。
+princess: （她向書庫申請了城防相關的歷史卷宗。她在日記裡寫滿了看起來像貴族小姐讀書心得的東西。她向禮官請教儀典中城牆建設的段落。）
 
-princess: （沒有正面回答。）
+princess: （她表現得像一個突然對王國史和城防著迷的公主——這個形象說得通，不可疑。）
 
-princess: 那條窄巷……我看到流民繞開了，那邊有什麼？
+[wait time="0.6"]
 
-npc: 那邊在整修，暫時不能走。
+princess: （真正在讀的東西：歷代城牆改建紀錄、城門閉合機制、魔法陣與物理城防的接點——她在從公開記錄裡逼近一個問題：那條窄巷通往哪裡？那面牆之後是什麼？）
 
 [wait time="0.8"]
 
 leave princess
 
-# === 當晚・公主寢房 ===
+# === 初見達爾 ===
 
-[background arg="res://art/backgrounds/royal_chamber.png" fade="0.7"]
-
-[wait time="1.0"]
-
-join princess left
-join chancellor right
-
-chancellor (default): 聽說殿下今天問了不少問題。
-
-princess: 我只是好奇。
-
-chancellor (default): 殿下的好奇心，臣很欣賞。
-
-[wait time="0.5"]
-
-chancellor (serious): 但有些地方……不是公主應該去的。
-
-[wait time="0.8"]
-
-princess: （他遞上一杯茶。動作很自然，像是每天都在做的事。）
-
-princess: （他來得這麼快。我只問了幾個問題——他在下城區也有眼線。我說的每一句話，都有人替他記著。）
+[background arg="res://art/backgrounds/hallway2.png" fade="0.7"]
 
 [wait time="0.6"]
 
-princess: （但至少……我記下了那條路的方向。）
+join princess left
+join dal right
 
-princess: （我接過茶杯，一飲而盡。）
+princess: （她以「想弄懂父王為何總為戰事煩惱、想學一點魔法防護的皮毛」為由，透過正當管道求見了達爾大人。）
+
+dal (default): 殿下對術式有興趣？
+
+princess: 只是想了解一些基礎。父王的防衛策略……我想能夠聽懂一些。
+
+[wait time="0.5"]
+
+dal (default): ……殿下若是好奇，臣可以說幾句。術式不是三天能學的，殿下有心就好。
+
+[wait time="0.5"]
+
+princess: （他以為她是三分鐘熱度。她也讓他繼續這樣以為——但達爾說的，她全記下來了。術式的基本構成、陣核是什麼、術理的用語。不多，但夠讓她下一輪進陣核時不像完全的外行。）
+
+[wait time="0.6"]
+
+leave dal
+
+# === 幾天過去 ===
+
+[wait time="0.5"]
+
+princess: （幾天過去了。宰相表面微笑，沒有阻攔她讀書或見達爾的請求。）
+
+princess (hollow): （難道她真的騙過了他？）
+
+[wait time="0.8"]
+
+leave princess
+
+# === 城牆地圖 ===
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.7"]
+
+[wait time="0.6"]
+
+join princess left
+join maid right
+
+princess: 莉娜，我想看一下城牆沿革的地圖。我在研究賑災的物資調度路線……
+
+maid (default): 哎呀，殿下真的好用功喔！莉娜幫您找找看！
+
+[wait time="0.5"]
+
+leave maid
+
+princess: （地圖鋪開在桌上。她假裝在規劃物資路線，但她的目光和筆尖一再停在同一個地方——窄巷方向，內城牆邊界，那面比周圍厚得多的牆。）
+
+[wait time="0.8"]
+
+# === 慈愛的毒茶 ===
+
+leave princess
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.6"]
+[music path="res://audio/bgm/tension_low.ogg" fade="1.5" volume="0.50"]
+
+[wait time="0.8"]
+
+join princess left
+join maid right
+
+maid (default): 殿下～宰相大人聽說您一回來就盯著城牆地圖看，他可心疼了。大人特地準備了睡前放鬆的茶，還吩咐我把地圖收走，讓您好好休息呢。
+
+[wait time="0.5"]
+
+princess: （莉娜把桌上的地圖輕輕捲走，然後把茶放到她面前，笑容滿臉。）
+
+[wait time="0.6"]
+
+princess: （她聞到那個氣味。蜂蜜、玫瑰、那一點點苦。）
+
+[wait time="0.5"]
+
+princess (hollow): （他沒有放鬆警惕。前幾天的「放任」，一樣是觀察。地圖一拿出來，觸發的就是同一個死局。）
+
+princess (hollow): （他不需要在場。只需要莉娜幫他說這句話，讓茶出現在正確的地方。）
+
+[wait time="0.8"]
+
+princess: （她喝下茶。意識消散前，她只想著兩件事——那條窄巷的方向；達爾說的那些術語，她還沒有用上它們。）
 
 [wait time="1.5"]
 
-leave chancellor
+leave princess
+leave maid
 
 [background arg="res://art/backgrounds/darkness.png" fade="2.5"]
-
-[wait time="2.0"]
-
-princess (hollow): （那條巷子。那個方向。那些走路像兵的人。下一次我要去那裡。）
-
-[wait time="1.5"]
-
-princess (hollow): （他的展示之旅讓我看見了真實的苦難——也讓我看見了苦難是怎麼被引導成仇恨的。糧食分發點的台詞、傷兵收容所的指控——「誰的錯」這個答案，是他替所有人選好的。）
-
-princess (hollow): （苦難是真的。方向是假的。）
 
 [wait time="2.0"]
 
@@ -80,7 +132,7 @@ princess (hollow): （苦難是真的。方向是假的。）
 
 [wait time="3.0"]
 
-「她學會了假裝，但深入不夠。苦難是真的，方向是假的。」
+「她學會了偽裝，卻在最不像威脅的地方觸了地雷。地圖一拿出來，所有的放任都是觀察。」
 
 [wait time="3.0"]
 
@@ -92,5 +144,6 @@ leave --All--
 [signal arg="intel:intel_mob_manipulation"]
 [signal arg="intel:intel_lower_city_route"]
 [signal arg="intel:intel_bruno_wife_death"]
-[signal arg="death_context:{'death_message': '你學會了假裝，但問得太多。他的展示之旅讓你看見了苦難如何被引導成仇恨——但也暴露了你的好奇心。「她學會了假裝，但深入不夠。苦難是真的，方向是假的。」', 'intel_reward': ['intel_mob_manipulation', 'intel_lower_city_route', 'intel_bruno_wife_death'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="intel:intel_dal_magic_basics"]
+[signal arg="death_context:{'death_message': '你學會了偽裝，讓宰相幾天沒有出手。但地圖一拿出來，他的視線就已經在那裡了。「她學會了偽裝，卻在最不像威脅的地方觸了地雷。地圖一拿出來，所有的放任都是觀察。」', 'intel_reward': ['intel_mob_manipulation', 'intel_lower_city_route', 'intel_bruno_wife_death', 'intel_dal_magic_basics'], 'killer': 'chancellor', 'advance_loop': false}"]
 [signal arg="trigger_death"]

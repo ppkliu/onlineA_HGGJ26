@@ -1,0 +1,82 @@
+# 調查線 C-1：私下告知達爾 — Day 1
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.9"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5" volume="0.40"]
+
+[wait time="0.8"]
+
+join princess left
+
+princess: （課後他收拾文件的幾分鐘——助手不在旁邊的時候。就是現在。）
+
+[wait time="0.5"]
+
+join dal right
+
+princess: 達爾先生。我要說一件事，很快說完。
+
+dal (wary): ……殿下？
+
+princess: 你的助手，在你說某幾個節點之前，他會先說話。你注意到了嗎？
+
+dal (wary): ……
+
+princess: 每次夜間清場令之後，那幾個節點的狀態就會退步一次。我對照過維護日誌，週期對得上。簽署路徑都經財政署——他們在紙面上只是核銷外聘、安排定期維護，還用「追查陣光黯淡」當理由清場，誰看都像正常流程。但如果你以技術負責人的身分去核——不要說是我說的——你應該能從紀錄裡看出對不起來的地方。
+
+[wait time="1.2"]
+
+dal (quiet): ……公主，這件事是從哪裡來的？
+
+princess: 卷宗與您帶我走過的巡視路線對照出來的——不是我待了多久，是紀錄與現場對不起來。您是負責人，這本來就該由您的職權去查證。請您照職責匯報，不要提我的名字。
+
+[wait time="1.0"]
+
+dal (quiet): （他看著我，沉默了很長一段時間。）
+
+dal (quiet): ……好。
+
+princess: （他會匯報的。他是那種人。）
+
+leave princess
+leave dal
+
+# === 隔天 ===
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.8"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="2.5" volume="0.28"]
+
+[wait time="1.0"]
+
+join princess left
+
+princess: （隔天，達爾沒有出現。）
+
+princess: （我等到中午，讓女僕隨口問了一句。）
+
+[wait time="0.6"]
+
+join maid right
+
+maid (default): 達爾先生昨晚好像身體不適，今天沒有到崗喔……
+
+leave maid
+
+[wait time="1.0"]
+
+princess: （我什麼都沒說。）
+
+[wait time="0.6"]
+
+princess: （之後過了好幾天，達爾與他的助手下落不明。）
+
+[wait time="0.8"]
+
+princess: （我在房間裡坐了很久。）
+
+princess: （我請他匯報，他匯報了，然後他死了。我以為匿名能保護他。但保護不了的不是名字——是「有人知道了」這件事本身。）
+
+[wait time="0.8"]
+
+leave princess
+
+jump 06_gate_framed_c1/

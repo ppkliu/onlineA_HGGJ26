@@ -1,24 +1,41 @@
-# 調查線 B — B-0 Bad End：毒殺（掩不住的敵意）
+# 調查線 B — B-0 Bad End：毒殺（回城路線——不只有茶）
 
-[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[background arg="res://art/backgrounds/royal_chamber.png" fade="0.9"]
+[music path="res://audio/bgm/tension_low.ogg" fade="1.5" volume="0.42"]
 
-[wait time="2.0"]
+[wait time="0.8"]
 
-princess (hollow): （他不需要親自動手。他只需要讓茶出現在正確的地方。）
+join princess left
 
-[wait time="1.5"]
+princess: （莉娜帶著她原路折返。回到城堡，父王得知她出去了——語氣是憤怒，說的卻是「我是在保護你」。她被關進一間小房間。沒有窗，門從外鎖上。）
 
-princess (hollow): （我一大早就讓他讀出了我的敵意。拒絕項鍊——他立刻出現在走廊上。試著質問——他一個眼神就知道了我知道的一切。）
+[wait time="0.8"]
+
+princess: （過了一段時間，桌上多了一杯茶。蜂蜜、玫瑰——她聞出那個氣味了。）
+
+princess (hollow): （她沒有喝。）
+
+[wait time="0.6"]
+
+princess: （侍從來收走茶杯，什麼都沒說。神情有些奇怪。）
+
+[wait time="0.8"]
+
+princess: （又過了一段時間。到了用餐的時間。食物被端上來了。）
+
+[wait time="0.5"]
+
+princess: （她聞著那個氣味——和茶不一樣，卻有某種共同的底色。）
+
+[wait time="0.5"]
+
+princess (hollow): （我以為不喝茶就能活。但不是只有茶。）
 
 [wait time="1.0"]
 
-princess (hollow): （他察覺我拒絕項鍊的速度，比我意識到那是一個信號的速度還快。監視沒有死角——我的每一個動作，對他來說都是即時的。）
+leave princess
 
-[wait time="1.5"]
-
-princess: （那條項鍊不只是禮物。它是服從度測試。戴上它，代表「我什麼都不知道」。拒絕它——）
-
-princess (hollow): （等同於發出「我知道了」的信號。）
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
 
 [wait time="2.0"]
 
@@ -26,7 +43,7 @@ princess (hollow): （等同於發出「我知道了」的信號。）
 
 [wait time="3.0"]
 
-「她拒絕了鎖鏈，然後發現整座牢房都是他的眼睛。」
+「她以為拒絕了茶就安全了。但他的手段從不只有一種。」
 
 [wait time="3.0"]
 
@@ -36,6 +53,7 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_surveillance"]
-[signal arg="intel:intel_necklace_compliance"]
-[signal arg="death_context:{'death_message': '你的憤怒暴露了你。他在你拒絕項鍊的瞬間就知道了——監視沒有死角，每一個動作都是即時的服從度評估。「她拒絕了鎖鏈，然後發現整座牢房都是他的眼睛。」', 'intel_reward': ['intel_chancellor_surveillance', 'intel_necklace_compliance'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="intel:intel_lower_city_suffering"]
+[signal arg="intel:intel_poison_not_just_tea"]
+[signal arg="death_context:{'death_message': '你拒絕了茶，但他的手段從不只有一種。拒絕茶只是換一種死法——任何食物飲品都可能被下毒。「她以為拒絕了茶就安全了。但他的手段從不只有一種。」', 'intel_reward': ['intel_chancellor_surveillance', 'intel_lower_city_suffering', 'intel_poison_not_just_tea'], 'killer': 'chancellor', 'advance_loop': false}"]
 [signal arg="trigger_death"]

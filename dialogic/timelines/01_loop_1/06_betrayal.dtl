@@ -80,13 +80,13 @@ chancellor (cold): 所以殿下不要怪臣。
 
 princess: （……）
 
-princess (hollow): （他的臉越來越模糊。「不要怪我」……為什麼要說這種話？他做了什麼？）
+princess (sad): （他的臉越來越模糊。「不要怪我」……為什麼要說這種話？他做了什麼？）
 
-princess (hollow): （還有這杯茶的味道……蜂蜜、玫瑰、那一點苦……這個氣味太特別了……）
+princess (sad): （還有這杯茶的味道……蜂蜜、玫瑰、那一點苦……這個氣味太特別了……）
 
-princess (hollow): （我不知道發生了什麼事。我只記得這兩件事——那句話，和這個氣味……）
+princess (sad): （我不知道發生了什麼事。我只記得這兩件事——那句話，和這個氣味……）
 
-princess (hollow): （我什麼都想不清楚了……）
+princess (sad): （我什麼都想不清楚了……）
 
 [signal arg="cut_to_silence"]
 

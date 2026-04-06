@@ -1,0 +1,80 @@
+# 調查線 C-0：再次接近達爾 — 書庫走廊（Day 1）
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.9"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5" volume="0.45"]
+
+[wait time="1.0"]
+
+join princess left
+
+princess: （書庫和達爾講解室之間有一條走廊。他在課後整理文件的幾分鐘，通常獨自走過。）
+
+princess: （B-1 的時候，我問了一個表面問題，他只當我三分鐘熱度。這次我準備了一個不同的問題。）
+
+[wait time="0.6"]
+
+join dal right
+
+dal (default): 殿下？
+
+princess: （他停下來了。）
+
+princess: （我讓問題開口之前有一點重量。）
+
+princess: 達爾先生，我讀了陣法沿革的卷宗——防護接縫那一段的描述，和您在課裡說的術式層級對不上。我想知道為什麼。
+
+[wait time="1.0"]
+
+dal (wary): （他皺眉。不是不悅——是在重新評估這個問法。）
+
+dal (wary): 公主上次來……是認真的？
+
+princess: 我對照了三版卷宗。接縫描述在第二版之後縮減了。您說的是第一版的做法，但現在的陣用的是第三版規格。我想知道是哪一個出了問題。
+
+[wait time="0.8"]
+
+dal (quiet): ……
+
+dal (quiet): 跟我來。
+
+princess: （他帶我進去了。）
+
+leave princess
+leave dal
+
+# === 巡視路線 ===
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="1.5" volume="0.38"]
+
+join princess left
+join dal right
+
+princess: （他帶我走進魔法陣的巡視路線，一邊走一邊講——不是課堂那種介紹，是他真正在工作時說話的方式。節點分層邏輯、導流方向、與城牆術式的接縫位置。哪些欄位在維護紀錄裡真正重要，哪些「正常波動」其實值得注意。）
+
+princess: （我沒有紙，沒有筆——在這裡帶走任何記錄都會被沒收。我唯一能做的就是記。）
+
+[wait time="0.6"]
+
+dal (quiet): 這段接縫——看見了嗎？第三版規格把緩衝層做薄了。當初的理由是節省維護成本，但波動容許範圍也相對縮小了。
+
+princess: 所以正常波動的定義就不同了——這就是為什麼第二版之後的紀錄和舊標準對不上。
+
+dal (quiet): 正是。
+
+[wait time="0.8"]
+
+dal (quiet): （他看了我一眼，像是第一次真正看見我。）
+
+dal (quiet): ……公主是認真的人。
+
+princess: （我把這句話記下來。不是因為它讓我高興——是因為這句話讓他決定繼續說。）
+
+princess: （今天的路線，我開始在腦子裡建圖。）
+
+[wait time="0.6"]
+
+leave princess
+leave dal
+
+jump 03_two_months_c0/

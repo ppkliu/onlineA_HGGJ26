@@ -4,21 +4,21 @@
 
 [wait time="2.0"]
 
-princess (hollow): （蜂蜜、玫瑰、那一點點苦——）
+princess (cold): （蜂蜜、玫瑰、那一點點苦——）
 
-princess (shocked): （這是那一次的味道。A-V0 臨死時，在宰相書房裡喝的那杯茶。）
+princess (cold): （這是那一次的味道。第一次臨死時，在宰相書房裡喝的那杯茶。）
 
 [wait time="1.5"]
 
-princess (hollow): （我連結起來了。兩次死亡，兩個不同的地點，同一個氣味。是他。）
+princess (cold): （我連結起來了。兩次死亡，兩個不同的地點，同一個氣味。是他。）
 
 [wait time="1.0"]
 
-princess (hollow): （他不需要出現在我面前。他不需要說「身不由己」，不需要說「不要怪我」。他只需要把茶放在正確的房間裡，等那扇門關上。）
+princess (cold): （他不需要出現在我面前。他不需要說「身不由己」，不需要說「不要怪我」。他只需要把茶放在正確的房間裡，等那扇門關上。）
 
 [wait time="1.5"]
 
-princess (hollow): （我的孤注一擲失敗了。但至少這一次，我不是茫然死去——我帶著「確認」離開。）
+princess (cold): （我的孤注一擲失敗了。但至少這一次，我不是茫然死去——我帶著「確認」離開。）
 
 [wait time="2.0"]
 
@@ -36,5 +36,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_poison"]
-[signal arg="death_context:{'death_message': '你在小房間裡認出了那杯茶的氣味——正是 A-V0 臨死時的那一杯。你終於連結起來了：兩次死亡，同一個氣味，同一個兇手。他不需要在場，他只需要讓茶出現在正確的位置。', 'intel_reward': ['intel_chancellor_poison'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你在小房間裡認出了那杯茶的氣味——正是第一次臨死時的那一杯。你終於連結起來了：兩次死亡，同一個氣味，同一個兇手。他不需要在場，他只需要讓茶出現在正確的位置。', 'intel_reward': ['intel_chancellor_poison'], 'killer': 'chancellor'}"]
 [signal arg="trigger_death"]
