@@ -67,7 +67,7 @@
 |---|---|---|---|
 | B-0 | 本能拒絕項鍊，找女僕出城；發現監視無死角 | Bad End：毒殺（回城或前進路線） | `intel_chancellor_surveillance` / `intel_lower_city_suffering` / `intel_maid_coerced` or `intel_poison_not_just_tea` |
 | B-1 | 偽裝順從，連日讀書＋初次接觸達爾學魔法入門；約一週後要城牆地圖觸發殺機 | Bad End：慈愛包裝的毒殺 | `intel_mob_manipulation` / `intel_bruno_wife_death` / `intel_lower_city_route` / `intel_dal_magic_basics` |
-| B-2 | 不帶地圖、不帶女僕，肉身滲透城牆邊界 | Bad End：私兵格殺 | `intel_secret_passage` → 調查線 B 鎖定 |
+| B-2 | 成衣脫身；以**宰相項鍊**向布魯諾換口頭線索後肉身滲透城牆邊界 | Bad End：私兵格殺 | `intel_bruno_passage_tip` ＋ `intel_secret_passage` → 調查線 B 鎖定 |
 
 **B-1 時間感**：非「當日往返即死」——回宮後有**數日至約一週**的讀書／學藝偽裝，才進入城牆地圖與女僕毒茶。
 
@@ -77,15 +77,15 @@
 
 **主要文件：** `03_loop_3/` · 詳見 `scenario_C_outline.md`
 
-**核心弧線：** 與達爾建立信任並觀測內鬼（C-0）→ 預警與匿名匯報仍無法救達爾（C-1）→ 向王權和盤托出反遭軟禁，宰相潛逃後短暫平靜、城破，高塔上**破局三選**（C-2）
+**核心弧線：** 與達爾建立信任並觀測內鬼（C-0）→ 預警與匿名匯報仍無法救達爾（C-1）→ 向王權和盤托出；父王**以王無法當場採信、以父仍信女**，以高塔隔離；宰相潛逃後短暫平靜、城破，高塔上**破局三選**（C-2）
 
 **進場前提**：B-1 已透過偽裝讀書與初次向達爾學藝取得 `intel_dal_magic_basics`。
 
 | 變體 | 公主視角概要 | 結局 | 關鍵情報 |
 |---|---|---|---|
 | C-0 | 以認真學生身分接近達爾，約兩個月默背陣式；與達爾在工作室確認腐蝕節點；助手端毒茶、達爾誤飲身亡，公主遭槍殺與嫁禍 | Bad End：達爾毒殺、公主槍殺（現場布置） | `intel_magic_array_mnemonic` / `intel_array_handed_clerk` / `intel_array_structural_passage` / `intel_chancellor_treason`（初稿） |
-| C-1 | 提早私下告知達爾並請匿名匯報；達爾仍隔天死亡；公主闖陣區試圖作為被捕，宰相誣陷「意圖破壞」，父王軟禁後毒殺 | Bad End：軟禁後毒殺 | `intel_chancellor_treason`（確認）/ `intel_narrative_flip` / `intel_king_defense_line` |
-| C-2 | 向父王和盤托出；被關高塔；宰相潛逃後長期虛假和平；茶味再現、女僕線斷、城破、外力全斷→**自選死亡**（破局的抉擇） | Bad End：自選死亡後進入 LOOP 4 | `intel_partial_leak` / `intel_chancellor_escape_plan`（建議） |
+| C-1 | 提早私下告知達爾並請匿名匯報；達爾仍隔天死亡；公主**僅至陣區門口**遭拒、**未入內**，仍被羅織「違反管制／意圖干預國防」，父王軟禁後毒殺 | Bad End：軟禁後毒殺 | `intel_chancellor_treason`（確認）/ `intel_narrative_flip` / `intel_king_defense_line` |
+| C-2 | 向父王和盤托出；父王**信女兒**仍以高塔**保護／隔離**；宰相潛逃後長期虛假和平；茶味再現、女僕線斷、城破、外力全斷→**自選死亡**（破局的抉擇） | Bad End：自選死亡後進入 LOOP 4 | `intel_partial_leak` / `intel_chancellor_escape_plan`（建議） |
 
 > **備註**：「破局的抉擇」（餐刀／冷茶／窗戶三選一）是 **C-2 同一輪迴的後段**，不是獨立章節。三選僅改意象；均導致公主死亡後進入 LOOP 4。唯一受影響之處：終章 D 醒來**首段獨白**依此切換。
 
@@ -101,14 +101,15 @@
 
 **開場**：儀式重複（女僕→項鍊→日期，台詞與前幾輪表層一致）；醒來首段獨白依 C-2「破局的抉擇」選項切換。
 
-**四步主線**
+**主線步驟**（見 `scenario_D_outline.md`）
 
-| 步驟 | 行動 | 來源 |
+| 步驟 | 行動 | 來源／備註 |
 |---|---|---|
-| 收服賽拉斯 | 道出密令＋安排封密道與朝堂護衛 | LOOP 0 ＋ A-1 |
-| 安撫布魯諾 | 真相＋承諾，奪回下城區敘事 | B-1 |
-| 達爾與魔法陣 | 以 C-0 默背指出腐蝕節點，達爾修復＋取證（賽拉斯先控場） | C-0（與 `LOOP_OUTLINE` 終章第三步） |
-| 朝堂揭露宰相 | 鐵證一次攤開，賽拉斯與布魯諾已先動 | A 全線＋ C 全線 |
+| 一｜收服賽拉斯 | 密令、糧道／巡邏／盯宰相與退路 | LOOP 0 ＋ A-1 |
+| 二｜安撫布魯諾 | 真相＋承諾，奪回下城區敘事 | B-1 |
+| 三｜達爾（密談） | 賽拉斯借故引見；術語、慎防副手、朝堂前勿輕動 | C 線；**修復不在此步** |
+| 四｜朝堂揭露 | 鐵證攤開；宰相無路可逃→**自盡** | A 全線＋ C 全線 |
+| 五｜修復與瓮城 | 進陣區修復／取證；暗道**將計就計**，敵動之日**瓮中捉鱉** | `intel_magic_array_mnemonic` 等 |
 
 **結局**：180 天後敵軍撤退；賽拉斯撕碎密令；破曉。
 
@@ -145,6 +146,7 @@
 | `intel_lower_city_route` | B-1 | 異常路線與內城牆邊界——鎖定密道方向 |
 | `intel_bruno_wife_death` | B-1 | 布魯諾妻子之死——終章情感槓桿 |
 | `intel_dal_magic_basics` | B-1 | 達爾魔法入門——C-0 以學生身分進核心的前置 |
+| `intel_bruno_passage_tip` | B-2 | 以項鍊向布魯諾換得的口頭線索——與 B-1 路線互證；終章可回扣「押鍊子換真話」 |
 | `intel_secret_passage` | B-2 | 城牆密道——物理城防被架空；終章封路 |
 | `intel_magic_array_mnemonic` | C-0 | 默背陣式節點——終章技術修復／取證 |
 | `intel_array_handed_clerk` | C-0 | 達爾助手異常——維護鏈內鬼抓手 |
@@ -152,7 +154,7 @@
 | `intel_chancellor_treason` | C-0（初稿）／C-1（確認） | 宰相叛國（魔法維護鏈等）——終章必備 |
 | `intel_king_defense_line` | B-1 卷宗＋C-1 對齊 | 父王防線全貌——終章必備 |
 | `intel_narrative_flip` | C-1 | 技術行為可被翻成叛國——終章須奪話語權 |
-| `intel_partial_leak` | C-2 | 王權已知卻壓制公主——體制反應本身即線索（見 `LOOP_OUTLINE`） |
+| `intel_partial_leak` | C-2 | 父王以父信女、以王囚女——高塔隔離仍無法終局；體制反應本身即線索（見 `LOOP_OUTLINE`） |
 | `intel_chancellor_escape_plan` | C-2（建議） | 宰相潛逃後的真空與半年窗口 |
 | `intel_dal_blinded_by_chancellor` | 選用支線 | 與現行主線衝突時勿用；僅作舊稿情感加筆 |
 
