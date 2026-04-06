@@ -67,9 +67,9 @@ princess: （我什麼都沒說。）
 
 [wait time="0.6"]
 
-princess: （之後過了好幾天，達爾與他的助手下落不明。）
-
-[wait time="0.8"]
+- 之後過了好幾天……
+	princess: （達爾與他的助手下落不明。）
+	[wait time="0.5"]
 
 princess: （我在房間裡坐了很久。）
 
