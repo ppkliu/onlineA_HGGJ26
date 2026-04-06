@@ -5,13 +5,13 @@
 
 join princess left
 
-princess: （按記憶裡的時間，在他的巡邏路線上等。沒多久，盔甲的腳步聲從走廊另一頭傳來。）
+princess: （我在轉角數他的腳步。甲冑聲近了。）
 
 [wait time="0.8"]
 
 join loyal_retainer right
 
-princess: （他一看見我就放慢了腳步，要行禮。我搖搖頭，示意他往廊柱後跟過來。）
+princess: （他看見我，先慢下來要行禮。我搖頭，指廊柱後面。）
 
 princess (determined): 莉娜。在這裡看著，別讓任何人靠近。
 
@@ -21,7 +21,7 @@ join maid center
 
 maid: ……！
 
-princess: （她愣了一瞬，臉倏地紅了——沒想到我終於「開竅了」。她忙不迭退到轉角，拉住要路過的侍從，神情嚴肅得像在守城。）
+princess: （她愣了一瞬，臉紅了，退到轉角——像突然被點名站崗。）
 
 leave maid
 
@@ -43,11 +43,11 @@ princess (determined): 宰相有問題。不是小貪小弊——是足以動搖
 
 [wait time="0.4"]
 
-princess: （他嘴角還維持著弧度，話卻很軟。）
+princess: （他還在笑。）
 
 loyal_retainer: 殿下，若無實據，這種話不可在外——
 
-princess: （我不跟他爭氣氛。直接丟幾件他職責內看過、卻沒有拼起來的事。）
+princess: （我不繞。）
 
 princess (determined): 上月換防的時間點，與糧草調度的紀錄對不起來。下城區南路，不該出現的車轍與腳印。財政署發往地下倉儲的批核文書，與實際入庫數量相差的那一點點——每一件都有案可查。
 
@@ -75,7 +75,7 @@ princess (determined): 父王有給你一道口頭密令。在不得已的時候
 
 loyal_retainer: ……
 
-princess: （他的手動了一下，像要否認，又停住。）
+princess: （他指尖動了一下，又停住。）
 
 princess (determined): 你哭著執行過這道口頭令。我知道。
 
@@ -85,7 +85,7 @@ princess (determined): 因為你是唯一會為殺我而哭的人。
 
 [wait time="1.5"]
 
-princess: （沉默拉長。這一次不是哄孩子的空氣——是兩個人都站在同一個殘酷的前提上。）
+princess: （沉默拉長。這次不是哄孩子。）
 
 princess (determined): 我不是來問你這道口頭令該怎麼辦。我是來請你——在我說「現在」之前，先幫我守住幾件事。
 
@@ -120,7 +120,7 @@ princess (determined): 你也是。
 leave princess
 leave loyal_retainer
 
-princess: （廊柱外，莉娜仍盡責地擋著路人。她的表情嚴肅，心裡大概已經演完半本言情。）
+princess: （莉娜還在轉角擋人。背挺得筆直。）
 
 [wait time="0.6"]
 

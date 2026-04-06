@@ -6,23 +6,23 @@
 
 join princess center
 
-princess: 「第一次醒來的時候，我連粗布衣摸起來是什麼感覺都不知道。」
+princess: 「一開始……我連粗布衣刮在皮膚上都覺得陌生。」
 
 [wait time="1.2"]
 
-princess: 「第二次醒來的時候，我學會了在下城區走路時低著頭。」
+princess: 「後來我學會低著頭走進下城。」
 
 [wait time="1.2"]
 
-princess: 「第三次醒來的時候，我學會了一個人在黑暗的地道裡點蠟燭。」
+princess: 「再後來……地道裡黑，我還是得把蠟燭點著。」
 
 [wait time="1.2"]
 
-princess: 「第四次醒來的時候……我終於學會了開口說：我需要你。」
+princess: 「到最後我才敢說出口：我需要你。」
 
 [wait time="2.5"]
 
-princess (determined): 「打破迴圈的方式，不是改變過去。而是在每一次重複裡，選擇成為一個不同的人。」
+princess (determined): 「迴圈打不破。能換的只有我每一次怎麼選。」
 
 [wait time="2.5"]
 

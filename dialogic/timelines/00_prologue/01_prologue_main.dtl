@@ -6,7 +6,7 @@
 
 [wait time="2.5"]
 
-princess (default): 嗯……好吵喔……窗戶外面紅紅的，是煙火嗎？今天不是節日呀……
+princess (default): 嗯……好吵……窗外怎麼紅紅的……煙火嗎？今天……有節慶嗎……
 
 [wait time="1.2"]
 
@@ -17,7 +17,7 @@ princess (shocked): 哇！什麼東西倒下來了？！……莉娜？！你在
 
 [wait time="1.0"]
 
-princess (default): 奇怪……門怎麼推不開……沒關係，父王說過有魔法陣，壞人進不來的。莉娜一定很快就來了。
+princess (default): 奇怪……門怎麼推不開……雖然有點害怕，但父王說過這裡很安全的……莉娜？你快來呀……
 
 [sound path="res://audio/sfx/door_knock_hard.ogg" bus="SFX" volume="1.78"]
 
@@ -29,7 +29,7 @@ princess (default): 嗯？敲門聲……是莉娜嗎？進來呀～
 
 [sound path="res://audio/sfx/running_screams_distant.ogg" bus="SFX" volume="0.56"]
 
-princess (default): 外面好多人跑動喔……是在玩什麼遊戲嗎？聽起來好慌張……
+princess (default): 外面……好吵鬧，好多腳步聲……大家在跑嗎……聽起來好急……
 
 [wait time="1.8"]
 

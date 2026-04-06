@@ -14,7 +14,7 @@ princess: 宰相大人……那份密令，我拿到了。
 
 chancellor (default): ……殿下。您真的做到了。
 
-princess: （他接過文件，指尖輕輕撫過封蠟的紋章，然後收進懷裡。動作很輕，像是收一封等了很久的信——從容得讓人說不出哪裡不對勁，但就是說不出哪裡對勁。）
+princess: （他接過去，指腹掠過封蠟——太熟練了。熟練得像早就等著這份東西。）
 
 [wait time="0.7"]
 
@@ -80,13 +80,13 @@ chancellor (cold): 所以殿下不要怪臣。
 
 princess: （……）
 
-princess (sad): （他的臉越來越模糊。「不要怪我」……為什麼要說這種話？他做了什麼？）
+princess (sad): （他的聲音變遠了。「不要怪我」……）
 
-princess (sad): （還有這杯茶的味道……蜂蜜、玫瑰、那一點苦……這個氣味太特別了……）
+princess (sad): （茶的味道黏在喉嚨裡——甜、香、還有一點苦……）
 
-princess (sad): （我不知道發生了什麼事。我只記得這兩件事——那句話，和這個氣味……）
+princess (sad): （我抓不住更多了。）
 
-princess (sad): （我什麼都想不清楚了……）
+princess (sad): （……）
 
 [signal arg="cut_to_silence"]
 
