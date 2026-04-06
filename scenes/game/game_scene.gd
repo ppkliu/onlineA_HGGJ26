@@ -7,8 +7,8 @@ func _ready() -> void:
 	GameManager.change_state(GameManager.GameState.PLAYING)
 	FlowLogger.log_event("scene", "Game scene ready", {"loop": IntelSystem.current_loop})
 
-	# 序章開始
-	if IntelSystem.current_loop == 0:
+	# 序章：尚未取得序章死亡情報前一律播序章（不依賴 current_loop）
+	if not IntelSystem.has_prologue_cleared():
 		_start_prologue()
 	else:
 		_start_loop()

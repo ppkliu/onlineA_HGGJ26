@@ -19,6 +19,17 @@ var scene_states: Dictionary = {}
 
 
 func _ready() -> void:
+	if not IntelSystem.progression_updated.is_connected(_on_progression_updated):
+		IntelSystem.progression_updated.connect(_on_progression_updated)
+	_update_phase()
+
+
+func _on_progression_updated() -> void:
+	_update_phase()
+
+
+## 供讀檔等路徑在批量寫入 Intel 後手動同步階段（不依賴輪迴次數）
+func refresh_phase() -> void:
 	_update_phase()
 
 
@@ -61,19 +72,32 @@ func _reset_loop(should_advance: bool = true) -> void:
 		SceneTransition.TransitionType.LOOP_RESTART)
 
 
-## 根據輪迴次數與關鍵情報更新階段
-func _update_phase() -> void:
-	var loop = IntelSystem.current_loop
+## 給 UI 用的「第幾幕」文案（依劇情階段，不依輪迴計數）
+func get_story_act_display() -> String:
+	match current_phase:
+		LoopPhase.PROLOGUE:
+			return "序幕"
+		LoopPhase.EARLY:
+			return "第一幕"
+		LoopPhase.MID:
+			return "第二幕"
+		LoopPhase.FINAL:
+			return "第三幕"
+		_:
+			return "第一幕"
 
+
+## 依序章／情報進度更新階段（不使用 current_loop 判斷）
+func _update_phase() -> void:
 	var old_phase = current_phase
-	if loop == 0:
+	if not IntelSystem.has_prologue_cleared():
 		current_phase = LoopPhase.PROLOGUE
-	elif loop <= 2:
-		current_phase = LoopPhase.EARLY
 	elif IntelSystem.has_final_loop_requirements():
 		current_phase = LoopPhase.FINAL
-	else:
+	elif IntelSystem.has_mid_story_markers():
 		current_phase = LoopPhase.MID
+	else:
+		current_phase = LoopPhase.EARLY
 
 	if current_phase != old_phase:
 		loop_phase_changed.emit(StringName(LoopPhase.keys()[current_phase]))

@@ -17,10 +17,19 @@ var _pending_trigger_death := false
 signal game_state_changed(new_state: GameState)
 
 
+const _OPTION_EXPLORED_KEYS: PackedStringArray = [
+	"option_explored:a_v0_cyras", "option_explored:a_v0_king", "option_explored:a_v0_chancellor",
+	"option_explored:a_v1_cyras", "option_explored:a_v1_king", "option_explored:a_v1_chancellor",
+	"option_explored:a_v2_cyras", "option_explored:a_v2_king", "option_explored:a_v2_chancellor",
+]
+
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if Dialogic and not Dialogic.signal_event.is_connected(_on_dialogic_signal_event):
 		Dialogic.signal_event.connect(_on_dialogic_signal_event)
+	if Dialogic and not Dialogic.timeline_started.is_connected(_on_timeline_started):
+		Dialogic.timeline_started.connect(_on_timeline_started)
 	FlowLogger.log_event("game", "GameManager ready")
 
 
@@ -68,7 +77,9 @@ func continue_game() -> void:
 	FlowLogger.log_event("game", "Continue game from manual save", {"current_loop": IntelSystem.current_loop})
 
 	change_state(GameState.PLAYING)
-	if IntelSystem.current_loop == 0:
+	LoopManager.refresh_phase()
+	# 尚未完成序章 → 主場景播序章；否則直接進寢宮（不依賴 current_loop）
+	if not IntelSystem.has_prologue_cleared():
 		SceneTransition.transition_to("res://scenes/game/game_scene.tscn",
 			TransitionConstants.TransitionType.FADE_BLACK)
 	else:
@@ -95,6 +106,19 @@ func quit_game() -> void:
 ## 檢查是否有手動存檔
 func has_save_data() -> bool:
 	return FileAccess.file_exists("user://manual_save.json")
+
+
+func _on_timeline_started() -> void:
+	_ensure_option_explored_vars()
+
+
+func _ensure_option_explored_vars() -> void:
+	if not Dialogic.current_state_info.has("variables"):
+		return
+	var vars: Dictionary = Dialogic.current_state_info["variables"]
+	for key in _OPTION_EXPLORED_KEYS:
+		if not vars.has(key):
+			vars[key] = false
 
 
 func _on_dialogic_signal_event(argument: Variant) -> void:
@@ -133,6 +157,10 @@ func _handle_dialogic_signal_string(argument: String) -> void:
 						_trigger_death_with_pending_context()
 				else:
 					push_warning("Invalid death context payload: %s" % argument)
+			elif argument.begins_with("option_explored:"):
+				if Dialogic.current_state_info.has("variables"):
+					Dialogic.current_state_info["variables"][argument] = true
+				FlowLogger.log_event("dialogic", "Option explored set", {"var": argument})
 			elif argument.begins_with("camera_shake"):
 				pass
 			elif argument.begins_with("day_counter:"):

@@ -1,6 +1,6 @@
 extends Control
 
-## 輪迴次數指示器 — 畫面右上角顯示當前輪迴次數
+## 劇情進度指示器 — 畫面右上角顯示「第幾幕」（依 LoopManager 階段，非輪迴數字）
 
 const BRANCH_LABEL_FONT_SIZE := 18
 const BRANCH_LABEL_MIN_HEIGHT := 28
@@ -13,6 +13,7 @@ const BRANCH_LABEL_MIN_HEIGHT := 28
 func _ready() -> void:
 	_update_display()
 	LoopManager.loop_started.connect(_on_loop_started)
+	LoopManager.loop_phase_changed.connect(_on_loop_phase_changed)
 	IntelSystem.progression_updated.connect(_update_display)
 
 
@@ -20,13 +21,17 @@ func _on_loop_started(_loop_number: int) -> void:
 	_update_display()
 
 
+func _on_loop_phase_changed(_phase: StringName) -> void:
+	_update_display()
+
+
 func _update_display() -> void:
-	var loop_num = IntelSystem.current_loop
-	if loop_num == 0:
+	var show_after_prologue := IntelSystem.has_prologue_cleared()
+	if not show_after_prologue:
 		visible = false
 	else:
 		visible = true
-		loop_label.text = "LOOP %d" % loop_num
+		loop_label.text = LoopManager.get_story_act_display()
 		branch_summary_label.text = "已完成支線 %d/2" % IntelSystem.get_completed_side_branch_count()
 		_rebuild_branch_list()
 

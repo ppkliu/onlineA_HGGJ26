@@ -14,7 +14,7 @@ signal progression_updated()
 # 已獲得的情報集合 { intel_id: IntelItem }
 var acquired_intels: Dictionary = {}
 
-# 已造訪的選項 { choice_text: true }
+# 已造訪的選項鍵（見 make_choice_tracking_key）；舊存檔可能仍為純文字鍵
 var visited_choices: Dictionary = {}
 
 # 當前輪迴次數
@@ -130,7 +130,31 @@ func has_final_loop_requirements() -> bool:
 	return false
 
 
-## 輪迴重置 — 保留情報、重置場景狀態
+## 序章已結束（取得序章死亡獎勵後即視為已離開序章；不依賴 current_loop）
+func has_prologue_cleared() -> bool:
+	return has_intel("intel_city_fall")
+
+
+## 已取得「序章三件套」以外的任一情報 → 代表已進入主線並有過額外進展（對應原先用 loop>1 區分的憤怒醒）
+func has_intel_beyond_prologue() -> bool:
+	for id in acquired_intels.keys():
+		if id != "intel_city_fall" and id != "intel_assassination" and id != "intel_magic_core_sabotage":
+			return true
+	return false
+
+
+## 中期劇情標記：B-2 密道線，或資料庫標為 source_loop >= 3 的情報（不依賴 current_loop）
+func has_mid_story_markers() -> bool:
+	if has_intel("intel_secret_passage"):
+		return true
+	for id in acquired_intels.keys():
+		var item: Resource = acquired_intels[id]
+		if item is IntelItem and (item as IntelItem).source_loop >= 3:
+			return true
+	return false
+
+
+## 輪迴重置 — 保留情報、重置場景相關狀態
 func trigger_loop_reset() -> void:
 	current_loop += 1
 	_save_persistent_data()
@@ -139,16 +163,28 @@ func trigger_loop_reset() -> void:
 	# 情報不重置！只重置場景相關狀態
 
 
+## 由 Dialogic 選項資訊組成唯一鍵（避免不同時間軸/事件重複使用同一字串時誤判勾勾）
+func make_choice_tracking_key(choice_info: Dictionary) -> String:
+	var raw_text: String = str(choice_info.get("text", ""))
+	var event_idx: int = choice_info.get("event_index", -1)
+	var btn_idx: int = choice_info.get("button_index", -1)
+	if Dialogic and Dialogic.current_timeline:
+		var tl_path: String = String(Dialogic.current_timeline.resource_path)
+		if not tl_path.is_empty() and event_idx >= 0 and btn_idx >= 0:
+			return "%s|%d|%d" % [tl_path, event_idx, btn_idx]
+	return raw_text
+
+
 ## 記錄造訪過的選項
-func mark_choice_visited(choice_text: String) -> void:
-	if not visited_choices.has(choice_text):
-		visited_choices[choice_text] = true
+func mark_choice_visited(choice_id: String) -> void:
+	if not visited_choices.has(choice_id):
+		visited_choices[choice_id] = true
 		_save_persistent_data()
 
 
 ## 檢查選項是否造訪過
-func is_choice_visited(choice_text: String) -> bool:
-	return visited_choices.has(choice_text)
+func is_choice_visited(choice_id: String) -> bool:
+	return visited_choices.has(choice_id)
 
 
 ## 持久化存檔（自動存檔，非手動 S/L）
