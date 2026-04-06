@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IntelDatabase" load_steps=40 format=3]
+[gd_resource type="Resource" script_class="IntelDatabase" load_steps=48 format=3]
 
 [ext_resource type="Script" path="res://resources/intel_data/intel_database.gd" id="1"]
 [ext_resource type="Script" path="res://resources/intel_data/intel_item.gd" id="2"]
@@ -372,6 +372,78 @@ category = &"character"
 source_loop = 2
 unlocks_branches = []
 
+[sub_resource type="Resource" id="intel_lower_city_route"]
+script = ExtResource("2")
+id = "intel_lower_city_route"
+title = "異常路線與內城牆邊界"
+description = "城牆沿革地圖上，窄巷與內城牆交界那面異常加厚的牆——死因方向與密道線索都指向同一處。"
+category = &"truth"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_dal_magic_basics"]
+script = ExtResource("2")
+id = "intel_dal_magic_basics"
+title = "術式入門"
+description = "以「想懂一點防護皮毛」為由向達爾請教，記下的術式構成、陣核與基本用語——下一輪進陣區時不至於像外行。"
+category = &"truth"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_bruno_passage_tip"]
+script = ExtResource("2")
+id = "intel_bruno_passage_tip"
+title = "鐵匠口中的窄巷"
+description = "以宰相所贈項鍊向布魯諾換來的口頭線索：窄巷夜行、黑甲與車輪規律、厚牆方位——與地圖上的異常彼此印證。"
+category = &"truth"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_secret_passage"]
+script = ExtResource("2")
+id = "intel_secret_passage"
+title = "城牆密道"
+description = "物理城牆上確實存在可供私兵無聲進出的通道——看見它的人不能活著離開，但記憶跨輪迴留下。"
+category = &"truth"
+source_loop = 2
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_magic_array_mnemonic"]
+script = ExtResource("2")
+id = "intel_magic_array_mnemonic"
+title = "默背的陣式節點"
+description = "與達爾共同確認的節點位置與腐蝕規律——你知道問題在哪、何時惡化，足以支撐終章的修復與取證。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_array_handed_clerk"]
+script = ExtResource("2")
+id = "intel_array_handed_clerk"
+title = "陣區裡的助手"
+description = "達爾的助手在維護鏈上異常引導、可端茶、可拔槍——內鬼就在最近距離，且能執行暗殺。"
+category = &"conspiracy"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_array_structural_passage"]
+script = ExtResource("2")
+id = "intel_array_structural_passage"
+title = "陣區結構與通道"
+description = "默背路線中辨識出陣區結構與可供封網的通道邏輯——終章可與密道線並用，收斂包抄。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
+[sub_resource type="Resource" id="intel_narrative_flip"]
+script = ExtResource("2")
+id = "intel_narrative_flip"
+title = "可被翻轉的敘事"
+description = "技術行為可被羅織成「意圖干預國防」——話語權不在真相，而在誰先塞進定罪框。"
+category = &"truth"
+source_loop = 3
+unlocks_branches = []
+
 [resource]
 script = ExtResource("1")
 items = [
@@ -415,5 +487,13 @@ items = [
 	SubResource("intel_chancellor_surveillance"),
 	SubResource("intel_lower_city_suffering"),
 	SubResource("intel_poison_not_just_tea"),
-	SubResource("intel_maid_coerced")
+	SubResource("intel_maid_coerced"),
+	SubResource("intel_lower_city_route"),
+	SubResource("intel_dal_magic_basics"),
+	SubResource("intel_bruno_passage_tip"),
+	SubResource("intel_secret_passage"),
+	SubResource("intel_magic_array_mnemonic"),
+	SubResource("intel_array_handed_clerk"),
+	SubResource("intel_array_structural_passage"),
+	SubResource("intel_narrative_flip")
 ]
