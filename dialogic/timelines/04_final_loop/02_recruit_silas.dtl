@@ -1,71 +1,127 @@
-# 最終輪迴：收服騎士長 — Day 1 夜晚（公主寢房）
+# 最終輪迴：收服騎士長 — Day 1（廊柱角落）
 
-[background arg="res://art/backgrounds/royal_chamber.png" fade="0.9"]
-[music path="res://audio/bgm/final_truth.ogg" fade="3.0" volume="0.39"]
+[background arg="res://art/backgrounds/hallway.png" fade="0.9"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="3.0" volume="0.35"]
 
 join princess left
 
-princess: （天黑了。蠟燭點了三根，照亮桌上我畫的草圖——地下防線的位置、糧倉、魔法陣管線。從記憶裡畫的，不一定準確，但足夠說明問題。）
-
-princess: （走廊上傳來沉重的腳步聲。是盔甲的聲音。他來了。）
+princess: （按記憶裡的時間，在他的巡邏路線上等。沒多久，盔甲的腳步聲從走廊另一頭傳來。）
 
 [wait time="0.8"]
 
 join loyal_retainer right
 
-loyal_retainer: ……殿下。
+princess: （他一看見我就放慢了腳步，要行禮。我搖搖頭，示意他往廊柱後跟過來。）
 
-princess: （他站在門口，沒有進來。盔甲的邊緣沾著灰——他巡邏回來的。他看了我一眼就低下頭，像以前在走廊上遇到我時一樣。）
+princess (determined): 莉娜。在這裡看著，別讓任何人靠近。
 
-princess (determined): 進來。關門。
+join maid center
+
+[wait time="0.4"]
+
+maid: ……！
+
+princess: （她愣了一瞬，臉倏地紅了——沒想到我終於「開竅了」。她忙不迭退到轉角，拉住要路過的侍從，神情嚴肅得像在守城。）
+
+leave maid
 
 [wait time="0.6"]
 
-princess (determined): 接下來的話你會覺得我瘋了。但請聽完，不要打斷我。
+loyal_retainer: （他跟著過來，肩背仍下意識擋在我外側，壓低聲音。）
 
-princess (determined): 父王給了你一道密令：在城破時，絕不能讓我落入敵手。不惜一切代價——包括殺了我。
+loyal_retainer: 殿下，這不合禮——
 
-loyal_retainer (exhausted): ……殿下不可能知道這件事。
+princess (determined): 我需要你站著聽完，不要中途走開。
 
-princess (determined): 你每天都在祈禱不需要執行它。
-
-princess: （他的手在發抖。跟城破那一夜拔劍時一模一樣的抖法。）
-
-princess (determined): 你每天都在為了不執行那道命令而拼命。我不知道你做了什麼——但你盔甲上的灰、你眼下的黑眼圈、你每天深夜才回來的腳步聲……我在地下通道裡都聽到了。莫里昂也知道。所以他抓我的時候，第一件事就是把你調去北境。因為你礙他的事。
-
-[wait time="1.0"]
-
-princess: 記得嗎？每次在走廊遇到我，你都低著頭快步走過。我以前以為你討厭我。
-
-princess (determined): 你不敢和我多說一句話，不敢讓我靠近。因為你怕看得越多、知道得越多……到時候劍就越重。
-
-princess (sad): 賽拉斯。你辛苦了。你比任何人都辛苦。
-
-[wait time="1.5"]
-
-loyal_retainer (tearful): ……（他低著頭。盔甲下的肩膀在發抖。）
-
-loyal_retainer (tearful): 臣是懸在您頭上的劍。只要那道命令還在一天，臣就是您最危險的人。殿下不應該信臣。
-
-princess (determined): 不。你是這座城堡裡唯一一個會為了殺我而哭的人。
-
-princess (determined): 這讓你成為我最信任的人。
-
-[wait time="1.0"]
-
-princess (determined): 宰相莫里昂是叛徒。他偽造帳簿、操弄暴民、破壞魔法陣、弄瞎了為父王建防線的工匠。我有證據。
-
-princess (determined): 但上一次我一個人去做，被他關進了塔樓。這一次，我需要你。
+[wait time="0.8"]
 
 loyal_retainer: ……
 
-loyal_retainer (relieved): ……（他抬起頭。眼裡有淚，但嘴角……笑了。那是我從來沒在他臉上看到過的表情。）
+# === 第一階段：像在玩遊戲 ===
 
-loyal_retainer (tearful): 臣等這句話……等了太久了。
+princess (determined): 宰相有問題。不是小貪小弊——是足以動搖國本的那種。
 
-loyal_retainer (tearful): 殿下有令，萬死不辭。
+[wait time="0.4"]
+
+princess: （他嘴角還維持著弧度，話卻很軟。）
+
+loyal_retainer: 殿下，若無實據，這種話不可在外——
+
+princess: （我不跟他爭氣氛。直接丟幾件他職責內看過、卻沒有拼起來的事。）
+
+princess (determined): 上月換防的時間點，與糧草調度的紀錄對不起來。下城區南路，不該出現的車轍與腳印。財政署發往地下倉儲的批核文書，與實際入庫數量相差的那一點點——每一件都有案可查。
+
+[wait time="1.2"]
+
+# === 第二階段：苗頭與現狀吻合，開始認真 ===
+
+loyal_retainer: （嘴角的弧度掛不住了。眉心蹙起，他下意識去對照自己巡邏時記下的異常。）
+
+loyal_retainer: ……殿下，這些，您是從哪裡——
+
+princess (determined): 你先回答我：你心裡，是不是早就覺得哪裡不對，只是沒有證據？
+
+[wait time="1.5"]
+
+loyal_retainer: （沉默很久。然後，極輕地點了一下頭。）
+
+[wait time="0.6"]
+
+# === 第三階段：口頭密令——只在他已認真之後 ===
+
+princess (determined): 父王有給你一道口頭密令。在不得已的時候，殺了我。
+
+[wait time="0.8"]
+
+loyal_retainer: ……
+
+princess: （他的手動了一下，像要否認，又停住。）
+
+princess (determined): 你哭著執行過這道口頭令。我知道。
+
+loyal_retainer (exhausted): ……公主是怎麼知道的？
+
+princess (determined): 因為你是唯一會為殺我而哭的人。
+
+[wait time="1.5"]
+
+princess: （沉默拉長。這一次不是哄孩子的空氣——是兩個人都站在同一個殘酷的前提上。）
+
+princess (determined): 我不是來問你這道口頭令該怎麼辦。我是來請你——在我說「現在」之前，先幫我守住幾件事。
+
+[wait time="0.8"]
+
+# === 第四階段：願意幫助——具體任務 ===
+
+loyal_retainer: （他閉了閉眼，再睜開時，眼神已經是執行任務的眼神。）
+
+loyal_retainer: ……殿下請說。臣聽著。
+
+princess (determined): 兩件事。若你已察覺苗頭，仍要當作沒看見全貌——不要打草驚蛇。
+
+princess (determined): 第一，下城區：由你親自，或只派絕對信得過的親信，當面分發糧食與物資。不要經第二手，不要讓其他人代勞。持續到入夜，周邊巡邏加密——密道暫時不封，以免他提前滅證；但巡邏要讓他出入不那麼自如。
+
+princess (determined): 第二，下一次朝堂：盯緊宰相，防他私兵接應，防他潛逃。你的耳目要比平日更近，但不能在事前演成對峙。
+
+[wait time="0.6"]
+
+princess (determined): 你先做得到這些，再談後面的事。
+
+[wait time="0.8"]
+
+loyal_retainer (relieved): ……（他應下了。這一次是應在具體軍務與時程上，不是一句空諾。）
+
+loyal_retainer: 公主……請保重。
+
+princess (determined): 你也是。
+
+[wait time="1.0"]
 
 leave princess
 leave loyal_retainer
+
+princess: （廊柱外，莉娜仍盡責地擋著路人。她的表情嚴肅，心裡大概已經演完半本言情。）
+
+[wait time="0.6"]
 
 jump 03_calm_mob/

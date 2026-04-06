@@ -1,0 +1,90 @@
+# 最終輪迴：達爾與魔法陣 — Day 3（內廷偏廳）
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+[wait time="1.0"]
+princess: （第三天。賽拉斯以軍務覆核為由，請達爾過來一趟——聲稱有件需要術式負責人親眼看的異常紀錄。地點在賽拉斯轄下的閱兵後庫，不是達爾的工作室。）
+- ——一日後——
+	[wait time="0.3"]
+
+# === 內廷偏廳 ===
+
+[background arg="res://art/backgrounds/hallway2.png" fade="0.9"]
+[music path="res://audio/bgm/investigation_cold.ogg" fade="2.5" volume="0.40"]
+
+join princess left
+join loyal_retainer right
+
+[wait time="0.5"]
+
+join dal right
+
+princess: （他到了才發現我在場。一愣，但仍守禮。）
+
+dal (wary): ……殿下。
+
+princess: （我沒有從情緒起講。直接用他聽得懂的語言開口。）
+
+princess (determined): 陣核東南象限，第三維護週期。節點亮度黯淡的模式——不是老化，是有人在每一次清場令後，對能源管線注入了什麼。
+
+[wait time="0.8"]
+
+dal (wary): ……殿下是怎麼——
+
+princess (determined): 我對照過維護日誌與清場時程。哪些「例行」在技術上是腐蝕而不是保養，負責人的日誌裡藏不住。你也看出來了——只是沒有開口說。
+
+[wait time="1.0"]
+
+dal: （他的反應是驚訝，然後迅速變成嚴肅。她描述的，與他心裡某塊對不起來的感覺高度吻合。）
+
+dal (quiet): ……若殿下說的是真的，這不是意外老化。那是——
+
+princess (determined): 有心人。而且離你很近。
+
+[wait time="0.6"]
+
+princess (determined): 請你格外小心身邊的人——尤其是最靠近紀錄與茶水的那一個。
+
+[wait time="0.5"]
+
+dal (quiet): ……若殿下說的是真的，我現在最該做的是——
+
+princess (determined): 活著。我需要你的幫助，別先成為下一個被滅口的理由。
+
+[wait time="0.8"]
+
+princess (determined): 在查明之後，不要輕舉妄動。不要私下向上匯報，不要單獨闖陣，不要在工作室與他撕破臉。等到事情被正式宣召到國王面前——那個時候，再把技術與物證一次攤開。
+
+princess (determined): 在那之前，只做可逆的查核，把能記下來的記下來。和賽拉斯保持聯絡。
+
+[wait time="0.6"]
+
+dal (quiet): （他看著我，沉默了很長一段時間。）
+
+dal (quiet): ……好。
+
+[wait time="0.8"]
+
+leave dal
+
+princess: （達爾離開了。賽拉斯沒有說話，只是看著我。）
+
+loyal_retainer: ……所有人都到位了。
+
+princess (determined): 還沒。得讓父王在場，讓宰相沒有退路，才算到位。
+
+[wait time="0.8"]
+
+leave princess
+leave loyal_retainer
+
+# === 最後決策 ===
+
+if {intel_chancellor_escape_plan}:
+	princess (determined): （上次我急著直接去抓他——書房空了，城門開了，賽拉斯拼死守在城門前。最後一步不能急。必須當著所有人的面，堵死他每一條退路。）
+
+- 正式請求覲見，在朝堂上揭露宰相
+	princess (determined): （等到朝堂。所有人在場，所有棋子同時落地。）
+	jump 04_expose_chancellor/
+- 趁宰相還不知道，現在直接去拿他 | [if {intel_chancellor_escape_plan} == false]
+	princess (determined): （他還不知道我這邊的準備。趁他反應過來之前——直接動手！）
+	jump 03b_rush_arrest/

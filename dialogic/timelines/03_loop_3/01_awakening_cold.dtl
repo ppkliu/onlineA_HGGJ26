@@ -77,19 +77,26 @@ if {intel_array_handed_clerk}:
 
 	jump 05_warn_dal_c1/
 
+# 同上：走完 B-2 密道線後改走下方 C-0（帶密道記憶醒來），避免無限重入 b2
+# 僅「只走過 B-0、尚未拿 B-1 獎勵」才進 b1；已 mob 或已密道時勿因 surveillance 永真而倒回 b1
+if {intel_mob_manipulation} and not {intel_secret_passage}:
+	jump b2_01_awakening/
+if {intel_chancellor_surveillance} and not {intel_mob_manipulation}:
+	jump b1_01_awakening/
+
 # C-0：帶著 B-2 死亡記憶醒來（預設路徑）
 
-princess: ……物理線走完了。
+princess: ……密道那條線，走完了。
 
 [wait time="1.2"]
 
-princess: （B-2 確認了——密道在那裡，物理防線的漏洞找到了。但城要破，兩個條件同時成立：密道讓兵進來，魔法陣垮掉讓牆守不住。）
+princess: （上一輪已經確認——密道在那裡，物理防線的漏洞找到了。但城要破，兩個條件同時成立：密道讓兵進來，魔法陣垮掉讓牆守不住。）
 
 princess: （賽拉斯說過——魔法防禦陣，三天前被從內部破壞。）
 
 [wait time="0.8"]
 
-princess: （B-1 向達爾學了術式入門。那些用語我現在拿得出來。這次要用更準確的問題去找他——讓他願意帶我繼續往裡走。）
+princess: （假意服從那輪向達爾學了術式入門。那些用語我現在拿得出來。這次要用更準確的問題去找他——讓他願意帶我繼續往裡走。）
 
 [wait time="1.0"]
 

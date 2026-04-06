@@ -1,93 +1,87 @@
-# 最終輪迴：安撫暴民 — Day 3（下城區）
+# 最終輪迴：初見布魯諾 — Day 2（下城區鐵匠鋪）
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
 [wait time="1.0"]
-princess: （接下來的兩天，我和賽拉斯一直在準備。他整理證物，我把三輪累積的情報全部寫成文字。晚上我們隔著一張桌子核對細節，說到天亮。）
-princess: （第三天早上。該出發了。）
-- ——兩天後——
+princess: （翌日。我以「體察民情」為由安排出城。侍衛留在街口等，我獨自走向鐵匠鋪。）
+- ——翌日——
 	[wait time="0.3"]
 
-# === 前往下城區 ===
-
-[background arg="res://art/backgrounds/hallway2.png" fade="0.8"]
-
-join princess left
-
-princess: （第四次走這條通道。這次身旁多了一個人——賽拉斯走在我後面，盔甲故意沒穿，換了一件普通的外套。但他走路的姿勢還是像個軍人，擋都擋不住。）
-
-princess: （「殿下確定嗎？」他問了三次。我說確定。他就不再問了。）
-
-leave princess
-
-# === 下城區 ===
+# === 下城區鐵匠鋪 ===
 
 [background arg="res://art/backgrounds/restaurant.png" fade="0.9"]
 [music path="res://audio/bgm/lower_district.ogg" fade="2.0"]
 
 join princess left
 
-princess: （酸腐味。灰撲撲的牆。「暴君去死」的炭筆字。我已經不會被嚇到了。）
-
-princess: （布魯諾的鐵匠鋪門口，他兒子阿爾正坐在地上玩泥巴。看到我的時候愣了一下——他不認識沒穿粗布衣的我。）
+princess: （酸腐味。灰撲撲的牆。「暴君去死」的炭筆字。這不是我第一次走這條路，但第一次是一個人，沒有侍衛在前面替我說場面話。）
 
 [wait time="0.6"]
 
 join mob_leader right
 
-mob_leader (angry): ……誰？
+princess: （他從鐵砧邊抬眼看過來，神情陌生而戒備。下城區見過貴人，但單獨找上門的公主比儀隊更難判斷——是施捨、是試探，還是麻煩。）
 
-princess (determined): 我叫艾蓮娜。國王的女兒。
+mob_leader: 殿下。
 
-mob_leader (angry): ……公主？帶著騎士長來鎮壓我們？
+princess: （語氣很平，不像歡迎。）
 
-princess (sad): 不。我來是因為我知道你們被人利用了。城外有人答應你們糧食和藥材，對吧？用來交換「有價值的東西」。
+[wait time="0.6"]
 
-mob_leader (suspicious): ……妳怎麼知道的？
+# === 歸還，不是施捨 ===
 
-princess (sad): 因為設下這個騙局的人，也騙了我。他笑瞇瞇地對我說「殿下還小」，然後把我一步步引進圈套。他答應的東西永遠不會兌現——「打下王城之後再說」，對吧？
+princess (determined): 我讀過下城區賑濟的卷宗——外聘維護、徵糧草藥的脈絡，財政署的簽核路徑。這些名字和路線，我是從紙上看來的。
 
-mob_leader: ……
+mob_leader (suspicious): 殿下想說什麼？
+
+princess (determined): 我想請你，在接下來幾日，自己去核對你能核對的部分。帳目、批核署名、糧倉的實際庫存——任何你覺得對不上的地方。
 
 [wait time="0.8"]
 
-princess (determined): 我以前什麼都不知道。住在滿是寶石和花茶的溫室裡，以為全世界都和我一樣安全。你們的苦難對我來說只是窗外灰撲撲的屋頂。
+mob_leader: （他靜了很久。第一次聽一個公主當面把話說到這個深度。）
 
-princess (determined): 那些稅金、徵兵、儲糧……不是為了享樂，是為了建一套地下防線——讓全城人在圍城時還有最後一道保障。那些糧食被鎖在地下倉庫，是為了讓所有人撐過最壞的日子。
+mob_leader (suspicious): 殿下怎麼會知道這些名字與路徑？
 
-princess (determined): 而告訴你們「敵軍會帶糧食」的人，跟弄瞎達爾眼睛的人，跟鎖住那些糧食的人——是同一個人。你們在他眼裡不是盟友，是棋子。
+princess (determined): 我讀卷宗，也聽見下城區的聲音。至於停在你沒說完的那個地方——那不是八卦，是有人該負責的線。
+
+[wait time="0.6"]
+
+mob_leader (angry): 知道又怎樣。能做什麼？
+
+princess: （他的聲音裡有憤怒，但底下有一層其他的東西——也許是疲倦，也許是不知道憤怒要往哪裡去。）
+
+[wait time="0.5"]
+
+princess (determined): 今天什麼都還不能做。但我需要你知道一件事——
+
+princess (determined): 我不是來施捨什麼，或替父王道歉的。那份憤怒是你的，你妻子的死是真實的，這些沒有辦法被任何人奪走或換回來。
+
+[wait time="0.6"]
+
+princess (determined): 在不久之後，朝堂上會有一場對質——宰相從帳目、私兵到輿論動過的手腳，會被一件一件攤開。那個時候，下城區需要有人能說——我查過，這是真的。
+
+princess (determined): 那個人，如果你願意，可以是你。
 
 [wait time="1.0"]
 
-mob_leader (hesitant): ……就算如此。我兒子還在挨餓。妳打算怎麼辦？
+mob_leader: 公主這樣說，是在要求我替王室說話。
 
-princess (determined): 地下倉庫的糧食，本來就是父王撥給你們的救濟糧。鎖上的是財政署的印章，不是王家紋章。宰相截留了它們。
+princess (determined): 不是。是在告訴你，有機會讓你親自查過的東西有人聽見。你要不要說，是你的事。
 
-princess (determined): 我不是在施捨。我是在歸還。
+[wait time="1.2"]
 
-[wait time="0.8"]
-
-mob_leader (hopeful): ……妳跟妳爹一點都不像。他從來不跟我們說話。
-
-princess (sad): 是。這是他的錯。也是我的錯。我來得太晚了。但從今天開始，不會再晚。
-
-mob_leader (hopeful): ……好。我給妳一次機會。如果妳騙我們——
-
-princess (determined): 如果我在騙你，你可以親手打開那道城門。
+mob_leader: （他看了我一眼，然後轉過身去，繼續打鐵。）
 
 [wait time="0.8"]
 
-princess: （布魯諾答應了。接下來……要怎麼處理宰相？）
+princess: （我等了一下，沒有再說話。轉身離開。）
 
-if {intel_chancellor_escape_plan}:
-	princess: （上次我帶賽拉斯直接去抓他，書房已經空了。他的逃跑路線早就備好，城門也被提前打開——最後一步不能急。必須當著所有人的面定罪，才能堵死他每一條退路。）
+leave princess
+leave mob_leader
 
-- 正式在朝堂上揭露宰相（需要時間準備證據）
-	princess (determined): （我要在所有人面前揭露他。讓他無路可退。這需要時間準備——但這次，我不是一個人。）
-	leave princess
-	leave mob_leader
-	jump 04_expose_chancellor/
-- 趁宰相還不知道，現在直接去抓他 | [if {intel_chancellor_escape_plan} == false]
-	princess (determined): （他還不知道布魯諾倒向了我。趁他反應過來之前——直接動手！）
-	leave princess
-	leave mob_leader
-	jump 03b_rush_arrest/
+[wait time="0.5"]
+
+princess: （他還不認得我——沒關係。我卻早就認得他停下來的那一句。他沒有說不。）
+
+[wait time="0.6"]
+
+jump 03c_dal_briefing/
