@@ -53,14 +53,13 @@ directories/dtl_directory={
 "01_awakening_cold": "res://dialogic/timelines/03_loop_3/01_awakening_cold.dtl",
 "01_awakening_final": "res://dialogic/timelines/04_final_loop/01_awakening_final.dtl",
 "01_prologue_main": "res://dialogic/timelines/00_prologue/01_prologue_main.dtl",
+"02_approach_dal_c0": "res://dialogic/timelines/03_loop_3/02_approach_dal_c0.dtl",
 "02_chancellor_visit": "res://dialogic/timelines/01_loop_1/02_chancellor_visit.dtl",
 "02_chancellor_visit_a_v1": "res://dialogic/timelines/01_loop_1/02_chancellor_visit_a_v1.dtl",
 "02_chancellor_visit_a_v2": "res://dialogic/timelines/01_loop_1/02_chancellor_visit_a_v2.dtl",
 "02_infiltration": "res://dialogic/timelines/02_loop_2/02_infiltration.dtl",
 "02_prologue_assassination": "res://dialogic/timelines/00_prologue/02_prologue_assassination.dtl",
 "02_recruit_silas": "res://dialogic/timelines/04_final_loop/02_recruit_silas.dtl",
-"02_search_dal": "res://dialogic/timelines/03_loop_3/02_search_dal.dtl",
-"02b_confront_chancellor": "res://dialogic/timelines/03_loop_3/02b_confront_chancellor.dtl",
 "03_calm_mob": "res://dialogic/timelines/04_final_loop/03_calm_mob.dtl",
 "03_daily_life": "res://dialogic/timelines/02_loop_2/03_daily_life.dtl",
 "03_daily_life_b_v1": "res://dialogic/timelines/02_loop_2/03_daily_life_b_v1.dtl",
@@ -100,6 +99,17 @@ layout/style_directory={
 }
 layout/default_style="res://dialogic/styles/custom_vn_style.tres"
 layout/style_list=["res://dialogic/styles/custom_vn_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"]
+variables={
+"option_explored:a_v0_chancellor": false,
+"option_explored:a_v0_cyras": false,
+"option_explored:a_v0_king": false,
+"option_explored:a_v1_chancellor": false,
+"option_explored:a_v1_cyras": false,
+"option_explored:a_v1_king": false,
+"option_explored:a_v2_chancellor": false,
+"option_explored:a_v2_cyras": false,
+"option_explored:a_v2_king": false
+}
 
 [display]
 
