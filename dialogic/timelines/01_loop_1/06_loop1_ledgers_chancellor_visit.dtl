@@ -296,4 +296,4 @@ loyal_retainer (tearful): ……對不起。
 leave loyal_retainer
 leave princess
 
-jump 07_bad_end_a1/
+jump 07_loop1_ledgers_badend/

@@ -83,7 +83,7 @@ if {intel_chancellor_escape_plan}:
 
 - 正式請求覲見，在朝堂上揭露宰相
 	princess (determined): （上朝。一次把話說完。）
-	jump 04_expose_chancellor/
+jump 06_final_main_expose_chancellor/
 - 趁宰相還不知道，現在直接去拿他 | [if {intel_chancellor_escape_plan} == false]
 	princess (determined): （賭他還沒收完。）
-	jump 03b_rush_arrest/
+jump 04_final_badend_rush_arrest/

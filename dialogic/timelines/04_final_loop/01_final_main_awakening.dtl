@@ -90,4 +90,4 @@ leave princess
 
 [signal arg="day_counter:180"]
 
-jump 02_recruit_silas/
+jump 02_final_main_recruit_silas/

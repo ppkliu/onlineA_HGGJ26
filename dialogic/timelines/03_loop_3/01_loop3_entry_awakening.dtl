@@ -36,7 +36,7 @@ if {intel_narrative_flip}:
 	leave maid
 	leave princess
 
-	jump 07_meet_king_c2/
+jump 07_loop3_king_meet_king/
 
 if {intel_array_handed_clerk}:
 	# C-1：帶著工作室死亡記憶醒來
@@ -69,14 +69,14 @@ if {intel_array_handed_clerk}:
 	leave maid
 	leave princess
 
-	jump 05_warn_dal_c1/
+jump 05_loop3_warning_warn_dal/
 
 # 同上：走完 B-2 密道線後改走下方 C-0（帶密道記憶醒來），避免無限重入 b2
 # 僅「只走過 B-0、尚未拿 B-1 獎勵」才進 b1；已 mob 或已密道時勿因 surveillance 永真而倒回 b1
 if {intel_mob_manipulation} and not {intel_secret_passage}:
-	jump b2_01_awakening/
+	jump 09_loop2_passage_awakening/
 if {intel_chancellor_surveillance} and not {intel_mob_manipulation}:
-	jump b1_01_awakening/
+	jump 05_loop2_surveillance_awakening/
 
 # C-0：帶著 B-2 死亡記憶醒來（預設路徑）
 
@@ -115,4 +115,4 @@ maid (forced_smile): 好了，殿下。小心喔。
 leave maid
 leave princess
 
-jump 02_approach_dal_c0/
+jump 02_loop3_dal_approach/

@@ -18,24 +18,24 @@ func _get_awakening_timeline() -> String:
 		LoopManager.LoopPhase.EARLY:
 			return _get_early_timeline()
 		LoopManager.LoopPhase.MID:
-			return "01_awakening_cold"
+			return "01_loop3_entry_awakening"
 		LoopManager.LoopPhase.FINAL:
-			return "01_awakening_final"
+			return "01_final_main_awakening"
 		_:
-			return "01_awakening"
+			return "01_loop1_betrayal_awakening"
 
 
 ## A 線依情報線性推進：A-0 → A-1 → A-2 → 第二章 B
 func _get_early_timeline() -> String:
-	if not IntelSystem.has_intel("intel_chancellor_betrayal"):
-		return "01_awakening"                # A-0
-	if not IntelSystem.has_intel("intel_fake_ledgers"):
-		return "01_awakening_a_v1"           # A-1
-	if not IntelSystem.has_intel("intel_chancellor_poison"):
-		return "01_awakening_a_v2"           # A-2
+		if not IntelSystem.has_intel("intel_chancellor_betrayal"):
+			return "01_loop1_betrayal_awakening"  # A-0
+		if not IntelSystem.has_intel("intel_fake_ledgers"):
+			return "05_loop1_ledgers_awakening"   # A-1
+		if not IntelSystem.has_intel("intel_chancellor_poison"):
+			return "08_loop1_poison_awakening"    # A-2
 	# A 線三份情報齊備 → 進入第二章 B 線
-	if IntelSystem.has_intel("intel_mob_manipulation") and not IntelSystem.has_intel("intel_secret_passage"):
-		return "b2_01_awakening"
-	if IntelSystem.has_intel("intel_chancellor_surveillance") and not IntelSystem.has_intel("intel_mob_manipulation"):
-		return "b1_01_awakening"
-	return "01_awakening_angry"              # B-0（預設）
+		if IntelSystem.has_intel("intel_mob_manipulation") and not IntelSystem.has_intel("intel_secret_passage"):
+			return "09_loop2_passage_awakening"
+		if IntelSystem.has_intel("intel_chancellor_surveillance") and not IntelSystem.has_intel("intel_mob_manipulation"):
+			return "05_loop2_surveillance_awakening"
+	return "01_loop2_anger_awakening"       # B-0（預設）

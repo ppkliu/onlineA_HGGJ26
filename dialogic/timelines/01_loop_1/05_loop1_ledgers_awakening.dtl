@@ -103,4 +103,4 @@ label choice_menu
 	leave maid
 	leave princess
 	[signal arg="day_counter:180"]
-	jump 02_chancellor_visit_a_v1/
+jump 06_loop1_ledgers_chancellor_visit/

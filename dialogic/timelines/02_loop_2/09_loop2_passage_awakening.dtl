@@ -47,4 +47,4 @@ maid (default): 好～殿下今天很乖呢！來，莉娜幫您扣好。
 leave princess
 leave maid
 
-jump b2_02_follow_route/
+jump 10_loop2_passage_follow_route/
