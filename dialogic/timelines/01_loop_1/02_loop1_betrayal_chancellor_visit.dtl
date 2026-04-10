@@ -181,4 +181,4 @@ princess (determined): （沒有別的辦法了。）
 	princess: （父王常說這扇門為我開著……）
 	princess: （對不起。）
 	leave princess
-	jump 06_betrayal/
+jump 03_loop1_betrayal_reveal/

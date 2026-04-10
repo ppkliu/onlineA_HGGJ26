@@ -69,7 +69,7 @@ princess: （嘴上的話，和腳下的路，對不上。）
 leave princess
 
 - 跟莉娜回城
-	jump b0_03_bad_end/
+jump 03_loop2_anger_badend/
 
 - 繼續往前走
-	jump b0_04_forward_bad_end/
+jump 04_loop2_anger_forward_badend/

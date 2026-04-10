@@ -60,4 +60,4 @@ princess: （能從宮裡把我帶出去的……只剩莉娜。）
 leave princess
 leave maid
 
-jump b0_02_confrontation/
+jump 02_loop2_anger_confrontation/
