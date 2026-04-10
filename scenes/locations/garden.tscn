@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_npc_body")
 
 [node name="InteractionArea" type="Area2D" parent="GeneralNPC"]
 script = ExtResource("6_npc")
-timeline_path = "res://dialogic/timelines/01_loop_1/04_lower_district.dtl"
+timeline_path = ""
 npc_name = "將軍"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GeneralNPC/InteractionArea"]
