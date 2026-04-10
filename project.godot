@@ -43,6 +43,7 @@ directories/dch_directory={
 "princess": "res://dialogic/characters/princess.dch"
 }
 directories/dtl_directory={
+"00_early_phase_entry": "res://dialogic/timelines/01_loop_1/00_early_phase_entry.dtl",
 "01_loop1_betrayal_awakening": "res://dialogic/timelines/01_loop_1/01_loop1_betrayal_awakening.dtl",
 "01_loop2_anger_awakening": "res://dialogic/timelines/02_loop_2/01_loop2_anger_awakening.dtl",
 "01_loop3_entry_awakening": "res://dialogic/timelines/03_loop_3/01_loop3_entry_awakening.dtl",

@@ -4,6 +4,7 @@
 
 | Old | New | Route |
 | --- | --- | --- |
+| new | `00_early_phase_entry.dtl` | early_entry |
 | `01_awakening.dtl` | `01_loop1_betrayal_awakening.dtl` | betrayal |
 | `02_chancellor_visit.dtl` | `02_loop1_betrayal_chancellor_visit.dtl` | betrayal |
 | `06_betrayal.dtl` | `03_loop1_betrayal_reveal.dtl` | betrayal |
