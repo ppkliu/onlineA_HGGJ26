@@ -7,7 +7,7 @@
 
 join princess left
 
-princess: （課後這幾分鐘，走廊常只剩他的腳步。上次我問得太像功課。）
+princess: （下課後這一小段走廊，通常只剩他的腳步聲。）
 
 [wait time="0.6"]
 
@@ -15,19 +15,19 @@ join dal right
 
 dal (default): 殿下？
 
-princess: （他停住了。）
+princess: （他停下來了。）
 
-princess: （這次開口要重一點。）
+princess: （這次不能再像個來問功課的小孩。）
 
-princess: 達爾先生，我讀了陣法沿革的卷宗——防護接縫那一段的描述，和您在課裡說的術式層級對不上。我想知道為什麼。
+princess: 達爾先生，我看過陣法沿革卷宗。防護接縫那一段，和您課上說的術式層級對不上。我想知道為什麼。
 
 [wait time="1.0"]
 
-dal (wary): （他皺眉。不是不悅——是在重新評估這個問法。）
+dal (wary): ……殿下連這個都看了？
 
-dal (wary): 公主上次來……是認真的？
+dal (wary): 公主上次來，不是隨便問問而已？
 
-princess: 我對照了三版卷宗。接縫描述在第二版之後縮減了。您說的是第一版的做法，但現在的陣用的是第三版規格。我想知道是哪一個出了問題。
+princess: 我對照了三版卷宗。第二版之後，接縫的描述變少了。您說的是舊做法，現在存檔用的卻是第三版規格。這裡面一定有原因。
 
 [wait time="0.8"]
 
@@ -35,7 +35,7 @@ dal (quiet): ……
 
 dal (quiet): 跟我來。
 
-princess: （他把我帶進去了。）
+princess: （他終於把我當成來查事的人。）
 
 leave princess
 leave dal
@@ -48,25 +48,23 @@ leave dal
 join princess left
 join dal right
 
-princess: （牆角、轉彎、他停頓的地方——這不是課堂，是他在上班。）
+princess: （牆角、轉彎、他停下來的地方……這不是課堂，是巡視。）
 
-princess: （不能寫。只能往腦子裡塞。）
+princess: （我不能寫，只能硬背。）
 
 [wait time="0.6"]
 
-dal (quiet): 這段接縫——看見了嗎？第三版規格把緩衝層做薄了。當初的理由是節省維護成本，但波動容許範圍也相對縮小了。
+dal (quiet): 這段接縫，看見了嗎？第三版把緩衝層做薄了。當初理由是省維護成本，可波動容許範圍也跟著縮小了。
 
-princess: 所以正常波動的定義就不同了——這就是為什麼第二版之後的紀錄和舊標準對不上。
+princess: 所以現在的「正常波動」，和以前根本不是同一套標準。
 
 dal (quiet): 正是。
 
 [wait time="0.8"]
 
-dal (quiet): （他看了我一眼，像是第一次真正看見我。）
+dal (quiet): ……公主，您是真的在聽。
 
-dal (quiet): ……公主是認真的人。
-
-princess: （他願意講下去……我腦中的線才開始連。）
+princess: （他願意往下講了。）
 
 [wait time="0.6"]
 

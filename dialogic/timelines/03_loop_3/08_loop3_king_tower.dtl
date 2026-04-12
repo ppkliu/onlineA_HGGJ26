@@ -7,41 +7,41 @@
 
 join princess left
 
-princess: （馬車沒往寢宮走。往高塔。）
+princess: （馬車沒有回寢宮。它往高塔走。）
 
 [wait time="0.6"]
 
-princess: （窗很大。風很硬。他們說這叫保護。）
+princess: （窗很大，風很冷。這裡叫做保護。）
 
 [wait time="0.8"]
 
-princess: （信了我的話，卻把我抬到離人群最遠的地方。）
+princess: （父王信了我，卻還是把我放到最遠的地方。）
 
 [wait time="1.2"]
 
 # === 宰相潛逃 ===
 
-princess: （兩天後，消息從底下爬上來。）
+princess: （兩天後，消息傳上來了。）
 
 [wait time="0.6"]
 
-npc: 宰相大人東窗事發，潛逃出城了。
+npc: 宰相大人東窗事發，已潛逃出城。
 
 [wait time="0.8"]
 
-princess: （人跑了。城還在喘。洞還在。髒手還在城裡。）
+princess: （人跑了。可洞還在，手也還在城裡。）
 
 [signal arg="intel:intel_chancellor_escape_plan"]
 
 [wait time="0.8"]
 
-princess: （表面卻靜得可怕。）
+princess: （城裡卻安靜得可怕。）
 
 # === 半年和平 ===
 
 [wait time="0.8"]
 
-princess: （日子一頁一頁翻。窗外的屋頂還是那個形狀。）
+princess: （日子一頁一頁翻過去。窗外的屋頂，看久了都像沒變過。）
 
 - 半年以上過去了……
 	[wait time="0.3"]

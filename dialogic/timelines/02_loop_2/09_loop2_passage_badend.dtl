@@ -5,51 +5,51 @@
 
 join princess left
 
-princess: （我貼著牆摸。石頭粗得刮手。）
+princess: （我貼著牆摸過去，石頭粗得刮手。）
 
 [wait time="0.6"]
 
-princess: （……有了。）
+princess: （……找到了。）
 
-princess: （一道縫。邊緣磨得圓，像被人反覆推開又闔上。）
+princess: （邊緣磨得圓圓的，像被推開過很多次。）
 
 [wait time="0.5"]
 
-princess: （我用力——石塊竟比想像輕。）
+princess: （我一用力，那塊石頭居然真的鬆了。）
 
 [wait time="0.8"]
 
-princess: （裡面黑得吞光。）
+princess: （裡面黑得像要把光整口吞掉。）
 
-princess: （風從裡面湧出來，濕、冷，帶鏽味。）
+princess: （風從裡面灌出來，又濕又冷，帶著鏽味。）
 
 [wait time="1.0"]
 
-princess (determined): （這不是給人散步的。）
+princess (determined): （這不是裂縫。）
 
-princess (determined): （這是……另一條路。）
+princess (determined): （這是路。）
 
-princess: （我胸口發冷。）
+princess: （我胸口整個冷下去。）
 
 [wait time="1.0"]
 
 # === 格殺 ===
 
-princess: （然後——）
+princess: （下一秒——）
 
 [wait time="0.3"]
 
-princess: （深處有腳步。很近，很直。）
+princess: （裡面有腳步聲。很快，很直。）
 
 [wait time="0.6"]
 
-princess: （三個黑影浮出黑暗。目光撞上我。）
+princess: （三個黑影從暗處走出來。）
 
 [wait time="0.5"]
 
-princess: （沒人問我是誰。）
+princess: （沒有人問我是誰。）
 
-princess (hollow): （在這裡被看見……就沒有下一個問題了。）
+princess (hollow): （在這裡被看見，就不需要第二句話了。）
 
 [signal arg="cut_to_silence"]
 
@@ -61,15 +61,15 @@ leave --All--
 
 [wait time="2.5"]
 
-princess (hollow): （原來城牆……早就不是城牆了。）
+princess (hollow): （原來城牆……早就不是牆了。）
 
 [wait time="1.5"]
 
-princess (hollow): （鍊子換來的話，換來了這個結局。）
+princess (hollow): （一條項鍊，換來這條路。）
 
 [wait time="1.0"]
 
-princess (hollow): （那道術式呢……還撐得住嗎？）
+princess (hollow): （那道陣……還撐得住多久？）
 
 [wait time="2.0"]
 
@@ -77,7 +77,7 @@ princess (hollow): （那道術式呢……還撐得住嗎？）
 
 [wait time="3.0"]
 
-narrator: 艾蓮娜公主找到了真相。真相的代價是：看見它的人，都不能活著離開。
+narrator: 艾蓮娜公主找到了真相。而真相的規矩很簡單：看見它的人，不能活著離開。
 
 [wait time="3.0"]
 

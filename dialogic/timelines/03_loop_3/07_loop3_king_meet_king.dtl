@@ -7,13 +7,13 @@
 
 join princess left
 
-princess: （我照規矩遞牌子。要書房。要單獨。不要宰相。）
+princess: （我照規矩遞牌子。要書房，要單獨，不要宰相。）
 
 [wait time="0.6"]
 
-princess: （等了一天。回覆才來。）
+princess: （等了一整天，回覆才來。）
 
-princess: （他肯見。）
+princess: （他肯見我。）
 
 leave princess
 
@@ -27,23 +27,23 @@ leave princess
 join princess left
 join king center
 
-princess: （書房裡只有燈火。沒有第三張椅子隔在中間。）
+princess: （書房裡只有燈。沒有第三個人。）
 
 [wait time="0.6"]
 
-princess: 父王。女兒有話說，說完為止，請您聽完。
+princess: 父王，女兒有話要說。請您先聽完。
 
-king: ……吾兒。說吧。
+king: ……好。說吧。
 
 # === 交牌 ===
 
 [wait time="0.5"]
 
-princess: （密道。私兵。簽字的人。達爾怎麼沒的。）
+princess: （密道、私兵、簽署路線，還有達爾是怎麼被抹掉的。）
 
-princess: （不哭。不求。）
+princess: （不哭，也不求。）
 
-princess: 這是我在三個月裡看見的事。父王比任何人都有辦法查證它。
+princess: 這些都是我看見的事。父王若要查，比任何人都查得快。
 
 [wait time="2.0"]
 
@@ -51,17 +51,19 @@ king: ……
 
 [wait time="1.0"]
 
-princess: （他很久不說話。像被兩隻手各扯一邊。）
+princess: （他很久都沒說話。）
 
 [wait time="0.8"]
 
-king: ……身為王，我沒辦法照你說的這些，在沒有證據、沒有程序、沒有大臣在場的情況下，就當成真相。
+king: ……身為王，我不能只憑你現在說的這些，就在沒有證據、沒有程序、沒有朝臣在場的時候，把它當成真相。
 
 [wait time="0.8"]
 
-king: （他抬眼看著她，眼眶很紅，聲音壓得很低。）
+king: 但身為你的父親——
 
-king: 但身為你的父親——我相信你。
+[wait time="0.5"]
+
+king: 我信你。
 
 [wait time="1.2"]
 
@@ -69,7 +71,7 @@ king: ……原諒我。我不能失去你。
 
 [wait time="1.0"]
 
-princess: （他揚聲喚人。聲音像下令。）
+princess: （他一開口叫人，聲音就變回王的聲音了。）
 
 leave princess
 leave king

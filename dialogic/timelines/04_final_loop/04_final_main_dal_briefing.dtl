@@ -4,7 +4,7 @@
 [wait time="1.0"]
 
 - ——第三天——
-	princess: （賽拉斯把人約到後庫。不在工作室。）
+	princess: （賽拉斯把人約到了後庫，不是工作室。）
 	[wait time="0.3"]
 
 # === 內廷偏廳 ===
@@ -19,45 +19,41 @@ join loyal_retainer right
 
 join dal right
 
-princess: （他進門才看見我，腳步一頓。）
+princess: （達爾進門看見我，腳步明顯慢了一下。）
 
 dal (wary): ……殿下。
 
-princess (determined): 陣核東南象限，第三維護週期。節點亮度黯淡的模式——不是老化，是有人在每一次清場令後，對能源管線注入了什麼。
+princess (determined): 陣核東南象限，第三維護週期。那段亮度下降，不是老化，是有人在每次清場後往能源管線裡動手。
 
 [wait time="0.8"]
 
-dal (wary): ……殿下是怎麼——
+dal (wary): ……殿下怎麼會——
 
-princess (determined): 我對照過維護日誌與清場時程。哪些「例行」在技術上是腐蝕而不是保養，負責人的日誌裡藏不住。你也看出來了——只是沒有開口說。
+princess (determined): 我對過維護日誌，也對過清場時程。哪些被寫成「例行維護」的東西，其實是腐蝕，你自己也看出來了，只是還沒說出口。
 
 [wait time="1.0"]
 
-princess: （他臉色變了。像終於對上那塊說不清的疙瘩。）
+princess: （他臉色變了。）
 
-dal (quiet): ……若殿下說的是真的，這不是意外老化。那是——
+dal (quiet): ……若真是這樣，這就不是意外。
 
-princess (determined): 有心人。而且離你很近。
+princess (determined): 我知道。所以你現在最重要的不是衝出去揭發誰。
 
 [wait time="0.6"]
 
-princess (determined): 請你格外小心身邊的人——尤其是最靠近紀錄與茶水的那一個。
+princess (determined): 是活著。
 
 [wait time="0.5"]
 
-dal (quiet): ……若殿下說的是真的，我現在最該做的是——
+dal (quiet): ……那我該怎麼做？
 
-princess (determined): 活著。我需要你的幫助，別先成為下一個被滅口的理由。
+princess (determined): 先把能逆著查的地方查乾淨。把技術紀錄留好，把能留下的物證留下。不要私下往上報，不要單獨闖陣，也不要在工作室跟任何人翻臉。
 
-[wait time="0.8"]
-
-princess (determined): 在查明之後，不要輕舉妄動。不要私下向上匯報，不要單獨闖陣，不要在工作室與他撕破臉。等到事情被正式宣召到國王面前——那個時候，再把技術與物證一次攤開。
-
-princess (determined): 在那之前，只做可逆的查核，把能記下來的記下來。和賽拉斯保持聯絡。
+princess (determined): 等正式上朝，再一次把東西攤開。到時候，有人護得住你。
 
 [wait time="0.6"]
 
-dal (quiet): （他看著我，沉默了很長一段時間。）
+dal (quiet): （他沉默了很久，最後點了頭。）
 
 dal (quiet): ……好。
 
@@ -65,11 +61,11 @@ dal (quiet): ……好。
 
 leave dal
 
-princess: （達爾走了。賽拉斯看我一眼，什麼都沒說。）
+princess: （達爾走後，賽拉斯才開口。）
 
-loyal_retainer: ……所有人都到位了。
+loyal_retainer: ……人都到位了。
 
-princess (determined): 還沒。要父王在。要他在眾人面前沒路可退。
+princess (determined): 還差父王。得讓他在眾人面前聽見，才堵得住退路。
 
 [wait time="0.8"]
 
@@ -79,28 +75,28 @@ leave loyal_retainer
 # === 最後決策 ===
 
 if {option_explored:final_rush_arrest}:
-	princess (determined): （上次我衝太快……空房間，開著的門。這次不能重來。）
+	princess (determined): （上次衝得太快，只看見空掉的房間和開著的門。這次不能再送他先走。）
 
 label final_choice_menu
 
 - 正式請求覲見，在朝堂上揭露宰相
-	princess (determined): （上朝。一次把話說完。）
+	princess (determined): （上朝。一次把門關死。）
 	jump 05_final_main_expose_chancellor/
 
 - 趁宰相還不知道，現在直接去拿他 | [if {option_explored:final_rush_arrest} == false]
-	princess (determined): （賭他還沒收完。）
+	princess (determined): （賭一把。）
 	[signal arg="option_explored:final_rush_arrest"]
 	jump rush_arrest_bad_explanation
 
 - 趁宰相還不知道，現在直接去拿他 | [if {option_explored:final_rush_arrest}]
-	princess (determined): （不能私下抓。只要我現在衝過去，他又會沿著預備路線先一步逃掉。）
+	princess (determined): （不能私下抓。只要我現在衝過去，他還是會沿著預備好的路先跑。）
 	jump final_choice_menu
 
 label rush_arrest_bad_explanation
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
 [wait time="1.0"]
-princess: （如果我現在帶人去抓——）
+princess: （如果我現在就帶人去抓——）
 - ——即刻——
 	[wait time="0.3"]
 
@@ -112,23 +108,23 @@ join loyal_retainer right
 
 princess: 賽拉斯，帶人去宰相書房。現在。
 
-loyal_retainer (serious): 殿下，不經過陛下的命令直接拿人——
+loyal_retainer (serious): 殿下，不經陛下命令直接拿人——
 
-princess: 來不及了。如果他知道布魯諾不配合了，他今晚就會動手。
+princess: 來不及了。再慢一步，他今晚就會跑。
 
 loyal_retainer (serious): ……遵命。
 
 [wait time="0.8"]
 
-princess: （門一推就開。桌空。抽屜空。連墨都乾了。）
+princess: （門一推就開。桌子是空的，抽屜也是，連墨都乾了。）
 
 princess (shocked): ……他不在。
 
-loyal_retainer: 他早一步。再追下去，只會在城門前迎上已經打開的缺口。
+loyal_retainer: 他早一步走了。現在再追，只會撞上已經被打開的口子。
 
 [wait time="0.8"]
 
-princess: （箭像雨。賽拉斯把我掼到牆後——他背上插著箭，還站著。）
+princess: （箭雨壓下來的時候，賽拉斯一把把我壓到牆後。他背上中了箭，還是沒有倒。）
 
 [wait time="0.8"]
 
@@ -140,7 +136,7 @@ leave loyal_retainer
 
 [signal arg="intel:intel_chancellor_escape_plan"]
 
-princess: （不能私下抓。要在眾人面前……把門關死。）
+princess: （不能私下抓。得在所有人面前，把他能走的門一起關上。）
 
 [wait time="1.2"]
 

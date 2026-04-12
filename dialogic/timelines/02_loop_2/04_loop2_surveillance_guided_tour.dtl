@@ -8,27 +8,27 @@
 join princess left
 join chancellor right
 
-princess: （他第一眼先看我的脖子——然後笑開了。）
+princess: （他第一眼先看我脖子上的項鍊，才抬頭笑。）
 
-chancellor (default): 哎呀，殿下！今天精神很好呢。有什麼事嗎？
+chancellor (default): 哎呀，殿下！今天看起來精神很好呢。有什麼吩咐嗎？
 
 princess: 宰相大人，我想請您幫我一個忙。
 
 chancellor (default): 殿下請說。
 
-princess: 我聽說下城區的人民生活很苦。我一直待在城堡裡，從來沒有親自去看過……我想去看看真實的情況。
+princess: 我聽說下城區很苦。可我一直待在城堡裡，從來沒親眼看過。我想去看看那裡現在到底是什麼樣子。
 
 [wait time="0.8"]
 
-princess: （他目光掠過我，像秤重量。）
+princess: （他看著我，像在秤我是真心還是一時興起。）
 
-princess: 我記得宰相大人以前說過，了解民情是治理的根本。我想學習。
+princess: 您以前說過，治理國家不能只看紙上的數字。我想學這件事。
 
 [wait time="0.6"]
 
-chancellor (default): 殿下有這份心，臣很感動。臣可以安排。
+chancellor (default): 殿下有這份心，臣很欣慰。這件事，臣可以安排。
 
-princess: （答得也太快……像這句話他早就在等。）
+princess: （答得太快了。）
 
 leave princess
 leave chancellor
@@ -42,22 +42,22 @@ leave chancellor
 
 join princess left
 
-princess: （侍衛貼著，走正門。街上的人都在看——「公主來了」。）
+princess: （侍衛貼著我走。街上的人都知道，今天有個公主來了。）
 
 [wait time="0.8"]
 
 # --- 三個視察站 ---
 
 - 糧食分發點
-	princess: （隊伍很長。分發的人嗓門特別大——像怕誰聽不見。）
-	npc: 這是宰相大人從自己庫存撥出來的！王上不管我們死活，只有宰相大人……
-	princess: （太順了。順得像排練過。）
+	princess: （隊伍排得很長，發糧的人嗓門也特別大，像生怕別人聽不清。）
+	npc: 這些都是宰相大人從自己的庫存撥出來的！王上不管我們死活，只有宰相大人還記得我們！
+	princess: （太順了，順得像先演過。）
 	jump station_hospital
 
 - 傷兵收容所
-	princess: （老婦人哭到嗓子都啞了——）
+	princess: （有個老婦人哭到聲音都啞了。）
 	old_woman: 都是王上要打仗，我兒子才會變成這樣……
-	princess: （她的痛是真的。可那句「怪誰」……像有人替她寫好。）
+	princess: （她的痛是真的。可那句怪誰，也像有人早就塞給她了。）
 	jump station_hospital
 
 label station_hospital
@@ -66,29 +66,29 @@ label station_hospital
 
 # --- 鐵匠鋪 ---
 
-princess: （最後停在鐵匠鋪。爐火味很重。走出來的男人手很粗，眼神卻沉。）
+princess: （最後停在鐵匠鋪。爐火熱得嚇人，走出來的男人比火還硬。）
 
 join mob_leader right
 
-npc: 這位是布魯諾先生，下城區的鐵匠，也是居民中比較有代表性的人物。
+npc: 這位是布魯諾先生，下城區的鐵匠，也是居民裡頗有分量的人。
 
-mob_leader: 殿下能親自來看看，我們很感激。宰相大人一直很關心我們……
+mob_leader: 殿下肯親自來看，我們很感激。宰相大人一直很關心下城區……
 
-princess: （他話說一半，先偷看侍衛的臉色。）
+princess: （他話講到一半，先看了一眼侍衛。）
 
 [wait time="0.6"]
 
-mob_leader: 如果不是徵糧令，我老婆也不會……
+mob_leader: 要不是徵糧令，我老婆也不會……
 
 [wait time="0.8"]
 
-mob_leader: ……反正，算了。
+mob_leader: ……算了。
 
-princess: （侍衛咳了一聲。像提醒。）
+princess: （侍衛清了清喉嚨。）
 
-mob_leader: 殿下辛苦了，這邊風大，請殿下保重。
+mob_leader: 這裡風大，殿下還是早點回去吧。
 
-princess: （他把話吞回去。可那句沒說完的，我記住了。）
+princess: （他把後半句吞回去了。但我記住了。）
 
 leave mob_leader
 

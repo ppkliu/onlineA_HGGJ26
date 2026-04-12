@@ -7,35 +7,45 @@
 
 join princess left
 
-princess: （助手不在的幾分鐘。就現在。）
+princess: （助手不在。就這幾分鐘。）
 
 [wait time="0.5"]
 
 join dal right
 
-princess: 達爾先生。我要說一件事，很快說完。
+princess: 達爾先生，我有話要說，很短。
 
 dal (wary): ……殿下？
 
-princess: 你的助手，在你說某幾個節點之前，他會先說話。你注意到了嗎？
+princess: 你的助手，每次你要說到某些節點之前，都會先插話。你注意過嗎？
 
 dal (wary): ……
 
-princess: 每次夜間清場令之後，那幾個節點的狀態就會退步一次。我對照過維護日誌，週期對得上。簽署路徑都經財政署——他們在紙面上只是核銷外聘、安排定期維護，還用「追查陣光黯淡」當理由清場，誰看都像正常流程。但如果你以技術負責人的身分去核——不要說是我說的——你應該能從紀錄裡看出對不起來的地方。
+princess: 每次夜間清場之後，那幾個節點就會再差一點。我對過維護日誌，週期完全對得上。表面上只是外聘維護、例行檢修、追查陣光黯淡，可如果你親自把帳跟技術紀錄對起來，一定看得出不對。
 
 [wait time="1.2"]
 
-dal (quiet): ……公主，這件事是從哪裡來的？
+dal (quiet): ……公主，這些是從哪裡來的？
 
-princess: 卷宗與您帶我走過的巡視路線對照出來的——不是我待了多久，是紀錄與現場對不起來。您是負責人，這本來就該由您的職權去查證。請您照職責匯報，不要提我的名字。
+princess: 從卷宗、從路線、從你自己帶我看過的現場。不是我在猜，是紀錄和現況對不上。你才是負責人，該由你去核。
 
 [wait time="1.0"]
 
-dal (quiet): （他看著我，沉默了很長一段時間。）
+princess: 不要提我。也不要急著往上報。
+
+[wait time="0.8"]
+
+dal (quiet): ……為什麼？
+
+princess: 因為你一開口，他們就知道有人看懂了。
+
+[wait time="1.0"]
+
+dal (quiet): （他看了我很久。）
 
 dal (quiet): ……好。
 
-princess: （他會照做的。我看得出來。）
+princess: （他會查。可我心裡一點都沒鬆。）
 
 leave princess
 leave dal
@@ -51,27 +61,27 @@ join princess left
 
 princess: （隔天，達爾沒來。）
 
-princess: （我忍到中午，讓人隨口去問。）
+princess: （我忍到中午，才讓人隨口去問。）
 
 [wait time="0.6"]
 
 join maid right
 
-maid (default): 達爾先生昨晚好像身體不適，今天沒有到崗喔……
+maid (default): 達爾先生昨晚好像身體不適，今天沒到崗喔……
 
 leave maid
 
 [wait time="1.0"]
 
-princess: （我把話吞回去。）
+princess: （我什麼都沒說。）
 
 [wait time="0.6"]
 
 - 之後過了好幾天……
-	princess: （達爾和助手……像被從宮裡抹掉。）
+	princess: （達爾和那個助手，像一起從宮裡被抹掉了。）
 	[wait time="0.5"]
 
-princess: （我請他往上說。他說了。然後人就沒了。）
+princess: （我叫他去查。然後人就沒了。）
 
 [wait time="0.8"]
 

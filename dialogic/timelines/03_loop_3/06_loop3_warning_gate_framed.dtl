@@ -7,23 +7,23 @@
 
 join princess left
 
-princess: （達爾不見了。陣還在爛。）
+princess: （達爾不見了。陣還在壞。）
 
 [wait time="0.6"]
 
-princess: （我至少想站到門口——讓裡面的人聽見我還在。）
+princess: （我至少要走到門口。）
 
 [wait time="0.5"]
 
-npc: 公主殿下，陣區目前暫停外部進入，請您——
+npc: 公主殿下，陣區暫停對外開放，請您——
 
-princess: 我只是想進去看看。
+princess: 我只是進去看一眼。
 
 npc: 請殿下配合。
 
 [wait time="0.8"]
 
-princess: （衛兵本來就該在。可那句「暫停進入」……下得太乾淨了。我連門檻都沒踩到。）
+princess: （衛兵站在那裡很正常。可「暫停進入」這句話，像是專門等我來聽的。）
 
 [wait time="0.6"]
 
@@ -38,19 +38,19 @@ leave princess
 
 join princess left
 
-princess: （沒多久，走廊開始傳另一套話。）
+princess: （沒多久，宮裡就開始傳新的說法。）
 
-npc: 公主殿下違反陣區管制——意圖干預國防術式——正在調查。
+npc: 公主殿下違反陣區管制，意圖干預國防術式，目前正在調查。
 
 [wait time="0.6"]
 
-princess: （我連門都沒進。「意圖」就夠了。）
+princess: （我連門都還沒進。）
 
 - 試著解釋
-	princess: 是有人在系統性腐蝕——
-	princess: （沒人接。像對著空牆說。）
+	princess: 是有人在故意腐蝕魔法陣——
+	princess: （沒人接。）
 - 閉上嘴
-	princess: （說了也白說。）
+	princess: （說了也沒人會信。）
 
 [wait time="0.8"]
 
@@ -60,7 +60,7 @@ princess: （我連門都沒進。「意圖」就夠了。）
 
 join king center
 
-king: ……我把你軟禁。是為了保護你。
+king: ……我把你軟禁，是為了保護你。
 
 [wait time="0.5"]
 
@@ -70,11 +70,11 @@ leave king
 
 [wait time="0.8"]
 
-princess: （可關起來……不是救。）
+princess: （可被關起來，從來不叫得救。）
 
 [wait time="0.6"]
 
-princess: （茶又來了。那個味道。）
+princess: （茶又送來了。還是那個味道。）
 
 [wait time="1.0"]
 
@@ -87,7 +87,7 @@ leave princess
 [background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 [wait time="3.0"]
 
-narrator: 提早告知不夠——威脅不在名字被揭露，而在「有人知道了」這件事本身。宰相清場的速度不需要理由，只需要那一通匯報作為觸發。
+narrator: 提早知道不夠。真正致命的不是名字被揭開，而是對方發現「有人已經知道了」。
 
 [wait time="3.0"]
 

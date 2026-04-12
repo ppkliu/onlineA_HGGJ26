@@ -9,31 +9,31 @@
 
 join princess left
 
-princess: （她們把我裝進禮服裡，像裝進一層殼。沒人問我去幹嘛。）
+princess: （她們把我塞進禮服裡，像塞回一個公主該有的樣子。）
 
-princess: （我往外走。每一步都覺得裙擺在替我發聲。）
+princess: （我往外走，裙擺每晃一下都很吵。）
 
 [wait time="0.8"]
 
 join chancellor right
 
-chancellor (concerned): 哎呀，殿下今天打扮得好正式啊～這是要去哪裡？
+chancellor (concerned): 哎呀，殿下今天打扮得這麼正式，是要去哪裡？
 
 princess: 去見父王。
 
-chancellor (concerned): 哦？難得呢。殿下這段時間好像都不太常走動——
+chancellor (concerned): 哦？真難得。殿下最近不是都不太愛出門嗎——
 
-chancellor (concerned): ……殿下今天沒有戴那條項鍊啊。
+chancellor (concerned): ……殿下今天沒有戴那條項鍊。
 
 [wait time="0.5"]
 
-princess: 沒帶，不太合適。
+princess: 今天不適合。
 
 [wait time="0.6"]
 
-chancellor (concerned): ……看來殿下不太喜歡啊，那臣再替殿下挑一條更好的——
+chancellor (concerned): ……原來如此。那臣再替殿下挑一條更好的——
 
-princess: 不需要了。我要去見父王了。
+princess: 不必了。我先失陪。
 
 [wait time="0.5"]
 
@@ -43,7 +43,7 @@ chancellor (concerned): ……殿下慢走。
 
 leave chancellor
 
-princess: （我沒回頭。後頸卻一直發麻——像有視線黏著。）
+princess: （我沒回頭，但後頸一直發麻。）
 
 [wait time="0.5"]
 
@@ -58,25 +58,25 @@ leave princess
 
 join princess left
 
-princess: （廳裡低聲嗡嗡的。賽拉斯像一塊鐵，貼在父王身側。）
+princess: （廳裡都是說話聲，賽拉斯就站在父王身邊，像一堵牆。）
 
 [wait time="0.5"]
 
 join king right
 
-king (joyful): 哦？今天吹了什麼風哪！我們的寶貝公主來了！
+king (joyful): 哦？今天吹了什麼風，我們的寶貝公主居然主動來找父王了！
 
 [wait time="0.5"]
 
-princess: （父王笑得很響——響得像要把氣氛撐起來。幾個大臣看我一眼，藉故散開。）
+princess: （父王笑得很大聲，像想把所有不對勁都壓下去。）
 
-princess: （他張開手，等我像小時候那樣撲過去。）
+princess: （他張開手，像平常那樣等我走過去。）
 
 [wait time="0.8"]
 
-princess: （我在幾步外停住。腳像被釘住。）
+princess: （可我停住了。）
 
-king: 怎麼啦，我們的小公主今天鬧脾氣了？不過來抱抱父王？
+king: 怎麼啦？今天不抱抱父王了？
 
 [wait time="0.6"]
 
@@ -84,35 +84,35 @@ princess (determined): 父王，您是不是瞞著我什麼？
 
 [wait time="0.8"]
 
-king: 什麼都沒有，你說什麼呀，父王哪有瞞過你——
+king: 什麼都沒有啊，你這孩子怎麼突然這麼問——
 
-princess (determined): 您有給賽拉斯一道密令。關於在不得已的時候，殺了我。
+princess (determined): 您是不是給過賽拉斯一道密令？如果守不住了，就讓他殺了我。
 
 [wait time="1.5"]
 
 [sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
 
-princess: （賽拉斯身上一陣細響——他整個人硬住了。）
+princess: （賽拉斯整個人都繃住了。）
 
 [wait time="0.8"]
 
-princess: （父王的笑僵在臉上。他瞥向賽拉斯，賽拉斯搖頭——父王的目光又砸回我身上。）
+princess: （父王先看他，再看我。）
 
-king: ……那是誰告訴你的？
+king: ……誰告訴你的？
 
 princess (determined): 沒有人。
 
 [wait time="0.6"]
 
-princess (determined): 我知道邊境的「小毛賊」根本不是小毛賊，是敵國的大軍。
+princess (determined): 我知道邊境來的不是小股盜匪，是敵國大軍。
 
 [wait time="0.5"]
 
 king: ……
 
-princess: （他沒有立刻罵我胡說。這種沉默……比承認還可怕。）
+princess: （他沒立刻反駁。這比承認更可怕。）
 
-princess (determined): 而且為了備戰，您課了很重的稅。
+princess (determined): 我也知道，為了備戰，您加了很重的稅。
 
 [wait time="0.5"]
 
@@ -124,23 +124,23 @@ king: 夠了！
 
 [signal arg="camera_shake" intensity="light"]
 
-king: 是誰告訴你這些的！！
+king: 這些話，到底是誰教你的！
 
-princess (shocked): 沒有人，我是自己——
+princess (shocked): 沒有人，是我自己查——
 
-king: 來人！快把公主請走！
+king: 來人！把公主先請下去！
 
 [wait time="0.5"]
 
 [sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
 
-princess: （有人扣住我的手臂。我掙了，像掙一塊鐵。）
+princess: （有人扣住我的手臂，我怎麼掙都掙不開。）
 
-princess (shocked): 是宰相！只要調查宰相就好了！父王——你不要讓宰相——
+princess (shocked): 是宰相！去查宰相就夠了！父王，你不要再讓他——
 
 [wait time="0.8"]
 
-princess: （門在面前合上。我的喊聲被截斷在另一邊。）
+princess: （門在我面前關上。）
 
 leave king
 leave princess
@@ -153,15 +153,15 @@ leave princess
 
 join king right
 
-princess: （我沒看見後面發生了什麼。）
+princess: （後面發生了什麼，我沒看見。）
 
-princess: （可我能想像那扇側門開合的聲音——還有腳步，遲疑又不得不上前。）
+princess: （只聽見父王在裡頭發火。）
 
 king: 你怎麼辦事的！
 
-chancellor (shocked): 臣冤枉……臣……
+chancellor (shocked): 臣冤枉……臣真的不知——
 
-princess: （再後面，牆把一切都吃掉了。）
+princess: （再後面，聲音就被門和牆吃掉了。）
 
 leave king
 
@@ -174,42 +174,42 @@ leave king
 
 join princess left
 
-princess: （一張桌，一把椅，一扇窗。窗不能開。沒有認識的臉孔。）
+princess: （一張桌子，一把椅子，一扇打不開的窗。）
 
 [wait time="1.2"]
 
-princess (sad): （他聽見了。然後把我推開。）
+princess (sad): （他聽見了，可還是把我關起來。）
 
-princess: （我坐在這裡，像被拔掉了舌頭。）
+princess: （像我說的那些話，全被當成危險。）
 
 [wait time="1.5"]
 
-princess: （桌上有一杯茶。不知道什麼時候放在那裡的。）
+princess: （桌上放著一杯茶。）
 
 [wait time="1.0"]
 
 - 站起來走了好幾圈
-	princess (sad): （我講了。他還是不聽。）
+	princess (sad): （我明明已經說出口了。）
 - 坐在椅子上，盯著牆
-	princess (sad): （說了那麼多……像一拳打在棉花上。）
+	princess (sad): （說了那麼多，還是沒用。）
 
 [wait time="1.2"]
 
-princess: （伸手拿起了桌上的茶杯。喝了一口。）
+princess: （我伸手拿起茶杯，喝了一口。）
 
 [wait time="1.5"]
 
 princess (shocked): （——！）
 
-princess: （這個氣味。我認得這個氣味。）
+princess: （這個味道。）
 
-princess (cold): （這個味道……我嚥過一次。）
+princess (cold): （我認得。）
 
-princess (cold): （不是錯覺。同一個人，同一種手筆。）
+princess (cold): （第一次死前，那杯茶也是這個味道。）
 
 [wait time="0.8"]
 
-princess (cold): （他總是先我一步……但至少這次，我認出來了。）
+princess (cold): （原來從頭到尾，都是同一個人。）
 
 [signal arg="cut_to_silence"]
 
