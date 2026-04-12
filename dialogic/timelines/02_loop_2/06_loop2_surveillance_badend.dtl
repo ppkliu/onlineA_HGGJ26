@@ -7,21 +7,21 @@
 
 join princess left
 
-princess (determined): （腦裡有地圖，臉上不能有。）
+princess (determined): （腦子裡有圖，臉上就更不能露。）
 
 [wait time="0.6"]
 
-princess: （我回到城堡，先裝沒事。）
+princess: （回城後，我先裝作什麼都沒發現。）
 
 [wait time="0.6"]
 
 - 製造偽裝……
-	princess: （我向書庫借卷宗，在日記裡寫滿「讀書心得」，再找禮官問儀典裡關於城牆的段落。）
-	princess: （看起來像一時興起對歷史著迷——最好笑得很自然。）
+	princess: （我借卷宗、寫讀書心得、去問禮官那些無聊到不行的典制細節。看起來像突然對歷史著迷。）
+	princess: （能演得多自然，就多自然。）
 	jump real_reading
 
 - 真正在讀什麼……
-	princess: （字裡行間我只找一件事：牆從哪裡厚起來、門怎麼關、術式接在哪——那條窄巷到底通向哪。）
+	princess: （我只看一件事：牆怎麼做、門怎麼關、術式接在哪，還有那條巷子最後通到哪。）
 	jump real_reading
 
 label real_reading
@@ -39,19 +39,19 @@ leave princess
 join princess left
 join dal right
 
-princess: （我照規矩遞牌子見達爾。）
+princess: （我照規矩遞牌子去見達爾。）
 
 dal (default): 殿下對術式有興趣？
 
-princess: 只是想了解一些基礎。父王的防衛策略……我想能夠聽懂一些。
+princess: 我想多懂一些。至少別再只會站著聽別人講。
 
 [wait time="0.5"]
 
-dal (default): ……殿下若是好奇，臣可以說幾句。術式不是三天能學的，殿下有心就好。
+dal (default): ……殿下若只是好奇，臣可以說幾句。只是術式不是三兩天能學會的。
 
 [wait time="0.5"]
 
-princess: （他當我好奇玩玩。可我每個字都往心裡刻。）
+princess: （他當我是心血來潮。我沒有糾正。）
 
 [wait time="0.6"]
 
@@ -60,8 +60,8 @@ leave dal
 # === 幾天過去 ===
 
 - 幾天過去了……
-	princess: （宰相仍舊笑著，沒有攔我借書、也沒攔我見達爾。）
-	princess (hollow): （……這樣就夠了嗎？）
+	princess: （宰相還是照樣對我笑，也沒攔我借書，沒攔我見達爾。）
+	princess (hollow): （……放得太輕了。）
 	[wait time="0.5"]
 
 leave princess
@@ -75,15 +75,15 @@ leave princess
 join princess left
 join maid right
 
-princess: 莉娜，我想看一下城牆沿革的地圖。我在研究賑災的物資調度路線……
+princess: 莉娜，我想看一下城牆沿革的地圖。我在研究賑災時物資怎麼走比較快。
 
-maid (default): 哎呀，殿下真的好用功喔！莉娜幫您找找看！
+maid (default): 哎呀，殿下最近真的好用功喔！莉娜幫您找找看！
 
 [wait time="0.5"]
 
 leave maid
 
-princess: （地圖一鋪開，眼睛就忍不住往同一角落——窄巷那邊，牆厚得不合理。）
+princess: （地圖一攤開，我的眼睛就黏在那塊牆上。那裡厚得太奇怪了。）
 
 [wait time="0.8"]
 
@@ -99,23 +99,25 @@ leave princess
 join princess left
 join maid right
 
-maid (default): 殿下～宰相大人聽說您一回來就盯著城牆地圖看，他可心疼了。大人特地準備了睡前放鬆的茶，還吩咐我把地圖收走，讓您好好休息呢。
+maid (default): 殿下～宰相大人聽說您一回來就在看城牆地圖，可心疼了。大人特地準備了放鬆的茶，還交代莉娜先把地圖收走，讓您好好休息呢。
 
 [wait time="0.5"]
 
-princess: （莉娜把地圖捲走，茶端到我鼻尖，笑得無懈可擊。）
+princess: （莉娜把地圖捲起來，茶送到我面前，笑得一點都挑不出毛病。）
 
 [wait time="0.6"]
 
-princess: （那個味道……）
+princess: （那個味道。）
 
 [wait time="0.5"]
 
-princess (hollow): （原來不是放任我。是等我伸手碰「那一塊」。）
+princess (hollow): （原來不是放任。）
+
+princess (hollow): （他只是在等我碰到真正不該碰的那一塊。）
 
 [wait time="0.8"]
 
-princess: （我喝下。黑暗上來前，腦子裡只剩窄巷的線，和達爾那些我還沒來得及用的詞。）
+princess: （我喝下去。黑下來之前，腦子裡只剩那面牆，和達爾講過還沒來得及用上的那些詞。）
 
 [wait time="1.5"]
 
@@ -130,7 +132,7 @@ leave maid
 
 [wait time="3.0"]
 
-narrator: 艾蓮娜公主學會了偽裝，卻在最不像威脅的地方觸了地雷。地圖一拿出來，所有的放任都是觀察。
+narrator: 艾蓮娜公主學會了偽裝，卻在最不像威脅的地方踩中了地雷。地圖一打開，所有的放任就都只是觀察。
 
 [wait time="3.0"]
 

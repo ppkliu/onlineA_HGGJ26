@@ -11,15 +11,15 @@ join princess left
 
 princess: （又是那個味道。）
 
-princess: （我沒碰。）
+princess: （這次我沒有碰。）
 
 [wait time="0.8"]
 
-princess: （我讓人去叫父王。叫賽拉斯。叫誰都好。）
+princess: （我讓人去找父王，去找賽拉斯，找誰都行。）
 
 [wait time="0.6"]
 
-princess: （人沒回來。）
+princess: （沒有人回來。）
 
 [wait time="1.2"]
 
@@ -28,15 +28,17 @@ princess: （人沒回來。）
 [sound path="res://audio/sfx/gate_open_heavy.ogg" volume="0.4"]
 [signal arg="camera_shake" intensity="medium"]
 
-princess: （夜裡，底下在吼。遠遠的，像整座城在裂。）
+princess: （半夜裡，底下傳來很遠的吼聲，像整座城正在裂開。）
 
 [wait time="1.2"]
 
-princess: （塔上看得見火。）
+princess: （高塔上看得見火。）
 
 [wait time="0.8"]
 
-princess: （以前都是別人動手。這次……換我。）
+princess: （以前總是別人替我動手。）
+
+princess: （這一次，輪到我自己。）
 
 [wait time="0.6"]
 
@@ -45,11 +47,11 @@ princess: （以前都是別人動手。這次……換我。）
 - 餐刀
 	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
 
-	princess (hollow): （桌角有刀。冷。）
+	princess (hollow): （桌角有把刀。冰得很。）
 
 	[wait time="0.8"]
 
-	princess (hollow): （我握住。）
+	princess (hollow): （我握住了。）
 
 	[wait time="1.5"]
 
@@ -61,7 +63,7 @@ princess: （以前都是別人動手。這次……換我。）
 	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 	[wait time="3.0"]
 
-	narrator: 父王信了艾蓮娜公主——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。「知道了」和「解決了」之間，仍然有一道無法靠單人行動跨越的距離。
+	narrator: 父王信了艾蓮娜公主，是以父親之身；可身為王，他還是沒辦法立刻兌現她要的答案。高塔是愛，也是囚。宰相跑了，城還是沒救回來。「知道了」和「做到了」之間，原來還隔著一道單憑一個人跨不過去的距離。
 
 	[wait time="3.0"]
 
@@ -73,7 +75,7 @@ princess: （以前都是別人動手。這次……換我。）
 - 冷掉的茶
 	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
 
-	princess (hollow): （茶涼了。杯底沉著甜，上面卻苦。）
+	princess (hollow): （茶已經涼了。底下還是甜，上面還是苦。）
 
 	princess (hollow): （我還是喝了。）
 
@@ -87,7 +89,7 @@ princess: （以前都是別人動手。這次……換我。）
 	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 	[wait time="3.0"]
 
-	narrator: 父王信了艾蓮娜公主——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。「知道了」和「解決了」之間，仍然有一道無法靠單人行動跨越的距離。
+	narrator: 父王信了艾蓮娜公主，是以父親之身；可身為王，他還是沒辦法立刻兌現她要的答案。高塔是愛，也是囚。宰相跑了，城還是沒救回來。「知道了」和「做到了」之間，原來還隔著一道單憑一個人跨不過去的距離。
 
 	[wait time="3.0"]
 
@@ -99,11 +101,11 @@ princess: （以前都是別人動手。這次……換我。）
 - 窗戶
 	[music path="res://audio/bgm/tension_rising.ogg" fade="1.0" volume="0.12"]
 
-	princess (hollow): （窗能推開。風灌進來，帶著煙。）
+	princess (hollow): （窗推得開。風裡都是煙。）
 
 	[wait time="0.8"]
 
-	princess (hollow): （我探出去。）
+	princess (hollow): （我探了出去。）
 
 	[wait time="1.5"]
 
@@ -115,7 +117,7 @@ princess: （以前都是別人動手。這次……換我。）
 	[background arg="res://art/backgrounds/darkness.png" fade="2.8"]
 	[wait time="3.0"]
 
-	narrator: 父王信了艾蓮娜公主——以父親之身。以王之身無法立刻兌現。高塔是愛，也是囚。宰相跑了，城仍未得救。「知道了」和「解決了」之間，仍然有一道無法靠單人行動跨越的距離。
+	narrator: 父王信了艾蓮娜公主，是以父親之身；可身為王，他還是沒辦法立刻兌現她要的答案。高塔是愛，也是囚。宰相跑了，城還是沒救回來。「知道了」和「做到了」之間，原來還隔著一道單憑一個人跨不過去的距離。
 
 	[wait time="3.0"]
 

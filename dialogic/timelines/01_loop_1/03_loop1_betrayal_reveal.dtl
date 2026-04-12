@@ -12,21 +12,21 @@ princess: 宰相大人……那份密令，我拿到了。
 
 [wait time="0.8"]
 
-chancellor (default): ……殿下。您真的做到了。
+chancellor (default): ……殿下，您真的做到了。
 
-princess: （他接過去，指腹掠過封蠟——太熟練了。熟練得像早就等著這份東西。）
+princess: （他接過去的動作太順了，像早就在等。）
 
 [wait time="0.7"]
 
-chancellor (concerned): 殿下今天受苦了。書房裡有沒有遇到什麼人？
+chancellor (concerned): 殿下今天辛苦了。過程中沒碰上誰吧？
 
-princess (shocked): 沒有，一切很順利。
+princess (shocked): 沒有，很順利。
 
-chancellor (concerned): 那就好。來，坐下。臣特地備了花茶——蜂蜜玫瑰的，暖暖身子。殿下今天緊繃了一整天，好好喝一杯。
+chancellor (concerned): 那就好。坐吧。臣備了花茶，蜂蜜玫瑰的，最適合壓驚。殿下今天一定嚇壞了。
 
 [wait time="0.6"]
 
-princess: （花茶的香氣從茶杯裡升起來，蜂蜜和玫瑰，還有一點說不清楚的苦。）
+princess: （香氣很熟，甜甜的，裡頭卻混著一點說不出的苦。）
 
 princess: 謝謝宰相大人。
 
@@ -34,55 +34,55 @@ princess: 謝謝宰相大人。
 
 princess: （我喝了一口。）
 
-princess: （味道比我平時喝的花茶多了一點苦，大概是不同的配方吧。）
+princess: （有點苦……但也許只是配方不同。）
 
-chancellor (concerned): 好喝嗎？
+chancellor (concerned): 味道如何？
 
-princess: 嗯……有一點點苦，但是很香。
+princess: 有一點苦，不過還是很香。
 
-chancellor (concerned): 苦的是安神草，幫助放鬆。殿下最近壓力太大了，好好休息一下。
+chancellor (concerned): 裡頭加了安神草。殿下最近受了驚，喝了會舒服些。
 
 [wait time="1.2"]
 
-princess: （……咦。手指尖怎麼麻了？）
+princess: （……手指怎麼麻了？）
 
-princess: （腿……突然沒力氣了。茶杯感覺比剛才重了好幾倍。）
+princess: （腿也使不上力。茶杯忽然重得嚇人。）
 
-princess (shocked): 宰相大人……我、我好像……
+princess (shocked): 宰相大人……我、我怎麼……
 
 chancellor: ……
 
 [wait time="0.8"]
 
-princess: （茶杯從手裡滑落，摔碎在地板上。我想站起來，膝蓋卻軟成棉花。書房的燭光開始模糊，像隔著一層水在看。）
+princess: （杯子從手裡滑下去，摔得粉碎。我想站起來，膝蓋卻一下就軟了。燭光變得又遠又晃。）
 
-chancellor (cold): 殿下不用怕。不會痛的。只是會慢慢睡著而已。
+chancellor (cold): 殿下別怕。不會太痛。只是睡過去而已。
 
-princess (shocked): 你……在茶裡……？
+princess (shocked): 你……你在茶裡……
 
 [wait time="0.6"]
 
 chancellor (cold): ……
 
-chancellor (cold): 臣也是身不由己。
+chancellor (cold): 臣也是不得已。
 
 [wait time="1.0"]
 
-princess: （他的聲音很輕，輕到我差點沒聽清楚。）
+princess: （他的聲音還是那麼輕。）
 
-chancellor (cold): 殿下從小就很好。臣看著您長大……說句實話，在臣心裡，您一直是臣當女兒對待的孩子。
+chancellor (cold): 殿下從小就懂事，臣一直很喜歡您。
 
 [wait time="0.8"]
 
-chancellor (cold): 所以殿下不要怪臣。
+chancellor (cold): 所以……殿下別怪臣。
 
 [wait time="1.0"]
 
-princess: （……）
+princess: （不要怪我。）
 
-princess (sad): （他的聲音變遠了。「不要怪我」……）
+princess (sad): （他的聲音越來越遠。）
 
-princess (sad): （茶的味道黏在喉嚨裡——甜、香、還有一點苦……）
+princess (sad): （喉嚨裡只剩那口茶的味道。甜的、香的，最後發苦。）
 
 princess (sad): （我抓不住更多了。）
 

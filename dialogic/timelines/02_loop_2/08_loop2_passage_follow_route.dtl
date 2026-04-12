@@ -10,17 +10,17 @@
 join princess left
 join maid right
 
-princess: 莉娜，今天集市日。我想去挑一些布料。
+princess: 莉娜，今天集市日。我想去挑點布料。
 
-maid (default): 好呀～殿下好久沒去逛了！那莉娜陪您去。
+maid (default): 好呀～殿下好久沒出去逛了！那莉娜陪您去。
 
-princess: 嗯。……不過，我想自己試試衣服，不需要人在旁邊伺候。
+princess: 嗯。不過我想自己試衣服，不用人在旁邊伺候。
 
-maid (default): 好、好的，那莉娜在外頭幫您挑布料就好！
+maid (default): 好、好的，那莉娜在外頭幫殿下挑就好！
 
 [wait time="0.5"]
 
-princess: （侍衛守在路口，不進店——就這一點空隙。）
+princess: （侍衛守在路口，不進店。就這一點空隙。）
 
 leave princess
 leave maid
@@ -33,18 +33,18 @@ leave maid
 
 join princess left
 
-princess: （成衣店。莉娜在外頭挑布，我鑽進試衣間。）
+princess: （我鑽進試衣間。）
 
 [wait time="0.5"]
 
 - 快速換上粗布
-	princess: （粗布寬鬆，能遮。項鍊先藏進領口。）
+	princess: （粗布夠寬，也夠不起眼。）
 - 堆好華服製造假象
-	princess: （外頭掛著裙角，讓她以為我還在裡面磨蹭。）
+	princess: （把裙角掛在外頭，讓人以為我還在裡面慢慢挑。）
 
 [wait time="0.5"]
 
-princess: （貓腰從側邊溜出去。人群一合，我就只是個不起眼的影子。）
+princess: （從側邊溜出去之後，我很快就只是人群裡一個影子。）
 
 leave princess
 
@@ -58,41 +58,43 @@ leave princess
 join princess left
 join mob_leader right
 
-princess: （找到鐵匠鋪。爐火轟轟響。他抬眼，一眼就看出我不屬於這裡。）
+princess: （我找到鐵匠鋪。布魯諾只看我一眼，就知道我不屬於這裡。）
 
-mob_leader: ……走開。別在這裡惹眼。
-
-[wait time="0.5"]
-
-princess: （我沒退。把聲音壓低，只問牆交界、夜裡車輪、黑甲從哪兒進出——字眼都撿最不起眼的說。）
+mob_leader: ……走開。別把麻煩帶來我門口。
 
 [wait time="0.5"]
 
-mob_leader: 這種話出口，要嘛是瘋子，要嘛是找死。
+princess: （我沒退，只把聲音壓低。）
+
+princess: 我想問牆交界、夜裡的車輪聲，還有黑甲兵是從哪裡進出的。
+
+[wait time="0.5"]
+
+mob_leader: 你不是瘋子，就是不想活了。
 
 [wait time="0.6"]
 
-princess: （我把項鍊按到他掌邊。）
+princess: （我把項鍊推到他掌邊。）
 
-princess: 當鋪、熔金、或留著當抵押，都夠換一個答案。我只要真話。
+princess: 拿去當、拿去熔、拿去換糧都行。我只換一句真話。
 
 [wait time="0.8"]
 
-princess: （他盯著鍊子，沉默很久。手指沒碰，眼神已經在秤斤兩。）
+princess: （他盯著那條鍊子很久，沒碰。）
 
 [wait time="0.6"]
 
-mob_leader: ……你拿這個換一句話，值不值，你自己想。
+mob_leader: ……你用這東西換一句話，值不值，自己想。
 
 [wait time="0.5"]
 
-mob_leader: 哪一段牆流民嘴裡叫「別看、別停」。黑甲什麼時候像補給車一樣進出。窄巷入口在哪裡，和你說的那個方向怎麼對上。
+mob_leader: 你要找的那段牆，在流民嘴裡叫「別停的地方」。黑甲會裝成補給車從那邊進出。窄巷入口在哪、該往哪個方向摸過去，我都告訴你。
 
-mob_leader: 我不保證你活著回來。我只保證我說的每一句都是真的。
+mob_leader: 我不保你活著回來。我只保我現在說的都是真的。
 
 [wait time="0.6"]
 
-princess: （鍊子留下。後悔是下一步的事。）
+princess: （鍊子留在桌上。現在沒空心疼。）
 
 leave mob_leader
 
@@ -100,40 +102,40 @@ leave mob_leader
 
 [wait time="0.8"]
 
-princess: （順著人流走一截，再折進小巷。）
+princess: （我順著人流先走一段，再拐進他說的巷子。）
 
 [wait time="0.6"]
 
-princess: （巷口又破又臭。牆角卻磨得發亮——像常有東西靠著碾過。）
+princess: （巷口又臭又窄，可牆角磨得發亮，像常有重東西來回擦過。）
 
 [wait time="0.8"]
 
-princess: （再往裡，路變窄，光被吃掉。）
+princess: （越往裡走，光越少。）
 
 [wait time="0.6"]
 
 # === 士兵的影子 ===
 
-princess: （遠處腳步很齊。不像逃難的人會那樣走。）
+princess: （遠處有腳步聲，整齊得不像逃難的人。）
 
 [wait time="0.8"]
 
-princess: （角落裡有人抬頭，嘴唇一動。）
+princess: （角落裡有人抬頭，嘴唇動了一下。）
 
-npc: 不要看他們。不要讓他們看見你在看。
+npc: 不要看他們。不要讓他們知道你在看。
 
-princess: （我僵在原地。）
+princess: （我整個人都僵了一下。）
 
 [wait time="0.6"]
 
 - 順著老人的視線看過去
-	princess: （牆面看起來普通……可那一截特別厚，厚得不講道理。）
+	princess: （牆面乍看普通，可那一截厚得不自然。）
 - 蹲下來摸牆面
-	princess: （指尖一刮，石紋都跟旁邊接不上。）
+	princess: （指尖一刮，石紋跟旁邊對不上。）
 
 [wait time="1.0"]
 
-princess (determined): （就是這裡。內外城交界。）
+princess (determined): （就是這裡。）
 
 [wait time="0.8"]
 

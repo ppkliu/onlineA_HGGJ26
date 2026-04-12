@@ -2,7 +2,7 @@
 
 [background arg="res://art/backgrounds/darkness.png" fade="0.6"]
 [wait time="1.0"]
-princess: （隔天。馬車停在街口。我獨自往鐵匠鋪走。）
+princess: （隔天。馬車停在街口，我自己走去鐵匠鋪。）
 - ——翌日——
 	[wait time="0.3"]
 
@@ -13,74 +13,74 @@ princess: （隔天。馬車停在街口。我獨自往鐵匠鋪走。）
 
 join princess left
 
-princess: （酸腐味。牆上炭筆字刺眼睛。）
+princess: （空氣裡都是炭灰味，牆上的字一筆一畫都帶火氣。）
 
 [wait time="0.6"]
 
 join mob_leader right
 
-princess: （他從鐵砧後抬眼，像在量我：又一個來施捨的？）
+princess: （他從鐵砧後抬眼，先把我當成來做戲的人。）
 
 mob_leader: 殿下。
 
-princess: （聲音很平。）
+princess: （聲音不大，也不客氣。）
 
 [wait time="0.6"]
 
 # === 歸還，不是施捨 ===
 
-princess (determined): 我讀過下城區賑濟的卷宗——外聘維護、徵糧草藥的脈絡，財政署的簽核路徑。這些名字和路線，我是從紙上看來的。
+princess (determined): 我看過下城區的賑濟卷宗，也查過徵糧和草藥的批核。財政署怎麼走帳、東西怎麼被截住，我心裡大概有數。
 
-mob_leader (suspicious): 殿下想說什麼？
+mob_leader (suspicious): 殿下跟我說這些，想幹什麼？
 
-princess (determined): 我想請你，在接下來幾日，自己去核對你能核對的部分。帳目、批核署名、糧倉的實際庫存——任何你覺得對不上的地方。
+princess (determined): 我想請你，這幾天自己去核。帳目、署名、糧倉的實際庫存，凡是你覺得不對的，全都去看。
 
 [wait time="0.8"]
 
-mob_leader: （他靜了很久。第一次聽一個公主當面把話說到這個深度。）
+mob_leader: 殿下怎麼會知道這些？
 
-mob_leader (suspicious): 殿下怎麼會知道這些名字與路徑？
-
-princess (determined): 我讀卷宗，也聽見下城區的聲音。至於停在你沒說完的那個地方——那不是八卦，是有人該負責的線。
+princess (determined): 我看過紙，也看過人。你老婆的事，我知道不只是一句「時局如此」就能帶過去。
 
 [wait time="0.6"]
 
-mob_leader (angry): 知道又怎樣。能做什麼？
+mob_leader (angry): 知道又怎樣？我老婆也不會回來。
 
-princess: （他吼完，眼底先累。）
+princess: （他話裡全是火，可眼睛底下更像累。）
 
 [wait time="0.5"]
 
-princess (determined): 今天什麼都還不能做。但我需要你知道一件事——
+princess (determined): 我不是來叫你原諒誰，也不是來施捨你什麼。
 
-princess (determined): 我不是來施捨什麼，或替父王道歉的。那份憤怒是你的，你妻子的死是真實的，這些沒有辦法被任何人奪走或換回來。
+princess (determined): 你的怒氣是真的。你失去的東西也是真的。這些沒有人有資格幫你抹平。
 
 [wait time="0.6"]
 
-princess (determined): 在不久之後，朝堂上會有一場對質——宰相從帳目、私兵到輿論動過的手腳，會被一件一件攤開。那個時候，下城區需要有人能說——我查過，這是真的。
+princess (determined): 但再過不久，朝堂上會有人被攤開來問。從帳到人，從糧到私兵，都會被攤在光底下。
 
-princess (determined): 那個人，如果你願意，可以是你。
+princess (determined): 到那時候，下城區需要一個能站出來說「我自己查過，這是真的」的人。
+
+princess (determined): 如果你願意，那個人可以是你。
 
 [wait time="1.0"]
 
-mob_leader: 公主這樣說，是在要求我替王室說話。
+mob_leader: 公主這麼說，是要我替王室開口。
 
-princess (determined): 不是。是在告訴你，有機會讓你親自查過的東西有人聽見。你要不要說，是你的事。
+princess (determined): 不是。是要你替你自己開口。
 
 [wait time="1.2"]
 
-mob_leader: （他看了我一眼，然後轉過身去，繼續打鐵。）
+mob_leader: （他盯著我看了好一會兒，最後轉身繼續打鐵。）
 
 [wait time="0.8"]
 
-princess: （我停了一會兒，沒再逼。轉身走。）
+princess: （我沒逼他，只站了一會兒就轉身離開。）
 
 leave princess
 leave mob_leader
 
 [wait time="0.5"]
 
-princess: （爐火還在響。他沒有說不。）
+princess: （他沒有答應。也沒有拒絕。）
 
 [wait time="0.6"]
 

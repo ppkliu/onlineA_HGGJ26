@@ -10,27 +10,27 @@ join maid right
 
 princess: 莉娜，我想去下城區看看。
 
-maid (default): 下城區？殿下，那邊最近不太平……
+maid (default): 下城區？殿下，那邊最近很亂……
 
-maid (forced_smile): 宰相大人也交代過，這幾天殿下最好待在城堡裡……
+maid (forced_smile): 宰相大人也交代過，這幾天殿下最好先待在城堡裡……
 
-maid (default): 萬一出了什麼事，莉娜可擔待不起呢……
+maid (default): 萬一出了事，莉娜真的擔不起呀……
 
 [wait time="0.6"]
 
-princess: （她停住了。）
+princess: （她不是單純不想去。她是怕。）
 
-princess: 我只是想出去看看。你陪我去，不會有事的。
+princess: 我只想親眼看看。你陪我去，我們看完就回來。
 
 [wait time="0.8"]
 
-princess: （莉娜眼神一閃——不是「不想去」，是「想去又不敢」那種卡。）
+princess: （她眼神晃了一下。像是其實很想點頭，只是不敢。）
 
 [wait time="0.5"]
 
-maid (default): ……好吧。但不能去太深。
+maid (default): ……好吧。但真的不能走太深。
 
-princess: （她答應得太勉強。那一下停頓……不像在擔心路。）
+princess: （她答應得很勉強。）
 
 leave princess
 leave maid
@@ -44,25 +44,25 @@ leave maid
 
 join princess left
 
-princess: （人越來越擠，味道也越來越重。莉娜抓著我的袖子，指節發白。）
+princess: （人越來越擠，空氣也越來越難聞。莉娜抓著我的袖子，手一直在抖。）
 
 [wait time="0.8"]
 
 - 看見了什麼……
-	princess: （這裡沒有「行距」——只有破布、瘦得見骨的孩子、牆角堆著的東西。有個女人抱著嬰兒坐著，一聲不吭。）
+	princess: （破布、瘦得見骨的孩子、牆角一堆分不清是垃圾還是家當的東西。還有一個抱著嬰兒的女人，連哭都沒聲音。）
 	jump lower_city_walk
 
 - 這和帳本不一樣……
-	princess (determined): （紙上再怎麼寫，也寫不出這種氣味。）
+	princess (determined): （那些紙上的數字，根本寫不出這個味道。）
 	jump lower_city_walk
 
 label lower_city_walk
 
 [wait time="0.6"]
 
-princess: （莉娜一直說回去、回去——可腳步卻把我往另一頭帶。）
+princess: （莉娜嘴上一直催我回去，可腳步卻把我往更深的地方帶。）
 
-princess: （嘴上的話，和腳下的路，對不上。）
+princess: （她嘴裡說的，和她真正想做的，不一樣。）
 
 [wait time="0.6"]
 
@@ -83,31 +83,31 @@ label anger_return_badend
 
 join princess left
 
-princess: （回城之後，世界一下子變小。）
+princess: （回城之後，世界一下子縮得很小。）
 
-princess: （父王的吼聲隔著門傳進來，最後只剩一句「我是在保護你」。然後是鎖舌咔噠一聲。）
+princess: （我只聽見父王隔著門吼了一句「我是在保護你」，然後門鎖就落下來了。）
 
 [wait time="0.8"]
 
-princess: （桌上多了一杯茶。一聞——又是那個甜裡帶苦的味。）
+princess: （桌上多了一杯茶。我一聞就知道，還是那個味道。）
 
 princess (hollow): （我沒碰。）
 
 [wait time="0.6"]
 
-princess: （侍從來收杯子，眼神躲了一下。）
+princess: （侍從來收走杯子時，不敢看我。）
 
 [wait time="0.8"]
 
-princess: （飯點到了。盤子擺上來，熱氣裡混著熟悉的東西。）
+princess: （晚餐送來時，熱氣裡也混著那股熟悉的底味。）
 
 [wait time="0.5"]
 
-princess: （不是茶……可底味一樣。）
+princess: （不是茶。可還是一樣。）
 
 [wait time="0.5"]
 
-princess (hollow): （原來躲得開杯子，躲不開別的。）
+princess (hollow): （原來避開一杯茶，根本沒用。）
 
 [wait time="1.0"]
 
@@ -121,7 +121,7 @@ leave princess
 
 [wait time="3.0"]
 
-narrator: 艾蓮娜公主以為拒絕了茶就安全了。但他的手段從不只有一種。
+narrator: 艾蓮娜公主以為不碰那杯茶就能活下來。但他的手段，從來不只一種。
 
 [wait time="3.0"]
 
@@ -145,29 +145,29 @@ label anger_forward_badend
 
 join princess left
 
-princess: （斑剝的牆，屋裡空得發乾。莉娜說先坐，她去弄茶。）
+princess: （斑駁的牆，空得嚇人的屋子。莉娜說先坐，她去倒茶。）
 
 [wait time="0.6"]
 
-princess: （茶盤一歪，杯子摔了。她連聲道歉，轉身又去換。）
+princess: （第一杯打翻了，她連聲道歉。）
 
 [wait time="0.5"]
 
-princess: （換來的又說涼了，再熱——指尖一直在抖。）
+princess: （第二杯送來，又說太涼，急著端走。）
 
 [wait time="0.5"]
 
-princess: （第三回，茶終於擺到我面前。她卻不坐，只盯著那杯，像盯著自己的命。）
+princess: （第三次，茶終於擺在我面前。她卻只是站著，眼睛一直盯著那個杯口。）
 
 [wait time="0.8"]
 
 join maid right
 
-maid (forced_smile): ……這茶的味道我聞著怪怪的。我們……還是不要喝了。
+maid (forced_smile): ……這茶聞起來怪怪的。我們……還是別喝了，好不好？
 
 [wait time="0.8"]
 
-princess: （一聞就知道。）
+princess: （我一聞就知道。）
 
 princess: 是宰相嗎？
 
@@ -191,9 +191,9 @@ princess: （視線開始發軟。）
 
 [wait time="0.5"]
 
-princess (hollow): （她剛才……一直在攔。不是笨手笨腳。）
+princess (hollow): （她剛才不是笨手笨腳。）
 
-princess (hollow): （可到頭來，她還是只能站在那裡。）
+princess (hollow): （她是在攔。）
 
 [wait time="1.0"]
 
@@ -208,7 +208,7 @@ leave maid
 
 [wait time="3.0"]
 
-narrator: 艾蓮娜公主找到了苦難的真相，也找到了網的裂縫。只是裂縫還不夠大，大不過控制本身。
+narrator: 艾蓮娜公主看見了苦難，也看見了控制裡那條細小的裂縫。只是那道裂縫，還不夠讓人逃出去。
 
 [wait time="3.0"]
 

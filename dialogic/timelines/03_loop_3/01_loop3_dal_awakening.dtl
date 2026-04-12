@@ -11,13 +11,13 @@ princess: ……密道那條線，走完了。
 
 [wait time="1.2"]
 
-princess: （密道是真的。可兵進來還不夠——牆後面那層光……也得塌。）
+princess: （密道是真的。可光有密道還不夠。）
 
-princess: （賽拉斯那句話還卡在耳朵裡：從裡面壞的。）
+princess: （賽拉斯說過，魔法陣是從裡面壞掉的。）
 
 [wait time="0.8"]
 
-princess: （達爾課上那些詞……我現在至少叫得出名字。）
+princess: （達爾課上講過的東西，我現在總算能接上幾個詞。）
 
 [wait time="1.0"]
 
@@ -29,13 +29,13 @@ princess: 退回去。
 
 maid (default): 欸？可是殿下都還沒看——
 
-princess: 莉娜。今天不戴那條鍊子。幫我挑一套去書庫的衣服——乾淨，不張揚。
+princess: 莉娜。今天不戴那條鍊子。幫我挑一套去書庫穿的衣服，乾淨一點，不要顯眼。
 
 maid (confused): ……去書庫？是，殿下。
 
 [wait time="0.5"]
 
-maid (forced_smile): 好了，殿下。小心喔。
+maid (forced_smile): 好了，殿下。路上小心。
 
 [signal arg="day_counter:180"]
 
