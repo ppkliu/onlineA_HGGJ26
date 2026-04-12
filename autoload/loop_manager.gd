@@ -16,6 +16,7 @@ enum LoopPhase {
 var current_phase: LoopPhase = LoopPhase.PROLOGUE
 # 當前輪迴中的場景進度狀態（每次輪迴重置）
 var scene_states: Dictionary = {}
+var pending_next_timeline := ""
 
 
 func _ready() -> void:
@@ -55,13 +56,19 @@ func trigger_death(context: Dictionary = {}) -> void:
 
 	# 3. 執行輪迴重置（advance_loop: false 代表錯誤死法，不推進迴圈）
 	var should_advance: bool = context.get("advance_loop", true)
-	_reset_loop(should_advance)
+	var next_timeline := ""
+	if should_advance:
+		next_timeline = str(context.get("next_timeline", ""))
+	_reset_loop(should_advance, next_timeline)
 
 
 ## 輪迴重置
-func _reset_loop(should_advance: bool = true) -> void:
+func _reset_loop(should_advance: bool = true, next_timeline: String = "") -> void:
 	if should_advance:
 		IntelSystem.trigger_loop_reset()
+		pending_next_timeline = next_timeline
+	else:
+		pending_next_timeline = ""
 	scene_states.clear()
 	_update_phase()
 	loop_started.emit(IntelSystem.current_loop)
@@ -119,3 +126,9 @@ func set_scene_state(key: String, value: Variant) -> void:
 ## 取得場景狀態
 func get_scene_state(key: String, default: Variant = null) -> Variant:
 	return scene_states.get(key, default)
+
+
+func consume_pending_next_timeline() -> String:
+	var timeline_id := pending_next_timeline
+	pending_next_timeline = ""
+	return timeline_id

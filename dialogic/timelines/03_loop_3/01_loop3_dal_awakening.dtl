@@ -1,0 +1,45 @@
+# 調查線 C：醒來 — 公主寢房
+
+[background arg="res://art/backgrounds/royal_chamber.png" fade="1.3"]
+[music path="res://audio/bgm/music_box_uneasy.ogg" fade="3.5" volume="0.31"]
+
+[wait time="2.0"]
+
+join princess left
+
+princess: ……密道那條線，走完了。
+
+[wait time="1.2"]
+
+princess: （密道是真的。可兵進來還不夠——牆後面那層光……也得塌。）
+
+princess: （賽拉斯那句話還卡在耳朵裡：從裡面壞的。）
+
+[wait time="0.8"]
+
+princess: （達爾課上那些詞……我現在至少叫得出名字。）
+
+[wait time="1.0"]
+
+join maid right
+
+maid (default): 殿下～早安呀！今天也是好天氣喔～宰相大人送來了——
+
+princess: 退回去。
+
+maid (default): 欸？可是殿下都還沒看——
+
+princess: 莉娜。今天不戴那條鍊子。幫我挑一套去書庫的衣服——乾淨，不張揚。
+
+maid (confused): ……去書庫？是，殿下。
+
+[wait time="0.5"]
+
+maid (forced_smile): 好了，殿下。小心喔。
+
+[signal arg="day_counter:180"]
+
+leave maid
+leave princess
+
+jump 02_loop3_dal_approach/

@@ -78,12 +78,70 @@ leave loyal_retainer
 
 # === 最後決策 ===
 
-if {intel_chancellor_escape_plan}:
+if {option_explored:final_rush_arrest}:
 	princess (determined): （上次我衝太快……空房間，開著的門。這次不能重來。）
+
+label final_choice_menu
 
 - 正式請求覲見，在朝堂上揭露宰相
 	princess (determined): （上朝。一次把話說完。）
-jump 06_final_main_expose_chancellor/
-- 趁宰相還不知道，現在直接去拿他 | [if {intel_chancellor_escape_plan} == false]
+	jump 05_final_main_expose_chancellor/
+
+- 趁宰相還不知道，現在直接去拿他 | [if {option_explored:final_rush_arrest} == false]
 	princess (determined): （賭他還沒收完。）
-jump 04_final_badend_rush_arrest/
+	[signal arg="option_explored:final_rush_arrest"]
+	jump rush_arrest_bad_explanation
+
+- 趁宰相還不知道，現在直接去拿他 | [if {option_explored:final_rush_arrest}]
+	princess (determined): （不能私下抓。只要我現在衝過去，他又會沿著預備路線先一步逃掉。）
+	jump final_choice_menu
+
+label rush_arrest_bad_explanation
+
+[background arg="res://art/backgrounds/darkness.png" fade="0.6"]
+[wait time="1.0"]
+princess: （如果我現在帶人去抓——）
+- ——即刻——
+	[wait time="0.3"]
+
+[background arg="res://art/backgrounds/hallway.png" fade="0.8"]
+[music path="res://audio/bgm/tension_rising.ogg" fade="2.0"]
+
+join princess left
+join loyal_retainer right
+
+princess: 賽拉斯，帶人去宰相書房。現在。
+
+loyal_retainer (serious): 殿下，不經過陛下的命令直接拿人——
+
+princess: 來不及了。如果他知道布魯諾不配合了，他今晚就會動手。
+
+loyal_retainer (serious): ……遵命。
+
+[wait time="0.8"]
+
+princess: （門一推就開。桌空。抽屜空。連墨都乾了。）
+
+princess (shocked): ……他不在。
+
+loyal_retainer: 他早一步。再追下去，只會在城門前迎上已經打開的缺口。
+
+[wait time="0.8"]
+
+princess: （箭像雨。賽拉斯把我掼到牆後——他背上插著箭，還站著。）
+
+[wait time="0.8"]
+
+leave princess
+leave loyal_retainer
+
+[background arg="res://art/backgrounds/darkness.png" fade="2.5"]
+[wait time="2.5"]
+
+[signal arg="intel:intel_chancellor_escape_plan"]
+
+princess: （不能私下抓。要在眾人面前……把門關死。）
+
+[wait time="1.2"]
+
+jump final_choice_menu

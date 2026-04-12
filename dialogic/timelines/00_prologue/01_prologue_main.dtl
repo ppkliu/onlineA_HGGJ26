@@ -10,7 +10,7 @@ princess (default): 嗯……好吵……窗外怎麼紅紅的……煙火嗎？
 
 [wait time="1.2"]
 
-[sound path="res://audio/sfx/corridor_crash.ogg" bus="SFX" volume="0.71"]
+audio "res://audio/sfx/corridor_crash.ogg" [volume="0.71" bus="SFX"]
 [signal arg="camera_shake"]
 
 princess (shocked): 哇！什麼東西倒下來了？！……莉娜？！你在外面嗎？莉娜——！
@@ -19,7 +19,7 @@ princess (shocked): 哇！什麼東西倒下來了？！……莉娜？！你在
 
 princess (default): 奇怪……門怎麼推不開……雖然有點害怕，但父王說過這裡很安全的……莉娜？你快來呀……
 
-[sound path="res://audio/sfx/door_knock_hard.ogg" bus="SFX" volume="1.78"]
+audio "res://audio/sfx/door_knock_hard.ogg" [volume="1.78" bus="SFX"]
 
 [wait time="0.8"]
 
@@ -27,14 +27,14 @@ princess (default): 嗯？敲門聲……是莉娜嗎？進來呀～
 
 [wait time="1.0"]
 
-[sound path="res://audio/sfx/running_screams_distant.ogg" bus="SFX" volume="0.56"]
+audio "res://audio/sfx/running_screams_distant.ogg" [volume="0.56" bus="SFX"]
 
 princess (default): 外面……好吵鬧，好多腳步聲……大家在跑嗎……聽起來好急……
 
 [wait time="1.8"]
 
-[sound path="res://audio/sfx/armor_approach_heavy.ogg" bus="SFX"]
-[sound path="res://audio/sfx/lock_break_forceful.ogg" bus="SFX"]
+audio "res://audio/sfx/armor_approach_heavy.ogg" [bus="SFX"]
+audio "res://audio/sfx/lock_break_forceful.ogg" [bus="SFX"]
 [signal arg="camera_shake"]
 
 jump 02_prologue_assassination/

@@ -6,6 +6,8 @@
 >
 > 調查線 C 的公主帶著 B-1 的達爾入門語言進入，目標是親眼看見魔法陣如何從內部被蛀空。三推演給出三個答案：第一推演她看見了陣，卻死在工作室裡——內鬼就在旁邊，達爾死在她眼前；第二推演她提前告知達爾，讓他匿名匯報，卻以達爾之死為代價，獨力修復當場被捕；第三推演她把全部底牌交給父王，換來的是高塔、半年虛假和平，最後在城破聲中第一次主動選擇死亡。
 
+**實作註記**：Dialogic 端對應的固定順序為 `01_loop3_dal_awakening -> 02_loop3_dal_approach -> 03_loop3_dal_two_months -> 04_loop3_dal_workshop -> 05_loop3_warning_warn_dal -> 06_loop3_warning_gate_framed -> 07_loop3_king_meet_king -> 08_loop3_king_tower -> 09_loop3_king_final_choice`，不再依持有情報從 opening 直接跳到 C-1 或 C-2。
+
 ---
 
 ## 共用背景：進場前提

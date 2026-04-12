@@ -67,7 +67,7 @@ princess: （以前都是別人動手。這次……換我。）
 
 	[signal arg="intel:intel_chancellor_escape_plan"]
 	[signal arg="intel:intel_king_defense_line"]
-	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（餐刀）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（餐刀）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true, 'next_timeline': '01_final_main_awakening'}"]
 	[signal arg="trigger_death"]
 
 - 冷掉的茶
@@ -93,7 +93,7 @@ princess: （以前都是別人動手。這次……換我。）
 
 	[signal arg="intel:intel_chancellor_escape_plan"]
 	[signal arg="intel:intel_king_defense_line"]
-	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（冷茶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（冷茶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true, 'next_timeline': '01_final_main_awakening'}"]
 	[signal arg="trigger_death"]
 
 - 窗戶
@@ -121,5 +121,5 @@ princess: （以前都是別人動手。這次……換我。）
 
 	[signal arg="intel:intel_chancellor_escape_plan"]
 	[signal arg="intel:intel_king_defense_line"]
-	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（窗戶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true}"]
+	[signal arg="death_context:{'death_message': '父王信了艾蓮娜公主、以高塔相囚；宰相潛逃；半年後城破，外力全斷，公主第一次主動選擇死亡（窗戶）。', 'intel_reward': ['intel_chancellor_escape_plan', 'intel_king_defense_line'], 'killer': 'self', 'advance_loop': true, 'next_timeline': '01_final_main_awakening'}"]
 	[signal arg="trigger_death"]

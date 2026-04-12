@@ -36,5 +36,5 @@ leave --All--
 
 # === 獲得情報 ===
 [signal arg="intel:intel_chancellor_poison"]
-[signal arg="death_context:{'death_message': '你在小房間裡認出了那杯茶的氣味——正是第一次臨死時的那一杯。你終於連結起來了：兩次死亡，同一個氣味，同一個兇手。他不需要在場，他只需要讓茶出現在正確的位置。', 'intel_reward': ['intel_chancellor_poison'], 'killer': 'chancellor'}"]
+[signal arg="death_context:{'death_message': '你在小房間裡認出了那杯茶的氣味——正是第一次臨死時的那一杯。你終於連結起來了：兩次死亡，同一個氣味，同一個兇手。他不需要在場，他只需要讓茶出現在正確的位置。', 'intel_reward': ['intel_chancellor_poison'], 'killer': 'chancellor', 'advance_loop': true, 'next_timeline': '01_loop2_anger_awakening'}"]
 [signal arg="trigger_death"]

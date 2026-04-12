@@ -88,5 +88,5 @@ leave --All--
 # === 獲得情報 ===
 [signal arg="intel:intel_bruno_passage_tip"]
 [signal arg="intel:intel_secret_passage"]
-[signal arg="death_context:{'death_message': '你以宰相所贈的項鍊向布魯諾換得了口頭情報，找到了城牆密道——宰相的私兵無聲穿梭的通道。王城的物理城防已被架空。但看見真相的人不能活著離開。「艾蓮娜公主找到了真相。真相的代價是：看見它的人，都不能活著離開。」', 'intel_reward': ['intel_bruno_passage_tip', 'intel_secret_passage'], 'killer': 'ghost_soldiers', 'advance_loop': false}"]
+[signal arg="death_context:{'death_message': '你以宰相所贈的項鍊向布魯諾換得了口頭情報，找到了城牆密道——宰相的私兵無聲穿梭的通道。王城的物理城防已被架空。但看見真相的人不能活著離開。「艾蓮娜公主找到了真相。真相的代價是：看見它的人，都不能活著離開。」', 'intel_reward': ['intel_bruno_passage_tip', 'intel_secret_passage'], 'killer': 'ghost_soldiers', 'advance_loop': true, 'next_timeline': '01_loop3_dal_awakening'}"]
 [signal arg="trigger_death"]
