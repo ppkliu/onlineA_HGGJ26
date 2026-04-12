@@ -22,6 +22,13 @@ loyal_retainer (exhausted): 殿下……城破了。
 
 [wait time="1.6"]
 
+- 先追問父王
+	princess (shocked): 父王呢？父王現在在哪裡？
+- 先看他身上的血
+	princess (shocked): 你身上那些血……到底發生什麼事了？
+
+[wait time="1.0"]
+
 princess (shocked): 城破？什麼叫城破？城牆壞了嗎？那趕快叫工匠去修啊，就像上次那樣——
 
 [wait time="1.0"]
