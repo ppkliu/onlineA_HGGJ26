@@ -17,7 +17,7 @@ princess (shocked): 哇啊！剛剛那是什麼聲音？！……莉娜？你在
 
 [wait time="1.0"]
 
-princess (default): 奇怪……門怎麼打不開……父王明明說過，這裡最安全了……莉娜？你快來呀……
+princess (confused): 奇怪……門怎麼打不開……父王明明說過，這裡最安全了……莉娜？你快來呀……
 
 - 去拉門把
 	princess: （我又用力拉了一次。門還是紋絲不動。）
@@ -28,13 +28,13 @@ audio "res://audio/sfx/door_knock_hard.ogg" [volume="1.78" bus="SFX"]
 
 [wait time="0.8"]
 
-princess (default): 嗯？敲門聲？是莉娜嗎？快進來呀。
+princess (confused): 嗯？敲門聲？是莉娜嗎？快進來呀。
 
 [wait time="1.0"]
 
 audio "res://audio/sfx/running_screams_distant.ogg" [volume="0.56" bus="SFX"]
 
-princess (default): 外面怎麼這麼亂……好多人在跑步的聲音……到底怎麼了？
+princess (confused): 外面怎麼這麼亂……好多人在亂跑的聲音……到底怎麼了？
 
 [wait time="1.8"]
 

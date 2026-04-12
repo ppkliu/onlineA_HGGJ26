@@ -47,7 +47,7 @@ princess: 我想多懂一些。至少別再只會站著聽別人講。
 
 [wait time="0.5"]
 
-dal (default): ……殿下若只是好奇，臣可以說幾句。只是術式不是三兩天能學會的。
+dal (default): ……殿下若想多聽幾句，臣說也無妨。只是術式這東西，聽懂了和學會了，是兩口不同的井。
 
 [wait time="0.5"]
 
@@ -61,7 +61,7 @@ leave dal
 
 - 幾天過去了……
 	princess: （宰相還是照樣對我笑，也沒攔我借書，沒攔我見達爾。）
-	princess (hollow): （……放得太輕了。）
+	princess (determined): （……放得太輕了。）
 	[wait time="0.5"]
 
 leave princess
@@ -99,7 +99,7 @@ leave princess
 join princess left
 join maid right
 
-maid (default): 殿下～宰相大人聽說您一回來就在看城牆地圖，可心疼了。大人特地準備了放鬆的茶，還交代莉娜先把地圖收走，讓您好好休息呢。
+maid (forced_smile): 殿下～宰相大人聽說您一回來就在看城牆地圖，可心疼了。大人特地準備了放鬆的茶，還交代莉娜先把地圖收走，讓您好好休息呢。
 
 [wait time="0.5"]
 
@@ -111,9 +111,9 @@ princess: （那個味道。）
 
 [wait time="0.5"]
 
-princess (hollow): （原來不是放任。）
+princess (cold): （原來不是放任。）
 
-princess (hollow): （他只是在等我碰到真正不該碰的那一塊。）
+princess (cold): （他只是在等我碰到真正不該碰的那一塊。）
 
 [wait time="0.8"]
 

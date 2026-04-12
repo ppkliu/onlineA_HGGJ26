@@ -61,25 +61,25 @@ chancellor: ……
 
 princess: （杯子從手裡滑下去，摔得粉碎。碎裂聲一響，燭光也跟著變得又遠又晃。）
 
-chancellor (cold): 殿下別怕。不會太痛。只是睡過去而已。
+chancellor (concerned): 殿下別怕。不會太痛。只是睡過去而已。
 
 princess (shocked): 你……你在茶裡……
 
 [wait time="0.6"]
 
-chancellor (cold): ……
+chancellor (concerned): ……
 
-chancellor (cold): 臣也是不得已。
+chancellor (concerned): 臣也是不得已。
 
 [wait time="1.0"]
 
 princess: （他的聲音還是那麼輕。）
 
-chancellor (cold): 殿下從小就懂事，臣一直很喜歡您。
+chancellor (concerned): 殿下從小就懂事，臣一直很喜歡您。
 
 [wait time="0.8"]
 
-chancellor (cold): 所以……殿下別怪臣。
+chancellor (concerned): 所以……殿下別怪臣。
 
 [wait time="1.0"]
 

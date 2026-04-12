@@ -35,7 +35,7 @@ princess (determined): 我對過維護日誌，也對過清場時程。哪些被
 
 princess: （他臉色變了。）
 
-dal (quiet): ……若真是這樣，這就不是意外。
+dal (wary): ……若真是這樣，那些縫隙就不是自己長出來的。
 
 princess (determined): 我知道。所以你現在最重要的不是衝出去揭發誰。
 
@@ -45,7 +45,7 @@ princess (determined): 是活著。
 
 [wait time="0.5"]
 
-dal (quiet): ……那我該怎麼做？
+dal (wary): ……那我該怎麼做？
 
 princess (determined): 先把能逆著查的地方查乾淨。把技術紀錄留好，把能留下的物證留下。不要私下往上報，不要單獨闖陣，也不要在工作室跟任何人翻臉。
 
@@ -53,9 +53,9 @@ princess (determined): 等正式上朝，再一次把東西攤開。到時候，
 
 [wait time="0.6"]
 
-dal (quiet): （他沉默了很久，最後點了頭。）
+dal (sad_smile): （他沉默了很久，最後點了頭。）
 
-dal (quiet): ……好。
+dal (sad_smile): ……好。
 
 [wait time="0.8"]
 
@@ -108,7 +108,7 @@ join loyal_retainer right
 
 princess: 賽拉斯，帶人去宰相書房。現在。
 
-loyal_retainer (serious): 殿下，不經陛下命令直接拿人——
+loyal_retainer (default): 殿下，不經陛下命令直接拿人——
 
 princess: 來不及了。再慢一步，他今晚就會跑。
 

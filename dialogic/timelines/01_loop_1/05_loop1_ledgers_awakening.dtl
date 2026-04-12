@@ -51,11 +51,11 @@ princess: （想到宰相，我胃裡就先縮了一下。）
 
 maid (default): 殿下，宰相大人的項鍊要不要戴上呀？他特地交代，說今天一定要配那件藍色禮服——
 
-princess (sad): 不用了。今天不想戴。
+princess (shocked): 不用了。今天不想戴。
 
 maid (default): 啊……好，那莉娜幫您換別的——
 
-princess (sad): 簡單一點就好。
+princess (shocked): 簡單一點就好。
 
 [wait time="0.8"]
 
