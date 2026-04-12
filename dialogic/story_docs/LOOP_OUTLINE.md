@@ -61,6 +61,8 @@
 >
 > 核心弧線：**信任 → 懷疑 → 確認**
 
+**實作註記**：序章死亡後統一透過共用 death handoff 直接接到 `01_loop1_betrayal_awakening.dtl`，不再使用獨立的 EARLY router timeline。
+
 ---
 
 ### 1-1 溫柔的鴆毒（A-0）：致命的庇護
@@ -271,6 +273,8 @@
 > 第一章「信任路線」走不通後，公主改從**下城區（民意與底層物理防線）**切入；宰相曾帶人證與她「聽過的訴苦」讓她相信民怨有根，卻發現自己如**籠中鳥**，監視無孔不入。
 >
 > 核心弧線：**求證 → 偽裝 → 滲透**
+
+**實作註記**：B-0 的兩種死亡演出都內嵌在 `02_loop2_anger_confrontation.dtl`，兩路結束後統一接到 `03_loop2_surveillance_awakening.dtl`，再線性推進到 `09_loop2_passage_badend.dtl`。
 >
 > **時間感**：B-1 非「當日往返即死」——回宮後尚有**數日至約一週**的讀書／學藝偽裝，才進入城牆地圖與女僕毒茶，以強調宰相**從未放鬆警惕**。
 >
@@ -464,6 +468,8 @@
 > 物理城防若破，**魔法穹頂（防禦陣）**仍能保全城堡範圍；若陣法自內部崩潰，則可能在極短時間內（例如**一日內**）導致全面陷落。公主在確認宰相（LOOP 1）、監視與密道（LOOP 2）後，改從**術式與工程體系**切入，卻發現**學術、技術與決策圈皆已被滲透**。
 >
 > **進場前提**：B-1 已透過偽裝讀書與**初次向達爾學藝**取得 `intel_dal_magic_basics`；C-0 的達爾線延續「認真的學生」人設，才得以接近魔法陣與相關人員。
+
+**實作註記**：Loop 3 固定依 `01_loop3_dal_awakening -> 02_loop3_dal_approach -> 03_loop3_dal_two_months -> 04_loop3_dal_workshop -> 05_loop3_warning_warn_dal -> 06_loop3_warning_gate_framed -> 07_loop3_king_meet_king -> 08_loop3_king_tower -> 09_loop3_king_final_choice` 順序推進，不再由 opening router 依情報直接跳段。
 >
 > 核心弧線：**與達爾建立信任並觀測內鬼（C-0）→ 預警與匿名匯報仍無法救達爾（C-1）→ 向王權和盤托出反遭軟禁，宰相潛逃換來短暫平靜後城破，公主在高塔上主動選擇死亡（C-2 末段破局）**。
 >
@@ -576,6 +582,8 @@
 > **定位**：**承接 C-2 死亡，為固定主線**。破局三選的選項只影響**醒來開場獨白**，不影響本節主線。
 >
 > 公主帶著所有輪迴的記憶醒來。她不只知道敵人是誰（LOOP 1）、監視與密道如何運作（LOOP 2）、魔法陣如何被蛀空與如何默背修復（LOOP 3），更知道**單線必定被宰相翻敘事或掐人證**。收束段的核心是**同一時間窗內多線並行**——**兵、民、術、證**四件事一起落地。
+
+**實作註記**：終章固定依 `01_final_main_awakening -> 02_final_main_recruit_silas -> 03_final_main_calm_mob -> 04_final_main_dal_briefing -> 05_final_main_expose_chancellor -> 06_final_goodend_dawn -> 07_final_goodend_epilogue` 推進；「直接抓宰相」只在 `04_final_main_dal_briefing.dtl` 內做錯誤選項說明，不另開 bad end 檔。
 >
 > **「換我來保護你了。」**
 

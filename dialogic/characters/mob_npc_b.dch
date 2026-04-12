@@ -24,6 +24,7 @@
 "image": "res://art/characters/suspect_c_default.png"
 },
 "mirror": false,
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 },

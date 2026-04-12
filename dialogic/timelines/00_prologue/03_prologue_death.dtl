@@ -22,5 +22,5 @@ narrator: 帶著這一夜……回到一切開始之前。
 [signal arg="intel:intel_city_fall"]
 [signal arg="intel:intel_assassination"]
 [signal arg="intel:intel_magic_core_sabotage"]
-[signal arg="death_context:{'death_message': '你被最信任的騎士長親手刺殺。「無知，是最溫柔的死刑。」他哭了。你卻到死都無法理解為什麼。', 'intel_reward': ['intel_city_fall', 'intel_assassination', 'intel_magic_core_sabotage'], 'killer': 'retainer'}"]
+[signal arg="death_context:{'death_message': '你被最信任的騎士長親手刺殺。「無知，是最溫柔的死刑。」他哭了。你卻到死都無法理解為什麼。', 'intel_reward': ['intel_city_fall', 'intel_assassination', 'intel_magic_core_sabotage'], 'killer': 'retainer', 'advance_loop': true, 'next_timeline': '01_loop1_betrayal_awakening'}"]
 [signal arg="trigger_death"]

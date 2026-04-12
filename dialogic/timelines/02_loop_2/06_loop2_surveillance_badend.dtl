@@ -143,5 +143,5 @@ leave --All--
 [signal arg="intel:intel_lower_city_route"]
 [signal arg="intel:intel_bruno_wife_death"]
 [signal arg="intel:intel_dal_magic_basics"]
-[signal arg="death_context:{'death_message': '你學會了偽裝，讓宰相幾天沒有出手。但地圖一拿出來，他的視線就已經在那裡了。「艾蓮娜公主學會了偽裝，卻在最不像威脅的地方觸了地雷。地圖一拿出來，所有的放任都是觀察。」', 'intel_reward': ['intel_mob_manipulation', 'intel_lower_city_route', 'intel_bruno_wife_death', 'intel_dal_magic_basics'], 'killer': 'chancellor', 'advance_loop': false}"]
+[signal arg="death_context:{'death_message': '你學會了偽裝，讓宰相幾天沒有出手。但地圖一拿出來，他的視線就已經在那裡了。「艾蓮娜公主學會了偽裝，卻在最不像威脅的地方觸了地雷。地圖一拿出來，所有的放任都是觀察。」', 'intel_reward': ['intel_mob_manipulation', 'intel_lower_city_route', 'intel_bruno_wife_death', 'intel_dal_magic_basics'], 'killer': 'chancellor', 'advance_loop': true, 'next_timeline': '07_loop2_passage_awakening'}"]
 [signal arg="trigger_death"]

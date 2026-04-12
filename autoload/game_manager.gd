@@ -21,6 +21,7 @@ const _OPTION_EXPLORED_KEYS: PackedStringArray = [
 	"option_explored:a_v0_cyras", "option_explored:a_v0_king", "option_explored:a_v0_chancellor",
 	"option_explored:a_v1_cyras", "option_explored:a_v1_king", "option_explored:a_v1_chancellor",
 	"option_explored:a_v2_cyras", "option_explored:a_v2_king", "option_explored:a_v2_chancellor",
+	"option_explored:final_rush_arrest",
 ]
 
 

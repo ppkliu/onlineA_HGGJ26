@@ -1,12 +1,14 @@
 # 終章 D 大綱：覺悟（最終輪迴）
 
-> 本文件為終章 D（`04_loop_4/`）的場景逐幕大綱，供對白撰寫參考。
+> 本文件為終章 D（`04_final_loop/`）的場景逐幕大綱，供對白撰寫參考。
 >
 > **敘事定位**：**承接 C-2 結尾「破局的抉擇」（同一輪迴內的自選死亡），為固定主線**。C-2 的三選一死法（餐刀／冷茶／窗戶）**僅改變本章「醒來」首段獨白**，不影響後續事件順序與結局。本故事為**線性敘事**，所有中途分歧只改台詞色彩，不改主線。
 >
 > 終章 D 沒有 Bad End。公主帶著所有輪迴的記憶醒來，她已經知道每一步要做什麼、先後順序、以及哪一步不能提前發動。這一輪的核心不是「再解一次謎」，而是**讓已就位的棋子在同一個瞬間落地**。
 >
 > 核心句：**「換我來保護你了。」**
+
+**實作註記**：終章固定依 `01_final_main_awakening -> 02_final_main_recruit_silas -> 03_final_main_calm_mob -> 04_final_main_dal_briefing -> 05_final_main_expose_chancellor -> 06_final_goodend_dawn -> 07_final_goodend_epilogue` 推進；`04_final_main_dal_briefing.dtl` 內部保留「直接抓宰相」的錯誤選項說明，但不再跳出獨立 bad end timeline。
 
 ---
 
