@@ -254,13 +254,6 @@ func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT
 		return
 	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
 
-func _sync_to_dialogic_when_ready(attempts_left: int = DIALOGIC_SYNC_RETRY_LIMIT) -> void:
-	if sync_to_dialogic():
-		return
-	if attempts_left <= 0 or get_tree() == null:
-		return
-	get_tree().create_timer(0.0).timeout.connect(_sync_to_dialogic_when_ready.bind(attempts_left - 1), CONNECT_ONE_SHOT)
-
 ## 完全重置（新遊戲）
 func reset_all() -> void:
 	acquired_intels.clear()
