@@ -35,7 +35,7 @@ maid (confused): ……去書庫？是，殿下。
 
 [wait time="0.5"]
 
-maid (forced_smile): 好了，殿下。路上小心。
+maid (forced_smile): 好了，殿下！……路上小心喔。
 
 [signal arg="day_counter:180"]
 

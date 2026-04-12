@@ -31,7 +31,7 @@ princess: （聲音不大，也不客氣。）
 
 princess (determined): 我看過下城區的賑濟卷宗，也查過徵糧和草藥的批核。財政署怎麼走帳、東西怎麼被截住，我心裡大概有數。
 
-mob_leader (suspicious): 殿下跟我說這些，想幹什麼？
+mob_leader (hesitant): 殿下跟我說這些，想幹什麼？
 
 princess (determined): 我想請你，這幾天自己去核。帳目、署名、糧倉的實際庫存，凡是你覺得不對的，全都去看。
 
@@ -63,7 +63,7 @@ princess (determined): 如果你願意，那個人可以是你。
 
 [wait time="1.0"]
 
-mob_leader: 公主這麼說，是要我替王室開口。
+mob_leader (hesitant): 妳這話的意思，是叫我替王室說話？
 
 princess (determined): 不是。是要你替你自己開口。
 

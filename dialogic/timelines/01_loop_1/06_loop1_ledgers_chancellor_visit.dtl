@@ -31,7 +31,7 @@ princess: （他臉上明明閃過一瞬。）
 
 princess (determined): 你明白。
 
-loyal_retainer (default): 臣不會有事瞞著殿下。
+loyal_retainer (exhausted): 臣不會有事瞞著殿下。
 
 princess: （他答得太快。）
 
@@ -269,7 +269,15 @@ loyal_retainer (tearful): 是宰相。大家都被他騙了。
 
 [wait time="0.8"]
 
-loyal_retainer (tearful): 他是不是主謀，我不敢斷言。但他一定在裡面。從什麼時候開始、滲到多深……我也不知道。真正知道全局的人，只有陛下。
+loyal_retainer (tearful): 他是不是主謀……我不敢斷言。
+
+[wait time="0.5"]
+
+loyal_retainer (tearful): 但他一定在裡面。
+
+[wait time="0.5"]
+
+loyal_retainer (tearful): 從什麼時候、滲到多深……那些，只有陛下知道。
 
 [wait time="0.8"]
 
@@ -279,7 +287,7 @@ princess: 我知道了。謝謝你，賽拉斯。
 
 [wait time="0.5"]
 
-princess: 你一直都是很好的人。
+princess: 你是一位溫柔又勇敢的騎士。
 
 [wait time="1.5"]
 
