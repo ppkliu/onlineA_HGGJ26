@@ -81,6 +81,21 @@ directories/dtl_directory={
 "09_loop3_king_final_choice": "res://dialogic/timelines/03_loop_3/09_loop3_king_final_choice.dtl",
 "10_loop1_poison_badend": "res://dialogic/timelines/01_loop_1/10_loop1_poison_badend.dtl"
 }
+audio/channel_defaults={
+"": {
+"audio_bus": "SFX",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "BGM",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+audio/type_sound_bus="SFX"
 layout/style_directory={
 "": "res://dialogic/styles/custom_vn_style.tres",
 "Custom VN Style": "res://dialogic/styles/custom_vn_style.tres",
