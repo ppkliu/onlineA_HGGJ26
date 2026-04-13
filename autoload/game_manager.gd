@@ -109,6 +109,25 @@ func has_save_data() -> bool:
 	return FileAccess.file_exists("user://manual_save.json")
 
 
+func get_default_story_timeline_id() -> String:
+	if not IntelSystem.has_prologue_cleared():
+		return "01_prologue_main"
+
+	var pending_timeline := LoopManager.peek_pending_next_timeline()
+	if not pending_timeline.is_empty():
+		return pending_timeline
+
+	match LoopManager.current_phase:
+		LoopManager.LoopPhase.EARLY:
+			return "01_loop1_betrayal_awakening"
+		LoopManager.LoopPhase.MID:
+			return "01_loop3_dal_awakening"
+		LoopManager.LoopPhase.FINAL:
+			return "01_final_main_awakening"
+		_:
+			return "01_loop1_betrayal_awakening"
+
+
 func _on_timeline_started() -> void:
 	_ensure_option_explored_vars()
 

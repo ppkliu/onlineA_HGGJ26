@@ -132,3 +132,22 @@ func consume_pending_next_timeline() -> String:
 	var timeline_id := pending_next_timeline
 	pending_next_timeline = ""
 	return timeline_id
+
+
+func peek_pending_next_timeline() -> String:
+	return pending_next_timeline
+
+
+func get_current_phase_index() -> int:
+	if not IntelSystem.has_prologue_cleared():
+		return 0
+
+	match current_phase:
+		LoopPhase.EARLY:
+			return 1
+		LoopPhase.MID:
+			return 3
+		LoopPhase.FINAL:
+			return 4
+		_:
+			return 0
