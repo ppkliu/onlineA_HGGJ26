@@ -24,8 +24,29 @@ loyal_retainer (exhausted): 殿下……城破了。
 
 - 先追問父王
 	princess (shocked): 父王呢？父王現在在哪裡？
+	loyal_retainer (tearful): ......
+	jump ask_after_king
+
 - 先看他身上的血
 	princess (shocked): 你身上那些血……到底發生什麼事了？
+	loyal_retainer (tearful): ......
+	jump ask_after_blood
+
+label ask_after_king
+- 再看他身上的血
+	princess (shocked): 賽拉斯，你先告訴我，你身上那些血到底是誰的？
+	loyal_retainer (tearful): ......
+	jump ask_both_done
+
+label ask_after_blood
+- 再追問父王
+	princess (shocked): 那父王呢？父王現在在哪裡？
+	loyal_retainer (tearful): ......
+	jump ask_both_done
+
+label ask_both_done
+
+princess (shocked): （父王和那些血，一下子都朝我壓過來了。）
 
 [wait time="1.0"]
 
@@ -37,7 +58,7 @@ loyal_retainer (tearful): 三天前……魔法陣的能源核心，被人從裡
 
 [wait time="1.3"]
 
-princess (shocked): 可是父王明明說過，那個陣會一直保護我們……他明明說過不會有事的……
+princess (shocked): 可是父王明明說過，那個魔法陣會一直保護我們……他明明說過不會有事的……
 
 [wait time="1.0"]
 
@@ -90,7 +111,7 @@ loyal_retainer (tearful): 臣從您五歲時扶您上馬，八歲時陪您看星
 
 [wait time="1.0"]
 
-loyal_retainer (tearful): 臣每天都在求……求這道命令永遠不要落到臣手上。
+loyal_retainer (tearful): 臣每天都在祈求……求這道命令永遠不會執行。
 
 [wait time="1.6"]
 
@@ -102,9 +123,17 @@ loyal_retainer (tearful): 請原諒臣，殿下。
 
 [wait time="1.0"]
 
-loyal_retainer (tearful): 若真有來世……臣只求生在一個沒有王命、沒有戰火的地方。那時候，臣只做賽拉斯。
+loyal_retainer (tearful): 若真有來世……臣只求生在一個沒有王命、沒有戰火的地方。到那時，您不再是身不由己的公主，而我——只想作為『賽拉斯』，繼續守在您身邊。
 
 [wait time="0.8"]
+
+loyal_retainer (tearful): ......
+
+[wait time="0.8"]
+
+loyal_retainer (tearful): ............
+
+[wait time="1.4"]
 
 [sound path="res://audio/sfx/sword_stab_short.ogg" bus="SFX"]
 
