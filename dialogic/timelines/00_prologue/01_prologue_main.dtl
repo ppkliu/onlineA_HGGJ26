@@ -19,10 +19,31 @@ princess (shocked): 哇啊！剛剛那是什麼聲音？！……莉娜？你在
 
 princess (confused): 奇怪……門怎麼打不開……父王明明說過，這裡最安全了……莉娜？你快來呀……
 
-- 去拉門把
-	princess: （我又用力拉了一次。門還是紋絲不動。）
-- 貼近門聽外面
-	princess: （我把耳朵貼上去。外頭好像有人在跑，亂成一團。）
+- 先去拉門把
+	princess: （我又用力拉了一次。門板只悶悶震了一下，卻連一條縫也沒有。）
+	princess: （這不像只是鎖住了……像是有人從外面拿東西堵住把手。我自己根本出不去。）
+	jump door_after_pull
+
+- 先貼近門聽外面
+	princess: （我把耳朵貼上去。外頭有人在跑，還夾著東西磨過地面的聲音，亂成一團。）
+	princess: （像是有人把櫃子還是雜物推到門前……不是我打不開，是外面把我堵住了。）
+	jump door_after_listen
+
+label door_after_pull
+- 再貼近門聽外面
+	princess: （我屏住氣，把耳朵貼回門上。外頭還是亂糟糟的，腳步聲裡夾著重物拖磨的悶響。）
+	princess: （剛剛那一下不是錯覺……門外真的被什麼東西堵住了。）
+	jump door_both_done
+
+label door_after_listen
+- 再去拉門把
+	princess: （我不死心，又狠狠拉了一次。門板悶悶震了一下，卻還是紋絲不動。）
+	princess: （外頭那些聲音不是錯覺……門真的像從外面被堵死了，我自己根本出不去。）
+	jump door_both_done
+
+label door_both_done
+
+princess (confused): 莉娜？外面有人嗎？門被堵住了，我出不去呀……
 
 audio "res://audio/sfx/door_knock_hard.ogg" [volume="1.78" bus="SFX"]
 
