@@ -102,6 +102,21 @@ variables={
 "option_explored:a_v2_king": false,
 "option_explored:final_rush_arrest": false
 }
+audio/channel_defaults={
+"": {
+"audio_bus": "SFX",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "BGM",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+audio/type_sound_bus="SFX"
 
 [display]
 

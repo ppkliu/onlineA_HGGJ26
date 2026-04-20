@@ -2,6 +2,23 @@ extends Node
 
 ## 音效管理器 — 三段式音樂設計 + Cut to Silence 效果
 
+const BGM_BUS_NAME := "BGM"
+const SFX_BUS_NAME := "SFX"
+const DIALOGIC_AUDIO_CHANNEL_DEFAULTS := {
+	"": {
+		"volume": 0.0,
+		"audio_bus": SFX_BUS_NAME,
+		"fade_length": 0.0,
+		"loop": false,
+	},
+	"music": {
+		"volume": 0.0,
+		"audio_bus": BGM_BUS_NAME,
+		"fade_length": 0.0,
+		"loop": true,
+	},
+}
+
 var bgm_player: AudioStreamPlayer
 var sfx_player: AudioStreamPlayer
 var ambience_player: AudioStreamPlayer
@@ -14,19 +31,21 @@ var _bgm_tween: Tween
 
 
 func _ready() -> void:
+	_configure_dialogic_audio_routing()
+
 	bgm_player = AudioStreamPlayer.new()
 	bgm_player.name = "BGMPlayer"
-	bgm_player.bus = "BGM"
+	bgm_player.bus = BGM_BUS_NAME
 	add_child(bgm_player)
 
 	sfx_player = AudioStreamPlayer.new()
 	sfx_player.name = "SFXPlayer"
-	sfx_player.bus = "SFX"
+	sfx_player.bus = SFX_BUS_NAME
 	add_child(sfx_player)
 
 	ambience_player = AudioStreamPlayer.new()
 	ambience_player.name = "AmbiencePlayer"
-	ambience_player.bus = "BGM"
+	ambience_player.bus = BGM_BUS_NAME
 	add_child(ambience_player)
 
 	set_bgm_volume(bgm_volume)
@@ -35,18 +54,18 @@ func _ready() -> void:
 
 ## 設定 BGM bus 音量（同時影響 Dialogic 的 [music] 和環境音）
 func set_bgm_volume(value: float) -> void:
-	bgm_volume = value
-	var bus_idx := AudioServer.get_bus_index("BGM")
+	bgm_volume = clampf(value, 0.0, 1.0)
+	var bus_idx := AudioServer.get_bus_index(BGM_BUS_NAME)
 	if bus_idx >= 0:
-		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(value))
+		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(bgm_volume))
 
 
 ## 設定 SFX bus 音量（同時影響 Dialogic 的 [sound] 音效）
 func set_sfx_volume(value: float) -> void:
-	sfx_volume = value
-	var bus_idx := AudioServer.get_bus_index("SFX")
+	sfx_volume = clampf(value, 0.0, 1.0)
+	var bus_idx := AudioServer.get_bus_index(SFX_BUS_NAME)
 	if bus_idx >= 0:
-		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(value))
+		AudioServer.set_bus_volume_db(bus_idx, linear_to_db(sfx_volume))
 
 
 ## 序章：史詩交響樂 + 大火音效
@@ -108,6 +127,35 @@ func stop_all() -> void:
 	bgm_player.stop()
 	sfx_player.stop()
 	ambience_player.stop()
+
+
+func _configure_dialogic_audio_routing() -> void:
+	var current_defaults: Variant = ProjectSettings.get_setting("dialogic/audio/channel_defaults", {})
+	var merged_defaults: Dictionary = {}
+	if current_defaults is Dictionary:
+		merged_defaults = current_defaults.duplicate(true)
+
+	var changed := false
+	for channel_name in DIALOGIC_AUDIO_CHANNEL_DEFAULTS.keys():
+		var desired_defaults: Dictionary = DIALOGIC_AUDIO_CHANNEL_DEFAULTS[channel_name]
+		var current_channel_defaults: Dictionary = {}
+		var existing_channel_defaults: Variant = merged_defaults.get(channel_name, null)
+		if existing_channel_defaults is Dictionary:
+			current_channel_defaults = existing_channel_defaults.duplicate(true)
+
+		for key in desired_defaults.keys():
+			if current_channel_defaults.get(key) != desired_defaults[key]:
+				current_channel_defaults[key] = desired_defaults[key]
+				changed = true
+
+		merged_defaults[channel_name] = current_channel_defaults
+
+	if ProjectSettings.get_setting("dialogic/audio/type_sound_bus", "") != SFX_BUS_NAME:
+		ProjectSettings.set_setting("dialogic/audio/type_sound_bus", SFX_BUS_NAME)
+		changed = true
+
+	if changed:
+		ProjectSettings.set_setting("dialogic/audio/channel_defaults", merged_defaults)
 
 
 func _safe_load(path: String) -> Resource:
