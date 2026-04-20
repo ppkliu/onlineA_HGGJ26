@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://garden001"]
+[gd_scene load_steps=15 format=3 uid="uid://garden001"]
 
 [ext_resource type="Script" path="res://scenes/locations/garden.gd" id="1_script"]
 [ext_resource type="Texture2D" path="res://art/backgrounds/restaurant.png" id="2_bg"]
@@ -7,6 +7,7 @@
 [ext_resource type="SpriteFrames" path="res://art/characters/general_npc.tres" id="5_npc_frames"]
 [ext_resource type="Script" path="res://scripts/npc/interactable_npc.gd" id="6_npc"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialog_context_menu.tscn" id="7_ctx_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/timeline_debug_panel.tscn" id="8_debug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(50, 24)
@@ -120,3 +121,5 @@ text = "庭園"
 horizontal_alignment = 1
 
 [node name="DialogContextMenu" parent="." instance=ExtResource("7_ctx_menu")]
+
+[node name="TimelineDebugPanel" parent="." instance=ExtResource("8_debug")]
